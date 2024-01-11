@@ -149,6 +149,8 @@ h5{
 @media screen and (max-width: 768px) {
     .main {
         background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 @media screen and (max-width: 768px) {
