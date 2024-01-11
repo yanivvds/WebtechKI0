@@ -24,11 +24,21 @@
             <img src="fotos/logomain.png" alt="Logo" href="index.html">
             <nav>
                 <ul>
-                    <li><a href="destinations.html">Destinations</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Top Spots</a></li>
-                    <li><a href="#">Flights</a></li>
-                    <li><button class="menubtn"><img src="fotos/menu.png"></button></li>
+                    <li class="link"><a href="destinations.html">Destinations</a></li>
+                    <li class="link"><a href="#">Reviews</a></li>
+                    <li class="link"><a href="#">Top Spots</a></li>
+                    <li class="link"><a href="#">Flights</a></li>
+                    <li>
+                        <div class="menu-btn" onclick="toggleMenu()">
+                            <img src="fotos/menu.png">
+                        </div>
+                        <div class="menu-container" id="menuContainer">
+                            <a href="destinations.html">Destinations</a>
+                            <a href="#">Reviews</a>
+                            <a href="#">Top Spots</a>
+                            <a href="#">Flights</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <button class="btn">Login </button>
@@ -61,5 +71,6 @@
                 </div>
         </div>
     </div>
+    <script src="/javascript/script1.js"></script>
 </body>
 </html>

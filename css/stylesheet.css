@@ -70,6 +70,39 @@ nav ul li a{
     margin-right: 30px;
     
 }
+.menu-container {
+    display: none;
+    position: absolute;
+    background-color: #f5168d;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-container a {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    text-align: left;
+}
+
+.menu-btn {
+    background: none;
+    padding: 3px;
+    border: 0;
+    outline: 0;
+    border-radius: 5%;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.menu-btn img {
+    width: 40px;
+    display: flex;
+    cursor: pointer;
+}
 .menubtn img{
     width: 40px; /* Aangepaste breedte van het pictogram */
     display: flex;
@@ -101,6 +134,10 @@ h1{
     width: 300px;
     font-size: 20;
     outline: 0;
+
+}
+.link:hover{
+    background-color: #f5168d;
 
 }
 .card{
@@ -164,6 +201,9 @@ h5{
     }
 }
 @media screen and (max-width: 1400px) {
+    .menu-btn{
+        margin-left: 22px;
+    }
     .navbar{
         flex-direction: column;
     }
