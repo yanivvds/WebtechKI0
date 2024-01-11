@@ -195,9 +195,9 @@ h5{
 .login-input {
     padding: 10px; 
     margin: 5px 0;
-    border: 1px solid #70496e;
+    border: 2px solid #461d63bd;
     border-radius: 4px; 
-    background-color: #ce71f960; 
+    background-color: #8b64d47a; 
     font-size: 14px; 
     width: calc(100% - 20px); 
     box-sizing: border-box; 
