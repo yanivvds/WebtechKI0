@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="your-stylesheet.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="tylesheet.css">
 </head>
 <body>
     <div class="main">
         <div class="navbar">
-            <!-- Your navigation bar content goes here -->
+            <img src="fotos/logomain.png" alt="Logo" href="index.html">
+            <nav>
+                <ul>
+                    <li class="link"><a href="destinations.html">Destinations</a></li>
+                    <li class="link"><a href="#">Reviews</a></li>
+                    <li class="link"><a href="#">Top Spots</a></li>
+                    <li class="link"><a href="#">Flights</a></li>
+                    <li>
+                        <div class="menu-btn" onclick="toggleMenu()">
+                            <img src="fotos/menu.png">
+                        </div>
+                        <div class="menu-container" id="menuContainer">
+                            <a href="destinations.html" class="linkpurple">Destinations</a>
+                            <a href="#" class="linkpurple">Reviews</a>
+                            <a href="#" class="linkpurple">Top Spots</a>
+                            <a href="#" class="linkpurple">Flights</a>
+                            <a href="#" class="linkpurple">Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
         <div class="row">
