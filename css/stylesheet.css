@@ -134,11 +134,16 @@ h1{
     width: 300px;
     font-size: 20;
     outline: 0;
-
+}
+#explorebtn:hover{
+    transform: translateY(-10px);
 }
 .link:hover{
     background-color: #f5168d;
 
+}
+.linkpurple:hover{
+    background-color:fuchsia
 }
 .card{
     width: 280px;
