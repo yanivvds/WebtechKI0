@@ -84,7 +84,7 @@ nav ul li a{
 
 .col{
     flex-basis: 50%;
-    margin-top: 150px;
+    margin-top: 120px;
 }
 p{
     color: #fff;
@@ -152,6 +152,12 @@ h5{
     }
 }
 @media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .menubtn{
+        margin-left: 30px;
+    }
     nav {
         flex-direction: column;
         align-items: center;
@@ -171,5 +177,15 @@ h5{
 
     .btn {
         margin-top: 10px;
+        margin-left: 10px;
         
     }
+    .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .col{
+        flex-direction: column;
+        align-items: center;
+    }
+}
