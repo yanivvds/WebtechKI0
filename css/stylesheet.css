@@ -191,6 +191,18 @@ h5{
     font-size: 15px;
 }
 
+/* Login screen classes */
+.login-input {
+    padding: 10px; 
+    margin: 5px 0;
+    border: 1px solid #70496e;
+    border-radius: 4px; 
+    background-color: #f9f9f9; 
+    font-size: 14px; 
+    width: calc(100% - 20px); 
+    box-sizing: border-box; 
+}
+
 /* halve screen settings 
 @media screen and (max-width: px) {
 /*
