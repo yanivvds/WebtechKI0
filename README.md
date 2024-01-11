@@ -1,11 +1,5 @@
 # WebtechKI0
-hallo dit is een test
-yaniv
-jeff
-Jeff heeft dus super veel errors,
-wat een noob!!!
-Dit werkt?
-Yaniv, Jens en Thierry werken!
-Simon red niet
-ihgc
-hij werkt nog steeds
+Hallo,
+Dit is onze website genaamd travelinsidertips.com.
+Deze website is voor al uw informatie over reizen.
+Gemaakt door Yaniv, Jeff, Jens en Thierry
