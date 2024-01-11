@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Calibri, Helvetica, sans-serif"
-    box-sizing: border-box;
+
 }
 .main{
     width: 100%;
@@ -10,6 +10,9 @@
     background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/foto1.jpg);
     background-size: cover;
     background-position: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-sizing: border-box;
 }
 .navbar{
     height: 12%;
@@ -20,6 +23,11 @@
     width: 160px;
     cursor: pointer;
 }
+nav{
+    flex: 1;
+    text-align: right;
+}
+
 nav ul{
     list-style: none;
     width: 100%;
@@ -27,18 +35,17 @@ nav ul{
     padding-right: 60px;
 }
 nav ul li{
-    display: inline-block;
-    margin: 10px 20px;
+    list-style: none;
+    display:inline-block;
+    margin-left: 60px;
 }
 nav ul li a{
     color: #fff;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 500;
 }
 .btn{
-    display: flex;
     align-items: center;
     padding: 10px 20px;
     border: 0;
@@ -53,19 +60,92 @@ nav ul li a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#menubtn{
-    background: #f5168d; /* Witte achtergrond */
+.menubtn{
+    background: none;
     padding: 3x; /* Aangepaste padding voor een kleiner formaat */
     border: 0;
     outline: 0;
     border-radius: 5%; /* Maakt de knop rond */
     align-items: center;
+    margin-right: 30px;
     
 }
-#menubtn img{
+.menubtn img{
     width: 40px; /* Aangepaste breedte van het pictogram */
     display: flex;
+    cursor: pointer;
 }
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+
+}
+
+.col{
+    flex-basis: 50%;
+    margin-top: 150px;
+}
+p{
+    color: #fff;
+    font-size: 20px;
+    line-height: 15px;
+
+}
+h1{
+    color: #fff;
+    font-size: 100px;
+}
+#explorebtn{
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 12px 0;
+    width: 300px;
+    font-size: 20;
+    outline: 0;
+
+}
+.card{
+    width: 280px;
+    height: 310px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(../fotos/mexico.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+
+}
+.card1{
+    background-image: url(../fotos/mexico.jpg);
+}
+.card2{
+    background-image: url(../fotos/fineas-anton-kC1-9Snr9hI-unsplash.jpg);
+}
+.card3{
+    background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
+}
+.card4{
+    background-image: url(../fotos/andreas-rasmussen-GhvpEtG5HMs-unsplash.jpg);
+}
+.card:hover{
+    transform: translatey(-10px);
+}
+h5{
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.card p{
+    text-shadow: 0 0 5px #000;
+    font-size: 15px;
+}
+/* Phone/tablet settings */
+
 @media screen and (max-width: 768px) {
     .main {
         background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
@@ -93,26 +173,3 @@ nav ul li a{
         margin-top: 10px;
         
     }
-}
-.row{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-.col{
-    flex-basis: 50%;
-}
-p{
-    color: #fff;
-    font-size: 11px;
-    line-height: 15px;
-
-}
-h1{
-    color: #fff;
-    font-size: 100px;
-}
