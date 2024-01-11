@@ -142,9 +142,13 @@ h5{
     text-shadow: 0 0 5px #000;
     font-size: 15px;
 }
+
+/* halve screen settings 
+@media screen and (max-width: px) {
+/*
 /* Phone/tablet settings */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .main {
         background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
         padding-left: 0;
@@ -154,10 +158,16 @@ h5{
         background-position: center;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
     .navbar{
         flex-direction: column;
     }
+}
+@media screen and (max-width: 1400px) {
+    .navbar{
+        flex-direction: column;
+    }
+
     .menubtn{
         margin-left: 30px;
     }
@@ -193,3 +203,4 @@ h5{
         align-items: center;
     }
 }
+
