@@ -14,16 +14,27 @@
         <!-- End Google Tag Manager (noscript) -->
         <div class="main">
             <div class="navbar">
-                <a href="index.html"><img src="fotos/logomain.png" alt="Logo"></a>
+                <img src="fotos/logomain.png" alt="Logo" href="index.html">
                 <nav>
                     <ul>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="#">Reviews</a></li>
-                        <li><a href="#">Top Spots</a></li>
-                        <li><a href="#">Flights</a></li>
+                        <li class="link"><a href="destinations.html">Destinations</a></li>
+                        <li class="link"><a href="#">Reviews</a></li>
+                        <li class="link"><a href="#">Top Spots</a></li>
+                        <li class="link"><a href="#">Flights</a></li>
+                        <li>
+                            <div class="menu-btn" onclick="toggleMenu()">
+                                <img src="fotos/menu.png">
+                            </div>
+                            <div class="menu-container" id="menuContainer">
+                                <a href="destinations.html" class="linkpurple">Destinations</a>
+                                <a href="#" class="linkpurple">Reviews</a>
+                                <a href="#" class="linkpurple">Top Spots</a>
+                                <a href="#" class="linkpurple">Flights</a>
+                                <a href="#" class="linkpurple">Contact</a>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
-                <button id="menubtn"><img src="fotos/iconmenu.png"></button>
                 <button class="btn">Login </button>
             </div>
         </div>
