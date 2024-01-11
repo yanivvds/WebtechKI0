@@ -46,16 +46,25 @@ nav ul li a{
     border-radius: 5%;
     background: #f5168d;
     color: #fff;
-    margin-right: 20px;
+    margin-right: 20px; /* Voeg deze regel toe voor meer ruimte */
     font-weight: 500;
     font-size: 20px;
     cursor: pointer;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.btn img{
-    width: 20px;
-    margin-right: 10px;
 
+#menubtn{
+    background: #f5168d; /* Witte achtergrond */
+    padding: 3x; /* Aangepaste padding voor een kleiner formaat */
+    border: 0;
+    outline: 0;
+    border-radius: 5%; /* Maakt de knop rond */
+    align-items: center;
+    
+}
+#menubtn img{
+    width: 40px; /* Aangepaste breedte van het pictogram */
+    display: flex;
 }
 @media screen and (max-width: 768px) {
     .main {
@@ -93,4 +102,17 @@ nav ul li a{
 nav{
     flex: 1;
     text-align: right;
+}
+.col{
+    flex-basis: 50%;
+}
+p{
+    color: #fff;
+    font-size: 11px;
+    line-height: 15px;
+
+}
+h1{
+    color: #fff;
+    font-size: 100px;
 }
