@@ -124,13 +124,13 @@ h1{
     background-image: url(../fotos/mexico.jpg);
 }
 .card2{
-    background-image: url(../fotos/fineas-anton-kC1-9Snr9hI-unsplash.jpg);
+    background-image: url(../fotos/massimiliano-donghi-JXsxH2shRgY-unsplash.jpg);
 }
 .card3{
     background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
 }
 .card4{
-    background-image: url(../fotos/andreas-rasmussen-GhvpEtG5HMs-unsplash.jpg);
+    background-image: url(../fotos/charles-postiaux-WOw3Pcdmw4I-unsplash.jpg);
 }
 .card:hover{
     transform: translatey(-10px);
