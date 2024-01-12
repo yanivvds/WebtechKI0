@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($username === $correctUsername && $password === $correctPassword) {
-        echo "Login successful!";
+        header("Location: dashboard.html");
     } else {
         echo "Login failed: Incorrect username or password";
     }
