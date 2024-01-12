@@ -1,4 +1,7 @@
-function toggleMenu() {
-    var menuContainer = document.getElementById("menuContainer");
-    menuContainer.style.display = (menuContainer.style.display === "block") ? "none" : "block";
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
 }
