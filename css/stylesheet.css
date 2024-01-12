@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Calibri, Helvetica, sans-serif";
+    font-family: "Helvetica, Arial, sans-serif";
+    font-weight: 500;
     line-height: 1.5;
 }
 .main{
@@ -19,8 +20,8 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    height: 7rem;
-    background-color: rgba(0,0,0,0.1);
+    height: 5rem;
+    background-color: rgba(0,0,0,0.05);
     z-index: 1;
     transition: 0.5s;
 }
@@ -29,15 +30,15 @@ header.scroll{
     top: 0;
     left: 0;
     width: 100%;
-    height: -7rem;
+    height: -5rem;
     background-color: rgba(0,0,0,0.1);
     z-index: 1;
     transition: 0.5s;
 }
 .logo{
     position: absolute;
-    left: 10%;
-    bottom: 1rem;
+    left: 6%;
+    bottom: 0rem;
     text-transform: uppercase;
     font-size: 1.5rem;
     color:#000000; 
@@ -45,7 +46,7 @@ header.scroll{
 nav{
     position: absolute;
     left: 30%;
-    bottom: 1rem;
+    bottom: 0rem;
     width: 60%;
     margin-left: 180px;
 }
@@ -57,7 +58,7 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     color: #fff;
-    font-family:"Calibri, Helvetica, sans-serif";
+    font-family:"Helvetica, monospace, Arial, sans-serif";
     text-transform: uppercase;
     
 }
@@ -88,24 +89,8 @@ nav ul li a:hover::after{
 .loginbtn{
     background: none;
 }
-.menu-container {
-    display: none;
-    position: absolute;
-    background-color: #f5168d;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-.menu-container a {
-    padding: 30px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    display:block;
-    text-align: left;
-    margin-right: 30px;
 
-}
 
 .menu-btn {
     background: none;
@@ -117,16 +102,6 @@ nav ul li a:hover::after{
     cursor: pointer;
 }
 
-.menu-btn img {
-    width: 50px;
-    display: flex;
-    cursor: pointer;;
-}
-.menubtn img{
-    width: 40px; /* Aangepaste breedte van het pictogram */
-    display: flex;
-    cursor: pointer;
-}
 .row{
     display: flex;
     height: 88%;
@@ -230,64 +205,6 @@ h5{
 /*
 /* Phone/tablet settings */
 
-@media screen and (max-width: 1200px) {
-    .main {
-        background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
-        padding-left: 0;
-        padding-right: 0;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-    }
-}
-@media screen and (max-width: 1300px) {
-    .navbar{
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 1400px) {
-    .menu-btn{
-        margin-left: 22px;
-    }
-    .navbar{
-        flex-direction: column;
-    }
-
-    .menubtn{
-        margin-left: 30px;
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    nav ul {
-        text-align: center;
-        padding: 0;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .btn {
-        margin-top: 10px;
-        margin-left: 10px;
-        
-    }
-    .row{
-        margin-left: 140px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .col{
-        flex-direction: column;
-        align-items: center;
-    }
-}
 /* navigatie flow in */
 .overlay {
     height: 0%;
@@ -295,7 +212,7 @@ h5{
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: rgb(0,0,0);
     background-color: rgba(0, 0, 0, 0.9);
     overflow-y: hidden;
@@ -304,9 +221,9 @@ h5{
   
   .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-top: 30px;
   }
   
@@ -339,4 +256,92 @@ h5{
     top: 15px;
     right: 35px;
     }
-  }
+}
+  
+/* Phone screen and smaller screens*/
+@media screen and(max-width: 320px) {
+    .main{
+    background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    }
+    header{
+        height: 2rem;
+    }
+    header.scroll{
+        height: -2rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .main {
+        background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    header{
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .row{
+        margin: auto;
+        width: 50%;
+        flex-direction: column;
+        align-items:center;
+    }
+    .col{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media screen and (max-width: 1300px) {
+    #topspotsnav{
+        display: none;
+    }
+    #destinationsnav{
+        display: none;
+    }
+    #loginnav{
+        display: none;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .row{
+        margin: auto;
+        width: 50%;
+        flex-direction: column;
+        align-items:center;
+    }
+    .col{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .menu-btn{
+        margin-left: 22px;
+    }
+}
