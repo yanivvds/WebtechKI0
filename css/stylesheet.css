@@ -146,6 +146,7 @@ h3{
     width: 300px;
     font-size: 20;
     outline: 0;
+    transition: transform 0.5s;
 }
 #explorebtn:hover{
     transform: translateY(-10px);
