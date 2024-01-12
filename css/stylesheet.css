@@ -4,21 +4,19 @@
     font-family: "Helvetica, Arial, sans-serif";
     font-weight: 500;
     line-height: 1.5;
+    box-sizing: border-box;
 }
-.main{
-    width: 100%;
-    min-height: 100vh;
+body{
     background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/foto1.jpg);
     background-size: cover;
     background-position: center;
-    padding-left: 2%;
-    padding-right: 2%;
     box-sizing: border-box;
 }
 header{
     position: fixed;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 5rem;
     background-color: rgba(0,0,0,0.05);
@@ -37,32 +35,57 @@ header.scroll{
 }
 .logo{
     position: absolute;
+    width: 100%;
+    height: auto;
     left: 6%;
     bottom: 0rem;
     text-transform: uppercase;
     font-size: 1.5rem;
     color:#000000; 
 }
+
 nav{
-    position: absolute;
-    left: 30%;
+    position: relative;
+    display: inline-flex;
+    left: 650px;
     bottom: 0rem;
-    width: 60%;
-    margin-left: 180px;
+    width: auto;
+    margin-top: 35px;
 }
-nav ul{
-    display: flex;
+nav span{
+    margin-left: 85px;
+    margin-bottom: 20px;
+    background: none;
+    padding: 3px;
+    border: 0;
+    outline: 0;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.navbar{
     list-style: none;
-    justify-content: space-around;
+    margin-top: 20px;
 }
-nav ul li a{
-    text-decoration: none;
+.navbar li{
+    display: inline-block;
+    padding: 0px 60px;
+}
+.navbar li a{
+    transition: all0.3 ease 0s;
     color: #fff;
+    font-family:"Helvetica, monospace, Arial, sans-serif";
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.navbar li a:hover{
+    text-decoration: none;
+    color: gray;
     font-family:"Helvetica, monospace, Arial, sans-serif";
     text-transform: uppercase;
     
 }
-nav ul li a::after{
+.navbar li a::after{
     content:'';
     display: block;
     width:0;
@@ -71,7 +94,7 @@ nav ul li a::after{
     transition: width 0.3s;
     
 }
-nav ul li a:hover::after{
+.navbar li a:hover::after{
     width: 100%;
     transition: width 0.3s;
 }
@@ -90,18 +113,10 @@ nav ul li a:hover::after{
     background: none;
 }
 
-
-
-.menu-btn {
-    background: none;
-    padding: 3px;
-    border: 0;
-    outline: 0;
-    border-radius: 5%;
-    align-items: center;
-    cursor: pointer;
+#textfrontpage{
+    margin-left: 6%;
+    margin-top: 4%;
 }
-
 .row{
     display: flex;
     height: 88%;
@@ -266,24 +281,32 @@ h5{
 }
   
 /* Phone screen and smaller screens*/
-@media screen and(max-width: 320px) {
-    .main{
-    background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+@media screen and(max-width: 450px) {
+    body{
+        background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        padding-left: 2%;
+        padding-right: 2%;
+        box-sizing: border-box;
     }
     header{
         height: 2rem;
     }
+    
     header.scroll{
         height: -2rem;
     }
+    .logo img{
+        width: 60%;
+    }
+    header nav ul li span{
+        right: 4%;
+    }
 }
 @media screen and (max-width: 1200px) {
-    .main {
+    body {
         background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/mobile.jpg);
-        width: 100%;
         background-size: cover;
         background-position: center;
     }
