@@ -151,6 +151,10 @@ h3{
 #explorebtn:hover{
     transform: translateY(-10px);
 }
+.link{
+    border-radius: 10%;
+
+}
 .link:hover{
     background-color: #f5168d;
 
