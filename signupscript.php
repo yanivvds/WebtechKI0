@@ -38,6 +38,14 @@ if ( ! $stmt->prepare($sql)) {
 
 $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
 
-$stmt->execute();
+if ($stmt->execute()) {
+    echo "Signup succesfully";
 
-echo "Signup succesfully";
+} else {
+
+    if ($stmt->errno === 1062) {
+        die("Email has already been used");
+    } else {
+        die($mysqli->error . " " . $mysqli->errno);
+    }
+}
