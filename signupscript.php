@@ -39,8 +39,10 @@ if ( ! $stmt->prepare($sql)) {
 $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
 
 if ($stmt->execute()) {
-    echo "Signup succesfully";
 
+    header("Location: signup-success.html");
+    exit;
+    
 } else {
 
     if ($stmt->errno === 1062) {
