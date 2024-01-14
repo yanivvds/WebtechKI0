@@ -1,6 +1,6 @@
 <?php
 
-if (empty($_POST["name"])) {
+if (empty($_POST["username"])) {
     die("Name is required");
 }
 
