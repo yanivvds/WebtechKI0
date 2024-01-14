@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     var_dump($user);
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
-
+<div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a href="top_spots.html">Top Spots</a>
+              <a href="destinations.html">Destinations</a>
+              <a href="#">Flights</a>
+              <a href="#">Contact</a>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              
+            </div>
+          </div>
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="fotos/logomain.png" alt="Logomain"></a>
+                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li class="link"><a href="destinations.html" id="destinationsnav">Destinations</a></li>
+                        <li class="link"><a href="top_spots.html" id="topspotsnav">Top Spots</a></li>
+                        <li><a class="login" href="login.html" id="loginnav">Login</a></li>
+                    </ul>
+                    <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span>
+                </nav>
+            </header>
+    </div>
     <h1>Login</h1>
 
     <form method="post">
