@@ -64,6 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <button type="Login">Login</button>
     </form>
 
-    <p>Don't have an account? <a href="signup.php">Sign up</a></p>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
 </body>
 </html>
