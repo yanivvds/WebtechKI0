@@ -40,7 +40,7 @@ $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
 
 if ($stmt->execute()) {
 
-    header("Location: signupsuccess.html");
+    header("Location: signupsucces.html");
     exit;
     
 } else {
