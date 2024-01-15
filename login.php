@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user) {
         if (password_verify($_POST["password"], $user["password"])) {
-            session_start();
+            $_SESSION['email'] = $user['email'];
         } else {
             echo "Incorrect password.";
         }

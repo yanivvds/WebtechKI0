@@ -24,7 +24,12 @@ session_start();
                 <ul class="navbar">
                     <li class="link"><a href="destinations.php" id="destinationsnav">Destinations</a></li>
                     <li class="link"><a href="inspiration.php" id="topspotsnav">Inspiration</a></li>
-                    <li><a class="login" href="login.php" id="loginnav">Login</a></li>
+                    <?php if(isset($_SESSION['username'])): ?>
+                        <li><a href="profile.php">Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></a></li>
+                        <li><a href="logout.php">Logout</a></li>
+                    <?php else: ?>
+                        <li><a class="login" href="login.php" id="loginnav">Login</a></li>
+                    <?php endif; ?>
                 </ul>
                 <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span>
             </nav>
