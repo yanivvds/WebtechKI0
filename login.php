@@ -1,5 +1,7 @@
 <?php
-session_start();
+
+$is_invalid = false;
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     var_dump($_POST);
     
@@ -23,13 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
             header("Location: index.php");
             exit;
-        } else {
-            echo "Incorrect password.";
-        }
-    } else {
-        echo "No user found with the provided email.";
+        } 
     }
-    exit;
+    $is_invalid = true;
 }
 
 ?>
@@ -44,13 +42,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 <?php include 'navbar.php'; ?>
-
+<?php if ($is_invalid): ?>
+        <em>Invalid login</em>
+    <?php endif; ?>
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <form method="post" class="formlogin">
             <div class="title">Login</div>
 
             <div class="input-container ic1">
-                <input type="email" name="email" id="email" class="input" placeholder=" " required />
+                <input type="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" class="input" placeholder=" " required />
                 <div class="cut"></div>
                 <label for="email" class="placeholder">Email</label>
             </div>
