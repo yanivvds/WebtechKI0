@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
 </head>
 <body>
 <div id="myNav" class="overlay">
@@ -37,12 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               
             </div>
-          </div>
+        </div>
             <header class="header">
                 <div class="logo">
                     <a href="index.html"><img src="fotos/logomain.png" alt="Logomain"></a>
                 </div>
-                <nav>
+                <nav>   
                     <ul class="navbar">
                         <li class="link"><a href="destinations.html" id="destinationsnav">Destinations</a></li>
                         <li class="link"><a href="top_spots.html" id="topspotsnav">Top Spots</a></li>
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span>
                 </nav>
             </header>
-    </div>
+</div>
     <h1>Login</h1>
 
     <form method="post">
