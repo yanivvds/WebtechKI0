@@ -28,8 +28,10 @@ $mysqli->close();
     <link rel="stylesheet" href="stylesheet.css"> 
 </head>
 <body>
+<div>
 <?php include 'navbar.php'; ?>
-    <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+</div>
+    <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: auto;">
         <div class="profile">
         <div class="container">
             <h1>User Profile</h1>
