@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </header>
 </div>
 
-    <div class="form-container center">
+    <div class="form-container" style="display: flex; justify-content: center; align-items: center;">
         <form method="post" class="form">
             <div class="title">Login</div>
 
