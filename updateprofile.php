@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $id = $_SESSION["user_id"];
     $firstName = $_POST["firstName"] ?? '';
     $lastName = $_POST["lastName"] ?? '';
-    $homeLocation = $_POST["homeLocation"] ?? '';
+    $city = $_POST["city"] ?? '';
     $phoneNumber = $_POST["phoneNumber"] ?? '';
     $birthday = $_POST["birthday"] ?? '';
 

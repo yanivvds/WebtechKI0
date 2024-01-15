@@ -46,8 +46,8 @@ $mysqli->close();
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" value="<?php echo $lastName; ?>"><br>
 
-            <label for="homeLocation">Home Location:</label>
-            <input type="text" id="homeLocation" name="homeLocation" value="<?php echo $homeLocation; ?>"><br>
+            <label for="city">Home Location:</label>
+            <input type="text" id="city" name="city" value="<?php echo $city; ?>"><br>
 
             <label for="phoneNumber">Phone Number:</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" value="<?php echo $phoneNumber; ?>"><br>
