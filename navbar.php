@@ -25,8 +25,13 @@ session_start();
                     <li class="link"><a href="destinations.php" id="destinationsnav">Destinations</a></li>
                     <li class="link"><a href="inspiration.php" id="topspotsnav">Inspiration</a></li>
                     <?php if(isset($_SESSION['user_id'])): ?>
-                        <li><a href="profile.php">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
-                        <li><a href="logout.php">Logout</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></a>
+                            <div class="dropdown-content">
+                                <a href="profile.php">Profile</a>
+                                <a href="logout.php">Logout</a>
+                            </div>
+                        </li>
                     <?php else: ?>
                         <li><a class="login" href="login.php" id="loginnav">Login</a></li>
                     <?php endif; ?>
