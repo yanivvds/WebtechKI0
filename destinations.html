@@ -2,42 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inspiration</title>
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
-    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/stylesheetsubpages.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZSGMBFN"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <div class="main">
-            <div class="navbar">
-                <a href="index.html"><img src="fotos/logomain.png" alt="Logomain"></a>                
-                <nav>
-                    <ul>
-                        <li class="link"><a href="destinations.html">Destinations</a></li>
-                        <li class="link"><a href="#">Reviews</a></li>
-                        <li class="link"><a href="#">Top Spots</a></li>
-                        <li class="link"><a href="#">Flights</a></li>
-                        <li>
-                            <div class="menu-btn" onclick="toggleMenu()">
-                                <img src="fotos/menu.png">
-                            </div>
-                            <div class="menu-container" id="menuContainer">
-                                <a href="destinations.html" class="linkpurple">Destinations</a>
-                                <a href="#" class="linkpurple">Reviews</a>
-                                <a href="#" class="linkpurple">Top Spots</a>
-                                <a href="#" class="linkpurple">Flights</a>
-                                <a href="#" class="linkpurple">Contact</a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="btn">Login </button>
-            </div>
-        </div>
-    
 </body>
 </html>
+<div id="myNav" class="overlay">
+    <div class="overlay-content">
+      <a href="inspiration.html">inspiration</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="#">Flights</a>
+      <a href="#">Contact</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+    </div>
+  </div>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="fotos/logomain.png" alt="Logomain"></a>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li class="link"><a href="destinations.html" id="destinationsnav">Destinations</a></li>
+                <li class="link"><a href="inspiration.html" id="topspotsnav">inspiration</a></li>
+                <li><a class="login" href="login.php" id="loginnav">Login</a></li>
+            </ul>
+            <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span>
+        </nav>
+    </header>
+
+    
