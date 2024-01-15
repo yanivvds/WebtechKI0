@@ -1,5 +1,7 @@
 <?php
 
+$message = "";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $mysqli = require __DIR__ . "/database.php";
@@ -11,9 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $mysqli->query($sql);
     
     $user = $result->fetch_assoc();
-
-    var_dump($user);
-    exit;
+    if ($user === null) {
+        $message = "Please create an account before logging in"; 
+    } else {
+        var_dump($user);
+        exit;
+    }
 }
 
 ?>
