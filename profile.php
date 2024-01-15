@@ -32,7 +32,7 @@ $mysqli->close();
 <?php include 'navbar.php'; ?>
 </div>
 <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: auto;">
-    <form action="updateprofile.php" method="POST" class="formlogin">
+    <form action="updateprofile.php" method="POST" class="formlogin" style="height; auto">
         <div class="title" style="font-size: 36px; color: #7d4471;">User Profile</div>
     
         <div class="input-container ic1">
@@ -42,33 +42,40 @@ $mysqli->close();
         </div>
 
         <div class="input-container ic2">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?php echo $email; ?>" disabled><br>
+            <input type="email" id="email" name="email" value="<?php echo $email; ?>" class="input" placeholder=" " disabled />
+            <div class="cut"></div>
+            <label for="email" class="placeholder">Email</label>
         </div>
 
+
         <div class="input-container ic1">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" value="<?php echo $firstName; ?>"><br>
+            <input type="text" id="firstName" name="firstName" value="<?php echo $firstName; ?>" class="input" placeholder=" " />
+            <div class="cut"></div>
+            <label for="firstName" class="placeholder">First Name</label>
         </div>
 
         <div class="input-container ic2">
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" value="<?php echo $lastName; ?>"><br>
+            <input type="text" id="lastName" name="lastName" value="<?php echo $lastName; ?>" class="input" placeholder=" " />
+            <div class="cut"></div>
+            <label for="lastName" class="placeholder">Last Name</label>
         </div>
         
         <div class="input-container ic1">
-            <label for="city">Home Location:</label>
-            <input type="text" id="city" name="city" value="<?php echo $city; ?>"><br>
-        </div>
+            <input type="text" id="city" name="city" value="<?php echo $city; ?>" class="input" placeholder=" " />
+            <div class="cut"></div>
+            <label for="city" class="placeholder">Home Location</label>
+        </div> 
 
         <div class="input-container ic2">
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" value="<?php echo $phoneNumber; ?>"><br>
+            <input type="tel" id="phoneNumber" name="phoneNumber" value="<?php echo $phoneNumber; ?>" class="input" placeholder=" " />
+            <div class="cut"></div>
+            <label for="phoneNumber" class="placeholder">Phone Number</label>
         </div>
 
         <div class="input-container ic1">
-            <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday" value="<?php echo $birthday; ?>"><br>
+            <input type="date" id="birthday" name="birthday" value="<?php echo $birthday; ?>" class="input" placeholder=" " />
+            <div class="cut"></div>
+            <label for="birthday" class="placeholder">Birthday</label>
         </div>
 
         <button type="submit" class="submit">Update Profile</button>
