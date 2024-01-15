@@ -8,7 +8,7 @@ if (!isset($_SESSION["username"])) {
 // Session info
 $username = htmlspecialchars($_SESSION["username"]);
 $email = htmlspecialchars($_SESSION["email"]);
-$firstName = htmlspecialchars($_SESSION["first_name"] ?? 'John'; 
+$last_name = $_POST["first_name"] ?? 'John'; 
 $last_name = $_POST["last_name"] ?? 'Doe'; 
 $home_location = $_POST["home_location"] ?? 'New York';
 $phone_number = $_POST["phone_number"] ?? '123456789';
