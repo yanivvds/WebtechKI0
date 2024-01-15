@@ -250,6 +250,31 @@ h5{
     padding: 10px;
   }
 
+/* Profile page */
+/* ------------ */
+.profile body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.profile .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.profile .profile-info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.profile .profile-info li {
+    margin-bottom: 10px;
+}
 
 /* Form styles */
 
