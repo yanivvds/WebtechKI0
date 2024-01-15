@@ -14,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($user) {
         if (password_verify($_POST["password"], $user["password"])) {
             $_SESSION['email'] = $user['email'];
+            header('Location: index.php');
+            exit();
         } else {
             echo "Incorrect password.";
         }
