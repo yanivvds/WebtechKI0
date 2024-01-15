@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KZSGMBFN');</script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Travel Insider</title>
+        <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
+        <link href="css/stylesheet.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZSGMBFN"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a href="top_spots.html">Top Spots</a>
+              <a href="destinations.html">Destinations</a>
+              <a href="#">Flights</a>
+              <a href="#">Contact</a>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              
+            </div>
+          </div>
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="fotos/logomain.png" alt="Logomain"></a>
+                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li class="link"><a href="destinations.html" id="destinationsnav">Destinations</a></li>
+                        <li class="link"><a href="top_spots.html" id="topspotsnav">Top Spots</a></li>
+                        <li><a class="login" href="login.php" id="loginnav">Login</a></li>
+                    </ul>
+                    <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span>
+                </nav>
+            </header>
+
+        <div class="row" style="justify-content: center;"> 
+            <div class="col" style="text-align: center;"> 
+                <!-- Login form starts here -->
+                <form action="login.php" method="post" style="max-width: 300px; margin: auto;"> 
+                    <h2>Login</h2>
+                    <p>
+                        <label for="username"> <h3> Username:  </h3> </label>
+                        <input type="text" id="username" name="username" class="login-input" required>
+                    </p>
+                    <p>
+                        <label for="password"> <h3> Password: </h3> </label>
+                        <input type="password" id="password" name="password" class="login-input" required>
+                    </p>
+                    <p>
+                        <button type="submit" class="btn" style="margin: 20px;">Login</button>
+                    </p>
+                </form>
+                <!-- Login form ends here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
