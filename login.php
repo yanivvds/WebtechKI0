@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $mysqli = require __DIR__ . "/database.php";
