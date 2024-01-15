@@ -215,6 +215,33 @@ h5{
     box-sizing: border-box; 
 }
 
+<<<<<<< HEAD
+
+/*Destinations page*/
+
+.body{
+	width: 100%;
+	text-align: center;
+}
+.heading{
+	width: 50%;
+	text-align: center;
+    z-index: 10;
+    margin-left: 30%;
+	color: #fff;
+    background-color: #f5168d;
+}
+.heading h2{
+	font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.heading p{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+=======
 .center {
     border: 5px solid;
     margin: auto;
@@ -359,6 +386,7 @@ h5{
     background-color: #06b;
   }
   
+>>>>>>> 81e5b7b5937d0da86fb76ef711f175db80497e3f
 /* halve screen settings 
 @media screen and (max-width: px) {
 /*
