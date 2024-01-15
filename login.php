@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <form method="post" class="formlogin">
         <?php if ($is_invalid): ?>
-            <em>Invalid login</em>
+            <em style="color: #840000;">Invalid login</em>
         <?php endif; ?>
             <div class="title">Login</div>
 
