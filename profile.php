@@ -9,14 +9,14 @@ include 'database.php';
 
 $id = $_SESSION["user_id"];
 
-$stmt = $conn->prepare("SELECT first_name, last_name, city, phone_number, birthday FROM users WHERE id = ?");
+$stmt = $mysqli->prepare("SELECT first_name, last_name, city, phone_number, birthday FROM users WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $stmt->bind_result($firstName, $lastName, $city, $phoneNumber, $birthday);
 $stmt->fetch();
 $stmt->close();
 
-$conn->close();
+$mysqli->close();
 ?>
 
 <!DOCTYPE html>
