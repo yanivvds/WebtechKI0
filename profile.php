@@ -5,14 +5,18 @@ if (!isset($_SESSION["username"])) {
     exit;
 }
 
-// Session info
-$username = htmlspecialchars($_SESSION["username"]);
-$email = htmlspecialchars($_SESSION["email"]);
-$last_name = $_POST["first_name"] ?? 'John'; 
-$last_name = $_POST["last_name"] ?? 'Doe'; 
-$home_location = $_POST["home_location"] ?? 'New York';
-$phone_number = $_POST["phone_number"] ?? '123456789';
-$birthday = $_POST["birthday"] ?? '01-01-2000';
+include 'database.php';
+
+$id = $_SESSION["user_id"];
+
+$stmt = $conn->prepare("SELECT first_name, last_name, city, phone_number, birthday FROM users WHERE id = ?");
+$stmt->bind_param("i", $userId);
+$stmt->execute();
+$stmt->bind_result($firstName, $lastName, $city, $phoneNumber, $birthday);
+$stmt->fetch();
+$stmt->close();
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
