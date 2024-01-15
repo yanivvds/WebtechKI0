@@ -13,7 +13,12 @@ $lastName = htmlspecialchars($_SESSION["last_name"]);
 $homeLocation = htmlspecialchars($_SESSION["home_location"]);
 $phoneNumber = htmlspecialchars($_SESSION["phone_number"]);
 $birthday = htmlspecialchars($_SESSION["birthday"]);
-$profilePicture = $_SESSION["profile_picture"]; 
+$profilePicture = $_SESSION["profile_picture"];
+$firstName = htmlspecialchars($_SESSION["first_name"] ?? 'John'; 
+$last_name = $_POST["last_name"] ?? 'Doe'; 
+$home_location = $_POST["home_location"] ?? 'New York';
+$phone_number = $_POST["phone_number"] ?? '123456789';
+$birthday = $_POST["birthday"] ?? '01-01-2000';
 ?>
 
 <!DOCTYPE html>
