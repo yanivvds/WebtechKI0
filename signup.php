@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 <body>
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.php'; ?>
 </div>
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <form action="signupscript.php" method="post" class="formsignup">

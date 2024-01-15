@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +22,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZSGMBFN"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.php'; ?>
 
         <div class="row">
             <div class="col" id="textfrontpage">

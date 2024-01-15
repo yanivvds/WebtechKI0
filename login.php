@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 <body>
-<?php include 'navbar.html'; ?>
+<?php include 'navbar.php'; ?>
 
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <form method="post" class="formlogin">
