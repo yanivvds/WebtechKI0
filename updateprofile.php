@@ -16,8 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     if ($stmt->execute()) {
-        echo "Profile updated successfully";
-
+        echo "<script>alert('Information updated successfully');</script>";
+        header("Location: homepage.php");
+        exit;
     } else {
         echo "Error: " . $stmt->error;
     }
