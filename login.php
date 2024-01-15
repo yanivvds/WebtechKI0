@@ -54,15 +54,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
     <h1>Login</h1>
 
-    <form method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+    <div class="form-container">
+        <form method="post" class="form">
+            <div class="title">Login</div>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
+            <div class="input-container ic1">
+                <input type="email" name="email" id="email" class="input" placeholder=" " required />
+                <div class="cut"></div>
+                <label for="email" class="placeholder">Email</label>
+            </div>
 
-        <button type="Login">Login</button>
-    </form>
+            <div class="input-container ic2">
+                <input type="password" name="password" id="password" class="input" placeholder=" " required />
+                <div class="cut"></div>
+                <label for="password" class="placeholder">Password</label>
+            </div>
+
+            <button type="submit" class="submit">Login</button>
+        </form>
+    </div>
+
 
     <p>Don't have an account? <a href="signup.html">Sign up</a></p>
 </body>
