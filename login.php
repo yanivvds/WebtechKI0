@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $result->fetch_assoc();
 
     if ($user) {
-        if (password_verify($_POST["password"], $user["password"])) {
+        if (password_verify($_POST["password_hash"], $user["password"])) {
             session_start();
             
             session_regenerate_id();
