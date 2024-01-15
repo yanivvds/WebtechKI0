@@ -390,17 +390,11 @@ h5{
 /* Dropdown Menu classes */
 /* --------------------- */
 .dropbtn {
-    background-color: #ffffff00;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #00000000;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -422,17 +416,13 @@ h5{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #370d7fba}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Change dropdown arrows to up/down arrows on hover */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
 /* halve screen settings 
 @media screen and (max-width: px) {
 /*

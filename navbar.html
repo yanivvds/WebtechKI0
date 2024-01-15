@@ -26,7 +26,7 @@ session_start();
                     <li class="link"><a href="inspiration.php" id="topspotsnav">Inspiration</a></li>
                     <?php if(isset($_SESSION['user_id'])): ?>
                         <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropbtn">Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></a>
+                            <a href="javascript:void(0)">Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></a>
                             <div class="dropdown-content">
                                 <a href="profile.php">Profile</a>
                                 <a href="logout.php">Logout</a>
