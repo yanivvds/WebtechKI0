@@ -51,9 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </nav>
             </header>
 </div>
-    <h1>Login</h1>
 
-    <div class="form-container">
+    <div class="form-container center">
         <form method="post" class="form">
             <div class="title">Login</div>
 
