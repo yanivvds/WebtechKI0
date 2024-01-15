@@ -19,29 +19,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZSGMBFN"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="myNav" class="overlay">
-        <div class="overlay-content">
-          <a href="inspiration.html">inspiration</a>
-          <a href="destinations.html">Destinations</a>
-          <a href="#">Flights</a>
-          <a href="#">Contact</a>
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          
-        </div>
-      </div>
-        <header class="header">
-            <div class="logo">
-                <a href="index.html"><img src="fotos/logomain.png" alt="Logomain"></a>
-            </div>
-            <nav>
-                <ul class="navbar">
-                    <li class="link"><a href="destinations.html" id="destinationsnav">Destinations</a></li>
-                    <li class="link"><a href="inspiration.html" id="topspotsnav">inspiration</a></li>
-                    <li><a class="login" href="login.php" id="loginnav">Login</a></li>
-                </ul>
-                <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span>
-            </nav>
-        </header>
+    <?php include 'navbar.html'; ?>
 
         <div class="row">
             <div class="col" id="textfrontpage">
