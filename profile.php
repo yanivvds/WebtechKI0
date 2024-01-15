@@ -34,7 +34,7 @@ $mysqli->close();
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: auto;">
         <div class="profile">
         <div class="container">
-            <h1>User Profile</h1>
+            <h1 style="font-size: 36px; color: #7d4471;">User Profile</h1>
             <form action="updateprofile.php" method="POST">
 
         <div class="input-container ic1">

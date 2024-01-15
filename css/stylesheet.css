@@ -260,12 +260,13 @@ h5{
     background-color: #f4f4f4;
 }
 .profile .container {
-    width: 80%;
+    width: 110%;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
 }
 .profile .profile-info {
     margin: 0;
