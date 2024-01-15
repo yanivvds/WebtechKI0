@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $birthday = $_POST["birthday"] ?? '';
 
 
-    $stmt = $conn->prepare("UPDATE users SET first_name = ?, last_name = ?, city = ?, phone_number = ?, birthday = ? WHERE id = ?");
+    $stmt = $mysqli->prepare("UPDATE users SET first_name = ?, last_name = ?, city = ?, phone_number = ?, birthday = ? WHERE id = ?");
     $stmt->bind_param("sssssi", $firstName, $lastName, $homeLocation, $phoneNumber, $birthday, $id);
 
 
@@ -25,5 +25,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->close();
 }
 
-$conn->close();
+$mysqli->close();
 ?>

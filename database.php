@@ -5,6 +5,7 @@ $username = "yanivs";
 $dbname = "travelinsider";
 $password = "bOEKjapQwwWbMWvHTKFsgVRXXqxqvRcd";
 
+
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
 if ($mysqli->connect_errno) {
