@@ -31,15 +31,14 @@ $mysqli->close();
 <div>
 <?php include 'navbar.php'; ?>
 </div>
-    <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: auto;">
-        <div class="profile">
-        <div class="container">
-            <h1 style="font-size: 36px; color: #7d4471;">User Profile</h1>
-            <form action="updateprofile.php" method="POST">
-
+<div class="form-container" style="display: flex; justify-content: center; align-items: center; height: auto;">
+    <form action="updateprofile.php" method="POST" class="formlogin">
+        <div class="title" style="font-size: 36px; color: #7d4471;">User Profile</div>
+    
         <div class="input-container ic1">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="<?php echo $username; ?>" disabled><br>
+            <input type="text" id="username" name="username" value="<?php echo $username; ?>" class="input" placeholder=" " disabled />
+            <div class="cut"></div>
+            <label for="username" class="placeholder">Username</label>
         </div>
 
         <div class="input-container ic2">
@@ -72,10 +71,8 @@ $mysqli->close();
             <input type="date" id="birthday" name="birthday" value="<?php echo $birthday; ?>"><br>
         </div>
 
-            <input type="submit" value="Update Profile">
+        <button type="submit" class="submit">Update Profile</button>
     </form> 
-            </div>
-        </div>
-    </div>
+</div>
 </body>
 </html>
