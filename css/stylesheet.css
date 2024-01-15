@@ -234,7 +234,7 @@ h5{
     height: 100vh;
   }
   
-.form-container .form {
+.form-container .formsignup {
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
@@ -242,7 +242,16 @@ h5{
     padding: 20px;
     width: 320px;
   }
-  
+
+.form-container .formlogin {
+   background-color: #15172b;
+   border-radius: 20px;
+   box-sizing: border-box;
+   height: 440px;
+   padding: 20px;
+   width: 320px;
+ }
+
  .form-container .title {
     color: #eee;
     font-family: sans-serif;

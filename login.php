@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <form method="post" class="form">
+        <form method="post" class="formlogin">
             <div class="title">Login</div>
 
             <div class="input-container ic1">
