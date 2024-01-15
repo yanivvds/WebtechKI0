@@ -1,9 +1,8 @@
 <?php
-
+error_reporting(E_ALL); ini_set('display_errors', 1);
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    var_dump($_POST);
     
     $mysqli = require __DIR__ . "/database.php";
     
