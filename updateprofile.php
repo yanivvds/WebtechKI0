@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($stmt->execute()) {
         echo "<script>alert('Information updated successfully');</script>";
-        header("Location: homepage.php");
+        header("Location: index.php");
         exit;
     } else {
         echo "Error: " . $stmt->error;
