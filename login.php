@@ -41,11 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 <?php include 'navbar.php'; ?>
-<?php if ($is_invalid): ?>
-        <em>Invalid login</em>
-    <?php endif; ?>
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <form method="post" class="formlogin">
+        <?php if ($is_invalid): ?>
+            <em>Invalid login</em>
+        <?php endif; ?>
             <div class="title">Login</div>
 
             <div class="input-container ic1">
