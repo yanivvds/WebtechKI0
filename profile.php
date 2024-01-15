@@ -33,7 +33,7 @@ $mysqli->close();
         
         <div class="container">
             <h1>User Profile</h1>
-            <form action="update_profile.php" method="POST">
+            <form action="updateprofile.php" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" value="<?php echo $username; ?>" disabled><br>
 
