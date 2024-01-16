@@ -38,7 +38,7 @@ header.scroll{
     width: 100%;
     height: auto;
     left: 6%;
-    bottom: 0rem;
+    bottom: -6px;
     text-transform: uppercase;
     font-size: 1.5rem;
     color:#000000; 
@@ -260,12 +260,13 @@ h5{
     background-color: #f4f4f4;
 }
 .profile .container {
-    width: 80%;
+    width: 110%;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
 }
 .profile .profile-info {
     margin: 0;
