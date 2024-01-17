@@ -4,7 +4,116 @@
     font-weight: 500;
     line-height: 1.5;
     box-sizing: border-box;
+    font-family: "Poppins";
 }
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
 html, body {
     height: 100%;
 }
@@ -47,6 +156,26 @@ header.scroll{
     text-transform: uppercase;
     font-size: 1.5rem;
     color: #fff;
+}
+.containertekst{
+    width:100%;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(82, 15, 225, 0.4);
+    height: 150px;
+    margin-top: 245px;
+}
+.containertekst h1{
+    color: #fff;
+    text-decoration: none;
+    font-size: 60px;
+}
+.containertekst p{
+     color: #fff;
+     text-decoration: none;
+     font-size: 20px;
 }
 
 nav{
@@ -215,3 +344,142 @@ nav span{
     grid-row-start: 6;
     grid-row-end: 9;
 }
+.imagediv{
+    background-image: url(../fotos/rahul-chakraborty-5aN2I852PTs-unsplash.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.imagediv2{
+    background-image: url(../fotos/joachim-lesne-ciNvnoptI20-unsplash.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.imagediv3{
+    background-image: url(../fotos/pema-lama-6cfK0SEtpbY-unsplash.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.imagediv4{
+    background-image: url(../fotos/trevor-gerzen-r_XS7sml57o-unsplash.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.imagediv5{
+    background-image: url(../fotos/fineas-anton-kC1-9Snr9hI-unsplash.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.imagediv6{
+    background-image: url(../fotos/wallpaperflare.com_wallpaper.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+h5, p{
+    color: #f1f1f1;
+    text-shadow: 0 0 5px #000;
+    text-decoration: none;
+}
+h5 {
+    font-size: 2em;
+    font-weight: 800;
+}
+p {
+    font-size: 1em;
+}
+a {
+    text-decoration: none;
+}
+.imagediv h5{
+    margin-bottom: 3.5rem;
+    text-shadow: #000000;
+    margin-left: 1rem;
+}
+.imagediv2 h5{
+    margin-bottom: 4rem;
+}
+.imagediv3 h5{
+    margin-bottom: 17rem;
+    text-shadow: 0 0 5px #000;
+    font-size: 2.5em;
+    margin-left: 1rem;
+}
+.imagediv4 h5{
+    margin-bottom: 6.5rem;
+    font-size: 1.9em;
+    margin-left: 0.1rem;
+}
+.imagediv5 h5{
+    margin-bottom: 9rem;
+    text-shadow: #000;
+    margin-left: 1rem;
+}
+.imagediv6 h5{
+    margin-bottom: 4em;
+    margin-left: 1rem;
+}
+.imagediv p,
+.imagediv2 p,
+.imagediv3 p,
+.imagediv4 p,
+.imagediv5 p,
+.imagediv6 p{
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+}
+.gallery__item:hover .imagediv p,
+.gallery__item:hover .imagediv2 p,
+.gallery__item:hover .imagediv3 p,
+.gallery__item:hover .imagediv4 p,
+.gallery__item:hover .imagediv5 p,
+.gallery__item:hover .imagediv6 p {
+    visibility: visible;
+}
+.gallery__item:hover, 
+.gallery__item:hover,
+.gallery__item:hover,
+.gallery__item:hover,
+.gallery__item:hover,
+.gallery__item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.gallery__item,
+.gallery__item,
+.gallery__item,
+.gallery__item,
+.gallery__item,
+.gallery__item{
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+    
