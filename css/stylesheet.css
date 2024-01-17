@@ -65,11 +65,12 @@ nav span{
 
 .navbar{
     list-style: none;
-    margin-top: 4px;
+    margin-bottom: 24px;
+
 }
 .navbar li{
     display: inline-block;
-    padding: 0px 60px;
+    padding: 0px 40px;
 }
 .navbar li a{
     transition: all0.3 ease 0s;
@@ -600,6 +601,6 @@ h5{
 
 @media screen and (max-width: 1400px) {
     .menu-btn{
-        margin-left: 22px;
+        /* margin-left: 22px; */
     }
 }

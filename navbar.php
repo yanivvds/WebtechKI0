@@ -18,7 +18,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </div>
         </div>
-        <header class="header">
+        <header class="header" style="background-color: rgb(91 65 116 / 57%);">
             <div class="logo">
                 <a href="index.php"><img src="fotos/logomain.png" alt="Logomain"></a>
             </div>
@@ -38,6 +38,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <?php else: ?>
                         <li><a class="login" href="login.php" id="loginnav">Login</a></li>
                     <?php endif; ?>
+                    <li> <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span></li>
                 </ul>
             </nav>
         </header>
