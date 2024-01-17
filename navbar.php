@@ -18,7 +18,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </div>
         </div>
-        <header class="header">
+        <header class="header" style="background-color: rgb(91 65 116 / 57%);">
             <div class="logo">
                 <a href="index.php"><img src="fotos/logomain.png" alt="Logomain"></a>
             </div>
