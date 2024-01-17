@@ -35,7 +35,7 @@ $mysqli->close();
     <form action="updateprofile.php" method="POST" class="formlogin" style="height: auto; margin: 90px; width: 32%;">
         <div class="title" style="font-size: 36px; color: #7d4471; text-align: center;">User Profile</div>
     
-        <div class="input-container ic1">
+        <div class="input-container ic1"    >
             <input type="text" id="username" name="username" value="<?php echo $username; ?>" class="input" placeholder=" " disabled />
             <div class="cut"></div>
             <label for="username" class="placeholder">Username</label>
