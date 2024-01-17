@@ -160,12 +160,10 @@ header.scroll{
 .containertekst{
     width:100%;
     align-items: center;
-    position: absolute;
     display: flex;
     flex-direction: column;
     background-color: rgba(82, 15, 225, 0.4);
     height: 150px;
-    margin-top: 245px;
 }
 .containertekst h1{
     color: #fff;
@@ -294,7 +292,8 @@ nav span{
     position: absolute;
     display: flex;
     justify-content: center;
-    margin-top: 25em;
+    margin-top: 5rem;
+    flex-direction: column;
 }
 .gallery {
     display: grid;
@@ -435,19 +434,18 @@ a {
 }
 .imagediv4 h5{
     margin-bottom: 6.5rem;
-    font-size: 1.9em;
-    margin-left: 0.1rem;
+    font-size: 1.6em;
+    margin-left: 3rem;
 }
 .imagediv5 h5{
     margin-bottom: 9rem;
     text-shadow: #000;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 .imagediv6 h5{
     margin-bottom: 4em;
     margin-left: 1rem;
 }
-.imagediv p,
 .imagediv2 p,
 .imagediv3 p,
 .imagediv4 p,
@@ -455,6 +453,16 @@ a {
 .imagediv6 p{
     visibility: hidden;
     transition: visibility 0.3s ease;
+}
+.imagediv p{
+    margin-left: 0.5rem;
+}
+.imagediv4 p{
+    margin-left: 1.6rem;
+}
+.imagediv5 p{
+    margin-left: 1.6rem;
+    font-size: 1.2rem;
 }
 .gallery__item:hover .imagediv p,
 .gallery__item:hover .imagediv2 p,

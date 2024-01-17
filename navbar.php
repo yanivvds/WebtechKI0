@@ -26,6 +26,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <ul class="navbar">
                     <li class="link"><a href="destinations.php" id="destinationsnav">Destinations</a></li>
                     <li class="link"><a href="inspiration.php" id="topspotsnav">Inspiration</a></li>
+                    <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff; margin-bottom: 5px" onclick="openNav()">&#9776;</span>
                     <?php if(isset($_SESSION['user_id'])): ?>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropbtn">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
@@ -38,7 +39,6 @@ if (session_status() == PHP_SESSION_NONE) {
                         <li><a class="login" href="login.php" id="loginnav">Login</a></li>
                     <?php endif; ?>
                 </ul>
-                <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span>
             </nav>
         </header>
     </body>
