@@ -59,6 +59,7 @@ nav .wrapper{
   opacity: 0;
   visibility: hidden;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  margin-top: -1.5%;
 }
 .nav-links li:hover .drop-menu,
 .nav-links li:hover .mega-box{
@@ -219,7 +220,7 @@ nav .wrapper{
     max-height: 0px;
     overflow: hidden;
     transition: all 0.3s ease;
-    margin-top: -3%;
+    margin-top: -1.5%;
   }
   .mega-box .content{
     box-shadow: none;
