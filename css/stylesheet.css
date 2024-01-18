@@ -12,7 +12,7 @@ body{
     background-position: center;
     box-sizing: border-box;
 }
-header{
+/* header{
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -99,7 +99,7 @@ nav span{
 .navbar li a:hover::after{
     width: 100%;
     transition: width 0.3s;
-}
+} */
 .btn{
     align-items: center;
     padding: 10px 20px;
@@ -426,7 +426,7 @@ h5{
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+/* .dropdown-content {
     display: none;
     position: absolute;
     background-color: #4c2268;
@@ -449,7 +449,7 @@ h5{
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 /* halve screen settings 
 @media screen and (max-width: px) {
@@ -596,4 +596,7 @@ h5{
         align-items: center;
     }
 }
+
+/* Navbar classes */
+/* -------------- */
 
