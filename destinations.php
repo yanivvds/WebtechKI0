@@ -12,6 +12,10 @@
 <div>
 <?php require_once("navbar.php"); ?>
 </div>
+<div class="title">
+    <h1> Destinations </h1>
+    <p>Click on the pins to see the destinations</p>
+</div>
 <div class="world-map">
     <img src="/wereld/wereld.png" alt="wereldkaart" />
     <div class="pin guatemala">
