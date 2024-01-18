@@ -748,13 +748,14 @@ h5{
 .world-map .title{
     text-align: center;
     color: #fff;
-    margin: 2em 0;
+    margin:rgb(234, 240, 128) 1em;
     padding: 0 1em;
 }
 .world-map .title p{
     max-width: 500px;
     margin: 1rem auto;
     line-height: 27px;
+    color: orange;
 }
 .world-map .pin{
     background: #4362f8;
