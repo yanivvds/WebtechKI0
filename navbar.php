@@ -70,11 +70,7 @@
                             <a href="logout.php">Logout</a>
                         </div>
                     </li>
-                <?php else: ?>
-                    <li><a class="login" href="login.php" id="loginnav">Login</a></li>
-                <?php endif; ?>
-                    <li> <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span></li>
-            </div>
+                </div>
           </div>
           </li>
           <?php if(isset($_SESSION['user_id'])): ?>
@@ -87,8 +83,6 @@
             </li>
         <?php else: ?>
             <li><a class="login" href="login.php" id="loginnav">Login</a></li>
-        <?php endif; ?>
-        <li> <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span></li>>
     </ul>
     <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
   </div>
