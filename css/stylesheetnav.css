@@ -140,9 +140,6 @@ nav .wrapper{
     .wrapper .btn {
         display: block;
     }
-    .wrapper .logo a {
-        background-image: url('/fotos/berg.png');
-    }
 }
   .wrapper .nav-links{
     position: fixed;
