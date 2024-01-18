@@ -176,60 +176,6 @@ header.scroll{
      font-size: 20px;
 }
 
-nav{
-    position: relative;
-    display: inline-flex;
-    left: 650px;
-    bottom: 0rem;
-    width: auto;
-    margin-top: 35px;
-}
-nav span{
-    margin-left: 85px;
-    margin-bottom: 20px;
-    background: none;
-    padding: 3px;
-    border: 0;
-    outline: 0;
-    border-radius: 5%;
-    cursor: pointer;
-}
-
-.navbar{
-    list-style: none;
-    margin-top: 20px;
-}
-.navbar li{
-    display: inline-block;
-    padding: 0px 60px;
-}
-.navbar li a{
-    transition: all0.3 ease 0s;
-    color: #fff;
-    font-family:"Helvetica, monospace, Arial, sans-serif";
-    text-transform: uppercase;
-    text-decoration: none;
-}
-.navbar li a:hover{
-    text-decoration: none;
-    color: gray;
-    font-family:"Helvetica, monospace, Arial, sans-serif";
-    text-transform: uppercase;
-    
-}
-.navbar li a::after{
-    content:'';
-    display: block;
-    width:0;
-    height: 1px;
-    background: #000000;
-    transition: width 0.3s;
-    
-}
-.navbar li a:hover::after{
-    width: 100%;
-    transition: width 0.3s;
-}
 .btn{
     align-items: center;
     padding: 10px 20px;
