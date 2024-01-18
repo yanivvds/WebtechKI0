@@ -28,8 +28,9 @@
         </li>
         <li>
           <a href="#" class="desktop-item">Planner</a>
-          <input type="checkbox" id="showMega">
-          {display: none;}
+          <input type="checkbox" id="showMega">{
+          display: none;
+          }
           <label for="showMega" class="mobile-item">Other</label>
           <div class="mega-box">
             <div class="content">
