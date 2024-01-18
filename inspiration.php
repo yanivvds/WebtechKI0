@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inspiration</title>
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
-    <link href="css/stylesheetsubpages.css" rel="stylesheet">
+    <!-- <link href="css/stylesheetsubpages.css" rel="stylesheet"> -->
     <link href="css/stylesheet.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
