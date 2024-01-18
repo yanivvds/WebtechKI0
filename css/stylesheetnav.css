@@ -29,6 +29,7 @@ nav .wrapper{
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
+  background-image: url('/fotos/logomain.png');
 }
 .wrapper .nav-links{
   display: inline-flex;
