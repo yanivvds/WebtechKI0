@@ -9,7 +9,7 @@
 <body>
   <nav>
     <div class="wrapper">
-      <div class="logo"><img href="index.php" alt="Logomain" style="margin-top: 20px;"></div>
+      <div class="logo"><a href="index.php"><img src="/fotos/logomain.png" alt="Logomain" style="margin-top: 20px;"></a></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
