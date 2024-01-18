@@ -147,7 +147,7 @@ nav .wrapper{
     max-width: 350px;
     top: 0;
     left: -100%;
-    background: #242526;
+    background: #421A66;
     display: block;
     padding: 50px 10px;
     line-height: 50px;
@@ -203,7 +203,7 @@ nav .wrapper{
     transition: all 0.3s ease;
   }
   .nav-links .mobile-item:hover{
-    background: #3A3B3C;
+    background: #421A66;
   }
   .drop-menu li{
     margin: 0;
@@ -230,7 +230,7 @@ nav .wrapper{
   .mega-box .content .rownav{
     width: 100%;
     margin-bottom: 15px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(66,26,102);
   }
   .mega-box .content .rownav:nth-child(1),
   .mega-box .content .rownav:nth-child(2){
