@@ -45,14 +45,14 @@ nav .wrapper{
   transition: all 0.3s ease;
 }
 .nav-links li a:hover{
-  background: #3A3B3C;
+  background: #362232;
 }
 .nav-links .mobile-item{
   display: none;
 }
 .nav-links .drop-menu{
   position: absolute;
-  background: #401471bf;
+  background: #3f1471;
   width: 180px;
   line-height: 45px;
   top: 85px;
@@ -79,6 +79,7 @@ nav .wrapper{
   position: absolute;
   left: 0;
   width: 100%;
+  background: #3f1471;
   padding: 0 30px;
   top: 85px;
   opacity: 0;
@@ -203,7 +204,7 @@ nav .wrapper{
     transition: all 0.3s ease;
   }
   .nav-links .mobile-item:hover{
-    background: #421A66;
+    background: #30243b;
   }
   .drop-menu li{
     margin: 0;
