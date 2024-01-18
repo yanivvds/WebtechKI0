@@ -135,12 +135,12 @@ nav .wrapper{
   right: 30px;
   top: 10px;
 }
-
+/* 
 @media screen and (max-width: 970px) {
     .wrapper .btn {
         display: block;
     }
-}
+} */
   .wrapper .nav-links{
     position: fixed;
     height: 100vh;
@@ -256,7 +256,6 @@ nav .wrapper{
   .content .row header{
     font-size: 19px;
   }
-}
 nav input{
   display: none;
 }
