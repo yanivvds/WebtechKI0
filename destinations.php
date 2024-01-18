@@ -8,6 +8,8 @@
     <link href="css/stylesheetsubpages.css" rel="stylesheet">
 </head>
 <body>
-<?php require_once("navbar.php"); ?>
+    <div>
+    <?php require_once("navbar.php"); ?>
+    </div>
 </body>
 </html>
