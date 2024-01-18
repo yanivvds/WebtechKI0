@@ -42,6 +42,9 @@
     <div class="pin belize">
         <span>Belize</span>
     </div>
+    <div class="pin iceland">
+        <span>Iceland</span>
+    </div>
 
 </body>
 </html>

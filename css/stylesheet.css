@@ -808,6 +808,10 @@ h5{
     top: 54%;
     left: 23%;
 }
+.iceland{
+    top: 30%;
+    left: 41.7%;
+}
 @keyframes pulse {
     100% {
         opacity: 0;
