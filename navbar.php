@@ -76,11 +76,11 @@
                     <li> <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span></li>
             </div>
           </div>
-        </li>
-        <li><a href="contact.php">Contact</a></li>
-      </ul>
-      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-    </div>
-  </nav>
+          </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
 </body>
 </html>
