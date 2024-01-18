@@ -7,7 +7,7 @@
   <link href='/css/stylesheetnav.css' rel='stylesheet'>
 </head>
 <body>
-  <nav class="overlay">
+  <nav>
     <div class="wrapper">
       <div class="logo"><img href="index.php" src="/fotos/logomain.png" alt="Logomain" style="margin-top: 20px;"></div>
       <input type="radio" name="slider" id="menu-btn">
