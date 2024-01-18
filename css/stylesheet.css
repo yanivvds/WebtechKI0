@@ -771,45 +771,45 @@ h5{
     position: absolute;
     left: 1.5rem;
     top: 50%;
-    transform: translateY(-300%);
+    transform: translateY(-100%);
     background: #e0b287;
     border-radius: 3em;
     padding: 0.3em 0.6em;
 }
 .guatemala{
-    top: 55.2%;
+    top: 58.2%;
     left: 22.1%;
 }
 .costa-rica{
-    top: 57%;
+    top: 60%;
     left: 24%;
 }
 .australia{
-    top: 69%;
+    top: 72%;
     left: 83%;
 }
 .italy{
-    top: 44%;
+    top: 47%;
     left: 50%;
 }
 .portugal{
-    top: 46%;
+    top: 49%;
     left: 44.5%;
 }
 .norway{
-    top: 32%;
+    top: 35%;
     left: 49%;
 }
 .usa{
-    top: 46%;
+    top: 49%;
     left: 18%;
 }
 .belize{
-    top: 54%;
+    top: 57%;
     left: 23%;
 }
 .iceland{
-    top: 30%;
+    top: 33%;
     left: 41.7%;
 }
 @keyframes pulse {
