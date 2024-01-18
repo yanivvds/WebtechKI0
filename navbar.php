@@ -66,12 +66,14 @@
           </div> 
         </li> 
         <?php if(isset($_SESSION['user_id'])): ?>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
-            <div class="dropdown-content">
+          <li>
+            <a href="javascript:void(0)" class="desktop-item">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+            <ul class="drop-menu">
               <a href="profile.php">Profile</a>
               <a href="logout.php">Logout</a>
-            </div>
+        </ul>
           </li>
         <?php else: ?>
           <li><a class="login" href="login.php" id="loginnav">Login</a></li>
