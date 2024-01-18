@@ -22,7 +22,7 @@ body{
 }
 .fotodiv1 h1{
     font-size: 6rem;
-    margin-bottom: 13rem;
+    margin-bottom: 15rem;
 }
 .fotodiv1 p{
     font-size: 1.5rem;
@@ -30,7 +30,7 @@ body{
     margin-top: 7rem;
 }
 .golfpagina1{
-    background-color: #fff;
+    background-color: #f2e6d9;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,8 @@ body{
     
 }
 .golfpagina1 h4{
-    margin-bottom: 36rem;
+    margin-bottom: 35rem;
+    color: #986e45;
     font-family: "Poppins";
     font-size: 2rem;
     position: relative;
@@ -72,6 +73,7 @@ body{
     font-family: "poppins";
     margin-top: 0vh;
     text-shadow: #999;
+    margin-left: 2rem;
 }
 
 .col{
@@ -117,6 +119,38 @@ h5{
     text-shadow: 0 0 5px #000;
     font-size: 20px;
     color: #fff;
+}
+.golfpagina2{
+    background-color: #fff;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:37rem;
+    z-index: 8;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-shadow: #999;
+    position: absolute;
+    border-radius: 30% 30% 30% 30%;
+    margin-top: -11rem;
+    
+}
+.exploreknop{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    background-color: #986e45;
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 20rem;
+    border: none;
+}
+.exploreknop:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* Font*/
