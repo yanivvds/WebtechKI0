@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
     
 </head>
-<body style="background: white;>
+<body style="background: white;">
 <div>
 <?php require_once("navbar.php"); ?>
 </div>

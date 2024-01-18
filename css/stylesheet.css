@@ -728,6 +728,7 @@ h5{
 }
 .world-map *{
     box-sizing: border-box;
+    width: 100%;
 }
 
 .world-map{
