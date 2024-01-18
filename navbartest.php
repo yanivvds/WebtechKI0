@@ -33,7 +33,7 @@
           <div class="mega-box">
             <div class="content">
               <div class="row">
-                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
+                <img src="/fotos/sunsetsurf.jpg" alt="">
               </div>
               <div class="row">
                 <header>Flights</header>
@@ -62,17 +62,17 @@
                   <li><a href="#">Experience reviews</a></li>
                 </ul>
               </div>
-                    <?php if(isset($_SESSION['user_id'])): ?>
-                        <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropbtn">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
-                            <div class="dropdown-content">
-                                <a href="profile.php">Profile</a>
-                                <a href="logout.php">Logout</a>
-                            </div>
-                        </li>
-                    <?php else: ?>
-                        <li><a class="login" href="login.php" id="loginnav">Login</a></li>
-                    <?php endif; ?>
+                <?php if(isset($_SESSION['user_id'])): ?>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+                        <div class="dropdown-content">
+                            <a href="profile.php">Profile</a>
+                            <a href="logout.php">Logout</a>
+                        </div>
+                    </li>
+                <?php else: ?>
+                    <li><a class="login" href="login.php" id="loginnav">Login</a></li>
+                <?php endif; ?>
                     <li> <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span></li>
             </div>
           </div>
