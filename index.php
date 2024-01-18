@@ -51,5 +51,7 @@ session_start();
                 </div>
         </div>
     <script src="/javascript/script1.js"></script>
+    <?php require_once("footer.php"); ?>
+
 </body>
 </html>
