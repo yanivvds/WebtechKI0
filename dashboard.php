@@ -9,6 +9,9 @@
 </head>
 <body>
     <?php include 'navbar.php'; ?>
+    <div style="row">
+        <h1> Destinations </h1>
+    </div>
 </body>
 </html>
 
