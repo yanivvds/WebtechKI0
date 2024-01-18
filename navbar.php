@@ -79,7 +79,7 @@
           <li><a class="login" href="login.php" id="loginnav">Login</a></li>
         <?php endif; ?>
       </ul>
-      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      <label for="menu-btn" class="btn menu-btn"></label>
     </div> 
   </nav>
 </body>
