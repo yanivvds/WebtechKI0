@@ -9,7 +9,7 @@
 <body>
   <nav>
     <div class="wrapper">
-      <div class="logo"><img href="index.php" src="/fotos/logomain.png" alt="Logomain" style="margin-top: 20px;"></div>
+    <div class="logo"><a href="index.php">Logo</a></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
@@ -54,7 +54,7 @@
                 </ul>
               </div>
               <div class="row">
-                <header>Expiriences</header>
+                <header>Experiences</header>
                 <ul class="mega-links">
                   <li><a href="#">Experience finder</a></li>
                   <li><a href="#">Saved experiences</a></li>
@@ -62,25 +62,25 @@
                   <li><a href="#">Experience reviews</a></li>
                 </ul>
               </div>
-                <?php if(isset($_SESSION['user_id'])): ?>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
-                        <div class="dropdown-content">
-                            <a href="profile.php">Profile</a>
-                            <a href="logout.php">Logout</a>
-                        </div>
-                    </li>
-                <?php else: ?>
-                    <li><a class="login" href="login.php" id="loginnav">Login</a></li>
-                <?php endif; ?>
-                    <li> <span id="menubtn" style="font-size:40px;cursor:pointer; color: #fff;" onclick="openNav()">&#9776;</span></li>
             </div>
-          </div>
+          </div> 
+        </li> 
+        <?php if(isset($_SESSION['user_id'])): ?>
+          <li>
+            <a href="javascript:void(0)" class="desktop-item">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Profile</label>
+            <ul class="drop-menu">
+              <a href="profile.php">Profile</a>
+              <a href="logout.php">Logout</a>
+        </ul>
           </li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-  </div>
-</nav>
+        <?php else: ?>
+          <li><a class="login" href="login.php" id="loginnav">Login</a></li>
+        <?php endif; ?>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"></label>
+    </div> 
+  </nav>
 </body>
 </html>

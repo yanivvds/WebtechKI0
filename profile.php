@@ -25,11 +25,11 @@ $mysqli->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link rel="stylesheet" href="stylesheet.css"> 
+    <link rel="stylesheet" href="/css/stylesheet.css"> 
 </head>
 <body>
 <div>
-<?php include 'navbar.php'; ?>
+<?php require_once("navbar.php"); ?>
 </div>
 <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: auto;">
     <form action="updateprofile.php" method="POST" class="formlogin" style="height: auto; margin: 90px; width: 32%;">
