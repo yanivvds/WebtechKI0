@@ -137,6 +137,8 @@ nav .wrapper{
 @media screen and (max-width: 970px) {
   .wrapper .btn{
     display: block;
+
+
   }
   .wrapper .nav-links{
     position: fixed;
@@ -257,3 +259,10 @@ nav .wrapper{
 nav input{
   display: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        }
+    }
