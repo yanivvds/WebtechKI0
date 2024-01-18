@@ -19,7 +19,7 @@
 <div class="world-map">
     <img src="/wereld/wereld.png" alt="wereldkaart" />
     <div class="pin guatemala">
-        <span>Guatemala</span>
+        <span style="left: -7.5rem;">Guatemala</span>
     </div>
     <div class="pin costa-rica">
         <span>Costa Rica</span>
@@ -31,7 +31,7 @@
         <span>Italy</span>
     </div>
     <div class="pin portugal">
-        <span>Portugal</span>
+        <span style="left: -6rem;">Portugal</span>
     </div>
     <div class="pin norway">
         <span>Norway</span>
