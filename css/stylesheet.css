@@ -718,3 +718,115 @@ h5{
 .footer_main:hover{
     transform: scale(1.02);
 }
+
+/* Destinations page */
+/* ----------------- */
+.world-map body{
+    margin: 0;
+    font-family: sans-serif;
+    background: rgb(242, 234, 220);
+}
+.world-map *{
+    box-sizing: border-box;
+}
+
+.world-map{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+}
+
+.world-map .image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.world-map .title{
+    text-align: center;
+    color: #fff;
+    margin: 2em 0;
+    padding: 0 1em;
+}
+.world-map .title p{
+    max-width: 500px;
+    margin: 1rem auto;
+    line-height: 27px;
+}
+.world-map .pin{
+    background: #4362f8;
+    position: absolute;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+}
+.world-map .pin::before{
+    content: '';
+    position: absolute;
+    background: #4362f8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: pulse 1.3s ease-in-out infinite;
+}
+.world-map .pin span{
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border-radius: 3em;
+    padding: 0.3em 0.6em;
+}
+.guatemala{
+    top: 50%;
+    left: 50%;
+}
+.costa-rica{
+    top: 40%;
+    left: 50%;
+}
+.australia{
+    top: 30%;
+    left: 50%;
+}
+.italy{
+    top: 20%;
+    left: 50%;
+}
+.portugal{
+    top: 10%;
+    left: 50%;
+}
+.norway{
+    top: 60%;
+    left: 50%;
+}
+.usa{
+    top: 70%;
+    left: 50%;
+}
+.belize{
+    top: 80%;
+    left: 50%;
+}
+@keyframes pulse {
+    100% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(2.5);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .world-map{
+        font-size: 13px;
+    }
+}
