@@ -23,13 +23,11 @@ nav .wrapper{
   align-items: center;
   justify-content: space-between;
 }
-
 .wrapper .logo a{
   color: #f2f2f2;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
-  background-image: url('/fotos/logomain.png');
 }
 .wrapper .nav-links{
   display: inline-flex;
@@ -135,12 +133,11 @@ nav .wrapper{
   right: 30px;
   top: 10px;
 }
-/* 
+
 @media screen and (max-width: 970px) {
-    .wrapper .btn {
-        display: block;
-    }
-} */
+  .wrapper .btn{
+    display: block;
+  }
   .wrapper .nav-links{
     position: fixed;
     height: 100vh;
@@ -256,6 +253,7 @@ nav .wrapper{
   .content .row header{
     font-size: 19px;
   }
+}
 nav input{
   display: none;
 }
