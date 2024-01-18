@@ -43,7 +43,7 @@
         <span>Belize</span>
     </div>
     <div class="pin iceland">
-        <span>Iceland</span>
+        <span style="left: -5.5rem">Iceland</span>
     </div>
 
 </body>
