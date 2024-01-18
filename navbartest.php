@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>navbar</title>
-  <link href='stylesheetnav.css' rel='stylesheet'>
+  <link href='/css/stylesheetnav.css' rel='stylesheet'>
 </head>
 <body>
   <nav>
