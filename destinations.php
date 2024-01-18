@@ -6,6 +6,7 @@
     <title>Destinations</title>
     <link rel="stylesheet" href="/css/stylesheet.css"> 
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
+    
 </head>
 <body>
 <div>
