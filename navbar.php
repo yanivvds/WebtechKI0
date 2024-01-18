@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>navbar</title>
-  <link href='/css/stylesheetnav.css' rel='stylesheet'>
+  <link href='stylesheet.css' rel='stylesheet'>
 </head>
 <body>
   <nav>
     <div class="wrapper">
-    <div class="logo"><a href="#">Logo</a></div>
+      <div class="logo"><img src="fotos/logomain.png" alt="Logomain" style="margin-top: 20px;"></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="index.php">Home</a></li>
         <li><a href="inspiration.php">Inspiration</a></li>
         <li>
           <a href="destinations.php" class="desktop-item">Destinations</a>
@@ -27,13 +28,13 @@
           </ul>
         </li>
         <li>
-          <a href="#" class="desktop-item">Planner</a>
+          <a href="#" class="desktop-item">Other</a>
           <input type="checkbox" id="showMega">
           <label for="showMega" class="mobile-item">Other</label>
           <div class="mega-box">
             <div class="content">
               <div class="row">
-                <img src="/fotos/sunsetsurf.jpg" alt="">
+                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
               </div>
               <div class="row">
                 <header>Flights</header>
@@ -54,7 +55,7 @@
                 </ul>
               </div>
               <div class="row">
-                <header>Experiences</header>
+                <header>Expiriences</header>
                 <ul class="mega-links">
                   <li><a href="#">Experience finder</a></li>
                   <li><a href="#">Saved experiences</a></li>
@@ -63,24 +64,12 @@
                 </ul>
               </div>
             </div>
-          </div> 
-        </li> 
-        <?php if(isset($_SESSION['user_id'])): ?>
-          <li>
-            <a href="javascript:void(0)" class="desktop-item">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
-            <input type="checkbox" id="showDrop">
-            <label for="showDrop" class="mobile-item">Profile</label>
-            <ul class="drop-menu">
-              <a href="profile.php">Profile</a>
-              <a href="logout.php">Logout</a>
-        </ul>
-          </li>
-        <?php else: ?>
-          <li><a class="login" href="login.php" id="loginnav">Login</a></li>
-        <?php endif; ?>
+          </div>
+        </li>
+        <li><a href="contact.php">Profiel</a></li>
       </ul>
-      <label for="menu-btn" class="btn menu-btn"></label>
-    </div> 
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
   </nav>
 </body>
 </html>
