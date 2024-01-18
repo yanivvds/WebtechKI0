@@ -1,0 +1,229 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fotodiv1{
+    background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/eugene-zhyvchik-kvP6b4aSxjI-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 52rem;
+    font-family: "Poppins";
+    color: #fff;
+    text-shadow: 0.6px 0.6px rgba(255, 255, 255, 0.383);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+}
+.fotodiv1 h1{
+    font-size: 6rem;
+    margin-bottom: 13rem;
+}
+.fotodiv1 p{
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: 7rem;
+}
+.golfpagina1{
+    background-color: #fff;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:37rem;
+    z-index: 1;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-shadow: #999;
+    position: absolute;
+    margin-top: -11rem;
+    border-radius: 30% 30% 30% 30%;
+    
+}
+.golfpagina1 h4{
+    margin-bottom: 36rem;
+    font-family: "Poppins";
+    font-size: 2rem;
+    position: relative;
+}
+
+.test{
+    padding: 300px;
+    background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
+    margin-top: 15rem;
+    background-size: cover;
+}
+.test h3{
+    color: #fff;
+    font-size: 4rem;
+    font-family: "poppins";
+    margin-bottom: 4rem;
+    text-shadow: #999;
+}
+.test p{
+    color: #fff;
+    font-size: 2rem;
+    font-family: "poppins";
+    margin-top: 0vh;
+    text-shadow: #999;
+}
+
+.col{
+    display: flex;
+    position: absolute;
+}
+.card{
+    width: 280px;
+    height: 310px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(../fotos/mexico.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+
+}
+.card1{
+    background-image: url(../fotos/mexico.jpg);
+}
+.card2{
+    background-image: url(../fotos/massimiliano-donghi-JXsxH2shRgY-unsplash.jpg);
+}
+.card3{
+    background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
+}
+.card4{
+    background-image: url(../fotos/charles-postiaux-WOw3Pcdmw4I-unsplash.jpg);
+}
+.card:hover{
+    transform: translatey(-10px);
+}
+h5{
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.card p{
+    text-shadow: 0 0 5px #000;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Font*/
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
