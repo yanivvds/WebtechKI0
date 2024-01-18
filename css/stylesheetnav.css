@@ -141,7 +141,8 @@ nav .wrapper{
     display: block;
     .wrapper .logo a {
         background-image: url('/fotos/berg.png');
-  }
+    }
+}
   .wrapper .nav-links{
     position: fixed;
     height: 100vh;
