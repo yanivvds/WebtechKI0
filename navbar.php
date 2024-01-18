@@ -33,7 +33,7 @@
           <div class="mega-box">
             <div class="content">
               <div class="row">
-                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
+                <img src="/fotos/sunsetsurf.jpg" alt="">
               </div>
               <div class="row">
                 <header>Flights</header>
