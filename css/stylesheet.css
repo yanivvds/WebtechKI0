@@ -747,7 +747,7 @@ h5{
 }
 
 .world-map .pin{
-    background: #b0702f;
+    background: #E0B287;
     position: absolute;
     width: 0.7rem;
     height: 0.7rem;
@@ -756,7 +756,7 @@ h5{
 .world-map .pin::before{
     content: '';
     position: absolute;
-    background: #b0702f;
+    background: #E0B287;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
