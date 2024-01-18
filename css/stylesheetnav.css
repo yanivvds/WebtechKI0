@@ -219,6 +219,7 @@ nav .wrapper{
     max-height: 0px;
     overflow: hidden;
     transition: all 0.3s ease;
+    margin-top: -3%;
   }
   .mega-box .content{
     box-shadow: none;
