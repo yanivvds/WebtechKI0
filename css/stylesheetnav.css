@@ -83,6 +83,7 @@ nav .wrapper{
   top: 85px;
   opacity: 0;
   visibility: hidden;
+  margin-top: -1.5%;
 }
 .mega-box .content{
   background: #242526;
@@ -220,7 +221,6 @@ nav .wrapper{
     max-height: 0px;
     overflow: hidden;
     transition: all 0.3s ease;
-    margin-top: -1.5%;
   }
   .mega-box .content{
     box-shadow: none;
