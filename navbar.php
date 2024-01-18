@@ -9,7 +9,7 @@
 <body>
   <nav>
     <div class="wrapper">
-    <div class="logo"><a href="index.php">Logo</a></div>
+    <div class="logo"><a href="index.php"><img src="/fotos/logomain.png" alt="Logo tit"></a></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
@@ -32,10 +32,10 @@
           <label for="showMega" class="mobile-item">Other</label>
           <div class="mega-box">
             <div class="content">
-              <div class="row">
+              <div class="rownav">
                 <img src="/fotos/sunsetsurf.jpg" alt="">
               </div>
-              <div class="row">
+              <div class="rownav">
                 <header>Flights</header>
                 <ul class="mega-links">
                   <li><a href="#">Flight finder</a></li>
@@ -44,7 +44,7 @@
                   <li><a href="#">Airline comparisons</a></li>
                 </ul>
               </div>
-              <div class="row">
+              <div class="rownav">
                 <header>Hotels</header>
                 <ul class="mega-links">
                   <li><a href="#">Hotel finder</a></li>
@@ -53,7 +53,7 @@
                   <li><a href="#">Hotel reviews</a></li>
                 </ul>
               </div>
-              <div class="row">
+              <div class="rownav">
                 <header>Experiences</header>
                 <ul class="mega-links">
                   <li><a href="#">Experience finder</a></li>
