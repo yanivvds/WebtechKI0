@@ -9,7 +9,7 @@
 <body>
   <nav>
     <div class="wrapper">
-      <div class="logo"><img href="index.php" alt="Logomain" style="margin-top: 20px;"></div>
+      <div class="logo"><img href="index.php" src="/fotos/logomain.png" alt="Logomain" style="margin-top: 20px;"></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
@@ -69,7 +69,7 @@
           <li>
             <a href="javascript:void(0)" class="desktop-item">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
             <input type="checkbox" id="showDrop">
-            <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+            <label for="showDrop" class="mobile-item">Profile</label>
             <ul class="drop-menu">
               <a href="profile.php">Profile</a>
               <a href="logout.php">Logout</a>
