@@ -374,7 +374,7 @@ a {
 .imagediv4 p,
 .imagediv5 p,
 .imagediv6 p{
-    visibility: hidden;
+    visibility:hidden;
     transition: visibility 0.3s ease;
 }
 .imagediv p{
@@ -395,21 +395,13 @@ a {
 .gallery__item:hover .imagediv6 p {
     visibility: visible;
 }
-.gallery__item:hover, 
-.gallery__item:hover,
-.gallery__item:hover,
-.gallery__item:hover,
-.gallery__item:hover,
+
 .gallery__item:hover{
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     background: rgba(255, 255, 255, 0.3)
 }
-.gallery__item,
-.gallery__item,
-.gallery__item,
-.gallery__item,
-.gallery__item,
+
 .gallery__item{
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
