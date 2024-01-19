@@ -18,7 +18,7 @@
         <li>
           <a href="destinations.php" class="desktop-item">Destinations</a>
           <input type="checkbox" id="showDrop">
-          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+          <label for="showDrop" class="mobile-item">Destinations</label>
           <ul class="drop-menu">
             <li><a href="#">Central America</a></li>
             <li><a href="#">Europe</a></li>
@@ -79,7 +79,7 @@
           <li><a class="login" href="login.php" id="loginnav">Login</a></li>
         <?php endif; ?>
       </ul>
-      <label for="menu-btn" class="btn menu-btn"></label>
+      <label for="menu-btn" class="btn menu-btn" style="background-color: #986e46;"></label>
     </div> 
   </nav>
 </body>
