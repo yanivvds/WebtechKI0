@@ -46,6 +46,16 @@ body{
     border-radius: 30% 30% 30% 30%;
     
 }
+
+.golfpagina1 h3{
+    color: #986e45;
+    font-size: 2rem;
+    font-family: "poppins";
+    position: relative;
+    margin-top: -7rem;
+    margin-left: -42rem;   
+}
+
 .golfpagina1 h4{
     margin-bottom: 35rem;
     color: #986e45;
@@ -368,7 +378,7 @@ h5{
 }
 
 .imagediv--1 h5{
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
     margin-left: 1rem;
     color: #fff;
 }
