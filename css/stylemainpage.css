@@ -157,7 +157,7 @@ h5{
     margin-left: -42rem;
 
 }
-.exploreknop{
+/* .exploreknop{
     padding-left: 3rem;
     padding-right: 3rem;
     height: 3rem;
@@ -171,6 +171,42 @@ h5{
 .exploreknop:hover{
     cursor: pointer;
     transform: scale(1.1);
+} */
+
+.button-24 {
+  background: #BD612F;
+  border: 1px solid #BD612F;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
 }
 
 /* Font*/

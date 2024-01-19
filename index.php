@@ -42,7 +42,8 @@ session_start();
     <div class="test">
         <h3>Enchanting Cappadocia</h3>
         <p>Where Magic Awakens Beneath the Rocks</p>
-        <button class="exploreknop">Explore</button>
+        <button class="button24">Explore</button>
+        
     </div>
     <div class="golfpagina2">
         <div class="gallery">
