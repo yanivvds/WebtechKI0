@@ -155,49 +155,22 @@ h5{
     position: relative;
     margin-top: -7rem;
     margin-left: -42rem;
-}
-/* Buttons */
-button {
-  --c:  #BD612F; 
-  box-shadow: 0 0 0 .1em inset var(--c); 
-  --_g: linear-gradient(var(--c) 0 0) no-repeat;
-  background: 
-    var(--_g) calc(var(--_p,0%) - 100%) 0%,
-    var(--_g) calc(200% - var(--_p,0%)) 0%,
-    var(--_g) calc(var(--_p,0%) - 100%) 100%,
-    var(--_g) calc(200% - var(--_p,0%)) 100%;
-  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
-  outline-offset: .1em;
-  transition: background-size .4s, background-position 0s .4s;
-}
-button:hover {
-  --_p: 100%;
-  transition: background-position .4s, background-size 0s;
-}
-button:active {
-  box-shadow: 0 0 9e9q inset #0009; 
-  background-color: var(--c);
-  color: #fff;
-}
 
-
-
-.button2 body {
-  height: 100vh;
-  margin: 0;
-  display: grid;
-  place-content: center;
-  grid-auto-flow: column;
-  gap: 40px;
-  background: #F2DCA2;
 }
-button {
-  font-family: system-ui, sans-serif;
-  font-size: 3.5rem;
-  cursor: pointer;
-  padding: .1em .6em;
-  font-weight: bold;  
-  border: none;
+.exploreknop{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    background-color: #986e45;
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 19.5rem;
+    border: none;
+}
+.exploreknop:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* Font*/
@@ -471,3 +444,4 @@ button {
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+    
