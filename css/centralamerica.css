@@ -5,13 +5,13 @@ html{
 
 body{
     margin: 0;
-    
-
+    background-color: #f2e6d9;
+    font-family: 'Poppins', sans-serif
 }
 .Background-fixed {
     background-attachment: fixed;
     background-position: center;
-    width: 100vw; /* Verander 'width' naar '100vw' voor 100% van de viewport breedte */
+    width: 100vw;
     margin: 0;
 }
 
@@ -31,63 +31,274 @@ body{
 }
 
 .TextBackground {
-    background-color: rgba(245, 22, 141, 0.50);
+    background-color: #f2e6d9bd;
     font-size: larger;
     padding: 2%;
     color: white;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
 }
 
-.pics .beachleft {
-    width: 25vw;
-    float: left;
-    margin-left: 16vw;
-    margin-top: 10vh;
-    border-radius: 3%;
+.ca-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(3, 35vw); 
+    gap: 10px; 
+    padding: 20px;
 }
 
-.pics .tikal {
-    width: 10vw;
-    float: right;
-
-    border-radius: 3%;
-}
-
-.capage .maintext h1{
-    float: right;
-    margin-left: 0;
-    margin-right: 20vw;
-    margin-top: 10vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 3vw;
-}
-
-.capage .maintext p{
-    float: right;
-    margin-right: 10vw;
-    margin-top: 1vh;
-    margin-bottom: 4.2vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1vw;
-}
-
-.capage .secondtext h1 {
-    float: left;
-    margin-top: 8vh;    
-    margin-right: 0;
-    margin-left: 18vw;   
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5vw;   
+.grid-pic1{
     text-align: center;
+    padding: 20px;
+    grid-area: 1 / 1 / 2 / 3;
 }
-.capage .secondtext ol{
-    float: left;        
-    max-width: 50vw;    
-    margin-top: 1vh;    
-    margin-right: 7vw;  
-    margin-left: 2vw;   
-    font-family: 'Poppins', sans-serif;
-    font-size: 1vw;
+
+.beachleft {
+    width: 24vw;
+    margin-left: 10vw;
+    border-radius: 3%;
+}
+
+.grid-text1 {
+    color: black;
     text-align: left;
+    padding: 20px;
+    grid-area: 1 / 3 / 2 / 5;
+    margin-left: 3vw;
+    font-size: 1vw;
+}
+
+.grid-text2 {
+    color: black;
+    text-align: left;
+    padding: 20px;
+    grid-area: 2 / 1 / 3 / 3;
+    margin-left: 2.5vw;
+    font-size: 1vw;
+}
+
+.grid-text2 h1 {
+    margin-left: 3vw;
+}
+
+.grid-pic2 {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    grid-area: 2 / 3 / 3 / 5;
+}
+
+.picture-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(6, 11vh); 
+    gap: 10px; 
+    padding: 20px;
+}
+
+.picture-pic1 {
+    background-image: url(../fotos/tikal.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 1 / 1 / 3 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic1::before {
+    content: "Tikal, Guatamala";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+
+.picture-pic1:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic2 {
+    background-image: url(../fotos/arenal-volcano.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 2 / 2 / 4 / 3;
+    border-radius: 15px;
+}
+
+.picture-pic2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic2::before {
+    content: "Arenal Volcano, Costa Rica";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic2:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic3 {
+    background-image: url(../fotos/caye-caulker.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 3 / 1 / 5 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic3::before {
+    content: "Caye Caulker, Belize";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic3:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic4 {
+    background-image: url(../fotos/antigua.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 4 / 2 / 6 / 3;
+    border-radius: 15px;
+}
+
+.picture-pic4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic4::before {
+    content: "Antigua, Guatemala";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic4:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic5 {
+    background-image: url(../fotos/manuel.jpg);
+    background-size: cover;
+    background-position: 0;
+    color: #fff;
+    text-align: center;
+    grid-area: 5 / 1 / 7 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic5::before {
+    content: "Manuel Antonio National Park, Costa Rica";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic5:hover::before {
+    opacity: 1; 
+}
+
+.grid-item {
+    margin: 0;
+    background: #ff0000;
+}
+
+.card {
+    margin-left: 3vw;
+    margin-top: 10vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    width: 20vw;
+    border-radius: 3%;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+  
+.tempel{
+    border-radius: 3% 3% 0 0;
+}
+  
+.container {
+    padding: 2px 16px;
 }
