@@ -53,7 +53,8 @@ body{
     font-family: "poppins";
     position: relative;
     margin-top: -7rem;
-    margin-left: -42rem;   
+    margin-left: -42rem;
+
 }
 
 .golfpagina1 h4{
@@ -65,7 +66,7 @@ body{
 }
 
 .test{
-    padding: 300px;
+    padding: 16% 23%;
     background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
     margin-top: 15rem;
     background-size: cover;
