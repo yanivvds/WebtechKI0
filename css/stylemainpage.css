@@ -381,7 +381,10 @@ h5{
     margin-bottom: 3rem;
 }
 .imagediv--1 h5,
-.imagediv--2 h5,
+.imagediv--2 h5{
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+}
 .imagediv--3 h5,
 .imagediv--4 h5{
     text-decoration: none !important;

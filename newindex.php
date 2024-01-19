@@ -18,7 +18,7 @@ session_start();
         <p>Discover a world of travel possibilities, where every page unfolds new <br>adventures and valuable insights</p>
     </div>
     <div class="golfpagina1">
-        <h4>Explore</h4>
+        <h3 style="margin-top:-27rem;">Explore</h3>
     <div class="col">
         <div class="card card1">
             <h5>Central America</h5>
@@ -46,7 +46,7 @@ session_start();
     </div>
     <div class="golfpagina2">
         <div class="gallery">
-            <h3>Take the road</h3>
+            <h3 style="margin-top: -5rem">Take the road</h3>
             <div class="gallery__item gallery__item--1">
                 <a href="#">
                     <div class="imagediv--1">
