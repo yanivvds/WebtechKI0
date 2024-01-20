@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-        <li><a href="inspiration.php">Inspiration</a></li>
+        <li><a href="/inspiration.php">Inspiration</a></li>
         <li>
           <a href="destinations.php" class="desktop-item">Destinations</a>
           <input type="checkbox" id="showDrop">
@@ -69,7 +69,8 @@ if (session_status() == PHP_SESSION_NONE) {
               </div>
             </div>
           </div> 
-        </li> 
+        </li>
+        <li><a href="/about.php">About</a></li>
         <?php if(isset($_SESSION['user_id'])): ?>
           <li>
             <a href="javascript:void(0)" class="desktop-item">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
