@@ -48,14 +48,14 @@
                     diam tortor faucibus lorem, in porta nibh ipsum at eros. Sed arcu quam, ultrices sed consequat vel,
                     gravida quis leo. Sed ac imperdiet est, quis aliquet lectus.
                 </p>
-                <img src="../fotos/over-ons.jpg" alt="over ons afbeelding" />
+                <img src="../fotos/over-ons.webp" alt="over ons afbeelding" />
             </div>
             <div class="our-team">
                 <h3>Our travel team</h3>
                 <div class="members">
                     <div class="member">
                         <div class=>
-                            <img src="../fotos/yaniv.jpg" alt="">
+                            <img src="../fotos/yaniv.webp" alt="">
                             <h4>Yaniv van der Stigchel</h4>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
@@ -64,7 +64,7 @@
                     </div>
                     <div class="member">
                         <div>
-                            <img src="../fotos/thierry.jpg" alt="">
+                            <img src="../fotos/thierry.webp" alt="">
                             <h4>Thierry Schneider</h4>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
@@ -73,7 +73,7 @@
                     </div>
                     <div class="member">
                         <div>
-                            <img src="../fotos/jev.jpg" alt="">
+                            <img src="../fotos/jev.webp" alt="">
                             <h4>Jev Kroon</h4>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
@@ -82,7 +82,7 @@
                     </div>
                     <div class="member">
                         <div>
-                            <img src="../fotos/aimee.jpg" alt="">
+                            <img src="../fotos/aimee.webp" alt="">
                             <h4>Aimée Oijevaar</h4>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
@@ -91,7 +91,7 @@
                     </div>
                     <div class="member">
                         <div>
-                            <img src="../fotos/jens.jpg" alt="">
+                            <img src="../fotos/jens.webp" alt="">
                             <h4>Jens Breusers</h4>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
