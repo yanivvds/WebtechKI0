@@ -20,7 +20,7 @@
           <input type="checkbox" id="showDrop">
           <label for="showDrop" class="mobile-item">Destinations</label>
           <ul class="drop-menu">
-            <li><a href="#">Central America</a></li>
+            <li><a href="/centralamerica.php">Central America</a></li>
             <li><a href="#">Europe</a></li>
             <li><a href="#">Oceania</a></li>
             <li><a href="#">Asia</a></li>
