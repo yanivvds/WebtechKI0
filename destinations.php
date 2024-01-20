@@ -13,8 +13,8 @@
 <?php require_once("navbar.php"); ?>
 </div>
 <div class="title">
-    <h1 style="text-align: center; color: #ffffff; margin: 0em 1em; padding: 0 1em; font-size: 49px;"> Destinations </h1>
-    <p style="max-width: 500px; margin: 1rem auto; line-height: 27px; color: orange;">Click on the pins to see the destinations</p>
+    <h1 style="text-align: center; color: #f2e5d8; margin: 0em 1em; padding: 0 1em; font-size: 49px;"> Destinations </h1>
+    <p style="max-width: 500px; margin: 1rem auto; line-height: 27px; color: #e0b287; text-align: center;">Click on the pins to see the destinations</p>
 </div>
 <div class="world-map">
     <img src="/wereld/wereld.png" alt="wereldkaart" />
