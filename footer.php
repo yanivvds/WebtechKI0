@@ -26,7 +26,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <!--Waves Container-->
 <div>
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"> 
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     <defs>
     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
     </defs>
@@ -40,10 +40,6 @@ if (session_status() == PHP_SESSION_NONE) {
     </div>
     <div class="nieuwe_footer_box">
         <div class="box_van_contact_info">
-            <div class="footer_images">
-                <img src="/fotos/sdg.jpg" alt="foto 1">
-                <img src="/fotos/uva.jpg" alt="foto 2">
-            </div>
             <table class="footer_tabel">
                 <tr>
                   <th><a href="index.php"><img class="footer_main" src="fotos/logomain.png" alt="Logomain"></a></th>
@@ -51,7 +47,6 @@ if (session_status() == PHP_SESSION_NONE) {
                 </tr>
                 <tr>
                     <td><a href="#">FAQ</a></td>
-                    <td> <img src="fotos/sdg.png" alt="sdg"></td>
                     <td><a class="footer_icon" href="https://www.instagram.com/travel_insinder_tips?igsh=dzNvMDVjcjRqMjY3&utm_source=qr"><img src="fotos/instagram_icon.png" alt="insta"></a></td>
                 </tr>
                 <tr>
