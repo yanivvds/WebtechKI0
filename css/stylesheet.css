@@ -710,9 +710,11 @@ h5{
 }
 
 .footer_main{
-    background-color: black;
     border-radius: 10px;
+    border-color: #986e43;
+    border-style: double;
     transition: transform 0.4s;
+    max-width: 20%;
 }
 
 .footer_main:hover{

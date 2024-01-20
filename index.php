@@ -82,8 +82,8 @@ session_start();
             </div>
         </div>
     </div>
-    <div style="flex: 1;">
-    <?php require_once("footer.php"); ?>
+    <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
+        <?php require_once("footer.php"); ?>
     </div>
 <script src="/javascript/script1.js"></script>
 </body>
