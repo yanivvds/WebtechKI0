@@ -47,6 +47,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 </tr>
                 <tr>
                     <td><a href="#">FAQ</a></td>
+                    <td> <img src="fotos/sdg.png" alt="sdg"></td>
                     <td><a class="footer_icon" href="https://www.instagram.com/travel_insinder_tips?igsh=dzNvMDVjcjRqMjY3&utm_source=qr"><img src="fotos/instagram_icon.png" alt="insta"></a></td>
                 </tr>
                 <tr>
