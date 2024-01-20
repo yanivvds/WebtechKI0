@@ -720,6 +720,16 @@ h5{
 .footer_main:hover{
     transform: scale(1.02);
 }
+.footer_images {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.footer_images img {
+    margin: 0 10px; 
+    width: auto; 
+    height: 100px;
+}
 
 /* Destinations page */
 /* ----------------- */
