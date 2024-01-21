@@ -23,7 +23,7 @@
         <div class="gallery">
             <div class="gallery__item gallery__item--1">
                 <a href="#">
-                    <div class="imagediv">
+                    <div class="imagediv--1">
                         <h5>Amalfi Coast</h5>
                         <p class="hide1">Cliffside villages, azure sea, and culinary delights.</p>
                     </div>
@@ -31,7 +31,7 @@
             </div>
             <div class="gallery__item gallery__item--2">
                 <a href="#">
-                    <div class="imagediv2">
+                    <div class="imagediv--2">
                         <h5>European underdogs</h5>
                         <p>Discover budget-friendly charm in Eastern European delights</p>
                     </div>
@@ -39,7 +39,7 @@
             </div>
             <div class="gallery__item gallery__item--3">
                 <a href="#">
-                    <div class="imagediv3" alt="Image 3">
+                    <div class="imagediv--3">
                         <h5>Tokyo Beyond the Bright Lights</h5>
                         <p>Beneath Tokyo's dazzling skyline lies a world of hidden wonders. Embark on a journey beyond the neon glow, where historic temples whisper tales and culinary delights paint a vibrant portrait. Curiosity beckons, click to unveil Tokyo's best-kept secrets!</p>
                     </div>
@@ -47,7 +47,7 @@
             </div>
             <div class="gallery__item gallery__item--4">
                 <a href="#">
-                    <div class="imagediv4">
+                    <div class="imagediv--4">
                         <h5>Surfing Odyssey: Where Waves Meet Wonder</h5>
                         <p>Explore the World's Best Surf Spots! From Bali's barrels to California's breaks, discover the allure of each coastal gem. Immerse in local vibes, savor seaside delights, and ride the waves of pure serenity. Ready for a surf adventure? Click to chase waves and coastal charm!"</p>
                     </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="gallery__item gallery__item--5">
                 <a href="#">
-                    <div class="imagediv5">
+                    <div class="imagediv--5">
                         <h5>Savoring Italy's Culinary Delights</h5>
                         <p>Savor Italy's Culinary Symphony: Pasta, Pizza, Truffles, Gelato, and Regional Wines. A Gastronomic Journey</p>
                     </div>
@@ -63,14 +63,118 @@
             </div>
             <div class="gallery__item gallery__item--6">
                 <a href="#">
-                    <div class="imagediv6" alt="Image 6">
+                    <div class="imagediv--6">
                         <h5>Mystical Mexico</h5>
                         <p>Experience the Kaleidoscope of Mexico: Savory Culinary Feasts, Sun-Kissed Beaches, Ancient Temples, and Rich History Unfold in Every Corner</p>
                     </div>
                     </a>
             </div>
         </div>
+        <div class="title2">
+            <h2>Trending Articles</h2>
+            <p>Follow the newest travel trends and ideas</p>
+        </div>
         <!-- Hier komt de carousel-->
+        <div class="containercarousel">
+            <div class="carousel">
+                <input type="radio" name="slides" checked="checked" id="slide-1">
+                <input type="radio" name="slides" id="slide-2">
+                <input type="radio" name="slides" id="slide-3">
+                <input type="radio" name="slides" id="slide-4">
+                <input type="radio" name="slides" id="slide-5">
+                <input type="radio" name="slides" id="slide-6">
+                <ul class="carousel__slides">
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <a href="#"><img src="https://picsum.photos/id/1041/800/450" alt=""></a>
+                            </div>
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Tim Marshall</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <a href="#"><img src="https://picsum.photos/id/1043/800/450" alt=""></a>
+                            </div>
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Christian Joudrey</span>                            
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <a href=""><img src="https://picsum.photos/id/1044/800/450" alt=""></a>
+                            </div>
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Steve Carter</span>                            
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                               <a href=""><img src="https://picsum.photos/id/1045/800/450" alt=""></a>
+                            </div>
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Aleksandra Boguslawska</span>                            
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <a href=""><img src="https://picsum.photos/id/1049/800/450" alt=""></a>
+                            </div>
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Rosan Harmens</span>                            
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <a href=""><img src="https://picsum.photos/id/1052/800/450" alt=""></a>
+                            </div>
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Annie Spratt</span>                            
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>    
+                <ul class="carousel__thumbnails">
+                    <li>
+                        <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
+                    </li>
+                    <li>
+                        <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
+                    </li>
+                    <li>
+                        <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
+                    </li>
+                    <li>
+                        <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
+                    </li>
+                    <li>
+                        <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
+                    </li>
+                    <li>
+                        <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+        <!--end-->
     </div>
     <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
         <?php require_once("footer.php"); ?>
