@@ -1,7 +1,7 @@
 <?php
 include('flightapi.php');
 
-
+$userID = $_SESSION["user_id"];
 // Initialize cURL session
 $ch = curl_init();
 
@@ -30,10 +30,8 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $offer) {
         echo "<div class='flight-offer'>";
 
-        // Display price information
         echo "<h2>Price: " . $offer['price']['total'] . " " . $offer['price']['currency'] . "</h2>";
 
-        // Display itinerary information
         foreach ($offer['itineraries'] as $itinerary) {
             echo "<div class='itinerary'>";
             echo "<p>Duration: " . $itinerary['duration'] . "</p>";
@@ -47,7 +45,10 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             echo "</div>"; // .itinerary
         }
 
-        echo "</div>"; // .flight-offer
+       
+        echo "<button class='save-button' onclick='saveFlight(" . $offer['id'] . ", " . $userID . ")'>Save</button>";
+
+        echo "</div>"; 
     }
 } else {
     echo "<p>No flight offers found.</p>";
@@ -58,15 +59,50 @@ echo "<style>
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
+    position: relative; /* Add this to position the Save button */
 }
+
 .itinerary {
     margin-top: 10px;
     padding: 5px;
     background-color: #f9f9f9;
 }
+
 .segment {
     padding: 5px;
     border-top: 1px solid #eee;
 }
+
+.save-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
 </style>";
 ?>
+<script>
+function saveFlight(flightID, userID) {
+    $.ajax({
+        url: '/flights/save_flight.php', 
+        type: 'POST',
+        data: { flightID: flightID, userID: userID },
+        dataType: 'json',
+        success: function(response) {
+            if (response.success) {
+                alert('Flight saved successfully!');
+            } else {
+                alert('Error saving flight.');
+            }
+        }
+    });
+}
+</script>
