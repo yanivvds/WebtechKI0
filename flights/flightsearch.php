@@ -7,12 +7,19 @@ $ch = curl_init();
 
 $origin = $_POST['origin'] ?? 'NYC';
 $destination = $_POST['destination'] ?? 'MAD';
-$departureDate = $_POST['departureDate'] ?? date('Y-m-d', strtotime('+1 day'));
-$returnDate = $_POST['returnDate'] ?? date('Y-m-d', strtotime('+8 day'));
+
+// Change to the format that the API expects
+$departureDateInput = $_POST['departureDate'] ?? date('Y-m-d', strtotime('+1 day'));
+$departureDate = DateTime::createFromFormat('Y-m-d', $departureDateInput)->format('d-m-Y');
+
+$returnDateInput = $_POST['returnDate'] ?? date('Y-m-d', strtotime('+8 day'));
+$returnDate = DateTime::createFromFormat('Y-m-d', $returnDateInput)->format('d-m-Y');
+
 $adults = $_POST['adults'] ?? 1;
 
+
 // Set cURL options
-curl_setopt($ch, CURLOPT_URL, 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=NYC&destinationLocationCode=MAD&departureDate=2024-02-20&adults=1');
+curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=$origin&destinationLocationCode=$destination&departureDate=$departureDate&returnDate=$returnDate&adults=$adults&nonStop=false&max=50");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Authorization: Bearer ' . $access_token,
     'Content-Type: application/x-www-form-urlencoded'
