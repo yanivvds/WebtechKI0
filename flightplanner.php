@@ -46,7 +46,6 @@
 document.getElementById('origin').addEventListener('input', function() {
     var query = this.value;
     
-    
     $.ajax({
         url: '/airport_city_search.php',
         type: 'POST',
@@ -71,10 +70,12 @@ document.getElementById('origin').addEventListener('input', function() {
                     return false;
                 }
             });
+        }
+    });
+});
 
 document.getElementById('destination').addEventListener('input', function() {
     var query = this.value;
-    
     
     $.ajax({
         url: '/airport_city_search.php',
@@ -84,7 +85,6 @@ document.getElementById('destination').addEventListener('input', function() {
         success: function(response) {
             $('#destination').autocomplete({
                 source: response.map(item => {
-                    // Extract the IATA code from the detailed name
                     const parts = item.detailedName.split(':');
                     if (parts.length > 1) {
                         return {
