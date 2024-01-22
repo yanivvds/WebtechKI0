@@ -6,11 +6,11 @@
 <title>Flight Search</title>
 <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
-<body>
-<div class="form-container">
+<body style="height: 100vh;">
+<div class="form-container" style="margin: 5%;text-align: -webkit-center;">
   <div class="formsignup">
     <div class="title">Flight Search</div>
-    <form action="flightapi.php" method="post">
+    <form action="/flights/flightapi.php" method="post">
         <div class="input-container ic1">
             <input id="origin" class="input" type="text" placeholder=" " name="origin" required/>
             <div class="cut"></div>
