@@ -1,5 +1,5 @@
 <?php
-include('flightapi.php');
+include('/flights/flightapi.php');
 
 $query = $_POST['search_query'] ?? '';
 
