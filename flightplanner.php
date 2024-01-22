@@ -71,7 +71,7 @@ document.getElementById('destination').addEventListener('input', function() {
         data: { search_query: query },
         dataType: 'json',
         success: function(response) {
-            $('#origin').autocomplete({
+            $('#destination').autocomplete({
                 source: response,
                 minLength: 2, 
             });
