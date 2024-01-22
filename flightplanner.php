@@ -43,67 +43,43 @@
   </div>
 </div>
 <script>
-document.getElementById('origin').addEventListener('input', function() {
-    var query = this.value;
-    
-    $.ajax({
-        url: '/airport_city_search.php',
-        type: 'POST',
-        data: { search_query: query },
-        dataType: 'json',
-        success: function(response) {
-            $('#origin').autocomplete({
-                source: response.map(item => {
-                    const parts = item.detailedName.split(':');
-                    if (parts.length > 1) {
-                        return {
-                            label: item.detailedName,
-                            value: parts[1].trim(), 
-                        };
+$(document).ready(function() {
+    function setupAutocomplete(selector) {
+        $(selector).autocomplete({
+            minLength: 2,
+            source: function(request, response) {
+                $.ajax({
+                    url: '/airport_city_search.php',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        search_query: request.term
+                    },
+                    success: function(data) {
+                        response($.map(data, function(item) {
+                            return {
+                                label: item.detailedName + ' (' + item.iataCode + ')',
+                                value: item.iataCode 
+                            };
+                        }));
                     }
-                    return item.detailedName;
-                }),
-                minLength: 2, 
-                select: function(event, ui) {
-                    $('#origin').val(ui.item.label);
-                    $('#originIataCode').val(ui.item.value);
-                    return false;
-                }
-            });
-        }
-    });
-});
+                });
+            },
+            select: function(event, ui) {
+                event.preventDefault(); // To prevent the default behavior
+                $(this).val(ui.item.value); 
+            }
+        }).autocomplete("instance")._renderItem = function(ul, item) {
+            return $("<li>")
+                .append("<div>" + item.label + "</div>") // Label
+                .appendTo(ul);
+        };
+    }
 
-document.getElementById('destination').addEventListener('input', function() {
-    var query = this.value;
-    
-    $.ajax({
-        url: '/airport_city_search.php',
-        type: 'POST',
-        data: { search_query: query },
-        dataType: 'json',
-        success: function(response) {
-            $('#destination').autocomplete({
-                source: response.map(item => {
-                    const parts = item.detailedName.split(':');
-                    if (parts.length > 1) {
-                        return {
-                            label: item.detailedName,
-                            value: parts[1].trim(),
-                        };
-                    }
-                    return item.detailedName;
-                }),
-                minLength: 2, 
-                select: function(event, ui) {
-                    $('#destination').val(ui.item.label);
-                    $('#destinationIataCode').val(ui.item.value);
-                    return false;
-                }
-            });
-        }
-    });
+    setupAutocomplete('#origin');
+    setupAutocomplete('#destination');
 });
 </script>
+
 </body>
 </html>
