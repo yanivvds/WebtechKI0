@@ -40,5 +40,42 @@
     </form>
   </div>
 </div>
+<script>
+document.getElementById('origin').addEventListener('input', function() {
+    var query = this.value;
+    
+    
+    $.ajax({
+        url: '/airport_city_search.php',
+        type: 'POST',
+        data: { search_query: query },
+        dataType: 'json',
+        success: function(response) {
+            $('#origin').autocomplete({
+                source: response,
+                minLength: 2, 
+            });
+        }
+    });
+});
+
+document.getElementById('destination').addEventListener('input', function() {
+    var query = this.value;
+    
+    
+    $.ajax({
+        url: '/airport_city_search.php',
+        type: 'POST',
+        data: { search_query: query },
+        dataType: 'json',
+        success: function(response) {
+            $('#origin').autocomplete({
+                source: response,
+                minLength: 2, 
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
