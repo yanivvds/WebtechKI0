@@ -27,10 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['email'] = $user['email'];
             
             header("Location: index.php");
+            setcookie('id', $user["id"], time() + 86400 * 2);
+            setcookie('loggedin','yes', time() + 86400 * 2);
             exit;
         } 
     }
     $is_invalid = true;
+    setcookie('loggedin','no', time() + 86400 * 2);
 }
 
 ?>
