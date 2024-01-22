@@ -14,7 +14,7 @@
 <body>
     <?php require_once("navbar.php"); ?>
     <div class="container">
-        <div class="containertekst">
+        <div class="containertekst" style="margin-bottom: 2%; margin-top: -6.5%;">
             <h1>Travel Blog</h1>
             <p>Find inspiration for your next trip in this blog</p>
         </div>
@@ -68,7 +68,7 @@
                     </a>
             </div>
         </div>
-        <div class="title2">
+        <div class="title2" style="margin-top: 2%; margin-bottom: 2%;">
             <h2>Trending Articles</h2>
             <p>Follow the newest travel trends and ideas</p>
         </div>
