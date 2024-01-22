@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 include('flightapi.php');
 
 
@@ -12,8 +10,11 @@ $destination = $_POST['destination'] ?? 'MAD';
 $departureDate = $_POST['departureDate'] ?? date('Y-m-d', strtotime('+1 day'));
 $returnDate = $_POST['returnDate'] ?? date('Y-m-d', strtotime('+8 day'));
 
+// Debugging
+$url = "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=$origin&destinationLocationCode=$destination&departureDate=$departureDate&returnDate=$returnDate&adults=1";
+echo "URL being requested: $url<br>";
 // Set cURL options
-curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=$origin&destinationLocationCode=$destination&departureDate=$departureDate&returnDate=$returnDate&adults=1");
+curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=$origin&destinationLocationCode=$destination&departureDate=$departureDate&adults=1");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Authorization: Bearer ' . $access_token,
     'Content-Type: application/x-www-form-urlencoded'
@@ -22,19 +23,10 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Execute cURL session and get the response
 $response = curl_exec($ch);
-if ($response === false) {
-    $error_msg = curl_error($ch);
-    echo "cURL error: $error_msg"; 
-}
 $responseArray = json_decode($response, true);  
 
 curl_close($ch);
-if (!$responseArray || !isset($responseArray['data'])) {
-    echo "<p>Invalid API response</p>";
-    echo "<pre>";
-    var_dump($response); // Dump the raw response to debug
-    echo "</pre>";
-    exit;
+
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $offer) {
         echo "<div class='flight-offer'>";
