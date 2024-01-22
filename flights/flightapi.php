@@ -1,5 +1,5 @@
 <?php
-include '/flights/config.php';
+include('config.php');
 
 $client_id = $config['client_id'];
 $client_secret = $config['client_secret'];
