@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(rgba(248, 135, 14, 0.35), rgba(82, 15, 225, 0.6)), url(../fotos/ballon.jpg);
+    background-image: linear-gradient(rgb(141 58 58 / 41%), rgb(219 199 182 / 57%)), url(../fotos/ballon.jpg);
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
