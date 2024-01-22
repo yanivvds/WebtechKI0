@@ -15,10 +15,52 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Execute cURL session and get the response
 $response = curl_exec($ch);
-$response = json_decode($response, true);  
+$responseArray = json_decode($response, true);  
 
 curl_close($ch);
 
-// Print the response
-print_r($response);  
+if (isset($responseArray['data']) && is_array($responseArray['data'])) {
+    foreach ($responseArray['data'] as $offer) {
+        echo "<div class='flight-offer'>";
+
+        // Display price information
+        echo "<h2>Price: " . $offer['price']['total'] . " " . $offer['price']['currency'] . "</h2>";
+
+        // Display itinerary information
+        foreach ($offer['itineraries'] as $itinerary) {
+            echo "<div class='itinerary'>";
+            echo "<p>Duration: " . $itinerary['duration'] . "</p>";
+            foreach ($itinerary['segments'] as $segment) {
+                echo "<div class='segment'>";
+                echo "<p>From: " . $segment['departure']['iataCode'] . " at " . $segment['departure']['at'] . "</p>";
+                echo "<p>To: " . $segment['arrival']['iataCode'] . " at " . $segment['arrival']['at'] . "</p>";
+                echo "<p>Airline: " . $segment['carrierCode'] . " Flight Number: " . $segment['number'] . "</p>";
+                echo "</div>"; // .segment
+            }
+            echo "</div>"; // .itinerary
+        }
+
+        echo "</div>"; // .flight-offer
+    }
+} else {
+    echo "<p>No flight offers found.</p>";
+}
+
+echo "<style>
+.flight-offer {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.itinerary {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+.segment {
+    padding: 5px;
+    border-top: 1px solid #eee;
+}
+</style>";
+?>
 ?>
