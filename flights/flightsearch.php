@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('flightapi.php');
 
 
 // Initialize cURL session
