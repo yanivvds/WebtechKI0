@@ -11,7 +11,7 @@ $departureDate = $_POST['departureDate'] ?? date('Y-m-d', strtotime('+1 day'));
 $returnDate = $_POST['returnDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_POST['adults'] ?? 1;
 
-var_dump($origin, $destination, $departureDate, $returnDate, $adults);
+
 // Set cURL options
 curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=$origin&destinationLocationCode=$destination&departureDate=$departureDate&returnDate=$returnDate&adults=$adults&nonStop=false&max=50");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
