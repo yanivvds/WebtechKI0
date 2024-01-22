@@ -10,7 +10,7 @@
 <div class="form-container" style="margin: 5%;text-align: -webkit-center;">
   <div class="formsignup">
     <div class="title">Flight Search</div>
-    <form action="/flights/flightapi.php" method="post">
+    <form action="/flights/flightsearch.php" method="post">
         <div class="input-container ic1">
             <input id="origin" class="input" type="text" placeholder=" " name="origin" required/>
             <div class="cut"></div>
