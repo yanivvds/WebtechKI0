@@ -54,7 +54,16 @@ document.getElementById('origin').addEventListener('input', function() {
         dataType: 'json',
         success: function(response) {
             $('#origin').autocomplete({
-                source: response.map(item => item.detailedName),
+                source: response.map(item => {
+                    const parts = item.detailedName.split(':');
+                    if (parts.length > 1) {
+                        return {
+                            label: item.detailedName,
+                            value: parts[1].trim(), 
+                        };
+                    }
+                    return item.detailedName;
+                }),
                 minLength: 2, 
                 select: function(event, ui) {
                     $('#origin').val(ui.item.label);
@@ -62,9 +71,6 @@ document.getElementById('origin').addEventListener('input', function() {
                     return false;
                 }
             });
-        }
-    });
-});
 
 document.getElementById('destination').addEventListener('input', function() {
     var query = this.value;
@@ -77,7 +83,17 @@ document.getElementById('destination').addEventListener('input', function() {
         dataType: 'json',
         success: function(response) {
             $('#destination').autocomplete({
-                source: response.map(item => item.detailedName),
+                source: response.map(item => {
+                    // Extract the IATA code from the detailed name
+                    const parts = item.detailedName.split(':');
+                    if (parts.length > 1) {
+                        return {
+                            label: item.detailedName,
+                            value: parts[1].trim(),
+                        };
+                    }
+                    return item.detailedName;
+                }),
                 minLength: 2, 
                 select: function(event, ui) {
                     $('#destination').val(ui.item.label);
