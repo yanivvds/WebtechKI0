@@ -47,7 +47,7 @@ session_start();
     </div>
     <div class="golfpagina2">
         <div class="gallery">
-            <h3 style="margin-top: -5rem">Take the road</h3>
+            <h3 style="margin-top: -5rem; margin: -400%;">Take the road</h3>
             <div class="gallery__item gallery__item--1">
                 <a href="#">
                     <div class="imagediv--1">
