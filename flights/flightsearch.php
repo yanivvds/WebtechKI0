@@ -7,10 +7,10 @@ $ch = curl_init();
 
 $origin = $_POST['origin'] ?? 'NYC';
 $destination = $_POST['destination'] ?? 'MAD';
-
 // Change to the format that the API expects
 
 $departureDateInput = $_POST['departureDate'] ?? date('d-m-Y', strtotime('+1 day'));
+echo "Departure Date Input: " . $departureDateInput . "<br>";
 $departureDateObject = DateTime::createFromFormat('d-m-Y', $departureDateInput);
 if ($departureDateObject === false) {
     die("Invalid format for departure date");
@@ -18,6 +18,7 @@ if ($departureDateObject === false) {
 $departureDate = $departureDateObject->format('Y-m-d');
 
 $returnDateInput = $_POST['returnDate'] ?? date('d-m-Y', strtotime('+8 day'));
+echo "Return Date Input: " . $returnDateInput . "<br>";
 $returnDateObject = DateTime::createFromFormat('d-m-Y', $returnDateInput);
 if ($returnDateObject === false) {
     
