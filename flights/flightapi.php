@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('/var/www/config.php');
 
 $client_id = $config['client_id'];
 $client_secret = $config['client_secret'];
