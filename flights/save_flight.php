@@ -1,9 +1,14 @@
 <?php
 
-include('/../database.php');
+session_start();
+include '/var/www/database.php';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $userID = $_SESSION["user_id"];
+}
 
 $flightID = $_POST['flightID'];
-$userID = $_POST['userID'];
+
 
 
 $sql = "INSERT INTO SavedFlights (UserID, FlightID) VALUES (?, ?)";
