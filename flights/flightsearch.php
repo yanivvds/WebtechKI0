@@ -9,11 +9,11 @@ $origin = $_POST['origin'] ?? 'NYC';
 $destination = $_POST['destination'] ?? 'MAD';
 
 // Change to the format that the API expects
-$departureDateInput = $_POST['departureDate'] ?? date('d-m-Y', strtotime('+1 day'));
-$departureDate = DateTime::createFromFormat('d-m-Y', $departureDateInput)->format('Y-m-d');
+$departureDateInput = $_POST['departureDate'] ?? date('Y-m-d', strtotime('+1 day'));
+$departureDate = DateTime::createFromFormat('Y-m-d', $departureDateInput)->format('d-m-Y');
 
-$returnDateInput = $_POST['returnDate'] ?? date('d-m-Y', strtotime('+8 day'));
-$returnDate = DateTime::createFromFormat('d-m-Y', $returnDateInput)->format('Y-m-d');
+$returnDateInput = $_POST['returnDate'] ?? date('Y-m-d', strtotime('+8 day'));
+$returnDate = DateTime::createFromFormat('Y-m-d', $returnDateInput)->format('d-m-Y');
 
 $adults = $_POST['adults'] ?? 1;
 
