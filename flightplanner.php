@@ -10,7 +10,7 @@
 </head>
 <body style="height: 100vh;">
 <?php require_once("navbar.php"); ?>
-<div class="form-container" style="margin: 5%;text-align: -webkit-center;">
+<div class="form-container" style="margin: 3%;text-align: -webkit-center;">
   <div class="formsignup">
     <div class="title">Flight Search</div>
     <form action="/flights/flightsearch.php" method="post">
