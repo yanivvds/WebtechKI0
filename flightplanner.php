@@ -54,7 +54,7 @@ document.getElementById('origin').addEventListener('input', function() {
         dataType: 'json',
         success: function(response) {
             $('#origin').autocomplete({
-                source: response,
+                source: response.map(item => item.detailedName),
                 minLength: 2, 
             });
         }
@@ -72,7 +72,7 @@ document.getElementById('destination').addEventListener('input', function() {
         dataType: 'json',
         success: function(response) {
             $('#destination').autocomplete({
-                source: response,
+                source: response.map(item => item.detailedName),
                 minLength: 2, 
             });
         }
