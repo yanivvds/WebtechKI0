@@ -21,6 +21,6 @@ curl_close($ch);
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     echo json_encode($responseArray['data']);
 } else {
-    echo json_encode([]);
+    echo json_encode();
 }
 ?>

@@ -56,6 +56,11 @@ document.getElementById('origin').addEventListener('input', function() {
             $('#origin').autocomplete({
                 source: response.map(item => item.detailedName),
                 minLength: 2, 
+                select: function(event, ui) {
+                    $('#origin').val(ui.item.label);
+                    $('#originIataCode').val(ui.item.value);
+                    return false;
+                }
             });
         }
     });
@@ -74,6 +79,11 @@ document.getElementById('destination').addEventListener('input', function() {
             $('#destination').autocomplete({
                 source: response.map(item => item.detailedName),
                 minLength: 2, 
+                select: function(event, ui) {
+                    $('#origin').val(ui.item.label);
+                    $('#originIataCode').val(ui.item.value);
+                    return false;
+                }
             });
         }
     });
