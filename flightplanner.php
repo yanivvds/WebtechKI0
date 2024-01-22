@@ -31,6 +31,11 @@
             <div class="cut cut-short"></div>
             <label for="returnDate" class="placeholder">Return Date</label>
         </div>
+        <div class="input-container ic1">
+            <input id="adults" class="input" type="number" placeholder=" " name="adults" required/>
+            <div class="cut"></div>
+            <label for="adults" class="placeholder">Number of adults</label>
+        </div>
         <button type="submit" class="submit">Search Flights</button>
     </form>
   </div>
