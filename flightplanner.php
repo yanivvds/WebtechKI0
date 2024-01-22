@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body style="height: 100vh;">
+<?php require_once("navbar.php"); ?>
 <div class="form-container" style="margin: 5%;text-align: -webkit-center;">
   <div class="formsignup">
     <div class="title">Flight Search</div>
