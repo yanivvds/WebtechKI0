@@ -2,11 +2,6 @@
 include('flightapi.php');
 session_start();
 
-if (!isset($_SESSION["user_id"])) {
-    echo "<p>You must be logged in to schedule a flight.</p>";
-    header("Location: login.php"); // Back to login
-    exit; 
-}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $id = $_SESSION["user_id"];
