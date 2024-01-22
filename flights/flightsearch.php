@@ -22,10 +22,19 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Execute cURL session and get the response
 $response = curl_exec($ch);
+if ($response === false) {
+    $error_msg = curl_error($ch);
+    echo "cURL error: $error_msg"; 
+}
 $responseArray = json_decode($response, true);  
 
 curl_close($ch);
-
+if (!$responseArray || !isset($responseArray['data'])) {
+    echo "<p>Invalid API response</p>";
+    echo "<pre>";
+    var_dump($response); // Dump the raw response to debug
+    echo "</pre>";
+    exit;
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $offer) {
         echo "<div class='flight-offer'>";
