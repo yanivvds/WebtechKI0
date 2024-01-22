@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include('flightapi.php');
 
 
@@ -67,5 +69,4 @@ echo "<style>
     border-top: 1px solid #eee;
 }
 </style>";
-?>
 ?>
