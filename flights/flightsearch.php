@@ -6,7 +6,7 @@ include('flightapi.php');
 $ch = curl_init();
 
 // Set cURL options
-curl_setopt($ch, CURLOPT_URL, 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=NYC&destinationLocationCode=MAD&departureDate=2023-02-02&adults=1');
+curl_setopt($ch, CURLOPT_URL, 'https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=NYC&destinationLocationCode=MAD&departureDate=2024-02-02&adults=1');
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Authorization: Bearer ' . $access_token,
     'Content-Type: application/x-www-form-urlencoded'
