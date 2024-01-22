@@ -80,7 +80,7 @@ document.getElementById('destination').addEventListener('input', function() {
                 source: response.map(item => item.detailedName),
                 minLength: 2, 
                 select: function(event, ui) {
-                    $('#desination').val(ui.item.label);
+                    $('#destination').val(ui.item.label);
                     $('#destinationIataCode').val(ui.item.value);
                     return false;
                 }
