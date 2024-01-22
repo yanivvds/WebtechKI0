@@ -93,7 +93,6 @@
           </div>
     </div>   
     <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
-        <?php require_once("footer.php"); ?>
     </div>
 </body>
 </html>
