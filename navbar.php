@@ -72,7 +72,7 @@ if (session_status() == PHP_SESSION_NONE) {
         </li>
         <li><a href="/about.php">About</a></li>
         <?php if(isset($_SESSION['user_id'])): ?>
-          <li>
+          <li style="text-align: end;">
             <a href="javascript:void(0)" class="desktop-item">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
             <input type="checkbox" id="showDrop">
             <label for="showDrop" class="mobile-item">Profile</label>
