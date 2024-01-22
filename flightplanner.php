@@ -80,8 +80,8 @@ document.getElementById('destination').addEventListener('input', function() {
                 source: response.map(item => item.detailedName),
                 minLength: 2, 
                 select: function(event, ui) {
-                    $('#origin').val(ui.item.label);
-                    $('#originIataCode').val(ui.item.value);
+                    $('#desination').val(ui.item.label);
+                    $('#destinationIataCode').val(ui.item.value);
                     return false;
                 }
             });
