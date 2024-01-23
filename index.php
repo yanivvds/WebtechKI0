@@ -1,6 +1,4 @@
 <?php
-$userid = $_['id'] ?? 'Guest';
-$loggedin = $_COOKIE['loggedin'] ?? 'Unknown';
 require_once 'config.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
