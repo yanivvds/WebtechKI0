@@ -5,9 +5,9 @@ ini_set('session.use_strict_mode', 1);
 
 session_set_cookie_params([
     'lifetime' => 1800,
-    'domain' => 'ki0.webtech-uva.nl',
+    'domain' => 'ki0.webtech-uva.nl', 
     'path' => '/',
-    'secure' => true,
+    'secure' => true, 
     'httponly' => true
 ]);
 
@@ -15,21 +15,13 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if (!isset($_SESSION['last_regeneration'])){
-
+if (!isset($_SESSION['last_regeneration'])) {
     session_regenerate_id(true);
     $_SESSION['last_regeneration'] = time();
-}
-else{
-
+} else {
     $interval = 60 * 30;
-
-    if (time() - $_SESSION['last_regeneration'] >= $interval){
-
+    if (time() - $_SESSION['last_regeneration'] >= $interval) {
         session_regenerate_id(true);
         $_SESSION['last_regeneration'] = time();
     }
 }
-
-
-session_regenerate_id(true);
