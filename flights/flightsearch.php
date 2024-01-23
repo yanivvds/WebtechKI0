@@ -56,8 +56,9 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         }
 
        
-        echo "<button class='save-button' onclick='saveFlight(" . json_encode($offer) . ", " . $userID . ")'>Save</button>";
-
+        $offerJson = htmlspecialchars(json_encode($offer), ENT_QUOTES, 'UTF-8');
+        echo "<button class='save-button' onclick='saveFlight($offerJson, $userID)'>Save</button>";
+        
         echo "</div>"; 
     }
 } else {
@@ -102,6 +103,10 @@ echo "<style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 function saveFlight(offer, userID) {
+    if (userID === null) {
+        alert('User is not logged in.');
+        return;
+    }
     const firstItinerary = offer.itineraries[0];
     const firstSegment = firstItinerary.segments[0];
 
