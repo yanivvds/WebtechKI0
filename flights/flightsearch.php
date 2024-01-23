@@ -98,26 +98,31 @@ echo "<style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 function saveFlight(offer, userID) {
+    const firstItinerary = offer.itineraries[0];
+    const firstSegment = firstItinerary.segments[0];
+
     $.ajax({
         url: '/flights/save_flight.php',
         type: 'POST',
         data: {
-            airline: offer.carrierCode,
-            flightNumber: offer.number,
-            departureAirport: offer.departure.iataCode,
-            arrivalAirport: offer.arrival.iataCode,
-            departureDateTime: offer.departure.at,
-            arrivalDateTime: offer.arrival.at,
+            airline: firstSegment.carrierCode,
+            flightNumber: firstSegment.number,
+            departureAirport: firstSegment.departure.iataCode,
+            arrivalAirport: firstSegment.arrival.iataCode,
+            departureDateTime: firstSegment.departure.at,
+            arrivalDateTime: firstSegment.arrival.at,
             ticketPrice: offer.price.total,
-            userID: userID
         },
         dataType: 'json',
         success: function(response) {
             if (response.success) {
                 alert('Flight saved successfully!');
             } else {
-                alert('Error saving flight.');
+                alert('Error saving flight: ' + response.error);
             }
+        },
+        error: function(xhr, status, error) {
+            alert('An error occurred: ' + error);
         }
     });
 }
