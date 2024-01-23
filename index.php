@@ -2,7 +2,9 @@
 $userid = $_COOKIE['id'] ?? 'Guest';
 $loggedin = $_COOKIE['loggedin'] ?? 'Unknown';
 require_once 'config.php';
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 
 ?>
