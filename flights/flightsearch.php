@@ -4,7 +4,9 @@ session_start();
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $id = $_SESSION["user_id"];
+    if (isset($_SESSION["user_id"])) {
+        $userID = $_SESSION["user_id"];
+    }
 }
 // Initialize cURL session
 $ch = curl_init();
@@ -50,7 +52,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         }
 
        
-        echo "<button class='save-button' onclick='saveFlight(" . $offer['id'] . ", " . $userID . ")'>Save</button>";
+        echo "<button class='save-button' onclick='saveFlight(" . json_encode($offer) . ", " . $userID . ")'>Save</button>";
 
         echo "</div>"; 
     }
@@ -93,19 +95,34 @@ echo "<style>
 }
 </style>";
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-function saveFlight(flightID, userID) {
+function saveFlight(offer, userID) {
+    const firstItinerary = offer.itineraries[0];
+    const firstSegment = firstItinerary.segments[0];
+
     $.ajax({
-        url: '/flights/save_flight.php', 
+        url: '/flights/save_flight.php',
         type: 'POST',
-        data: { flightID: flightID, userID: userID },
+        data: {
+            airline: firstSegment.carrierCode,
+            flightNumber: firstSegment.number,
+            departureAirport: firstSegment.departure.iataCode,
+            arrivalAirport: firstSegment.arrival.iataCode,
+            departureDateTime: firstSegment.departure.at,
+            arrivalDateTime: firstSegment.arrival.at,
+            ticketPrice: offer.price.total,
+        },
         dataType: 'json',
         success: function(response) {
             if (response.success) {
                 alert('Flight saved successfully!');
             } else {
-                alert('Error saving flight.');
+                alert('Error saving flight: ' + response.error);
             }
+        },
+        error: function(xhr, status, error) {
+            alert('An error occurred: ' + error);
         }
     });
 }
