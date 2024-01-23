@@ -52,7 +52,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         }
 
        
-        echo "<button class='save-button' onclick='saveFlight(" . $offer['id'] . ", " . $userID . ")'>Save</button>";
+        echo "<button class='save-button' onclick='saveFlight(" . json_encode($offer) . ", " . $userID . ")'>Save</button>";
 
         echo "</div>"; 
     }
@@ -96,11 +96,20 @@ echo "<style>
 </style>";
 ?>
 <script>
-function saveFlight(flightID, userID) {
+function saveFlight(offer, userID) {
     $.ajax({
-        url: '/flights/save_flight.php', 
+        url: '/flights/save_flight.php',
         type: 'POST',
-        data: { flightID: flightID, userID: userID },
+        data: {
+            airline: offer.carrierCode,
+            flightNumber: offer.number,
+            departureAirport: offer.departure.iataCode,
+            arrivalAirport: offer.arrival.iataCode,
+            departureDateTime: offer.departure.at,
+            arrivalDateTime: offer.arrival.at,
+            ticketPrice: offer.price.total,
+            userID: userID
+        },
         dataType: 'json',
         success: function(response) {
             if (response.success) {

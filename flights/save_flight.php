@@ -8,31 +8,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userID = $_SESSION["user_id"];
     
     // All flight info
-    $airline = $_POST['airline'];
-    $flightNumber = $_POST['flightNumber'];
-    $departureAirport = $_POST['departureAirport'];
-    $arrivalAirport = $_POST['arrivalAirport'];
-    $departureDateTime = $_POST['departureDateTime'];
-    $arrivalDateTime = $_POST['arrivalDateTime'];
-    $ticketPrice = $_POST['ticketPrice'];
+    $airline = $_POST['airline'] ?? '';
+    $flightNumber = $_POST['flightNumber'] ?? '';
+    $departureAirport = $_POST['departureAirport'] ?? '';
+    $arrivalAirport = $_POST['arrivalAirport'] ?? '';
+    $departureDateTime = $_POST['departureDateTime'] ?? '';
+    $arrivalDateTime = $_POST['arrivalDateTime'] ?? '';
+    $ticketPrice = $_POST['ticketPrice'] ?? 0.0;
     
-    // To php admin
+    
+    $mysqli = require __DIR__ . "/../database.php";
+
     $sql = "INSERT INTO Flight (Airline, FlightNumber, DepartureAirport, ArrivalAirport, DepartureDateTime, ArrivalDateTime, TicketPrice) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
-    
-    // execute the query
-    $stmt = $conn->prepare($sql);
+    VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $mysqli->stmt_init();
     $stmt->bind_param("ssssssd", $airline, $flightNumber, $departureAirport, $arrivalAirport, $departureDateTime, $arrivalDateTime, $ticketPrice);
     
     if ($stmt->execute()) {
-        // get back the generated flightid
-        $flightID = mysqli_insert_id($conn);
+        // Get the generated FlightID
+        $flightID = mysqli_insert_id($mysqli);
         
        
         $sql2 = "INSERT INTO UserFlights (UserID, FlightID) VALUES (?, ?)";
         
         // execute the query
-        $stmt2 = $conn->prepare($sql2);
+        $stmt2 = $mysqli->prepare($sql2);
         $stmt2->bind_param("ii", $userID, $flightID);
         
         if ($stmt2->execute()) {
@@ -53,6 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $stmt2->close();
     $stmt->close();
-    $conn->close();
+    $mysqli->close();
 }
 ?>
