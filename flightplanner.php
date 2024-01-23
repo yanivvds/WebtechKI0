@@ -4,11 +4,11 @@ require_once 'config.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-    if (!isset($_SESSION["user_id"])) {
-        echo "<p>You must be logged in to schedule a flight.</p>";
-        echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
-        exit; 
-    }
+if (!isset($_SESSION["user_id"])) {
+    echo "<p>You must be logged in to schedule a flight.</p>";
+    echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
+    exit; 
+}
 ?>
 
 <!DOCTYPE html>
