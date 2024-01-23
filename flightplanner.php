@@ -1,12 +1,14 @@
 <?php
 require_once 'config.php';
 
-session_start();
-if (!isset($_SESSION["user_id"])) {
-    echo "<p>You must be logged in to schedule a flight.</p>";
-    echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
-    exit; 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
 }
+    if (!isset($_SESSION["user_id"])) {
+        echo "<p>You must be logged in to schedule a flight.</p>";
+        echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
+        exit; 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +20,26 @@ if (!isset($_SESSION["user_id"])) {
 <link rel="stylesheet" href="/css/stylesheet.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+        .ui-autocomplete {
+            background-color: #f0f0f0; /* Background color of the dropdown */
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .ui-menu-item {
+            padding: 3px 15px;
+            background-color: #f0f0f0; 
+            color: #333; /* Text color */
+        }
+
+        .ui-menu-item:hover, .ui-menu-item.ui-state-focus {
+            background-color: #d0d0d0; 
+            color: #212121; /* Hover text color */
+        }
+    </style>
 </head>
 <body style="height: 100vh;">
 <?php require_once("navbar.php"); ?>
