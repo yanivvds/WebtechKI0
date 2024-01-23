@@ -57,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     
     // Handle success or failure and return a JSON response
-    console.log(response);
     echo json_encode($response);
 
     $stmt2->close();
