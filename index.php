@@ -1,6 +1,7 @@
 <?php
-$userid = $_COOKIE['userid'] ?? 'Guest';
+$userid = $_COOKIE['id'] ?? 'Guest';
 $loggedin = $_COOKIE['loggedin'] ?? 'Unknown';
+require_once 'config.php';
 session_start();
 
 
@@ -18,6 +19,7 @@ session_start();
 <body>
     <P> hello 
     <?php echo htmlspecialchars($userid); ?>
+    <?php echo htmlspecialchars($loggedin);?>
     </p>
     <?php require_once("navbar.php"); ?>
     <div class="fotodiv1">
@@ -92,6 +94,7 @@ session_start();
     <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
         <?php require_once("footer.php"); ?>
     </div>
+    <?php include 'cookiespopup.html' ?>
 <script src="/javascript/script1.js"></script>
 </body>
 </html>
