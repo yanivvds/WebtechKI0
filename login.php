@@ -17,9 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($user) {
         if (password_verify($_POST["password"], $user["password_hash"])) {
             require_once 'config.php';
-            if (session_status() == PHP_SESSION_NONE) {
-                session_start();
-            }
+            session_start();
             
             session_regenerate_id();
             
