@@ -4,7 +4,9 @@ session_start();
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $id = $_SESSION["user_id"];
+    if (isset($_SESSION["user_id"])) {
+        $userID = $_SESSION["user_id"];
+    }
 }
 // Initialize cURL session
 $ch = curl_init();
