@@ -9,7 +9,7 @@ session_set_cookie_params([
     'path' => '/',
     'secure' => true,
     'httponly' => true
-])
+]);
 
 if (!isset($_SESSION['last_regeneration'])){
 
