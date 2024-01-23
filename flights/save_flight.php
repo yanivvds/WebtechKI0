@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json');
+
 error_reporting(E_ALL); // remove after testing
 ini_set('display_errors', 1); // remove after testing
 
@@ -9,7 +11,6 @@ if (session_status() == PHP_SESSION_NONE) {
 include('flightapi.php');
 include '/var/www/database.php';
 
-header('Content-Type: application/json');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userID = $_SESSION["user_id"];
@@ -56,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     
     // Handle success or failure and return a JSON response
+    console.log(response);
     echo json_encode($response);
 
     $stmt2->close();
