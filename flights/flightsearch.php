@@ -4,12 +4,14 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+$userID = null;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_SESSION["user_id"])) {
         $userID = $_SESSION["user_id"];
     }
 }
+
 // Initialize cURL session
 $ch = curl_init();
 
