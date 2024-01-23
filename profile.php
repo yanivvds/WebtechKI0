@@ -7,10 +7,10 @@ if (!isset($_SESSION["username"])) {
 
 include '/var/www/database.php';
 
-$id = $_SESSION["user_id"];
+$UserID = $_SESSION["userid"];
 
-$stmt = $mysqli->prepare("SELECT username, email, firstName, lastName, city, phoneNumber, birthday FROM Users WHERE id = ?");
-$stmt->bind_param("i", $id);
+$stmt = $mysqli->prepare("SELECT username, email, firstName, lastName, city, phoneNumber, birthday FROM Users WHERE userid = ?");
+$stmt->bind_param("i", $UserID);
 $stmt->execute();
 $stmt->bind_result($username, $email, $firstName, $lastName, $city, $phoneNumber, $birthday);
 $stmt->fetch();
