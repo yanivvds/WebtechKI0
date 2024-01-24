@@ -28,15 +28,16 @@ if (!isset($_SESSION["user_id"])) {
     $departureDateTime = $_POST['departureDateTime'] ?? '';
     $arrivalDateTime = $_POST['arrivalDateTime'] ?? '';
     $ticketPrice = $_POST['ticketPrice'] ?? 0.0;
+    $layovers = $_POST['layovers'] ?? 0;
     
     $mysqli = require __DIR__ . "/../../database.php";
 
-    $sql = "INSERT INTO Flight (Airline, FlightNumber, DepartureAirport, ArrivalAirport, DepartureDateTime, ArrivalDateTime, TicketPrice) 
-    VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO Flight (Airline, FlightNumber, DepartureAirport, ArrivalAirport, DepartureDateTime, ArrivalDateTime, TicketPrice, Layovers) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $mysqli->stmt_init();
     if ($stmt->prepare($sql)) {
-        $stmt->bind_param("ssssssd", $airline, $flightNumber, $departureAirport, $arrivalAirport, $departureDateTime, $arrivalDateTime, $ticketPrice);
+        $stmt->bind_param("ssssssdi", $airline, $flightNumber, $departureAirport, $arrivalAirport, $departureDateTime, $arrivalDateTime, $ticketPrice, $layovers);
         
         if ($stmt->execute()) {
             // Get the generated FlightID

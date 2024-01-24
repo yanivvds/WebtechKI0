@@ -45,6 +45,8 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         foreach ($offer['itineraries'] as $itinerary) {
             echo "<div class='itinerary'>";
             echo "<p>Duration: " . $itinerary['duration'] . "</p>";
+            $layovers = count($itinerary['segments']) - 1;
+            echo "<p>Layovers: " . $layovers . "</p>";
             foreach ($itinerary['segments'] as $segment) {
                 echo "<div class='segment'>";
                 echo "<p>From: " . $segment['departure']['iataCode'] . " at " . $segment['departure']['at'] . "</p>";
@@ -121,6 +123,7 @@ function saveFlight(offer, userID) {
             departureDateTime: firstSegment.departure.at,
             arrivalDateTime: firstSegment.arrival.at,
             ticketPrice: offer.price.total,
+            layovers: layovers,
         },
         dataType: 'json',
         success: function(response) {
