@@ -71,7 +71,7 @@
                 echo "<td>" . htmlspecialchars($row['ArrivalAirport']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['DepartureDateTime']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ArrivalDateTime']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['Ticketprice']) . "</td>";
+                echo "<td>€" . htmlspecialchars($row['Ticketprice']) . "</td>";
                 echo "</tr>";
             }
             echo "</table>";
