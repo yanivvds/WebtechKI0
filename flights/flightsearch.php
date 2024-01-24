@@ -115,6 +115,13 @@ function saveFlight(offer, userID) {
     const lastSegment = firstItinerary.segments[firstItinerary.segments.length - 1];
     const layovers = offer.layovers;
 
+    const secondItinerary = offer.itineraries[1];
+    const firstSegmentReturn = secondItinerary.segments[0];
+    const lastSegmentReturn = secondItinerary.segments[secondItinerary.segments.length - 1];
+    const layoversReturn = secondItinerary.segments.length - 1; 
+
+
+
     $.ajax({
         url: '/flights/save_flight.php',
         type: 'POST',
@@ -127,6 +134,14 @@ function saveFlight(offer, userID) {
             arrivalDateTime: lastSegment.arrival.at, 
             ticketPrice: offer.price.total,
             layovers: layovers,
+
+            returnAirline: firstSegmentReturn.carrierCode,
+            returnFlightNumber: firstSegmentReturn.number,
+            returnDepartureAirport: firstSegmentReturn.departure.iataCode,
+            returnArrivalAirport: lastSegmentReturn.arrival.iataCode,
+            returnDepartureDateTime: firstSegmentReturn.departure.at,
+            returnArrivalDateTime: lastSegmentReturn.arrival.at,
+            returnLayovers: layoversReturn
         },
         dataType: 'json',
         success: function(response) {

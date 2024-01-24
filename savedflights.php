@@ -95,6 +95,8 @@
                 <th>Ticket Price</th>
                 <th>Layovers</th>
                 <th></th>";
+            echo "<th colspan='8'>Return Details</th>";
+            echo "</tr>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['Airline']) . "</td>";
@@ -111,6 +113,16 @@
                             <input type='submit' class='remove-button' value='Remove'>
                         </form>
                       </td>";
+                echo "</tr>";
+                echo "<tr>"; // Sub-row for return flight details
+                echo "<td colspan='2'>Return Airline: " . htmlspecialchars($row['ReturnAirline']) . "</td>";
+                echo "<td colspan='2'>Return Flight Number: " . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
+                echo "<td>Return Departure: " . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
+                echo "<td>Return Arrival: " . htmlspecialchars($row['ReturnArrivalAirport']) . "</td>";
+                echo "<td>Return Departure Date/Time: " . htmlspecialchars($row['ReturnDepartureDateTime']) . "</td>";
+                echo "<td>Return Arrival Date/Time: " . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
+                echo "<td>Return Layovers: " . htmlspecialchars($row['ReturnLayovers']) . "</td>";
+                echo "<td></td>"; // Empty cell for alignment with the 'Remove' button
                 echo "</tr>";
             }
             echo "</table>";
