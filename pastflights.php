@@ -38,7 +38,7 @@
 </head>
 <body>
     <?php require_once("navbar.php"); ?>
-    <h2>Your Saved Flights</h2>
+    <h2 style='text-align: center;'>Your Saved Flights</h2>
 
     <?php
     
@@ -63,7 +63,7 @@
             $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeFlightID);
             $removeStmt->execute();
             $removeStmt->close();
-            echo "<p>Flight removed successfully.</p>";
+            echo "<p style='text-align: center;'>Flight removed successfully.</p>";
         }
     }
 
@@ -104,7 +104,7 @@
             }
             echo "</table>";
         } else {
-            echo "<p>No saved flights found.</p>";
+            echo "<p style='text-align: center;'>No past flights found.</p>";
         }
 
         $stmt->close();
@@ -116,6 +116,6 @@
     $mysqli->close();
     ?>
 
-    <a href="saved_flights.php">View Upcoming Flights</a>
+    <a href="savedflights.php" style='text-align: center;'>View Upcoming Flights</a>
 </body>
 </html>

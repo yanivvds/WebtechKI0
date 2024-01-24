@@ -38,7 +38,7 @@
 </head>
 <body>
     <?php require_once("navbar.php"); ?>
-    <h2>Your Saved Flights</h2>
+    <h2 style="text-align: center;">Your Saved Flights</h2>
 
     <?php
     
@@ -48,7 +48,7 @@
 
     
     if (!isset($_SESSION["user_id"])) {
-        echo "<p>You must be logged in to see your saved flights.</p>";
+        echo "<p 'text-align: center;'>You must be logged in to see your saved flights.</p>";
         echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
         exit; 
     }
@@ -104,7 +104,7 @@
             }
             echo "</table>";
         } else {
-            echo "<p>No saved flights found.</p>";
+            echo "<p style='text-align: center;'>No saved flights found.</p>";
         }
 
         $stmt->close();
@@ -116,6 +116,6 @@
     $mysqli->close();
     ?>
 
-    <a href="past_flights.php">View Past Flights</a>
+    <a href="pastflights.php" style='text-align: center;'>View Past Flights</a>
 </body>
 </html>
