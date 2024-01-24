@@ -70,9 +70,10 @@
     $userID = $_SESSION["user_id"];
 
 
-    $sql = "SELECT f.* FROM Flight f
+    $sql = "SELECT f.*, uf.FlightID AS UserFlightID FROM Flight f
         INNER JOIN UserFlights uf ON f.FlightID = uf.FlightID
         WHERE uf.UserID = ? AND f.DepartureDateTime > NOW()";
+
 
     
     if ($stmt = $mysqli->prepare($sql)) {
@@ -84,7 +85,16 @@
 
         if ($result->num_rows > 0) {
             echo "<table>";
-            echo "<tr><th>Airline</th><th>Flight Number</th><th>Departure Airport</th><th>Arrival Airport</th><th>Departure Date/Time</th><th>Arrival Date/Time</th><th>Ticket Price</th><th> </th></tr>";
+            echo "<tr>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Departure Airport</th>
+                <th>Arrival Airport</th>
+                <th>Departure Date/Time</th>
+                <th>Arrival Date/Time</th>
+                <th>Ticket Price</th>
+                <th>Layovers</th>
+                <th></th>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['Airline']) . "</td>";
@@ -94,6 +104,7 @@
                 echo "<td>" . htmlspecialchars($row['DepartureDateTime']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ArrivalDateTime']) . "</td>";
                 echo "<td>€" . htmlspecialchars($row['Ticketprice']) . "</td>";
+                echo "<td>" . htmlspecialchars($layovers) . "</td>";
                 echo "<td>
                         <form action='' method='post'>
                             <input type='hidden' name='remove_flight_id' value='" . $row['FlightID'] . "'>
