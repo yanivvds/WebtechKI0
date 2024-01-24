@@ -13,6 +13,10 @@ include '/var/www/database.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    header('Content-Type: application/json');
+    $response = ['success' => true, 'debug' => 'Early return'];
+    echo json_encode($response);
+    exit; 
     $userID = $_SESSION["user_id"];
     
     // All flight info
