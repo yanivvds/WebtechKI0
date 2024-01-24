@@ -25,8 +25,8 @@ if (!isset($_SESSION["user_id"])) {
     $flightNumber = $_POST['flightNumber'] ?? '';
     $departureAirport = $_POST['departureAirport'] ?? '';
     $arrivalAirport = $_POST['arrivalAirport'] ?? '';
-    $departureDateTime = $_POST['departureDateTime'] ?? '';
-    $arrivalDateTime = $_POST['arrivalDateTime'] ?? '';
+    $departureDateTime = date('Y-m-d H:i:s', strtotime($_POST['departureDateTime'] ?? ''));
+    $arrivalDateTime = date('Y-m-d H:i:s', strtotime($_POST['arrivalDateTime'] ?? ''));
     $ticketPrice = $_POST['ticketPrice'] ?? 0.0;
     $layovers = $_POST['layovers'] ?? 0;
     
@@ -34,8 +34,8 @@ if (!isset($_SESSION["user_id"])) {
     $returnFlightNumber = $_POST['returnFlightNumber'] ?? '';
     $returnDepartureAirport = $_POST['returnDepartureAirport'] ?? '';
     $returnArrivalAirport = $_POST['returnArrivalAirport'] ?? '';
-    $returnDepartureDateTime = $_POST['returnDepartureDateTime'] ?? '';
-    $returnArrivalDateTime = $_POST['returnArrivalDateTime'] ?? '';
+    $returnDepartureDateTime = date('Y-m-d H:i:s', strtotime($_POST['returnDepartureDateTime'] ?? ''));
+    $returnArrivalDateTime = date('Y-m-d H:i:s', strtotime($_POST['returnArrivalDateTime'] ?? ''));
     $returnLayovers = $_POST['returnLayovers'] ?? 0;
 
 
