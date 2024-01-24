@@ -120,6 +120,10 @@ function saveFlight(offer, userID) {
     const lastSegmentReturn = secondItinerary.segments[secondItinerary.segments.length - 1];
     const layoversReturn = secondItinerary.segments.length - 1; 
 
+    console.log("Departure DateTime:", firstSegment.departure.at); // WEG NA TESTEN!!
+    console.log("Arrival DateTime:", lastSegment.arrival.at);
+    console.log("Return Departure DateTime:", firstSegmentReturn.departure.at);
+    console.log("Return Arrival DateTime:", lastSegmentReturn.arrival.at);
 
 
     $.ajax({
