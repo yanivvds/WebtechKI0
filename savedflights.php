@@ -113,6 +113,7 @@
                 <th>Arrival Date/Time</th>
                 <th>Ticket Price</th>
                 <th>Layovers</th>
+                <th></th>
                 <th></th>";
             echo "</tr>";
             while ($row = $result->fetch_assoc()) {
@@ -140,9 +141,9 @@
                 echo "<td>Return Arrival: " . htmlspecialchars($row['ReturnArrivalAirport']) . "</td>";
                 echo "<td>Return Departure Date/Time: " . htmlspecialchars($row['ReturnDepartureDateTime']) . "</td>";
                 echo "<td>Return Arrival Date/Time: " . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
+                echo "<td></td>"; 
                 echo "<td>Return Layovers: " . htmlspecialchars($row['ReturnLayovers']) . "</td>";
-                echo "<td></td>"; // Empty cell for alignment with the 'Remove' button
-                echo "</tr>";
+                echo "</tr> </td>";
             }
             echo "</table>";
         } else {
