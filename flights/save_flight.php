@@ -14,8 +14,11 @@ header('Content-Type: application/json');
 include('flightapi.php');
 include '/var/www/database.php';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if (!isset($_SESSION["user_id"])) {
+} else {
     $userID = $_SESSION["user_id"];
+    
+}
     
     // All flight info
     $airline = $_POST['airline'] ?? '';
