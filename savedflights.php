@@ -84,7 +84,7 @@
 
         if ($result->num_rows > 0) {
             echo "<table>";
-            echo "<tr><th>Airline</th><th>Flight Number</th><th>Departure Airport</th><th>Arrival Airport</th><th>Departure Date/Time</th><th>Arrival Date/Time</th><th>Ticket Price</th<th> </th></tr>";
+            echo "<tr><th>Airline</th><th>Flight Number</th><th>Departure Airport</th><th>Arrival Airport</th><th>Departure Date/Time</th><th>Arrival Date/Time</th><th>Ticket Price</th><th> </th></tr>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['Airline']) . "</td>";
