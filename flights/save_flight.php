@@ -46,7 +46,7 @@ if (!isset($_SESSION["user_id"])) {
 
     $stmt = $mysqli->stmt_init();
     if ($stmt->prepare($sql)) {
-       $stmt->bind_param("sssssdissdissdi", 
+       $stmt->bind_param("sssssiisssssssi", 
     $airline, $flightNumber, $departureAirport, $arrivalAirport, 
     $departureDateTime, $arrivalDateTime, $ticketPrice, $layovers, 
     $returnAirline, $returnFlightNumber, $returnDepartureAirport, 
@@ -56,6 +56,11 @@ if (!isset($_SESSION["user_id"])) {
         if ($stmt->execute()) {
             // Get the generated FlightID
             $flightID = $mysqli->insert_id;
+            error_log("Formatted Departure DateTime 2: $departureDateTime");
+            error_log("Formatted Arrival DateTime 2: $arrivalDateTime");
+            error_log("Formatted Return Departure DateTime 2: $returnDepartureDateTime");
+            error_log("Formatted Return Arrival DateTime 2: $returnArrivalDateTime");
+
             
             $sql2 = "INSERT INTO UserFlights (UserID, FlightID) VALUES (?, ?)";
             
