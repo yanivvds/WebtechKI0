@@ -123,7 +123,7 @@ function saveFlight(offer, userID) {
             airline: firstSegment.carrierCode,
             flightNumber: firstSegment.number,
             departureAirport: firstSegment.departure.iataCode,
-            arrivalAirport: lastSegment.arrival.iataCode;
+            arrivalAirport: lastSegment.arrival.iataCode,
             departureDateTime: firstSegment.departure.at,
             arrivalDateTime: lastSegment.arrival.at, 
             ticketPrice: offer.price.total,
