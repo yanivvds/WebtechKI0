@@ -74,7 +74,7 @@
                     <div class="member">
                         <div>
                             <img src="../fotos/jev.webp" alt="">
-                            <h4>Jev Kroon</h4>
+                            <h4>Jeff Kroon</h4>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
                             ullamcorper lectus consequat vel. Mauris vel suscipit odio. Donec tempor sollicitudin purus,

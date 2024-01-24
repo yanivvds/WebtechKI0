@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
             $consent = $_COOKIE['cookie'] ?? false;
             if ($consent){
+                setcookie('username', $user["username"], time() + 86400 * 2);
                 setcookie('id', $user["id"], time() + 86400 * 2);
                 setcookie('loggedin','yes', time() + 86400 * 2);
                 header("Location: index.php");
