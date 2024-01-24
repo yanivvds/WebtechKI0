@@ -45,7 +45,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <ul class="mega-links">
                   <li><a href="/flightplanner.php">Flight finder</a></li>
                   <li><a href="/savedflights.php">Saved flights</a></li>
-                  <li><a href="#">Past flights</a></li>
+                  <li><a href="/pastflights.php">Past flights</a></li>
                   <li><a href="#">Airline comparisons</a></li>
                 </ul>
               </div>
