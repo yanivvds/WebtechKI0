@@ -34,6 +34,25 @@
         .remove-button:hover {
             background-color: #d32f2f;
         }
+        .collapsible {
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .content {
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 0 18px;
+        }
     </style>
 </head>
 <body>
@@ -95,7 +114,7 @@
                 <th>Ticket Price</th>
                 <th>Layovers</th>
                 <th></th>";
-            echo "<th colspan='8'>Return Details</th>";
+            echo "<th><button type='button' class='collapsible'>Return Details</button></th>";
             echo "</tr>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
@@ -114,7 +133,7 @@
                         </form>
                       </td>";
                 echo "</tr>";
-                echo "<tr>"; // Sub-row for return flight details
+                echo "<tr class='content'><td colspan='10'>"; // Inklapbare rij voor return flights
                 echo "<td colspan='2'>Return Airline: " . htmlspecialchars($row['ReturnAirline']) . "</td>";
                 echo "<td colspan='2'>Return Flight Number: " . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
                 echo "<td>Return Departure: " . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
@@ -141,5 +160,23 @@
     <div style='text-align: center; margin-top: 2%;'>
     <a href="pastflights.php" class='btn'>View Past Flights</a>
     </div>
+
+
+
+    <!-- Knop voor return flight -->
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.parentElement.parentElement.nextElementSibling;
+            if (content.style.display === "table-row") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "table-row";
+            }
+        });
+    }
+    </script>
 </body>
 </html>
