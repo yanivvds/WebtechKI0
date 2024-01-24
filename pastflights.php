@@ -115,7 +115,8 @@
 
     $mysqli->close();
     ?>
-
+    <div class='btn' style='text-align: center;'>
     <a href="savedflights.php" style='text-align: center;'>View Upcoming Flights</a>
+    </div>
 </body>
 </html>
