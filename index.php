@@ -90,7 +90,50 @@ if (session_status() == PHP_SESSION_NONE) {
     <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
         <?php require_once("footer.php"); ?>
     </div>
-    <?php require_once("/cookiespopup.php"); ?>
+    
+    <div id="cookies">
+        <div class="containercook">
+            <div class="subcontainer">
+                <div class="cookies">
+                    <p>This website uses cookies to ensure you get the best experience on our website.
+                    <a href="#"> More info</a></p>
+                    <button id="cookies-btn"> Accept cookies</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 <script src="/javascript/script1.js"></script>
+<script>
+    setcookie = (cName, cValue, cExpdays) => {
+    let date = new Date();
+    date.setTime(date.getTime() + (cExpdays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+
+}
+getCookie = (cName) => {
+    const name = cName + "=";
+    const cDecoded = decodeURIComponent(document.cookie);
+    const cArr = cDecoded.split("; ");
+    let value;
+    cArr.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+    })
+
+    return value;
+}
+
+document.querySelector("#cookies-btn").addEventListener("click", () => {
+    document.querySelector("#cookies").style.display = "none";
+    setcookie("cookie", true, 5);
+})
+
+cookieMessage = () => {
+    if(!getCookie("cookie"))
+        document.querySelector("#cookies").style.display = "flex";
+}
+window.addEventListener("load", cookieMessage);
+</script>
 </body>
 </html>

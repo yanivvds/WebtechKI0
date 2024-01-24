@@ -1,13 +1,5 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-body{
-    font-size: 1rem;
-    font-family: 'poppins';
 
-}
-.container{
+.containercook{
     width: 85%;
     margin: auto;
 }
