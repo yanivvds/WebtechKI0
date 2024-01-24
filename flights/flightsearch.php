@@ -46,6 +46,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             echo "<div class='itinerary'>";
             echo "<p>Duration: " . $itinerary['duration'] . "</p>";
             $layovers = count($itinerary['segments']) - 1;
+            $offer['layovers'] = $layovers;
             echo "<p>Layovers: " . $layovers . "</p>";
             foreach ($itinerary['segments'] as $segment) {
                 echo "<div class='segment'>";
