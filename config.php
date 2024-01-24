@@ -7,7 +7,6 @@ session_set_cookie_params([
     'lifetime' => 1800,
     'domain' => 'ki0.webtech-uva.nl', 
     'path' => '/',
-    'secure' => true, 
 ]);
 
 if (session_status() == PHP_SESSION_NONE) {
