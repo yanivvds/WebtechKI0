@@ -29,7 +29,7 @@ if (!isset($_SESSION["user_id"])) {
     $arrivalDateTime = $_POST['arrivalDateTime'] ?? '';
     $ticketPrice = $_POST['ticketPrice'] ?? 0.0;
     
-    $mysqli = require __DIR__ . "/../database.php";
+    $mysqli = require __DIR__ . "/../../database.php";
 
     $sql = "INSERT INTO Flight (Airline, FlightNumber, DepartureAirport, ArrivalAirport, DepartureDateTime, ArrivalDateTime, TicketPrice) 
     VALUES (?, ?, ?, ?, ?, ?, ?)";
