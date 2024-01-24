@@ -143,7 +143,7 @@
                             <input type='submit' class='remove-button' value='Remove'>
                         </form>
                       </td>";
-                echo "<td><button type='button' class='return-button'>Return Details</button></td>";
+                echo "<td><button type='button' class='return-button collapsible'>Return Details</button></td>";
                 echo "</tr>";
                 echo "<tr class='content'>"; // Inklapbare rij voor return flights
                 echo "<td>" . htmlspecialchars($row['ReturnAirline']) . "</td>";
