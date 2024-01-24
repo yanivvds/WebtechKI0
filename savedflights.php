@@ -137,12 +137,12 @@
                 echo "<tr class='content'>"; // Inklapbare rij voor return flights
                 echo "<td colspan='2'>Return Airline: " . htmlspecialchars($row['ReturnAirline']) . "</td>";
                 echo "<td colspan='2'>Return Flight Number: " . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
-                echo "<td>Return Departure: " . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
-                echo "<td>Return Arrival: " . htmlspecialchars($row['ReturnArrivalAirport']) . "</td>";
-                echo "<td>Return Departure Date/Time: " . htmlspecialchars($row['ReturnDepartureDateTime']) . "</td>";
-                echo "<td>Return Arrival Date/Time: " . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnArrivalAirport']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnDepartureDateTime']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
                 echo "<td></td>"; 
-                echo "<td>Return Layovers: " . htmlspecialchars($row['ReturnLayovers']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnLayovers']) . "</td>";
                 echo "</tr>";
             }
             echo "</table>";
