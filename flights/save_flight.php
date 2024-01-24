@@ -13,10 +13,10 @@ include '/var/www/database.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    header('Content-Type: application/json');
-    $response = ['success' => true, 'debug' => 'Early return'];
-    echo json_encode($response);
-    exit; 
+    // header('Content-Type: application/json');
+    // $response = ['success' => true, 'debug' => 'Early return'];
+    // echo json_encode($response);
+    // exit; 
     $userID = $_SESSION["user_id"];
     
     // All flight info
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     if ($stmt->execute()) {
         // Get the generated FlightID
-        $flightID = mysqli_insert_id($mysqli);
+        $flightID = $mysqli->insert_id;
         
        
         $sql2 = "INSERT INTO UserFlights (UserID, FlightID) VALUES (?, ?)";
