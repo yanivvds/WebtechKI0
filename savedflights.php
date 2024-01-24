@@ -23,6 +23,17 @@
         tr:hover {
             background-color: #f5f5f5;
         }
+        .remove-button {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .remove-button:hover {
+            background-color: #d32f2f;
+        }
     </style>
 </head>
 <body>
@@ -44,6 +55,17 @@
 
     include('../database.php');
 
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['remove_flight_id'])) {
+        $removeFlightID = $_POST['remove_flight_id'];
+        
+        $removeSql = "DELETE FROM UserFlights WHERE UserID = ? AND FlightID = ?";
+        if ($removeStmt = $mysqli->prepare($removeSql)) {
+            $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeFlightID);
+            $removeStmt->execute();
+            $removeStmt->close();
+            echo "<p>Flight removed successfully.</p>";
+        }
+    }
 
     $userID = $_SESSION["user_id"];
 
@@ -72,6 +94,12 @@
                 echo "<td>" . htmlspecialchars($row['DepartureDateTime']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ArrivalDateTime']) . "</td>";
                 echo "<td>€" . htmlspecialchars($row['Ticketprice']) . "</td>";
+                echo "<td>
+                        <form action='' method='post'>
+                            <input type='hidden' name='remove_flight_id' value='" . $row['FlightID'] . "'>
+                            <input type='submit' class='remove-button' value='Remove'>
+                        </form>
+                      </td>";
                 echo "</tr>";
             }
             echo "</table>";
