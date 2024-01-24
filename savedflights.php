@@ -42,7 +42,7 @@
         exit; 
     }
 
-    include('../../database.php');
+    include('../database.php');
 
 
     $userID = $_SESSION["user_id"];
