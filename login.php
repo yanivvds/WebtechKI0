@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user) {
         if (password_verify($_POST["password"], $user["password_hash"])) {
-            require_once 'config.php';
             
             $_SESSION["user_id"] = $user["id"];
 
@@ -29,21 +28,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $_SESSION['email'] = $user['email'];
             
-            header("Location: index.php");
+            
             $consent = $_COOKIE['cookie'] ?? false;
-            if ($consent === true){
-            setcookie('id', $user["id"], time() + 86400 * 2);
-            setcookie('loggedin','yes', time() + 86400 * 2);
-            exit;
+            if ($consent){
+                setcookie('id', $user["id"], time() + 86400 * 2);
+                setcookie('loggedin','yes', time() + 86400 * 2);
+                header("Location: index.php");
+                exit;
             }
-            elseif ($consent === false){
+            header("Location: index.php");
             exit;
             }
         }
-    }
+
     $is_invalid = true;
-    setcookie('loggedin','no', time() + 86400 * 2);
-}
+    }
 
 ?>
 

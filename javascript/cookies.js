@@ -24,6 +24,6 @@ document.querySelector("#cookies-btn").addEventListener("click", () => {
 
 cookieMessage = () => {
     if(!getCookie("cookie"))
-        document.querySelector("#cookies").style.display = "block";
+        document.querySelector("#cookies").style.display = "flex";
 }
 window.addEventListener("load", cookieMessage);

@@ -7,8 +7,6 @@ session_set_cookie_params([
     'lifetime' => 1800,
     'domain' => 'ki0.webtech-uva.nl', 
     'path' => '/',
-    'secure' => true, 
-    'httponly' => true
 ]);
 
 if (session_status() == PHP_SESSION_NONE) {
@@ -16,12 +14,12 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['last_regeneration'])) {
-    session_regenerate_id(true);
+    session_regenerate_id();
     $_SESSION['last_regeneration'] = time();
 } else {
-    $interval = 60 * 30;
+    $interval = 60 * 10000;
     if (time() - $_SESSION['last_regeneration'] >= $interval) {
-        session_regenerate_id(true);
+        session_regenerate_id();
         $_SESSION['last_regeneration'] = time();
     }
 }
