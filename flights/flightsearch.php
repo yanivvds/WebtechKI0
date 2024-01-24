@@ -112,8 +112,7 @@ function saveFlight(offer, userID) {
     }
     const firstItinerary = offer.itineraries[0];
     const firstSegment = firstItinerary.segments[0];
-    const lastItinerary = offer.itineraries[offer.itineraries.length - 1];
-    const lastSegment = lastItinerary.segments[lastItinerary.segments.length - 1];
+    const lastSegment = firstItinerary.segments[lastItinerary.segments.length - 1];
     const layovers = offer.layovers;
 
     $.ajax({
