@@ -25,6 +25,7 @@
     </style>
 </head>
 <body>
+    <?php require_once("navbar.php"); ?>
     <h2>Your Saved Flights</h2>
 
     <?php
