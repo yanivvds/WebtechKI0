@@ -46,7 +46,7 @@ if (!isset($_SESSION["user_id"])) {
 
     $stmt = $mysqli->stmt_init();
     if ($stmt->prepare($sql)) {
-       $stmt->bind_param("sssssdissssssi", 
+       $stmt->bind_param("sssssdissdissdi", 
     $airline, $flightNumber, $departureAirport, $arrivalAirport, 
     $departureDateTime, $arrivalDateTime, $ticketPrice, $layovers, 
     $returnAirline, $returnFlightNumber, $returnDepartureAirport, 
