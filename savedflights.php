@@ -115,8 +115,8 @@
 
     $mysqli->close();
     ?>
-    <div class='btn' style='text-align: center;'>
-    <a href="pastflights.php" style='text-align: center;'>View Past Flights</a>
+    <div style='text-align: center;'>
+    <a href="pastflights.php" class='btn'>View Past Flights</a>
     </div>
 </body>
 </html>
