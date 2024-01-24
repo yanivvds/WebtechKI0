@@ -135,8 +135,8 @@
                 echo "<td><button type='button' class='collapsible'>Return Details</button></td>";
                 echo "</tr>";
                 echo "<tr class='content'>"; // Inklapbare rij voor return flights
-                echo "<td colspan='2'>Return Airline: " . htmlspecialchars($row['ReturnAirline']) . "</td>";
-                echo "<td colspan='2'>Return Flight Number: " . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnAirline']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ReturnArrivalAirport']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ReturnDepartureDateTime']) . "</td>";
