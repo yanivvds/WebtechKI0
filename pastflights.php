@@ -172,7 +172,7 @@
     $mysqli->close();
     ?>
     <div style='text-align: center; margin-top: 2%;'>
-    <a href="pastflights.php" class='btn'>View Past Flights</a>
+    <a href="savedflights.php" class='btn'>View Saved Flights</a>
     </div>
 
 
