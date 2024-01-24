@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saved Flights</title>
+    <title>Past Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
         table {
@@ -38,7 +38,7 @@
 </head>
 <body>
     <?php require_once("navbar.php"); ?>
-    <h2 style="text-align: center;">Your Saved Flights</h2>
+    <h2 style='text-align: center;'>Your Saved Flights</h2>
 
     <?php
     
@@ -48,7 +48,7 @@
 
     
     if (!isset($_SESSION["user_id"])) {
-        echo "<p 'text-align: center;'>You must be logged in to see your saved flights.</p>";
+        echo "<p>You must be logged in to see your saved flights.</p>";
         echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
         exit; 
     }
@@ -63,17 +63,16 @@
             $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeFlightID);
             $removeStmt->execute();
             $removeStmt->close();
-            echo "<p>Flight removed successfully.</p>";
+            echo "<p style='text-align: center;'>Flight removed successfully.</p>";
         }
     }
 
     $userID = $_SESSION["user_id"];
 
 
-    $sql = "SELECT f.*, uf.FlightID AS UserFlightID FROM Flight f
+    $sql = "SELECT f.* FROM Flight f
         INNER JOIN UserFlights uf ON f.FlightID = uf.FlightID
-        WHERE uf.UserID = ? AND f.DepartureDateTime > NOW()";
-
+        WHERE uf.UserID = ? AND f.DepartureDateTime <= NOW()";
 
     
     if ($stmt = $mysqli->prepare($sql)) {
@@ -85,18 +84,7 @@
 
         if ($result->num_rows > 0) {
             echo "<table>";
-            echo "<tr>
-                <th>Airline</th>
-                <th>Flight Number</th>
-                <th>Departure Airport</th>
-                <th>Arrival Airport</th>
-                <th>Departure Date/Time</th>
-                <th>Arrival Date/Time</th>
-                <th>Ticket Price</th>
-                <th>Layovers</th>
-                <th></th>";
-            echo "<th colspan='8'>Return Details</th>";
-            echo "</tr>";
+            echo "<tr><th>Airline</th><th>Flight Number</th><th>Departure Airport</th><th>Arrival Airport</th><th>Departure Date/Time</th><th>Arrival Date/Time</th><th>Ticket Price</th><th> </th></tr>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['Airline']) . "</td>";
@@ -106,7 +94,6 @@
                 echo "<td>" . htmlspecialchars($row['DepartureDateTime']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ArrivalDateTime']) . "</td>";
                 echo "<td>€" . htmlspecialchars($row['Ticketprice']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['Layovers']) . "</td>";
                 echo "<td>
                         <form action='' method='post'>
                             <input type='hidden' name='remove_flight_id' value='" . $row['FlightID'] . "'>
@@ -114,20 +101,10 @@
                         </form>
                       </td>";
                 echo "</tr>";
-                echo "<tr>"; // Sub-row for return flight details
-                echo "<td colspan='2'>Return Airline: " . htmlspecialchars($row['ReturnAirline']) . "</td>";
-                echo "<td colspan='2'>Return Flight Number: " . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
-                echo "<td>Return Departure: " . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
-                echo "<td>Return Arrival: " . htmlspecialchars($row['ReturnArrivalAirport']) . "</td>";
-                echo "<td>Return Departure Date/Time: " . htmlspecialchars($row['ReturnDepartureDateTime']) . "</td>";
-                echo "<td>Return Arrival Date/Time: " . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
-                echo "<td>Return Layovers: " . htmlspecialchars($row['ReturnLayovers']) . "</td>";
-                echo "<td></td>"; // Empty cell for alignment with the 'Remove' button
-                echo "</tr>";
             }
             echo "</table>";
         } else {
-            echo "<p style='text-align: center;'>No saved flights found.</p>";
+            echo "<p style='text-align: center;'>No past flights found.</p>";
         }
 
         $stmt->close();
@@ -139,7 +116,9 @@
     $mysqli->close();
     ?>
     <div style='text-align: center; margin-top: 2%;'>
-    <a href="pastflights.php" class='btn'>View Past Flights</a>
+    <a href="savedflights.php" class='btn'>View Upcoming Flights</a>
     </div>
 </body>
 </html>
+
+

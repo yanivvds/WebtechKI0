@@ -45,6 +45,9 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         foreach ($offer['itineraries'] as $itinerary) {
             echo "<div class='itinerary'>";
             echo "<p>Duration: " . $itinerary['duration'] . "</p>";
+            $layovers = count($itinerary['segments']) - 1;
+            $offer['layovers'] = $layovers;
+            echo "<p>Layovers: " . $layovers . "</p>";
             foreach ($itinerary['segments'] as $segment) {
                 echo "<div class='segment'>";
                 echo "<p>From: " . $segment['departure']['iataCode'] . " at " . $segment['departure']['at'] . "</p>";
@@ -109,6 +112,15 @@ function saveFlight(offer, userID) {
     }
     const firstItinerary = offer.itineraries[0];
     const firstSegment = firstItinerary.segments[0];
+    const lastSegment = firstItinerary.segments[firstItinerary.segments.length - 1];
+    const layovers = offer.layovers;
+
+    const secondItinerary = offer.itineraries[1];
+    const firstSegmentReturn = secondItinerary.segments[0];
+    const lastSegmentReturn = secondItinerary.segments[secondItinerary.segments.length - 1];
+    const layoversReturn = secondItinerary.segments.length - 1; 
+
+
 
     $.ajax({
         url: '/flights/save_flight.php',
@@ -117,10 +129,19 @@ function saveFlight(offer, userID) {
             airline: firstSegment.carrierCode,
             flightNumber: firstSegment.number,
             departureAirport: firstSegment.departure.iataCode,
-            arrivalAirport: firstSegment.arrival.iataCode,
+            arrivalAirport: lastSegment.arrival.iataCode,
             departureDateTime: firstSegment.departure.at,
-            arrivalDateTime: firstSegment.arrival.at,
+            arrivalDateTime: lastSegment.arrival.at, 
             ticketPrice: offer.price.total,
+            layovers: layovers,
+
+            returnAirline: firstSegmentReturn.carrierCode,
+            returnFlightNumber: firstSegmentReturn.number,
+            returnDepartureAirport: firstSegmentReturn.departure.iataCode,
+            returnArrivalAirport: lastSegmentReturn.arrival.iataCode,
+            returnDepartureDateTime: firstSegmentReturn.departure.at,
+            returnArrivalDateTime: lastSegmentReturn.arrival.at,
+            returnLayovers: layoversReturn
         },
         dataType: 'json',
         success: function(response) {
