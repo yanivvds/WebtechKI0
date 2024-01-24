@@ -15,9 +15,10 @@
             padding: 8px;
             text-align: left;
             border-bottom: 1px solid #ddd;
+            background-color: #e2d1c68f;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #E3D1C5;
         }
         tr:hover {
             background-color: #f5f5f5;
