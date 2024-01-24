@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saved Flights</title>
+    <title>Past Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
         table {
@@ -72,7 +72,7 @@
 
     $sql = "SELECT f.* FROM Flight f
         INNER JOIN UserFlights uf ON f.FlightID = uf.FlightID
-        WHERE uf.UserID = ? AND f.DepartureDateTime > NOW()";
+        WHERE uf.UserID = ? AND f.DepartureDateTime <= NOW()";
 
     
     if ($stmt = $mysqli->prepare($sql)) {
@@ -116,6 +116,6 @@
     $mysqli->close();
     ?>
 
-    <a href="past_flights.php">View Past Flights</a>
+    <a href="saved_flights.php">View Upcoming Flights</a>
 </body>
 </html>
