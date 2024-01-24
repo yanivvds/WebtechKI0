@@ -94,7 +94,7 @@
                 echo "<td>" . htmlspecialchars($row['DepartureDateTime']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['ArrivalDateTime']) . "</td>";
                 echo "<td>€" . htmlspecialchars($row['Ticketprice']) . "</td>";
-                echo "<td>
+                echo "<td>Remove flight
                         <form action='' method='post'>
                             <input type='hidden' name='remove_flight_id' value='" . $row['FlightID'] . "'>
                             <input type='submit' class='remove-button' value='Remove'>
