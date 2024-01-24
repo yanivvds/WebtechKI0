@@ -34,6 +34,17 @@
         .remove-button:hover {
             background-color: #d32f2f;
         }
+        .return-button {
+            background-color: #ffffff;
+            color: black;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .return-button:hover {
+            background-color: #f3f2ee;
+        }
         .collapsible {
         cursor: pointer;
         border: none;
@@ -132,7 +143,7 @@
                             <input type='submit' class='remove-button' value='Remove'>
                         </form>
                       </td>";
-                echo "<td><button type='button' class='collapsible'>Return Details</button></td>";
+                echo "<td><button type='button' class='return-button'>Return Details</button></td>";
                 echo "</tr>";
                 echo "<tr class='content'>"; // Inklapbare rij voor return flights
                 echo "<td>" . htmlspecialchars($row['ReturnAirline']) . "</td>";
@@ -143,6 +154,8 @@
                 echo "<td>" . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
                 echo "<td></td>"; 
                 echo "<td>" . htmlspecialchars($row['ReturnLayovers']) . "</td>";
+                echo "<td></td>";
+                echo "<td></td>";
                 echo "</tr>";
             }
             echo "</table>";
