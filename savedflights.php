@@ -134,7 +134,7 @@
                       </td>";
                 echo "<td><button type='button' class='collapsible'>Return Details</button></td>";
                 echo "</tr>";
-                echo "<tr class='content'><td colspan='10'>"; // Inklapbare rij voor return flights
+                echo "<tr class='content'>"; // Inklapbare rij voor return flights
                 echo "<td colspan='2'>Return Airline: " . htmlspecialchars($row['ReturnAirline']) . "</td>";
                 echo "<td colspan='2'>Return Flight Number: " . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
                 echo "<td>Return Departure: " . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
@@ -143,7 +143,7 @@
                 echo "<td>Return Arrival Date/Time: " . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
                 echo "<td></td>"; 
                 echo "<td>Return Layovers: " . htmlspecialchars($row['ReturnLayovers']) . "</td>";
-                echo "</tr> </td>";
+                echo "</tr>";
             }
             echo "</table>";
         } else {
