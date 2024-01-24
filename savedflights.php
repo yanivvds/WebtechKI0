@@ -114,7 +114,6 @@
                 <th>Ticket Price</th>
                 <th>Layovers</th>
                 <th></th>";
-            echo "<th><button type='button' class='collapsible'>Return Details</button></th>";
             echo "</tr>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
@@ -132,6 +131,7 @@
                             <input type='submit' class='remove-button' value='Remove'>
                         </form>
                       </td>";
+                echo "<td><button type='button' class='collapsible'>Return Details</button></td>";
                 echo "</tr>";
                 echo "<tr class='content'><td colspan='10'>"; // Inklapbare rij voor return flights
                 echo "<td colspan='2'>Return Airline: " . htmlspecialchars($row['ReturnAirline']) . "</td>";
@@ -177,6 +177,6 @@
             }
         });
     }
-    </script>
+    </script>   
 </body>
 </html>
