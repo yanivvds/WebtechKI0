@@ -8,7 +8,6 @@ session_set_cookie_params([
     'domain' => 'ki0.webtech-uva.nl', 
     'path' => '/',
     'secure' => true, 
-    'httponly' => true
 ]);
 
 if (session_status() == PHP_SESSION_NONE) {
