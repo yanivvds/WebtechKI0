@@ -2,8 +2,6 @@
 error_reporting(E_ALL); // remove after testing
 ini_set('display_errors', 1); // remove after testing
 
-// Start output buffering
-ob_start();
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -88,12 +86,6 @@ if (!isset($_SESSION["user_id"])) {
         $response = ['success' => false, 'error' => 'Error preparing Flight insert'];
     }
     
-    // Log the output just before sending the JSON response
-    $output = ob_get_contents();
-    error_log("Captured Output: " . $output);
-
-    // Clean the output buffer and turn off output buffering
-    ob_end_clean();
 
     // Set header and return JSON response
     header('Content-Type: application/json');
