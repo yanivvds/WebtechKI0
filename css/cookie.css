@@ -22,7 +22,7 @@ body{
     color: #fff;
     background-color: rgba(0.596, 0.431, 0.271, 0.7);
     z-index: 1;
-    display: flex;
+    display: none;
     height: 9%;
 }
 .cookies{
