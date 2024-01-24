@@ -112,6 +112,8 @@ function saveFlight(offer, userID) {
     }
     const firstItinerary = offer.itineraries[0];
     const firstSegment = firstItinerary.segments[0];
+    const lastItinerary = offer.itineraries[offer.itineraries.length - 1];
+    const lastSegment = lastItinerary.segments[lastItinerary.segments.length - 1];
     const layovers = offer.layovers;
 
     $.ajax({
@@ -121,9 +123,9 @@ function saveFlight(offer, userID) {
             airline: firstSegment.carrierCode,
             flightNumber: firstSegment.number,
             departureAirport: firstSegment.departure.iataCode,
-            arrivalAirport: firstSegment.arrival.iataCode,
+            arrivalAirport: lastSegment.arrival.iataCode;
             departureDateTime: firstSegment.departure.at,
-            arrivalDateTime: firstSegment.arrival.at,
+            arrivalDateTime: lastSegment.arrival.at, 
             ticketPrice: offer.price.total,
             layovers: layovers,
         },
