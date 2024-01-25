@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel search</title>
+    <style>
+        .hotel-offer {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    position: relative; /* Add this to position the Save button */
+}
+
+.hotel-details {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.room-type {
+    padding: 5px;
+    border-top: 1px solid #eee;
+}
+
+.book-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    background-color: #218838;
+}
+.body {
+    background-color: #f9f9f9;
+}
+    </style>
+</head>
+<body>
 <?php
 include('hotelapi.php');
 
@@ -30,4 +75,21 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 } else {
     echo json_encode();
 }
+
+foreach ($responseArray['data'] as $hotel) {
+    // Display hotel details
+    echo '<div class="hotel-offer">';
+    echo '<div class="hotel-details">';
+    // ... Display details like hotel name, location, etc.
+    echo '</div>';
+    foreach ($hotel['rooms'] as $room) {
+        echo '<div class="room-type">';
+        // ... Display room details
+        echo '</div>';
+    }
+    echo '<button class="book-button">Save Room</button>';
+    echo '</div>';
 ?>
+
+</body>
+</html>
