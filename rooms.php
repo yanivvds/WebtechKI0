@@ -17,7 +17,11 @@ $checkOutDate = $_GET['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_GET['adults'] ?? 1;
 
 $hotelOffersCh = curl_init();
-$hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
+$hotelOffersUrl = $hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers" .
+"?hotelIds=" . urlencode($hotelId) .
+"&checkInDate=" . urlencode($checkInDate) .
+"&checkOutDate=" . urlencode($checkOutDate) .
+"&adults=" . urlencode($adults);
 
 // TESTINGGGG
 $httpcode = curl_getinfo($hotelOffersCh, CURLINFO_HTTP_CODE);
