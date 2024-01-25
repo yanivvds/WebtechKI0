@@ -26,7 +26,7 @@
 }
 
 .hotel-offer {
-    background: #ffffff;
+    background: #f3eae0;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 5px;
@@ -46,7 +46,7 @@
 
 
 .view-rooms-button {
-    background-color: #0056b3;
+    background-color: #986e43;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -60,7 +60,7 @@
 }
 
 .view-rooms-button:hover {
-    background-color: #003d7a;
+    background-color: #ab7946;
 }
 
     </style>
