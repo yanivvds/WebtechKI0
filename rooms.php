@@ -78,9 +78,13 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
                 echo "<div class='offer-details'>"; // Show all offer details
                 echo "<p><strong>Check-in Date:</strong> " . htmlspecialchars($offer['checkInDate']) . "</p>"; 
                 echo "<p><strong>Check-out Date:</strong> " . htmlspecialchars($offer['checkOutDate']) . "</p>"; 
-                echo "<p><strong>Room Type:</strong> " . htmlspecialchars($offer['room']['type']) . "</p>"; // Room Type
+                echo "<p><strong>Room Type:</strong> " . htmlspecialchars($offer['room']['typeEstimated']['category']) . "</p>"; // Room Type
+                if (isset($offer['room']['typeEstimated'])) {
+                    $typeEstimated = $offer['room']['typeEstimated'];}
+                if (isset($typeEstimated['beds']) && isset($typeEstimated['bedType'])) {
+                    echo "<p><strong>Bed Details:</strong> " . htmlspecialchars($typeEstimated['beds']) . " " . htmlspecialchars($typeEstimated['bedType']) . "(s)</p>";} // Bed details
                 echo "<p><strong>Room Description:</strong> " . htmlspecialchars($offer['room']['description']['text']) . "</p>"; // Room Description
-                echo "<p><strong>Price:</strong> " . htmlspecialchars($offer['price']['currency']) . " " . htmlspecialchars($offer['price']['total']) . "</p>"; // Price
+                echo "<p><strong>Price total:</strong> " . htmlspecialchars($offer['price']['currency']) . " " . htmlspecialchars($offer['price']['total']) . "</p>"; // Price
                 echo "<p><strong>Payment Type:</strong> " . htmlspecialchars($offer['policies']['paymentType']) . "</p>"; // Payment Type
                 
                 // Cancellation Policy
@@ -107,5 +111,3 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 
 </body>
 </html>
-
-
