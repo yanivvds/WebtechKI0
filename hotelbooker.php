@@ -77,6 +77,7 @@ $(document).ready(function() {
         $(selector).autocomplete({
             minLength: 2,
             source: function(request, response) {
+                var uniqueCities = new Set();
                 $.ajax({
                     url: '/airport_city_search.php',
                     type: 'POST',
@@ -87,11 +88,15 @@ $(document).ready(function() {
                     success: function(data) {
                         response($.map(data, function(item) {
                             var cityName = item.detailedName.split('/')[0];
-                            return {
-                                label: cityName, 
-                                value: cityName  
-                            };
+                            if (!uniqueCities.has(cityName)) { 
+                                uniqueCities.add(cityName);
+                                return {
+                                    label: cityName, 
+                                    value: cityName  
+                                };
+                            }
                         }));
+                        response(filteredData);
                     }
                 });
             },
