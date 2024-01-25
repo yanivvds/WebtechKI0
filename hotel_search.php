@@ -6,7 +6,7 @@
     <title>Hotel Search</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
-        body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -14,6 +14,18 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+h1 {
+    color: #e2d1c6;
+    font-size: 250%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+p {
+    color: #efe9e6;
+    font-size: 20px;
+    text-align: center;
 }
 
 .hotel-offers-container {
@@ -101,10 +113,10 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         echo "<h2 style='color: #986e43;'>Hotel Name: " . $hotel['name'] . "</h2>";
 
         // Show the city
-        echo "<p>City: " . $hotel['iataCode'] . "</p>"; 
+        echo "<p style='text-shadow: -0.3px -0.3px #986e45;'>City: " . $hotel['iataCode'] . "</p>"; 
         $hotelId = $hotel['hotelId'];
         if (isset($hotel['address'])) {
-            echo "<p>Country: " . $hotel['address']['countryCode'] . "</p>"; 
+            echo "<p style='text-shadow: -0.3px -0.3px #986e45;'>Country: " . $hotel['address']['countryCode'] . "</p>"; 
         }
         // View the rooms button
         echo "<button class='view-rooms-button' data-hotel-id='{$hotel['hotelId']}'>View Rooms</button>";
