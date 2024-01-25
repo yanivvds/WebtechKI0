@@ -56,6 +56,7 @@ curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
 
 $hotelOffersResponse = curl_exec($hotelOffersCh);
 
+echo "Raw response: <pre>" . htmlspecialchars($hotelOffersResponse) . "</pre>";
 
 $hotelOffersArray = json_decode($hotelOffersResponse, true);
 
