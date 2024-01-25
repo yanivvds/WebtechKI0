@@ -38,17 +38,17 @@ if (!isset($_SESSION["user_id"])) {
             <div class="input-container ic1">
                 <input id="datumVan" class="input" type="date" placeholder=" " name="datumVan" required/>
                 <div class="cut"></div>
-                <label for="datumVan" class="placeholder">Datum van</label>
+                <label for="datumVan" class="placeholder">Arrival</label>
             </div>
             <div class="input-container ic1">
                 <input id="datumTot" class="input" type="date" placeholder=" " name="datumTot" required/>
                 <div class="cut cut-short"></div>
-                <label for="datumTot" class="placeholder">Datum tot</label>
+                <label for="datumTot" class="placeholder">Departure</label>
             </div>
             <div class="input-container ic1">
                 <input id="aantalPersonen" class="input" type="number" placeholder=" " name="aantalPersonen" required/>
                 <div class="cut"></div>
-                <label for="aantalPersonen" class="placeholder">Aantal personen</label>
+                <label for="aantalPersonen" class="placeholder">Adults</label>
             </div>
             <button type="submit" class="submit">Search Hotels</button>
         </form>
