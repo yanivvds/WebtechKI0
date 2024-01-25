@@ -71,24 +71,36 @@ curl_close($ch);
 
 
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
-    echo json_encode($responseArray['data']);
-} else {
-    echo json_encode();
-}
+    foreach ($responseArray['data'] as $hotel) {
+        echo "<div class='hotel-offer'>";
 
-foreach ($responseArray['data'] as $hotel) {
-    // Display hotel details
-    echo '<div class="hotel-offer">';
-    echo '<div class="hotel-details">';
-    // ... Display details like hotel name, location, etc.
-    echo '</div>';
-    foreach ($hotel['rooms'] as $room) {
-        echo '<div class="room-type">';
-        // ... Display room details
-        echo '</div>';
+        // Displaying the hotel name
+        echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
+
+        // Assuming 'iataCode' represents the city
+        echo "<p>City (IATA Code): " . $hotel['iataCode'] . "</p>";
+
+        // Label associated to the location
+        // This isn't explicitly available in the data structure you've provided.
+        // You might need to access a different API endpoint or part of the response for this.
+
+        // Address information
+        // Assuming the structure of 'address' is like what's shown in the 'Hotel' schema
+        if (isset($hotel['address'])) {
+            echo "<div class='hotel-details'>";
+            echo "<p>Country Code: " . $hotel['address']['countryCode'] . "</p>";
+            // Other address details would go here, if available
+            echo "</div>"; // .hotel-details
+        }
+
+        // Rating information
+        // The 'rating' isn't explicitly available in the data structure you've provided.
+        // You might need to access a different API endpoint or part of the response for this.
+
+        echo "</div>"; // .hotel-offer
     }
-    echo '<button class="book-button">Save Room</button>';
-    echo '</div>';
+} else {
+    echo "<p>No hotel offers found.</p>";
 }
 ?>
 
