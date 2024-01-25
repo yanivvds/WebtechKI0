@@ -46,7 +46,7 @@ if (!isset($_SESSION["user_id"])) {
 <div class="form-container" style="margin: 3%;text-align: -webkit-center;">
     <div class="formsignup">
         <div class="title">Book hotel</div>
-        <form action="/airport_city_search.php" method="post">
+        <form action="/hotel_search.php" method="post">
             <div class="input-container ic1">
                 <input id="bestemming" class="input" type="text" placeholder=" " name="bestemming" required/>
                 <div class="cut"></div>
