@@ -21,7 +21,7 @@
     }
 
     .offer-details {
-        background-color: #f9f9f9;
+        background-color: #e2d0c5;
         margin-top: 10px;
         padding: 10px;
         border-radius: 5px;
@@ -33,7 +33,7 @@
 </style>
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
-<body style="height: 100vh;">
+<body style="height: 100%;">
 <?php require_once("navbar.php"); ?>
     <?php
 include('hotelapi.php');
@@ -69,7 +69,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     foreach ($hotelOffersArray['data'] as $hotelOffer) {
         echo "<div class='hotel-offer'>"; // Individual hotel offer container
         
-        echo "<h2>" . htmlspecialchars($hotelOffer['hotel']['name']) . "</h2>"; 
+        echo "<h2 style='color: #986e43;'>" . htmlspecialchars($hotelOffer['hotel']['name']) . "</h2>"; 
         echo "<p><strong>City:</strong> " . htmlspecialchars($hotelOffer['hotel']['cityCode']) . "</p>";
         
         

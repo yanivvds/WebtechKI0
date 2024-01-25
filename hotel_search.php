@@ -6,7 +6,7 @@
     <title>Hotel Search</title>
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
-<body>
+<body style="height: 100%;">
 <?php require_once("navbar.php"); ?>
 <?php
 include('hotelapi.php');
@@ -33,6 +33,8 @@ $responseArray = json_decode($response, true);
 
 curl_close($ch);
 
+echo '<div class="hotel-offers-container">';
+
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $hotel) {
         echo "<div class='hotel-offer'>";
@@ -40,8 +42,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
 
         // Show the city
-        echo "<p>City: " . $hotel['iataCode'] . "</p>";
-        echo "<p> Hotel ID:" . $hotel['hotelId'];
+        echo "<p>City: " . $hotel['iataCode'] . "</p>"; 
         $hotelId = $hotel['hotelId'];
         if (isset($hotel['address'])) {
             echo "<div class='hotel-details'>";
@@ -59,6 +60,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 } else {
     echo "<p>No hotel offers found.</p>";
 }
+echo "</div>"; 
 
 echo "<script>
 var viewRoomsButtons = document.querySelectorAll('.view-rooms-button');
