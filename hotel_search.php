@@ -5,6 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Search</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hotel-offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.hotel-offer {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px); /* Adjust the width as per your design */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.hotel-offer h2 {
+    margin-top: 0;
+    color: #333333;
+    font-size: 24px;
+}
+
+.hotel-details {
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.view-rooms-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.view-rooms-button:hover {
+    background-color: #003d7a;
+}
+
+    </style>
 </head>
 <body style="height: 100%;">
 <?php require_once("navbar.php"); ?>
