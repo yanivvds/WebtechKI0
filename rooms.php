@@ -31,18 +31,7 @@
         margin-top: 0;
     }
 
-    h1 {
-    color: #e2d1c6;
-    font-size: 250%;
-    text-align: center;
-    margin-top: 2%;
-    }
 
-    p {
-        color: #efe9e6;
-        font-size: 20px;
-        text-align: center;
-    }
 </style>
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
@@ -118,8 +107,8 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     }
     echo "</div>"; // Close hotel-offers-container
 } else {
-    echo "<h1>No hotel offers found at this time.</h1>";
-    echo "<p>Because we are still in a testing environment from this API not all hotel options will load.</p>";
+    echo "<h1 style='color: #e2d1c6;font-size: 250%;text-align: center;margin-top: 2%;'>No hotel offers found at this time.</h1>";
+    echo "<p style='color: #efe9e6;font-size: 20px;text-align: center;'>Because we are still in a testing environment from this API not all hotel options will load.</p>";
 }
 ?>
 
