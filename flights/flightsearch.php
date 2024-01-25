@@ -1,3 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.flight-offer {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    position: relative; /* Add this to position the Save button */
+}
+
+.itinerary {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.segment {
+    padding: 5px;
+    border-top: 1px solid #eee;
+}
+
+.save-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+.body {
+    background-color: #f9f9f9;
+}
+</style>
+</head>
+<body>
+<?php require_once("navbar.php"); ?>
 <?php
 include('flightapi.php');
 if (session_status() == PHP_SESSION_NONE) {
@@ -67,41 +113,6 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 } else {
     echo "<p>No flight offers found.</p>";
 }
-
-echo "<style>
-.flight-offer {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    position: relative; /* Add this to position the Save button */
-}
-
-.itinerary {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #f9f9f9;
-}
-
-.segment {
-    padding: 5px;
-    border-top: 1px solid #eee;
-}
-
-.save-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.save-button:hover {
-    background-color: #0056b3;
-}
-</style>";
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -161,3 +172,5 @@ function saveFlight(offer, userID) {
     });
 }
 </script>
+</body>
+</html>
