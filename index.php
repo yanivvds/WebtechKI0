@@ -123,12 +123,12 @@ getCookie = (cName) => {
 
     return value;
 }
-
+/*  Sets cookie if the user presses the accept cookies button*/
 document.querySelector("#cookies-btn").addEventListener("click", () => {
     document.querySelector("#cookies").style.display = "none";
     setcookie("cookie", true, 5);
 })
-
+/* if cookies are not accepted, the message keeps its display */
 cookieMessage = () => {
     if(!getCookie("cookie"))
         document.querySelector("#cookies").style.display = "flex";
