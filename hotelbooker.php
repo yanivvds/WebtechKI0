@@ -69,9 +69,10 @@ $(document).ready(function() {
                     },
                     success: function(data) {
                         response($.map(data, function(item) {
+                            var cityName = item.detailedName.split('/')[0];
                             return {
-                                label: cityName,
-                                value: cityName
+                                label: cityName, 
+                                value: cityName  
                             };
                         }));
                     }
