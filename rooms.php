@@ -109,6 +109,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 } else {
     echo "<h1 style='color: #e2d1c6;font-size: 250%;text-align: center;margin-top: 2%;'>No hotel offers found at this time.</h1>";
     echo "<p style='color: #efe9e6;font-size: 20px;text-align: center;'>Because we are still in a testing environment from this API not all hotel options will load.</p>";
+    echo "<btn class:'btn'><a href='hotel_search.php" . "?bestemming=" . $cityCode . "&checkInDate=" . $checkInDate . "&checkOutDate=" . $checkOutDate . "&adults=" . $adults . "'>Go back</a></btn>";
 }
 ?>
 
