@@ -14,19 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-h1 {
-    color: #e2d1c6;
-    font-size: 250%;
-    text-align: center;
-    margin-top: 2%;
-}
-
-p {
-    color: #efe9e6;
-    font-size: 20px;
-    text-align: center;
-}
+}v
 
 .hotel-offers-container {
     display: flex;
