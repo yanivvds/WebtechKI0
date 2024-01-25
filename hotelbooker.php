@@ -87,7 +87,8 @@ $(document).ready(function() {
                     },
                     success: function(data) {
                         response($.map(data, function(item) {
-                            var cityName = item.detailedName.split('/')[0];
+                            var cityName = item.address.cityName;
+                            var cityCode = item.address.cityCode;
                             if (!uniqueCities.has(cityName)) { 
                                 uniqueCities.add(cityName);
                                 return {
