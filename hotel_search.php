@@ -22,6 +22,7 @@
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    
 }
 
 .hotel-offer {
@@ -30,8 +31,11 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: calc(33% - 20px); /* Adjust the width as per your design */
-    margin-bottom: 20px; /* Space between rows */
+    width: calc(33% - 20px);
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-offer h2 {
@@ -40,12 +44,6 @@
     font-size: 24px;
 }
 
-.hotel-details {
-    background-color: #f9f9f9;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
 
 .view-rooms-button {
     background-color: #0056b3;
@@ -100,18 +98,14 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $hotel) {
         echo "<div class='hotel-offer'>";
         // Show the hotel name
-        echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
+        echo "<h2 style='color: #986e43;'>Hotel Name: " . $hotel['name'] . "</h2>";
 
         // Show the city
         echo "<p>City: " . $hotel['iataCode'] . "</p>"; 
         $hotelId = $hotel['hotelId'];
         if (isset($hotel['address'])) {
-            echo "<div class='hotel-details'>";
-            // and country
             echo "<p>Country: " . $hotel['address']['countryCode'] . "</p>"; 
-            echo "</div>"; 
         }
-
         // View the rooms button
         echo "<button class='view-rooms-button' data-hotel-id='{$hotel['hotelId']}'>View Rooms</button>";
 
