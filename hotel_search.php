@@ -71,25 +71,28 @@ curl_close($ch);
 
 
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
-    echo json_encode($responseArray['data']);
+    foreach ($responseArray['data'] as $hotel) {
+        echo "<div class='hotel-offer'>";
+
+        // Show the hotel name
+        echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
+
+        // Show the city
+        echo "<p>City: " . $hotel['iataCode'] . "</p>";
+        if (isset($hotel['address'])) {
+            echo "<div class='hotel-details'>";
+            // and country
+            echo "<p>Country: " . $hotel['address']['countryCode'] . "</p>";
+            echo "</div>"; 
+        }
+
+
+        echo "</div>"; // .hotel-offer
+    }
 } else {
-    echo json_encode();
+    echo "<p>No hotel offers found.</p>";
 }
 
-foreach ($responseArray['data'] as $hotel) {
-    // Display hotel details
-    echo '<div class="hotel-offer">';
-    echo '<div class="hotel-details">';
-    // ... Display details like hotel name, location, etc.
-    echo '</div>';
-    foreach ($hotel['rooms'] as $room) {
-        echo '<div class="room-type">';
-        // ... Display room details
-        echo '</div>';
-    }
-    echo '<button class="book-button">Save Room</button>';
-    echo '</div>';
-}
 ?>
 
 </body>
