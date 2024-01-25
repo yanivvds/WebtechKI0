@@ -12,6 +12,13 @@
     position: relative; /* Add this to position the Save button */
 }
 
+.room-offer {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    position: relative; /* Add this to position the Save button */
+}
+
 .hotel-details {
     margin-top: 10px;
     padding: 5px;
@@ -73,7 +80,7 @@ curl_close($ch);
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $hotel) {
         echo "<div class='hotel-offer'>";
-
+        $hotelId = $hotel['hotelId']
         // Show the hotel name
         echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
 
@@ -86,6 +93,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             echo "</div>"; 
         }
 
+        echo "<button class='toggle-button'>Toggle Room Details</button>";
 
         echo "</div>"; // .hotel-offer
     }
@@ -93,7 +101,72 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     echo "<p>No hotel offers found.</p>";
 }
 
-?>
+// --- HOTEL KAMERS!! NIEUWE API --- //
 
+$hotelOffersCh = curl_init();
+$hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
+
+curl_setopt($hotelOffersCh, CURLOPT_URL, $hotelOffersUrl);
+curl_setopt($hotelOffersCh, CURLOPT_HTTPHEADER, array(
+    'Authorization: Bearer ' . $access_token,
+    'Content-Type: application/x-www-form-urlencoded'
+));
+curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
+
+$hotelOffersResponse = curl_exec($hotelOffersCh);
+$hotelOffersArray = json_decode($hotelOffersResponse, true);
+
+curl_close($hotelOffersCh);
+
+// Handling the response and displaying the hotel offers
+if (isset($hotelOffersArray['data']) && is_array($hotelOffersArray['data'])) {
+    foreach ($hotelOffersArray['data'] as $hotelOffer) {
+        echo "<div class='room-offer'>";
+
+        // Show the hotel name and other details
+        echo "<h2>Hotel Name: " . $hotelOffer['hotel']['name'] . "</h2>";
+        // ... Add more details as needed
+
+        echo "<div class='room-type'>";
+        if (isset($hotelOffer['offers'])) {
+            foreach ($hotelOffer['offers'] as $offer) {
+                // Display offer details, price, etc.
+                echo "<p>Price: " . $offer['price']['total'] . " " . $offer['price']['currency'] . "</p>";
+                // ... Add more offer details as needed
+            }
+        }
+        echo "</div>"; // .room-type
+
+        echo "<button class='book-button'>Save Now</button>";
+
+        echo "</div>"; // .room-offer
+
+        echo "<script>
+                document.querySelector('.toggle-button').addEventListener('click', function() {
+                    var collapsibleContent = document.getElementById('$hotelOfferId');
+                    if (collapsibleContent.style.display === 'none') {
+                        collapsibleContent.style.display = 'block';
+                    } else {
+                        collapsibleContent.style.display = 'none';
+                    }
+                });
+              </script>";
+    }
+} else {
+    echo "<p>No hotel offers found.</p>";
+}
+?>
+echo "<script>
+                var toggleButton = document.querySelector('.toggle-button');
+                toggleButton.addEventListener('click', function() {
+                    var hotelOffer = toggleButton.closest('.room-offer');
+                    var collapsibleContent = hotelOffer.querySelector('.collapsible-content');
+                    if (collapsibleContent.style.display === 'none') {
+                        collapsibleContent.style.display = 'block';
+                    } else {
+                        collapsibleContent.style.display = 'none';
+                    }
+                });
+              </script>";
 </body>
 </html>
