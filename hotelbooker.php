@@ -29,7 +29,7 @@ if (!isset($_SESSION["user_id"])) {
 <div class="form-container" style="margin: 3%;text-align: -webkit-center;">
     <div class="formsignup">
         <div class="title">Book hotel</div>
-        <form action="/hotel_search.php" method="post">
+        <form action="/airport_city_search.php" method="post">
             <div class="input-container ic1">
                 <input id="bestemming" class="input" type="text" placeholder=" " name="bestemming" required/>
                 <div class="cut"></div>
@@ -56,43 +56,40 @@ if (!isset($_SESSION["user_id"])) {
 </div>
 <script>
 $(document).ready(function() {
-    function setupAutocomplete(selector) {
+    function setupCityAutocomplete(selector) {
         $(selector).autocomplete({
             minLength: 2,
             source: function(request, response) {
                 $.ajax({
-                    url: '/airport_city_search.php', 
+                    url: '/airport_city_search.php',
                     type: 'POST',
                     dataType: 'json',
                     data: {
-                        search_query: request.term,
-                        subType: 'CITY' 
+                        search_query: request.term
                     },
                     success: function(data) {
                         response($.map(data, function(item) {
                             return {
-                                label: item.detailedName, // or item.name based on your preference
-                                value: item.detailedName // or item.name based on your preference
+                                label: item.detailedName, 
+                                value: item.detailedName
                             };
                         }));
                     }
                 });
             },
             select: function(event, ui) {
-                event.preventDefault(); 
-                $(this).val(ui.item.value); 
+                event.preventDefault();
+                $(this).val(ui.item.value);
             }
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
-                .append("<div>" + item.label + "</div>")
+                .append("<div>" + item.label + "</div>") 
                 .appendTo(ul);
         };
     }
 
-    setupAutocomplete('#origin');
-    setupAutocomplete('#destination');
+    setupCityAutocomplete('#hotelCity');
 });
-
 </script>
 </body>
 </html>
