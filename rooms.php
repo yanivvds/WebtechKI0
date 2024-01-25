@@ -73,7 +73,7 @@ curl_close($hotelOffersCh);
 
 $roomDetails = [];
 
-f (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
+if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     echo "<div class='hotel-offers-container'>"; // Container for all hotel offers
     foreach ($hotelOffersArray['data'] as $hotelOffer) {
         echo "<div class='hotel-offer'>"; // Individual hotel offer container
