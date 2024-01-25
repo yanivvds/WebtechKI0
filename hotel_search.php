@@ -29,6 +29,24 @@ $responseArray = json_decode($response, true);
 
 curl_close($ch);
 
+
+// --- HOTEL KAMERS!! NIEUWE API --- //
+
+$hotelOffersCh = curl_init();
+$hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
+
+curl_setopt($hotelOffersCh, CURLOPT_URL, $hotelOffersUrl);
+curl_setopt($hotelOffersCh, CURLOPT_HTTPHEADER, array(
+    'Authorization: Bearer ' . $access_token,
+    'Content-Type: application/x-www-form-urlencoded'
+));
+curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
+
+$hotelOffersResponse = curl_exec($hotelOffersCh);
+$hotelOffersArray = json_decode($hotelOffersResponse, true);
+
+curl_close($hotelOffersCh);
+
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $hotel) {
         echo "<div class='hotel-offer'>";
@@ -53,24 +71,6 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 } else {
     echo "<p>No hotel offers found.</p>";
 }
-
-// --- HOTEL KAMERS!! NIEUWE API --- //
-
-$hotelOffersCh = curl_init();
-$hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
-
-curl_setopt($hotelOffersCh, CURLOPT_URL, $hotelOffersUrl);
-curl_setopt($hotelOffersCh, CURLOPT_HTTPHEADER, array(
-    'Authorization: Bearer ' . $access_token,
-    'Content-Type: application/x-www-form-urlencoded'
-));
-curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
-
-$hotelOffersResponse = curl_exec($hotelOffersCh);
-$hotelOffersArray = json_decode($hotelOffersResponse, true);
-
-curl_close($hotelOffersCh);
-
 // Handling the response and displaying the hotel offers
 if (isset($hotelOffersArray['data']) && is_array($hotelOffersArray['data'])) {
     foreach ($hotelOffersArray['data'] as $hotelOffer) {
