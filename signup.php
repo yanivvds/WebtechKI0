@@ -31,32 +31,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($_POST["password"] !== $_POST["password_confirmation"]) {
         $errorMessage = "Passwords have to be the same";
         $is_invalid = true;
-    } else {
-    $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
-    $mysqli = require __DIR__ . "/../database.php";
-
-    $sql = "INSERT INTO Users (username, email, password_hash) VALUES (?, ?, ?)";
-
-    $stmt = $mysqli->stmt_init();
     }
-}
+    if (!$is_invalid) {
+        // Ga alleen door als er geen errors zijn.
+        $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        $mysqli = require __DIR__ . "/../database.php";
+        $sql = "INSERT INTO Users (username, email, password_hash) VALUES (?, ?, ?)";
+        $stmt = $mysqli->stmt_init();
 
+        if (!$stmt->prepare($sql)) {
+            $errorMessage = "SQL ERROR: " . $mysqli->error;
+            $is_invalid = true;
+        } else {
+            $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
 
-$stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
-
-if ($stmt->execute()) {
-
-    header("Location: signupsucces.html");
-    exit;
-    
-} else {
-
-    if ($stmt->errno === 1062) {
-        $errorMessage = "Email has already been used.";
-        $is_invalid = true;
-    } else {
-        die($mysqli->error . " " . $mysqli->errno);
+            if ($stmt->execute()) {
+                header("Location: signupsucces.html");
+                exit;
+            } else {
+                if ($stmt->errno === 1062) {
+                    $errorMessage = "Email has already been used.";
+                    $is_invalid = true;
+                } else {
+                    die($mysqli->error . " " . $mysqli->errno);
+                }
+            }
+        }
     }
 }
 ?>
