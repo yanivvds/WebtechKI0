@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    .hotel-offers-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hotel-offer {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: calc(33% - 20px);
+    }
+
+    .offer-details {
+        background-color: #f9f9f9;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+</style>
 </head>
 <body>
     <?php
@@ -46,39 +73,45 @@ curl_close($hotelOffersCh);
 
 $roomDetails = [];
 
-// Check if the 'data'  exists in the hotel offers 
-if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
-    // Going through each hotel offer
+f (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
+    echo "<div class='hotel-offers-container'>"; // Container for all hotel offers
     foreach ($hotelOffersArray['data'] as $hotelOffer) {
-        // Check for 'offers' key 
+        echo "<div class='hotel-offer'>"; // Individual hotel offer container
+        
+        echo "<h2>" . htmlspecialchars($hotelOffer['hotel']['name']) . "</h2>"; 
+        echo "<p><strong>City:</strong> " . htmlspecialchars($hotelOffer['hotel']['cityCode']) . "</p>";
+        
+        
         if (isset($hotelOffer['offers']) && !empty($hotelOffer['offers'])) {
             foreach ($hotelOffer['offers'] as $offer) {
-                $offerDetails = [
-                    'id' => $offer['id'] ?? '',
-                    'checkInDate' => $offer['checkInDate'] ?? '',
-                    'checkOutDate' => $offer['checkOutDate'] ?? '',
-                    'roomType' => $offer['room']['type'] ?? '',
-                    'roomDescription' => $offer['room']['description']['text'] ?? '',
-                    'guests' => $offer['guests']['adults'] ?? '',
-                    'price' => [
-                        'currency' => $offer['price']['currency'] ?? '',
-                        'base' => $offer['price']['base'] ?? '',
-                        'total' => $offer['price']['total'] ?? '',
-                    ],
-                    'paymentType' => $offer['policies']['paymentType'] ?? '',
-                    'cancellationPolicy' => $offer['policies']['cancellations'][0]['description']['text'] ?? '',
-                ];
+                echo "<div class='offer-details'>"; // Show all offer details
+                echo "<p><strong>Check-in Date:</strong> " . htmlspecialchars($offer['checkInDate']) . "</p>"; 
+                echo "<p><strong>Check-out Date:</strong> " . htmlspecialchars($offer['checkOutDate']) . "</p>"; 
+                echo "<p><strong>Room Type:</strong> " . htmlspecialchars($offer['room']['type']) . "</p>"; // Room Type
+                echo "<p><strong>Room Description:</strong> " . htmlspecialchars($offer['room']['description']['text']) . "</p>"; // Room Description
+                echo "<p><strong>Price:</strong> " . htmlspecialchars($offer['price']['currency']) . " " . htmlspecialchars($offer['price']['total']) . "</p>"; // Price
+                echo "<p><strong>Payment Type:</strong> " . htmlspecialchars($offer['policies']['paymentType']) . "</p>"; // Payment Type
                 
-                // Add the current offer details to the room details array
-                $roomDetails[] = $offerDetails;
+                // Cancellation Policy
+                if (isset($offer['policies']['cancellations']) && !empty($offer['policies']['cancellations'])) {
+                    foreach ($offer['policies']['cancellations'] as $cancellation) {
+                        echo "<div class='cancellation-policy'>";
+                        echo "<p><strong>Cancellation Deadline:</strong> " . htmlspecialchars($cancellation['deadline']) . "</p>"; // Cancellation Deadline
+                        echo "<p><strong>Cancellation Fee:</strong> " . htmlspecialchars($cancellation['amount']) . "</p>"; // Cancellation Fee
+                        echo "</div>"; 
+                    }
+                }
+
+                echo "</div>"; 
             }
         }
+        
+        echo "</div>"; // Close hotel-offer container
     }
+    echo "</div>"; // Close hotel-offers-container
+} else {
+    echo "<p>No hotel offers found.</p>";
 }
-
-
-
-
 ?>
 
 </body>
