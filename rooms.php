@@ -42,7 +42,25 @@
     h2 {
         margin-top: 0;
     }
+    .city-save-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
 
+    .save-room-button {
+        padding: 10px 20px;
+        background-color: #4CAF50; 
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .save-room-button:hover {
+        background-color: #45a049; 
+    }
 
 </style>
 <link rel="stylesheet" href="css/stylesheet.css">
