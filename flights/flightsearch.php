@@ -43,7 +43,7 @@
 </style>
 </head>
 <body>
-<?php require_once("/../navbar.php"); ?>
+<?php require_once("../navbar.php"); ?>
 <?php
 include('flightapi.php');
 if (session_status() == PHP_SESSION_NONE) {
