@@ -72,6 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 <?php require_once("navbar.php"); ?>
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <?php if ($is_invalid): ?>
+        <div class="error-message"><?= nl2br(htmlspecialchars($errorMessage)) ?></div>
+    <?php endif; ?>
         <form method="post" class="formsignup">
             <div class="title">Sign-up</div>
     
