@@ -105,7 +105,8 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     }
     echo "</div>"; // Close hotel-offers-container
 } else {
-    echo "<p>No hotel offers found.</p>";
+    echo "<h1>No hotel offers found at this time.</h1>";
+    echo "<p>Because we are still in a testing environment from this API not all hotel options will load.</p>";
 }
 ?>
 
