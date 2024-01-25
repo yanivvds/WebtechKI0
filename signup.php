@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 <?php require_once("navbar.php"); ?>
     <div class="form-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <form action="signupscript.php" method="post" class="formsignup">
+        <form method="post" class="formsignup">
             <div class="title">Sign-up</div>
     
             <div class="input-container ic1">
