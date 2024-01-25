@@ -92,7 +92,7 @@ $(document).ready(function() {
                                 uniqueCities.add(cityName);
                                 return {
                                     label: cityName, 
-                                    value: cityName  
+                                    value: cityCode  
                                 };
                             }
                         }));
