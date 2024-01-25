@@ -55,17 +55,7 @@ curl_setopt($hotelOffersCh, CURLOPT_HTTPHEADER, array(
 curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
 
 $hotelOffersResponse = curl_exec($hotelOffersCh);
-// TESTINGGGG
-$httpcode = curl_getinfo($hotelOffersCh, CURLINFO_HTTP_CODE);
-echo "HTTP status code: $httpcode <br>";
 
-// Check if the response is not false and the status code is 200
-if ($hotelOffersResponse !== false && $httpcode == 200) {
-    echo "Raw response: <pre>" . htmlspecialchars($hotelOffersResponse) . "</pre>";
-} else {
-    echo "Error fetching data. Response: " . htmlspecialchars($hotelOffersResponse);
-}
-// TESTINGGGG
 
 $hotelOffersArray = json_decode($hotelOffersResponse, true);
 
