@@ -17,12 +17,17 @@ $checkOutDate = $_GET['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_GET['adults'] ?? 1;
 
 $hotelOffersCh = curl_init();
-$hotelOffersUrl = $hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers" .
-"?hotelIds=" . urlencode($hotelId) .
-"&checkInDate=" . urlencode($checkInDate) .
-"&checkOutDate=" . urlencode($checkOutDate) .
-"&adults=" . urlencode($adults);
+$hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
 
+
+curl_setopt($hotelOffersCh, CURLOPT_URL, $hotelOffersUrl);
+curl_setopt($hotelOffersCh, CURLOPT_HTTPHEADER, array(
+    'Authorization: Bearer ' . $access_token,
+    'Content-Type: application/x-www-form-urlencoded'
+));
+curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
+
+$hotelOffersResponse = curl_exec($hotelOffersCh);
 // TESTINGGGG
 $httpcode = curl_getinfo($hotelOffersCh, CURLINFO_HTTP_CODE);
 echo "HTTP status code: $httpcode <br>";
@@ -35,16 +40,6 @@ if ($hotelOffersResponse !== false && $httpcode == 200) {
 }
 // TESTINGGGG
 
-
-
-curl_setopt($hotelOffersCh, CURLOPT_URL, $hotelOffersUrl);
-curl_setopt($hotelOffersCh, CURLOPT_HTTPHEADER, array(
-    'Authorization: Bearer ' . $access_token,
-    'Content-Type: application/x-www-form-urlencoded'
-));
-curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
-
-$hotelOffersResponse = curl_exec($hotelOffersCh);
 $hotelOffersArray = json_decode($hotelOffersResponse, true);
 
 curl_close($hotelOffersCh);
