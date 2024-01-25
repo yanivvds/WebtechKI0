@@ -34,6 +34,7 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body style="height: 100vh;">
+<?php require_once("navbar.php"); ?>
     <?php
 include('hotelapi.php');
 if (isset($_GET['hotelId'])) {
