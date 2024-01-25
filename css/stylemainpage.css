@@ -77,14 +77,15 @@ body{
     font-family: "poppins";
     margin-bottom: 4rem;
     text-shadow: #999;
+    margin-left: 24%;
 }
 .test p{
     color: #fff;
     font-size: 1.5rem;
     font-family: "poppins";
-    margin-top: 0vh;
+    margin-bottom: 4vh;
     text-shadow: #999;
-    margin-left: 2rem;
+    margin-left: 16%
 }
 
 .col{
@@ -152,10 +153,7 @@ h5{
     color: #986e45;
     font-size: 2rem;
     font-family: "poppins";
-    position: relative;
-    margin-top: -20rem;
-    margin-left: -56rem;
-
+    position: relative
 }
 
 .exploreknop{
@@ -166,7 +164,7 @@ h5{
     background-color: #986e45;
     color: #fff;
     font-size: 2rem;
-    margin-left: 19.5rem;
+    margin-left: 35%;
     border: none;
 }
 .exploreknop:hover{
