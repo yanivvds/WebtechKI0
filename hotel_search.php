@@ -1,53 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel search</title>
-    <style>
-        .hotel-offer {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    position: relative; /* Add this to position the Save button */
-}
-
-.room-offer {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    position: relative; /* Add this to position the Save button */
-}
-
-.hotel-details {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #f9f9f9;
-}
-
-.room-type {
-    padding: 5px;
-    border-top: 1px solid #eee;
-}
-
-.book-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #28a745;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.book-button:hover {
-    background-color: #218838;
-}
-.body {
-    background-color: #f9f9f9;
-}
-    </style>
+    <!-- Your existing HTML head content -->
 </head>
 <body>
 <?php
@@ -63,7 +17,6 @@ $checkInDate = $_POST['checkInDate'] ?? date('Y-m-d', strtotime('+1 day'));
 $checkOutDate = $_POST['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_POST['adults'] ?? 1;
 
-
 curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=$cityCode");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Authorization: Bearer ' . $access_token,
@@ -76,30 +29,6 @@ $responseArray = json_decode($response, true);
 
 curl_close($ch);
 
-
-if (isset($responseArray['data']) && is_array($responseArray['data'])) {
-    foreach ($responseArray['data'] as $hotel) {
-        echo "<div class='hotel-offer'>";
-        $hotelId = $hotel['hotelId']
-        // Show the hotel name
-        echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
-
-        // Show the city
-        echo "<p>City: " . $hotel['iataCode'] . "</p>";
-        if (isset($hotel['address'])) {
-            echo "<div class='hotel-details'>";
-            // and country
-            echo "<p>Country: " . $hotel['address']['countryCode'] . "</p>";
-            echo "</div>"; 
-        }
-
-        echo "<button class='toggle-button'>Toggle Room Details</button>";
-
-        echo "</div>"; // .hotel-offer
-    }
-} else {
-    echo "<p>No hotel offers found.</p>";
-}
 
 // --- HOTEL KAMERS!! NIEUWE API --- //
 
@@ -118,11 +47,34 @@ $hotelOffersArray = json_decode($hotelOffersResponse, true);
 
 curl_close($hotelOffersCh);
 
+if (isset($responseArray['data']) && is_array($responseArray['data'])) {
+    foreach ($responseArray['data'] as $hotel) {
+        echo "<div class='hotel-offer'>";
+        $hotelId = $hotel['hotelId']; // Store the hotelId for the second API call
+        // Show the hotel name
+        echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
+
+        // Show the city
+        echo "<p>City: " . $hotel['iataCode'] . "</p>";
+        if (isset($hotel['address'])) {
+            echo "<div class='hotel-details'>";
+            // and country
+            echo "<p>Country: " . $hotel['address']['countryCode'] . "</p>";
+            echo "</div>"; 
+        }
+
+        // Add a button to toggle collapsible content
+        echo "<button class='toggle-button'>Toggle Room Details</button>";
+
+        echo "</div>"; // .hotel-offer
+    }
+} else {
+    echo "<p>No hotel offers found.</p>";
+}
 // Handling the response and displaying the hotel offers
 if (isset($hotelOffersArray['data']) && is_array($hotelOffersArray['data'])) {
     foreach ($hotelOffersArray['data'] as $hotelOffer) {
         echo "<div class='room-offer'>";
-
         // Show the hotel name and other details
         echo "<h2>Hotel Name: " . $hotelOffer['hotel']['name'] . "</h2>";
         // ... Add more details as needed
@@ -141,9 +93,12 @@ if (isset($hotelOffersArray['data']) && is_array($hotelOffersArray['data'])) {
 
         echo "</div>"; // .room-offer
 
+        // JavaScript to toggle the collapsible content
         echo "<script>
-                document.querySelector('.toggle-button').addEventListener('click', function() {
-                    var collapsibleContent = document.getElementById('$hotelOfferId');
+                var toggleButton = document.querySelector('.toggle-button');
+                toggleButton.addEventListener('click', function() {
+                    var hotelOffer = toggleButton.closest('.room-offer');
+                    var collapsibleContent = hotelOffer.querySelector('.collapsible-content');
                     if (collapsibleContent.style.display === 'none') {
                         collapsibleContent.style.display = 'block';
                     } else {
@@ -156,17 +111,5 @@ if (isset($hotelOffersArray['data']) && is_array($hotelOffersArray['data'])) {
     echo "<p>No hotel offers found.</p>";
 }
 ?>
-echo "<script>
-                var toggleButton = document.querySelector('.toggle-button');
-                toggleButton.addEventListener('click', function() {
-                    var hotelOffer = toggleButton.closest('.room-offer');
-                    var collapsibleContent = hotelOffer.querySelector('.collapsible-content');
-                    if (collapsibleContent.style.display === 'none') {
-                        collapsibleContent.style.display = 'block';
-                    } else {
-                        collapsibleContent.style.display = 'none';
-                    }
-                });
-              </script>";
 </body>
 </html>
