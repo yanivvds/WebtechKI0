@@ -89,6 +89,7 @@ foreach ($responseArray['data'] as $hotel) {
     }
     echo '<button class="book-button">Save Room</button>';
     echo '</div>';
+}
 ?>
 
 </body>
