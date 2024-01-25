@@ -11,6 +11,7 @@
         gap: 20px;
         padding: 20px;
     }
+    
     .backbtn{
     align-items: center;
     padding: 10px 20px;
@@ -21,7 +22,7 @@
     background-color: #986E43;
     color: #fff;
     font-size: 20px;
-}
+    }
 
     .hotel-offer {
         border: 1px solid #ddd;
@@ -121,7 +122,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 } else {
     echo "<h1 style='color: #e2d1c6;font-size: 250%;text-align: center;margin-top: 2%;'>No hotel offers found at this time.</h1>";
     echo "<p style='color: #efe9e6;font-size: 20px;text-align: center;'>Because we are still in a testing environment from this API not all hotel options will load.</p>";
-    echo "<a class:'backbtn' href='hotel_search.php" . "?bestemming=" . $cityCode . "&checkInDate=" . $checkInDate . "&checkOutDate=" . $checkOutDate . "&adults=" . $adults . "'>Go back</a>";
+    echo "<a class='backbtn' href='hotel_search.php?bestemming=" . urlencode($cityCode) . "&checkInDate=" . urlencode($checkInDate) . "&checkOutDate=" . urlencode($checkOutDate) . "&adults=" . urlencode($adults) . "'>Go back</a>";
 }
 ?>
 
