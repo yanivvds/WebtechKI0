@@ -11,6 +11,13 @@
         gap: 20px;
         padding: 20px;
     }
+    p {
+    color: #fff;
+    font-size: 20px;
+    margin: 12px;
+    }
+
+
 
     .backbtn{
     align-items: center;
