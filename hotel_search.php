@@ -81,8 +81,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
         echo "<p>City (IATA Code): " . $hotel['iataCode'] . "</p>";
 
         // Label associated to the location
-        // This isn't explicitly available in the data structure you've provided.
-        // You might need to access a different API endpoint or part of the response for this.
+        echo "<p>Info: " . $hotel['Location_Hotel']['name']  . "</p>";
 
         // Address information
         // Assuming the structure of 'address' is like what's shown in the 'Hotel' schema
