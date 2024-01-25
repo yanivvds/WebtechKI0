@@ -6,7 +6,7 @@
     <title>Hotel Search</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
-body {
+        body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-}v
+}
 
 .hotel-offers-container {
     display: flex;
