@@ -70,8 +70,8 @@ $(document).ready(function() {
                     success: function(data) {
                         response($.map(data, function(item) {
                             return {
-                                label: item.detailedName, 
-                                value: item.detailedName
+                                label: cityName,
+                                value: cityName
                             };
                         }));
                     }
