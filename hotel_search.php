@@ -72,31 +72,31 @@ curl_close($ch);
 
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $hotel) {
-        echo "<div class='hotel-offer'>";
+        // echo "<div class='hotel-offer'>";
 
-        // Displaying the hotel name
-        echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
+        // // Displaying the hotel name
+        // echo "<h2>Hotel Name: " . $hotel['name'] . "</h2>";
 
-        // Assuming 'iataCode' represents the city
-        echo "<p>City (IATA Code): " . $hotel['iataCode'] . "</p>";
+        // // Assuming 'iataCode' represents the city
+        // echo "<p>City (IATA Code): " . $hotel['iataCode'] . "</p>";
 
-        // Label associated to the location
-        echo "<p>Info: " . $hotel['Location_Hotel']['name']  . "</p>";
+        // // Label associated to the location
+        // echo "<p>Info: " . $hotel['Location_Hotel']['name']  . "</p>";
 
-        // Address information
-        // Assuming the structure of 'address' is like what's shown in the 'Hotel' schema
-        if (isset($hotel['address'])) {
-            echo "<div class='hotel-details'>";
-            echo "<p>Country Code: " . $hotel['address']['countryCode'] . "</p>";
-            // Other address details would go here, if available
-            echo "</div>"; // .hotel-details
-        }
+        // // Address information
+        // // Assuming the structure of 'address' is like what's shown in the 'Hotel' schema
+        // if (isset($hotel['address'])) {
+        //     echo "<div class='hotel-details'>";
+        //     echo "<p>Country Code: " . $hotel['address']['countryCode'] . "</p>";
+        //     // Other address details would go here, if available
+        //     echo "</div>"; // .hotel-details
+        // }
 
-        // Rating information
-        // The 'rating' isn't explicitly available in the data structure you've provided.
-        // You might need to access a different API endpoint or part of the response for this.
+        // // Rating information
+        // // The 'rating' isn't explicitly available in the data structure you've provided.
+        // // You might need to access a different API endpoint or part of the response for this.
 
-        echo "</div>"; // .hotel-offer
+        // echo "</div>"; // .hotel-offer
     }
 } else {
     echo "<p>No hotel offers found.</p>";
