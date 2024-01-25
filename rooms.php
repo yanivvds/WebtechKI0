@@ -85,17 +85,21 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
         echo "<div class='hotel-offer'>"; // Individual hotel offer container
         
         echo "<h2 style='color: #986e43;'>" . htmlspecialchars($hotelOffer['hotel']['name']) . "</h2>";
-        echo "<div class='city-save-container'>";
-        echo "<p><strong>City:</strong> " . htmlspecialchars($hotelOffer['hotel']['cityCode']) . "</p>";
-        echo "<button class='save-room-button' onclick='saveRoom(\"" . htmlspecialchars($offer['id']) . "\")'>Save Room</button>";
-        echo "</div>";
-        
+
         if (isset($hotelOffer['offers']) && !empty($hotelOffer['offers'])) {
             foreach ($hotelOffer['offers'] as $offer) {
+                echo "<div class='city-save-container'>";
+                echo "<p><strong>City:</strong> " . htmlspecialchars($hotelOffer['hotel']['cityCode']) . "</p>";
+                echo "<button class='save-room-button' onclick='saveRoom(\"" . htmlspecialchars($offer['id']) . "\")'>Save Room</button>";
+                echo "</div>";
                 echo "<div class='offer-details'>"; // Show all offer details
                 echo "<p><strong>Check-in Date:</strong> " . htmlspecialchars($offer['checkInDate']) . "</p>"; 
                 echo "<p><strong>Check-out Date:</strong> " . htmlspecialchars($offer['checkOutDate']) . "</p>"; 
-                echo "<p><strong>Room Type:</strong> " . htmlspecialchars($offer['room']['typeEstimated']['category']) . "</p>"; // Room Type
+                if (isset($typeEstimated['category'])) {
+                    echo "<p><strong>Room Type:</strong> " . htmlspecialchars($typeEstimated['category']) . "</p>";
+                } else {
+                    echo "<p><strong>Room Type:</strong> Not specified</p>";
+                }
                 if (isset($offer['room']['typeEstimated'])) {
                     $typeEstimated = $offer['room']['typeEstimated'];
                     if (isset($typeEstimated['category'])) {
