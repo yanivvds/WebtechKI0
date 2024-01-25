@@ -61,23 +61,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 // Initialize cURL session
 $ch = curl_init();
 
-// Define the required parameters for hotel search
-$cityCode = $_POST['cityCode'] ?? 'PAR'; // Example city code
-$checkInDate = $_POST['checkInDate'] ?? date('Y-m-d', strtotime('+1 day'));
-$checkOutDate = $_POST['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
+$origin = $_POST['origin'] ?? 'NYC';
+$destination = $_POST['destination'] ?? 'MAD';
+$departureDate = $_POST['departureDate'] ?? date('Y-m-d', strtotime('+1 day'));
+$returnDate = $_POST['returnDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_POST['adults'] ?? 1;
 
-// Set cURL options for hotel search
-curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=$cityCode");
+
+// Set cURL options
+curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=$origin&destinationLocationCode=$destination&departureDate=$departureDate&returnDate=$returnDate&adults=$adults&nonStop=false&max=50");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Authorization: Bearer ' . $access_token,
     'Content-Type: application/x-www-form-urlencoded'
 ));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-// Execute cURL session and get the response for hotels
+// Execute cURL session and get the response
 $response = curl_exec($ch);
-$responseArray = json_decode($response, true);
+$responseArray = json_decode($response, true);  
 
 curl_close($ch);
 
