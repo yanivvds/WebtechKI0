@@ -11,6 +11,17 @@
         gap: 20px;
         padding: 20px;
     }
+    .backbtn{
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 5%;
+    cursor: pointer;
+    background-color: #986E43;
+    color: #fff;
+    font-size: 20px;
+}
 
     .hotel-offer {
         border: 1px solid #ddd;
@@ -46,6 +57,7 @@ if (isset($_GET['hotelId'])) {
 $checkInDate = $_GET['checkInDate'] ?? date('Y-m-d', strtotime('+1 day'));
 $checkOutDate = $_GET['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_GET['adults'] ?? 1;
+$cityCode = $_GET['cityCode'] ?? 'PAR';
 
 $hotelOffersCh = curl_init();
 $hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
@@ -109,7 +121,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 } else {
     echo "<h1 style='color: #e2d1c6;font-size: 250%;text-align: center;margin-top: 2%;'>No hotel offers found at this time.</h1>";
     echo "<p style='color: #efe9e6;font-size: 20px;text-align: center;'>Because we are still in a testing environment from this API not all hotel options will load.</p>";
-    echo "<btn class:'btn'><a href='hotel_search.php" . "?bestemming=" . $cityCode . "&checkInDate=" . $checkInDate . "&checkOutDate=" . $checkOutDate . "&adults=" . $adults . "'>Go back</a></btn>";
+    echo "<a class:'backbtn' href='hotel_search.php" . "?bestemming=" . $cityCode . "&checkInDate=" . $checkInDate . "&checkOutDate=" . $checkOutDate . "&adults=" . $adults . "'>Go back</a>";
 }
 ?>
 

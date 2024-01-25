@@ -125,7 +125,9 @@ viewRoomsButtons.forEach(function(button) {
         window.location.href = 'rooms.php?hotelId=' + hotelId +
                                '&checkInDate=" . urlencode($checkInDate) .
                                "&checkOutDate=" . urlencode($checkOutDate) .
-                               "&adults=" . urlencode($adults) . "';
+                               "&adults=" . urlencode($adults) .
+                               "&cityCode=" . urlencode($cityCode) . "';
+                               
     });
 });
 </script>";
