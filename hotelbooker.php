@@ -88,7 +88,7 @@ $(document).ready(function() {
         };
     }
 
-    setupCityAutocomplete('#hotelCity');
+    setupCityAutocomplete('#bestemming');
 });
 </script>
 </body>
