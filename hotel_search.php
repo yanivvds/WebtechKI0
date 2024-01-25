@@ -6,7 +6,7 @@ $query = $_POST['search_query'] ?? '';
 $ch = curl_init();
 
 
-$cityCode = $_POST['cityCode'] ?? 'PAR';
+$cityCode = $_POST['bestemming'] ?? 'PAR';
 $checkInDate = $_POST['checkInDate'] ?? date('Y-m-d', strtotime('+1 day'));
 $checkOutDate = $_POST['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_POST['adults'] ?? 1;

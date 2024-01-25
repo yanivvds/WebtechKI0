@@ -53,19 +53,19 @@ if (!isset($_SESSION["user_id"])) {
                 <label for="bestemming" class="placeholder">Bestemming</label>
             </div>
             <div class="input-container ic1">
-                <input id="datumVan" class="input" type="date" placeholder=" " name="datumVan" required/>
+                <input id="checkInDate" class="input" type="date" placeholder=" " name="checkInDate" required/>
                 <div class="cut"></div>
-                <label for="datumVan" class="placeholder">Arrival</label>
+                <label for="checkInDate" class="placeholder">Arrival</label>
             </div>
             <div class="input-container ic1">
-                <input id="datumTot" class="input" type="date" placeholder=" " name="datumTot" required/>
+                <input id="checkOutDate" class="input" type="date" placeholder=" " name="checkOutDate" required/>
                 <div class="cut cut-short"></div>
-                <label for="datumTot" class="placeholder">Departure</label>
+                <label for="checkOutDate" class="placeholder">Departure</label>
             </div>
             <div class="input-container ic1">
-                <input id="aantalPersonen" class="input" type="number" placeholder=" " name="aantalPersonen" required/>
+                <input id="adults" class="input" type="number" placeholder=" " name="adults" required/>
                 <div class="cut"></div>
-                <label for="aantalPersonen" class="placeholder">Adults</label>
+                <label for="adults" class="placeholder">Adults</label>
             </div>
             <button type="submit" class="submit">Search Hotels</button>
         </form>
