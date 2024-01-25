@@ -14,7 +14,12 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-image: linear-gradient(rgb(141 58 58 / 41%), rgb(219 199 182 / 57%)), url(../fotos/ballon.jpg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
 }
+
 
 .hotel-offers-container {
     display: flex;
