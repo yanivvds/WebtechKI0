@@ -61,24 +61,25 @@ $(document).ready(function() {
             minLength: 2,
             source: function(request, response) {
                 $.ajax({
-                    url: '/hotel_search.php',
+                    url: '/airport_city_search.php', 
                     type: 'POST',
                     dataType: 'json',
                     data: {
-                        search_query: request.term
+                        search_query: request.term,
+                        subType: 'CITY' 
                     },
                     success: function(data) {
                         response($.map(data, function(item) {
                             return {
-                                label: item.detailedName + ' (' + item.iataCode + ')',
-                                value: item.iataCode 
+                                label: item.detailedName, // or item.name based on your preference
+                                value: item.detailedName // or item.name based on your preference
                             };
                         }));
                     }
                 });
             },
             select: function(event, ui) {
-                event.preventDefault();
+                event.preventDefault(); 
                 $(this).val(ui.item.value); 
             }
         }).autocomplete("instance")._renderItem = function(ul, item) {
@@ -88,8 +89,10 @@ $(document).ready(function() {
         };
     }
 
-    setupAutocomplete('#bestemming');
+    setupAutocomplete('#origin');
+    setupAutocomplete('#destination');
 });
+
 </script>
 </body>
 </html>
