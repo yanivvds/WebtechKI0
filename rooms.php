@@ -7,12 +7,18 @@
 </head>
 <body>
     <?php
+include('hotelapi.php');
 if (isset($_GET['hotelId'])) {
     $hotelId = $_GET['hotelId'];
 }
 
+$checkInDate = $_GET['checkInDate'] ?? date('Y-m-d', strtotime('+1 day'));
+$checkOutDate = $_GET['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
+$adults = $_GET['adults'] ?? 1;
+
 $hotelOffersCh = curl_init();
 $hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
+
 
 curl_setopt($hotelOffersCh, CURLOPT_URL, $hotelOffersUrl);
 curl_setopt($hotelOffersCh, CURLOPT_HTTPHEADER, array(

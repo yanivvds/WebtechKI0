@@ -58,18 +58,18 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     echo "<p>No hotel offers found.</p>";
 }
 
-
-        // JavaScript to toggle the collapsible content
-        echo "<script>
-        var viewRoomsButtons = document.querySelectorAll('.view-rooms-button');
-        viewRoomsButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                var hotelId = button.getAttribute('data-hotel-id');
-                // Redirect to the rooms page with hotel ID as a parameter
-                window.location.href = 'rooms.php?hotelId=' + hotelId;
-            });
-        });
-        </script>";
+echo "<script>
+var viewRoomsButtons = document.querySelectorAll('.view-rooms-button');
+viewRoomsButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var hotelId = button.getAttribute('data-hotel-id');
+        window.location.href = 'rooms.php?hotelId=' + hotelId +
+                               '&checkInDate=" . urlencode($checkInDate) .
+                               "&checkOutDate=" . urlencode($checkOutDate) .
+                               "&adults=" . urlencode($adults) . "';
+    });
+});
+</script>";
     
     
 
