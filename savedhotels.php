@@ -103,7 +103,7 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='card'>";
-                echo "<div class='card-header'>" . htmlspecialchars($row['Airline']) . " - " . htmlspecialchars($row['FlightNumber']) . "</div>";
+                echo "<div class='card-header'>";
                 echo "<div class='card-body'>";
                 echo "<h3>" . htmlspecialchars($row['HotelName']) . " - " . htmlspecialchars($row['CityCode']) . "</h3>";
                 echo "<p>Check-in: " . htmlspecialchars($row['CheckInDate']) . "</p>";
