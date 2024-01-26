@@ -12,7 +12,7 @@ header('Content-Type: application/json');
 include('hotelapi.php');
 include('../database.php');
 
-var_dump($_POST);
+error_log(print_r($_POST, true));
 
 if (!isset($_SESSION["user_id"])) {
 } else {
