@@ -12,7 +12,6 @@ header('Content-Type: application/json');
 include('hotelapi.php');
 include('../database.php');
 
-error_log(print_r($_POST, true));
 
 if (!isset($_SESSION["user_id"])) {
 } else {
