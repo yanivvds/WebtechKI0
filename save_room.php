@@ -31,7 +31,7 @@ $priceTotal = $_POST['priceTotal'] ?? 0.0;
 $currency = $_POST['currency'] ?? '';
 $paymentType = $_POST['paymentType'] ?? '';
 $cancellationDeadline = $_POST['cancellationDeadline'] ?? null;
-$cancellationFee = $_POST['cancellationFee'] ?? '';
+$cancellationFee = $_POST['cancellationFee'] ?? null;
 
 
     $mysqli = require __DIR__ . "/../database.php";
