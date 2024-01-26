@@ -7,21 +7,41 @@
     <title>Saved Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
         table {
-            width: 100%;
+            width: 90%;
+            margin: 20px auto;
             border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         th, td {
-            padding: 8px;
-            text-align: left;
+            padding: 10px;
             border-bottom: 1px solid #ddd;
-            background-color: #e2d1c68f;
+            text-align: left;
         }
+
         th {
-            background-color: #E3D1C5;
+            background-color: #007bff;
+            color: white;
+            font-weight: normal;
         }
+
         tr:hover {
-            background-color: #f5f5f5;
+            background-color: #f2f2f2;
         }
         .remove-button {
             background-color: #f44336;
@@ -34,30 +54,7 @@
         .remove-button:hover {
             background-color: #d32f2f;
         }
-        .return-button {
-            background-color: #ffffff;
-            color: black;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .return-button:hover {
-            background-color: #f3f2ee;
-        }
-        .collapsible {
-        cursor: pointer;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        }
-
-        .active, .collapsible:hover {
-            background-color: #555;
-            color: white;
-        }
-
+        
         .content {
             display: none;
             overflow: hidden;
