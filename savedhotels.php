@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saved Flights</title>
+    <title>Saved Hotels</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
         .card-container {
@@ -86,7 +86,7 @@
         
         $removeSql = "DELETE FROM UserRooms WHERE UserID = ? AND RoomID = ?";
         if ($removeStmt = $mysqli->prepare($removeSql)) {
-            $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeFlightID);
+            $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeRoomID);
             $removeStmt->execute();
             $removeStmt->close();
             echo "<p>Room removed successfully.</p>";
@@ -133,7 +133,7 @@
             echo "</div>"; // Close card
             }
         } else {
-            echo "<p style='text-align: center;'>No saved flights found.</p>";
+            echo "<p style='text-align: center;'>No saved Rooms found.</p>";
         }
         
 
@@ -147,7 +147,7 @@
     ?>
     </div>
     <div style='text-align: center; margin-top: 2%;'>
-    <a href="pastflights.php" class='btn'>View Past Hotel reservations.</a>
+    <a href="pasthotels.php" class='btn'>View Past Hotel reservations.</a>
     </div>
 </body>
 </html>
