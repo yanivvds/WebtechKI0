@@ -177,8 +177,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 ?>
 <script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    function saveRoom(offer, userID) {
+function saveRoom(offer, userID) {
         if (userID === null) {
         alert('User is not logged in.');
         return;
@@ -220,7 +219,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 
     // Perform the AJAX POST request to save the room offer
     $.ajax({
-        url: '/rooms/save_room.php', // Replace with the actual URL to save the room
+        url: '/save_room.php', // Replace with the actual URL to save the room
         type: 'POST',
         data: requestData,
         dataType: 'json',
