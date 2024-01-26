@@ -104,20 +104,24 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='card'>";
-                echo "<div class='card-header'>";
-                echo "<div class='card-body'>";
-                echo "<h3>" . htmlspecialchars($row['HotelName']) . " - " . htmlspecialchars($row['CityCode']) . "</h3>";
-                echo "<p>Check-in: " . htmlspecialchars($row['CheckInDate']) . "</p>";
-                echo "<p>Check-out: " . htmlspecialchars($row['CheckOutDate']) . "</p>";
-                echo "<p>Room Type: " . htmlspecialchars($row['RoomType']) . "</p>";
-                echo "<p>Bed Details: " . htmlspecialchars($row['BedDetails']) . "</p>";
-                echo "<p>Description: €" . htmlspecialchars($row['RoomDescription']) . "</p>";
-                echo "<p>Price: " . htmlspecialchars($row['PriceTotal']) . " " . htmlspecialchars($row['PriceTotal']) . "</p>";
-                echo "<form action='' method='post'>
-                        <input type='hidden' name='remove_room_id' value='" . $row['RoomID'] . "'>
-                        <input type='submit' class='remove-button' value='Remove'>
-                      </form>";
-                echo "</div>";
+            echo "<div class='card-header'>";
+            echo "<h3>" . htmlspecialchars($row['HotelName']) . " - " . htmlspecialchars($row['CityCode']) . "</h3>";
+            echo "</div>"; // Close card-header
+            echo "<div class='card-body'>";
+            echo "<p>Check-in: " . htmlspecialchars($row['CheckInDate']) . "</p>";
+            echo "<p>Check-out: " . htmlspecialchars($row['CheckOutDate']) . "</p>";
+            echo "<p>Room Type: " . htmlspecialchars($row['RoomType']) . "</p>";
+            echo "<p>Bed Details: " . htmlspecialchars($row['BedDetails']) . "</p>";
+            echo "<p>Description: €" . htmlspecialchars($row['RoomDescription']) . "</p>";
+            echo "<p>Price: " . htmlspecialchars($row['PriceTotal']) . " " . htmlspecialchars($row['PriceTotal']) . "</p>";
+            echo "</div>"; // Close card-body
+            echo "<div class='card-footer'>";
+            echo "<form action='' method='post'>";
+            echo "<input type='hidden' name='remove_room_id' value='" . $row['RoomID'] . "'>";
+            echo "<input type='submit' class='remove-button' value='Remove'>";
+            echo "</form>";
+            echo "</div>"; // Close card-footer
+            echo "</div>"; // Close card
             }
         } else {
             echo "<p style='text-align: center;'>No saved flights found.</p>";
