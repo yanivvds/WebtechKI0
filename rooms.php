@@ -203,7 +203,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 
         // Perform the AJAX POST request to save the room offer
         $.ajax({
-            url: '/flights/save_flight.php',
+            url: 'save_room.php',
             type: 'POST',
             data: {
                 userID: userID,
