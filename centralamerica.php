@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php include 'navbar.php'; ?>
-    <div class="ImageBackgroundWrap Background-fixed" style="Background-image: url( ../fotos/panama.jpg)">
+    <div class="ImageBackgroundWrap Background-fixed" style="Background-image: url( ../fotos/panamabeach.jpg)">
         <div class="ImageInnerWrap">
             <div class="TextBackground">
                 <div><h1>Central America</h1></div>
@@ -63,31 +63,35 @@
                   </div>
             </div>
             <div class="card">
-                <img class="tempel" src="../fotos/guatamala.jpg"  style="width:100%">
-                <div class="container">
-                  <h4><b>Jane Doe</b></h4> 
-                  <p>Interior Designerdsnldks</p> 
+                <img src="../fotos/costarica.jpg" alt="costarica">
+                <div class="card-content">
+                    <h2>Costa Rica</h2>
+                    <p>Costa Rica, a Central American gem, entices with its breathtaking biodiversity, lush rainforests, and pristine beaches, making it a nature lover's paradise.</p>
+                    <a href="#">Read More &rArr;</a>
                 </div>
             </div>
             <div class="card">
-                <img class="tempel" src="../fotos/tikal.jpg"  style="width:100%">
-                <div class="container">
-                  <h4><b>Jane Doe</b></h4> 
-                  <p>Interior Designer</p> 
+                <img src="../fotos/belize.jpg" alt="belize">
+                <div class="card-content">
+                    <h2>Belize</h2>
+                    <p>Belize, a Caribbean gem, charms with turquoise waters, coral reefs, and ancient Mayan sites, creating a blend of natural beauty and archaeological wonders.</p>
+                    <a href="#">Read More &rArr;</a>
                 </div>
             </div>
             <div class="card">
-                <img class="tempel" src="../fotos/tempel.jpg"  style="width:100%">
-                <div class="container">
-                  <h4><b>Jane Doe</b></h4> 
-                  <p>Interior Designer</p> 
+                <img src="../fotos/guatemala.jpg" alt="guatemala">
+                <div class="card-content">
+                    <h2>Guatemala</h2>
+                    <p>Guatemala, a Central American gem, captivates with Mayan ruins, colonial charm, and diverse landscapes, blending history and natural allure.</p>
+                    <a href="#">Read More &rArr;</a>
                 </div>
             </div>
             <div class="card">
-                <img class="tempel" src="../fotos/tempel.jpg"  style="width:100%">
-                <div class="container">
-                  <h4><b>Jane Doe</b></h4> 
-                  <p>Interior Designer</p> 
+                <img src="../fotos/panama.jpg" alt="panama">
+                <div class="card-content">
+                    <h2>Panama</h2>
+                    <p>Panama, a vibrant crossroads, combines modern cityscapes, lush rainforests, and the iconic Panama Canal for a dynamic blend of urban allure and natural marvels.</p>
+                    <a href="#">Read More &rArr;</a>
                 </div>
             </div>
           </div>
