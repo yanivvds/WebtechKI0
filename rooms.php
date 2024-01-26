@@ -187,11 +187,11 @@ function saveRoom(offer, userID) {
 
     const postData = {
         RoomID: offer.id,
-        HotelId: hotelOffer.hotel.hotelId,
+        HotelId: hotel.hotelId,
         OfferId: offer.id,
         CheckInDate: offer.checkInDate,
         CheckOutDate: offer.checkOutDate,
-        CityCode: hotelOffer.hotel.cityCode,
+        CityCode: hotel.cityCode,
         RoomType: typeEstimated.category || 'Not specified',
         BedDetails: typeEstimated.beds && typeEstimated.bedType ? `${typeEstimated.beds} ${typeEstimated.bedType}` : 'Not specified',
         RoomDescription: offer.room.description ? offer.room.description.text : 'Not specified',
