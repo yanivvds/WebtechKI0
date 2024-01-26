@@ -10,7 +10,7 @@ if (session_status() == PHP_SESSION_NONE) {
 header('Content-Type: application/json');
 
 include('hotelapi.php');
-include('../database.php');
+include('/../database.php');
 
 if (!isset($_SESSION["user_id"])) {
 } else {
@@ -34,7 +34,7 @@ $cancellationDeadline = $_POST['cancellationDeadline'] ?? '';
 $cancellationFee = $_POST['cancellationFee'] ?? '';
 
 
-    $mysqli = require __DIR__ . "../database.php";
+    $mysqli = require __DIR__ . "/../database.php";
 
     $sql = "INSERT INTO HotelRoom (HotelName, OfferId, CheckInDate, CheckOutDate, CityCode, RoomType, BedDetails, RoomDescription, PriceTotal, Currency, PaymentType, CancellationDeadline, CancellationFee) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
