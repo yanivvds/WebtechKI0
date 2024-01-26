@@ -119,7 +119,8 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
             foreach ($hotelOffer['offers'] as $offer) {
                 echo "<div class='city-save-container'>";
                 echo "<p><strong>City:</strong> " . htmlspecialchars($hotelOffer['hotel']['cityCode']) . "</p>";
-                echo "<button class='save-room-button' onclick='saveRoom(\"" . htmlspecialchars($offer['id']) . "\")'>Save Room</button>";
+                $offerJson = htmlspecialchars(json_encode($offer), ENT_QUOTES, 'UTF-8');
+                echo "<button class='save-room-button' onclick='saveRoom($offerJson, $userID)'>Save</button>";
                 echo "</div>";
                 echo "<div class='offer-details'>"; // Show all offer details
                 echo "<p><strong>Check-in Date:</strong> " . htmlspecialchars($offer['checkInDate']) . "</p>"; 
@@ -174,21 +175,23 @@ function saveRoom(offer, userID) {
         return;
     }
 
-    // Data that will be send to the server
+    const typeEstimated = offer.room.typeEstimated || {};
+
     const postData = {
-        hotelId: hotelOffers.data[0].hotel.hotelId,
-        offerId: hotelOffers.data[0].offers[0].id,
-        checkInDate: hotelOffers.data[0].offers[0].checkInDate,
-        checkOutDate: hotelOffers.data[0].offers[0].checkOutDate,
-        cityCode: hotelOffers.data[0].hotel.cityCode,
-        roomType: hotelOffers.data[0].offers[0].room.typeEstimated ? hotelOffers.data[0].offers[0].room.typeEstimated.category : '',
-        bedDetails: hotelOffers.data[0].offers[0].room.typeEstimated ? hotelOffers.data[0].offers[0].room.typeEstimated.beds + ' ' + hotelOffers.data[0].offers[0].room.typeEstimated.bedType : '',
-        roomDescription: hotelOffers.data[0].offers[0].room.description.text,
-        priceTotal: hotelOffers.data[0].offers[0].price.total,
-        currency: hotelOffers.data[0].offers[0].price.currency,
-        paymentType: hotelOffers.data[0].offers[0].policies.paymentType,
-        cancellationDeadline: hotelOffers.data[0].offers[0].policies.cancellations ? hotelOffers.data[0].offers[0].policies.cancellations[0].deadline : '',
-        cancellationFee: hotelOffers.data[0].offers[0].policies.cancellations ? hotelOffers.data[0].offers[0].policies.cancellations[0].amount : ''
+        RoomID: offer.id,
+        HotelId: hotelOffer.hotel.hotelId,
+        OfferId: offer.id,
+        CheckInDate: offer.checkInDate,
+        CheckOutDate: offer.checkOutDate,
+        CityCode: hotelOffer.hotel.cityCode,
+        RoomType: typeEstimated.category || 'Not specified',
+        BedDetails: typeEstimated.beds && typeEstimated.bedType ? `${typeEstimated.beds} ${typeEstimated.bedType}` : 'Not specified',
+        RoomDescription: offer.room.description ? offer.room.description.text : 'Not specified',
+        PriceTotal: offer.price.total,
+        Currency: offer.price.currency,
+        PaymentType: offer.policies.paymentType,
+        CancellationDeadline: offer.policies.cancellations && offer.policies.cancellations.length > 0 ? offer.policies.cancellations[0].deadline : 'Not specified',
+        CancellationFee: offer.policies.cancellations && offer.policies.cancellations.length > 0 ? offer.policies.cancellations[0].amount : 'Not specified'
     };
 
     $.ajax({
