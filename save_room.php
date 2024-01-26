@@ -9,8 +9,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 header('Content-Type: application/json');
 
-include('flightapi.php');
+include('hotelapi.php');
 include('../database.php');
+
+error_log(print_r($_POST, true));
 
 if (!isset($_SESSION["user_id"])) {
 } else {
@@ -19,8 +21,8 @@ if (!isset($_SESSION["user_id"])) {
 }
     
 // All hotel room info
-$HotelName = $_POST['HotelName'] ?? '';
-$offerId = $_POST['offerId'] ?? '';
+$HotelName = $_POST['hotelName'] ?? '';
+$offerId = $_POST['offerID'] ?? '';
 $checkInDate = date('Y-m-d', strtotime($_POST['checkInDate'] ?? ''));
 $checkOutDate = date('Y-m-d', strtotime($_POST['checkOutDate'] ?? ''));
 $cityCode = $_POST['cityCode'] ?? '';
@@ -30,11 +32,10 @@ $roomDescription = $_POST['roomDescription'] ?? '';
 $priceTotal = $_POST['priceTotal'] ?? 0.0;
 $currency = $_POST['currency'] ?? '';
 $paymentType = $_POST['paymentType'] ?? '';
-$cancellationDeadline = $_POST['cancellationDeadline'] ?? '';
-$cancellationFee = $_POST['cancellationFee'] ?? '';
+$cancellationDeadline = $_POST['cancellationDeadline'] ?? null;
+$cancellationFee = $_POST['cancellationFee'] ?? null;
 
-
-    $mysqli = require __DIR__ . "../database.php";
+    $mysqli = require __DIR__ . "/../database.php";
 
     $sql = "INSERT INTO HotelRoom (HotelName, OfferId, CheckInDate, CheckOutDate, CityCode, RoomType, BedDetails, RoomDescription, PriceTotal, Currency, PaymentType, CancellationDeadline, CancellationFee) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
