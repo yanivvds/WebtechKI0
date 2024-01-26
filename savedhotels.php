@@ -7,29 +7,43 @@
     <title>Saved Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
-        .hotel-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin: 10px;
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
             padding: 20px;
-            transition: transform 0.2s; /* Animation */
         }
 
-        .hotel-card:hover {
-            transform: scale(1.03); /* Slight zoom on hover */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            overflow: hidden;
         }
 
-        .hotel-card h3 {
-            margin-top: 0;
-            color: #007bff;
+        .card-header {
+            background-color: #E3D1C5;
+            color: #333;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
         }
 
-        .hotel-card p {
-            margin: 10px 0;
-            line-height: 1.5;
+        .card-body {
+            padding: 10px;
+            line-height: 1.6;
+            color: #333;
         }
+
+        .card-footer {
+            padding: 10px;
+            text-align: right;
+        }
+
 
         .hotel-card .remove-button {
             width: 100%;
@@ -88,7 +102,9 @@
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='hotel-card'>";
+                echo "<div class='card'>";
+                echo "<div class='card-header'>" . htmlspecialchars($row['Airline']) . " - " . htmlspecialchars($row['FlightNumber']) . "</div>";
+                echo "<div class='card-body'>";
                 echo "<h3>" . htmlspecialchars($row['HotelName']) . " - " . htmlspecialchars($row['CityCode']) . "</h3>";
                 echo "<p>Check-in: " . htmlspecialchars($row['CheckInDate']) . "</p>";
                 echo "<p>Check-out: " . htmlspecialchars($row['CheckOutDate']) . "</p>";
