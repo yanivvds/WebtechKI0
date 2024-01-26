@@ -283,22 +283,226 @@ body{
 }
 
 .card {
-    margin-left: 3vw;
-    margin-top: 10vh;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-    transition: 0.3s;
-    width: 20vw;
+    background-color:#f0cdaa;
+    width: 500px;
+    border: 1px solid #ffffff;
     border-radius: 3%;
+    overflow: hidden;
+    margin-top: 10vh;
+    margin-left: 2vw;
 }
-  
+
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
-  
-.tempel{
-    border-radius: 3% 3% 0 0;
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
-  
-.container {
-    padding: 2px 16px;
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.3vw;
+}
+
+.card-content p {
+    margin-bottom: 15px;
+    font-size: 0.9vw;
+}
+
+.card-content a {
+    display: block;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/*----------------------------------------*/
+
+
+.picture-pic1-asia {
+    background-image: url(../fotos/greatwall.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 1 / 1 / 3 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic1-asia {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic1-asia::before {
+    content: "Great Wall of China, China";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+
+.picture-pic1-asia:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic2-asia {
+    background-image: url(../fotos/tajmahal2.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 2 / 2 / 4 / 3;
+    border-radius: 15px;
+}
+
+.picture-pic2-asia {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic2-asia::before {
+    content: "Taj Mahal, India";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic2-asia:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic3-asia {
+    background-image: url(../fotos/mountfuji.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 3 / 1 / 5 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic3-asia{
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic3-asia::before {
+    content: "Mount Fuji, Japan";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic3-asia:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic4-asia {
+    background-image: url(../fotos/phiphi.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 4 / 2 / 6 / 3;
+    border-radius: 15px;
+}
+
+.picture-pic4-asia {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic4-asia::before {
+    content: "Phi Phi Islands, Thailand";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic4-asia:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic5-asia{
+    background-image: url(../fotos/bali.jpg);
+    background-size: cover;
+    background-position: 0;
+    color: #fff;
+    text-align: center;
+    grid-area: 5 / 1 / 7 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic5-asia {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic5-asia::before {
+    content: "Bali, Indonesia";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic5-asia:hover::before {
+    opacity: 1; 
 }
