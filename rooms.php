@@ -175,10 +175,11 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     const roomDetails = offer.room;
     const priceDetails = offer.price;
     const policies = offer.policies;
+    var hotelId = "<?php echo $hotelId; ?>";
 
     // Data that will be send to the server
     const postData = {
-        hotelId: hotelDetails.hotelId,
+        hotelId: hotelId,
         offerId: offer.id,
         checkInDate: offer.checkInDate,
         checkOutDate: offer.checkOutDate,
