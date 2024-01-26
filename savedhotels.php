@@ -32,6 +32,7 @@
             font-size: 18px;
             font-weight: bold;
             text-align: center;
+            border-radius: 15px 15px 0 0;
         }
 
         .card-body {
