@@ -163,6 +163,53 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     echo "</div>";
 }
 ?>
+<script>
+    function saveRoom(offer, userID) {
+    if (userID === null) {
+        alert('User is not logged in.');
+        return;
+    }
 
+    // Extract details from the offer object 
+    const hotelDetails = offer.hotel;
+    const roomDetails = offer.room;
+    const priceDetails = offer.price;
+    const policies = offer.policies;
+
+    // Data that will be send to the server
+    const postData = {
+        hotelId: hotelDetails.hotelId,
+        offerId: offer.id,
+        checkInDate: offer.checkInDate,
+        checkOutDate: offer.checkOutDate,
+        cityCode: hotelDetails.cityCode,
+        roomType: roomDetails.typeEstimated.category,
+        bedDetails: `${roomDetails.typeEstimated.beds} ${roomDetails.typeEstimated.bedType}`,
+        roomDescription: roomDetails.description.text,
+        priceTotal: priceDetails.total,
+        currency: priceDetails.currency,
+        paymentType: policies.paymentType,
+        cancellationDeadline: policies.cancellations ? policies.cancellations[0].deadline : '',
+        cancellationFee: policies.cancellations ? policies.cancellations[0].amount : ''
+    };
+
+    $.ajax({
+        url: 'save_room.php', 
+        type: 'POST',
+        data: postData,
+        dataType: 'json',
+        success: function(response) {
+            if (response.success) {
+                alert('Room saved successfully!');
+            } else {
+                alert('Error saving room: ' + response.error);
+            }
+        },
+        error: function(xhr, status, error) {
+            alert('An error occurred: ' + error);
+        }
+    });
+}
+</script>
 </body>
 </html>
