@@ -25,6 +25,13 @@
             height: 100%;
         }
 
+        .card-header h3 {
+            color: #986e43;
+            font-size: 23px;
+            font-weight: 550;
+            text-shadow: 0.6px 0.6px rgba(255, 255, 255, 0.383);
+        }
+
         .card-header {
             background-color: #E3D1C5;
             color: #333;
