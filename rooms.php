@@ -170,29 +170,21 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
         return;
     }
 
-    // Extract details from the offer object 
-    const hotelDetails = HotelOffer.hotel;
-    const roomDetails = HotelOffer.room;
-    const priceDetails = HotelOffer.price;
-    const policies = offer.policies;
-    var hotelId = "<?php echo $hotelId; ?>";
-    var cityCode = "<?php echo $cityCode; ?>";
-
     // Data that will be send to the server
     const postData = {
-        hotelId: hotelId,
-        offerId: HotelOffer.id,
-        checkInDate: HotelOffer.checkInDate,
-        checkOutDate: HotelOffer.checkOutDate,
-        cityCode: cityCode,
-        roomType: roomDetails.typeEstimated.category,
-        bedDetails: `${roomDetails.typeEstimated.beds} ${roomDetails.typeEstimated.bedType}`,
-        roomDescription: roomDetails.description.text,
-        priceTotal: priceDetails.total,
-        currency: priceDetails.currency,
-        paymentType: policies.paymentType,
-        cancellationDeadline: policies.cancellations ? policies.cancellations[0].deadline : '',
-        cancellationFee: policies.cancellations ? policies.cancellations[0].amount : ''
+        hotelId: hotelOffers.data[0].hotel.hotelId,
+        offerId: hotelOffers.data[0].offers[0].id,
+        checkInDate: otelOffers.data[0].offers[0].checkInDate,
+        checkOutDate: hotelOffers.data[0].offers[0].checkOutDate,
+        cityCode: hotelOffers.data[0].hotel.cityCode,
+        roomType: hotelOffers.data[0].offers[0].room.typeEstimated.category,
+        bedDetails: `${hotelOffers.data[0].offers[0].room.typeEstimated.beds} ${hotelOffers.data[0].offers[0].room.typeEstimated.bedType}`,
+        roomDescription: hotelOffers.data[0].offers[0].room.description.text,
+        priceTotal: hotelOffers.data[0].offers[0].price.total,
+        currency: hotelOffers.data[0].offers[0].price.currency,
+        paymentType: hotelOffers.data[0].offers[0].policies.paymentType,
+        cancellationDeadline: hotelOffers.data[0].offers[0].policies.cancellations[0].deadline : '',
+        cancellationFee: policies.cancellations ? hotelOffers.data[0].offers[0].policies.cancellations[0].amount : ''
     };
 
     $.ajax({
