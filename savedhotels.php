@@ -9,8 +9,8 @@
     <style>
         .card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax() values as needed */
+            gap: 20px; /* Space between cards */
             padding: 20px;
             justify-content: center;
         }
