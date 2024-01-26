@@ -22,6 +22,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             width: 300px;
             overflow: hidden;
+            height: 100%;
         }
 
         .card-header {
@@ -105,7 +106,7 @@
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='card'>";
             echo "<div class='card-header'>";
-            echo "<h3>" . htmlspecialchars($row['HotelName']) . " - " . htmlspecialchars($row['CityCode']) . "</h3>";
+            echo "<h3>" . htmlspecialchars($row['HotelName']) . "</h3>";
             echo "</div>"; // Close card-header
             echo "<div class='card-body'>";
             echo "<p>Check-in: " . htmlspecialchars($row['CheckInDate']) . "</p>";
