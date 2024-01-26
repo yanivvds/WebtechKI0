@@ -199,29 +199,27 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
         const cancellationDeadline = offer.offers[0].policies.cancellations[0].deadline;
         const cancellationFee = offer.offers[0].policies.cancellations[0].amount;
 
-        // Construct the data to send in the AJAX request
-        const requestData = {
-            userID: userID,
-            hotelName: hotelName,
-            offerID: offerID,
-            checkInDate: checkInDate,
-            checkOutDate: checkOutDate,
-            cityCode: cityCode,
-            bedDetails: bedDetails,
-            roomDescription: roomDescription,
-            roomType: roomType,
-            priceTotal: priceTotal,
-            currency: currency,
-            paymentType: paymentType,
-            cancellationDeadline: cancellationDeadline,
-            cancellationFee: cancellationFee
-        };
 
         // Perform the AJAX POST request to save the room offer
         $.ajax({
-            url: '/save_room.php', // Replace with the actual URL to save the room
+            url: '/flights/save_flight.php',
             type: 'POST',
-            data: requestData,
+            data: {
+                userID: userID,
+                hotelName: hotelName,
+                offerID: offerID,
+                checkInDate: checkInDate,
+                checkOutDate: checkOutDate,
+                cityCode: cityCode,
+                bedDetails: bedDetails,
+                roomDescription: roomDescription,
+                roomType: roomType,
+                priceTotal: priceTotal,
+                currency: currency,
+                paymentType: paymentType,
+                cancellationDeadline: cancellationDeadline,
+                cancellationFee: cancellationFee
+            },
             dataType: 'json',
             success: function(response) {
                 if (response.success) {
