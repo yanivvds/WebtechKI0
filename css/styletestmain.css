@@ -1,178 +1,11 @@
-
-body{
+*{
     margin: 0;
     padding: 0;
+    font-weight: 500;
+    line-height: 1.5;
     box-sizing: border-box;
-}
-.fotodiv1{
-    background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/eugene-zhyvchik-kvP6b4aSxjI-unsplash.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 52rem;
     font-family: "Poppins";
-    color: #fff;
-    text-shadow: 0.6px 0.6px rgba(255, 255, 255, 0.383);
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    z-index: 3;
 }
-.fotodiv1 h1{
-    font-size: 6rem;
-    margin-bottom: 15rem;
-}
-.fotodiv1 p{
-    font-size: 1.5rem;
-    position: absolute;
-    margin-top: 7rem;
-}
-.golfpagina1{
-    background-color: #f2e6d9;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:37rem;
-    z-index: 1;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    text-shadow: #999;
-    position: absolute;
-    margin-top: -11rem;
-    border-radius: 30% 30% 30% 30%;
-    
-}
-
-.golfpagina1 h3{
-    color: #986e45;
-    font-size: 2rem;
-    font-family: "poppins";
-    position: relative;
-    margin-top: -7rem;
-    margin-left: 0rem;
-
-}
-
-.golfpagina1 h4{
-    margin-bottom: 35rem;
-    color: #986e45;
-    font-family: "Poppins";
-    font-size: 2rem;
-    position: relative;
-}
-
-.test{
-    padding: 16% 23%;
-    background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
-    margin-top: 15rem;
-    background-size: cover;
-}
-.test h3{
-    color: #fff;
-    font-size: 4rem;
-    font-family: "poppins";
-    margin-bottom: 4rem;
-    text-shadow: #999;
-    margin-left: 24%;
-}
-.test p{
-    color: #fff;
-    font-size: 1.5rem;
-    font-family: "poppins";
-    margin-bottom: 4vh;
-    text-shadow: #999;
-    margin-left: 16%
-}
-
-.col{
-    display: flex;
-    position: absolute;
-}
-.card{
-    width: 280px;
-    height: 310px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 10px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 10px 15px;
-    background-image: url(../fotos/mexico.jpg);
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.5s;
-
-}
-.card1{
-    background-image: url(../fotos/mexico.jpg);
-}
-.card2{
-    background-image: url(../fotos/massimiliano-donghi-JXsxH2shRgY-unsplash.jpg);
-}
-.card3{
-    background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
-}
-.card4{
-    background-image: url(../fotos/charles-postiaux-WOw3Pcdmw4I-unsplash.jpg);
-}
-.card:hover{
-    transform: translatey(-10px);
-}
-h5{
-    font-size: 25px;
-    color: #fff;
-    text-shadow: 0 0 5px #999;
-}
-.card p{
-    text-shadow: 0 0 5px #000;
-    font-size: 20px;
-    color: #fff;
-}
-.golfpagina2{
-    background-color:#f2e6d9;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:60rem;
-    z-index: 8;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    text-shadow: #999;
-    position: absolute;
-    border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
-    margin-top: -12rem;
-}
-.gallery h3{
-    color: #986e45;
-    font-size: 2rem;
-    font-family: "poppins";
-    position: relative
-}
-
-.exploreknop{
-    padding-left: 3rem;
-    padding-right: 3rem;
-    height: 3rem;
-    border-radius: 5px;
-    background-color: #986e45;
-    color: #fff;
-    font-size: 2rem;
-    margin-left: 35%;
-    border: none;
-}
-.exploreknop:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-/* Font*/
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
@@ -280,24 +113,117 @@ h5{
     font-weight: 900;
     font-style: italic;
   }
+  
+html, body {
+    height: 100%;
+}
 
-  /* Gallery*/
-  .container {
+body {
+    background-image: linear-gradient(rgb(141 58 58 / 41%), rgb(219 199 182 / 57%)), url(../fotos/ballon.jpg);
+    background-size:cover;
+    background-position: center;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+header.scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: -5rem;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 1;
+    transition: 0.5s;
+}
+.containertekst{
+    width:100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color:#f2e6d9;
+    height: 150px;
+}
+.containertekst h1{
+    color:#986e45;
+    text-decoration: none;
+    font-size: 60px;
+}
+.containertekst p{
+     color: #986e45;
+     text-decoration: none;
+     font-size: 20px;
+}
+
+.btn{
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 5%;
+    cursor: pointer;
+    background-color: #f5168d;
+    color: #fff;
+    font-size: 20px;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+  
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+  
+.overlay .closebtn {
     position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 90px;
+    z-index: 2;
+}
+
+/* Gallery blog */
+.container {
+    width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 6rem;
     flex-direction: column;
 }
 .gallery {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 5vw);
-    grid-gap: 20px;
-    margin-left: 10rem;
-    margin-top: -5rem;
-    
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+    margin: auto
 }
 .gallery__img {
     width: 100%;
@@ -306,32 +232,40 @@ h5{
 }
 .gallery__item--1 {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
 }
 .gallery__item--2 {
-    grid-column-start: 4;
-    grid-column-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 5;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
 }
 .gallery__item--3 {
-    grid-column-start: 4;
-    grid-column-end: 7;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
 }
 .gallery__item--4 {
     grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
 }
-.gallery__item a{
-    text-decoration: none;
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
 }
-
+.gallery__item--6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
 .imagediv--1{
     background-image: url(../fotos/rahul-chakraborty-5aN2I852PTs-unsplash.jpg);
     width: 100%;
@@ -341,10 +275,9 @@ h5{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-decoration: none;
 }
 .imagediv--2{
-    background-image: url(../fotos/mikail-mcverry-6WRjFofNhPs-unsplash.jpg);
+    background-image: url(../fotos/joachim-lesne-ciNvnoptI20-unsplash.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -352,10 +285,9 @@ h5{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-decoration: none;
 }
 .imagediv--3{
-    background-image: url(../fotos/florian-schneider-NdBsn0WQadw-unsplash.jpg);
+    background-image: url(../fotos/pema-lama-6cfK0SEtpbY-unsplash.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -363,10 +295,9 @@ h5{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-decoration: none;
 }
 .imagediv--4{
-    background-image: url(../fotos/jonatan-pie-8I49k45G-3A-unsplash.jpg);
+    background-image: url(../fotos/trevor-gerzen-r_XS7sml57o-unsplash.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -374,66 +305,95 @@ h5{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+.imagediv--5{
+    background-image: url(../fotos/fineas-anton-kC1-9Snr9hI-unsplash.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.imagediv--6{
+    background-image: url(../fotos/wallpaperflare.com_wallpaper.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+h5, p{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-family:"poppins";
+}
+h5 {
+    font-weight: 800;
+}
+a {
     text-decoration: none;
 }
-
 .imagediv--1 h5{
-    margin-bottom: 7rem;
+    margin-bottom: 3.5rem;
+    text-shadow: #000000;
     margin-left: 1rem;
-    color: #fff;
-    font-family: "poppins";
-    text-decoration: none !important;
-    text-shadow: 0 0 5px #000;
-    font-size: 2rem;
 }
-.imagediv--4 h5{
+.imagediv--2 h5{
     margin-bottom: 4rem;
-    margin-left: 1rem;
 }
 .imagediv--3 h5{
-    margin-left: 1rem;
-    margin-bottom: 4rem;
-    font-family: "poppins";
-    text-decoration: none !important;
+    margin-bottom: 15rem;
     text-shadow: 0 0 5px #000;
-    font-size: 2rem;
-}
-.imagediv--2 h5{
+    font-size: 2.5em;
     margin-left: 1rem;
-    margin-bottom: 3rem;
-    font-family: "poppins";
-    text-shadow: 0 0 5px #000;
-    font-size: 2rem;
 }
-.imagediv--3 h5,
 .imagediv--4 h5{
-    text-decoration: none !important;
-    font-family: "poppins";
-    text-shadow: 0 0 5px #000;
-    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    font-size: 1.6em;
+    margin-left: 3rem;
 }
-.imagediv--2 h5{
-    margin-bottom: 6rem;
-
+.imagediv--5 h5{
+    margin-bottom: 9rem;
+    text-shadow: #000;
+    margin-left: 2rem;
+    font-size: 1.6rem;
 }
-.imagediv--1 p,
+.imagediv--6 h5{
+    margin-bottom: 7rem;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+}
 .imagediv--2 p,
 .imagediv--3 p,
-.imagediv--4 p{
+.imagediv--4 p,
+.imagediv--5 p,
+.imagediv--6 p{
     visibility: hidden;
     transition: visibility 0.3s ease;
-    color: #fff;
-    font-family: "poppins";
-    text-shadow: 0 0 10px #000;
+    font-style: "poppins";
+}
+.imagediv--1 p{
     margin-left: 0.5rem;
+}
+.imagediv--4 p{
+    margin-left: 1.6rem;
+}
+.imagediv--5 p{
+    margin-left: 1.6rem;
+    font-size: 1.2rem;
 }
 .gallery__item:hover .imagediv--1 p,
 .gallery__item:hover .imagediv--2 p,
 .gallery__item:hover .imagediv--3 p,
-.gallery__item:hover .imagediv--4 p{
+.gallery__item:hover .imagediv--4 p,
+.gallery__item:hover .imagediv--5 p,
+.gallery__item:hover .imagediv--6 p {
     visibility: visible;
-    text-decoration: none !important;
-    font-family: "poppins";
+    text-shadow:#818181
 }
 .gallery__item:hover, 
 .gallery__item:hover,
@@ -441,7 +401,7 @@ h5{
 .gallery__item:hover,
 .gallery__item:hover,
 .gallery__item:hover{
-    transform:scale(1.05);
+    transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 .gallery__item,
@@ -453,351 +413,205 @@ h5{
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
-/* COOKIES */
-
-.containercook{
-    width: 85%;
-    margin: auto;
-}
-.subcontainer{
-    width: 85%;
-    margin: auto;
-}
-#cookies{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    color: #fff;
-    background-color: rgba(0.596, 0.431, 0.271, 0.7);
-    z-index: 1;
-    display: none;
-    height: 9%;
-}
-.cookies{
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
+.title2{
+    background-color: #f2e6d9;
+    width:100%;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
 }
-.cookies a{
-    color: white;
-    font-weight: 500px;
-    text-decoration: none;
+.title2 h2{
+    color: #986e45;
 }
-#cookies-btn{
-    border-radius: 5px;
-    padding: 8px 12px 8px 12px;
-    font-size: 1rem;
-    font-family: inherit;
-    cursor: pointer;
-    border: 3px solid white;
-    background-color: black;
-    color: white;
-
-
+.title2 p{
+    color: #986e45;
+    margin-top: 2%;
 }
-
-
-@media(max-width: 1600px){
-    .container{
-        width: 100%;
+/* carousel*/
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+      
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
     }
-}
-@media(max-width: 1024px){
-    .cookies{
-        padding: 10px 0;
+      
+    > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
     }
-}
-/* font */
-.poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
   }
   
-.poppins-thin-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: italic;
+  /* Styling*/
+  
+  section {
+      background: #F4F4F4;
+      padding: 50px 0;
   }
   
-.poppins-extralight {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
+  .containercarousel {
+      max-width: 1044px;
+      margin: 0 auto;
+      padding: 0 20px;
+      margin-left: 20rem;
   }
   
-.poppins-extralight-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: italic;
+  .carousel {
+      display: block;
+      text-align: left;
+      position: relative;
+      margin-bottom: 22px;
+      
+      > input {
+          clip: rect(1px, 1px, 1px, 1px);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          
+          &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+          &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+          &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+          &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+          &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+          &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+          
+          &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+      }
   }
   
-.poppins-light {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+  .carousel__slides {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      display: flex;
   }
   
-.poppins-light-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: italic;
+  .carousel__slide {
+      position: relative;
+      display: block;
+      flex: 1 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transition: all 300ms ease-out;
+      vertical-align: top;
+      box-sizing: border-box;
+      white-space: normal;
+      
+      figure {
+          display: flex;
+          margin: 0;
+      }
+      
+      div {
+          @include aspect-ratio(3, 2);
+          width: 100%;
+      }
+      
+      img {
+          display: block;
+          flex: 1 1 auto;
+          object-fit: cover;
+      }
+      
+      figcaption {
+          align-self: flex-end;
+          padding: 20px 20px 0 20px;
+          flex: 0 0 auto;
+          width: 25%;
+          min-width: 150px;
+      }
+      
+      .credit {
+          margin-top: 1rem;
+          color: rgba(0, 0, 0, 0.5);
+          display: block;        
+      }
+      
+      &.scrollable {
+          overflow-y: scroll;
+      }
   }
   
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  .carousel__thumbnails {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      
+      margin: 0 -10px;
+      
+      .carousel__slides + & {
+          margin-top: 20px;
+      }
+      
+      li {        
+          flex: 1 1 auto;
+          max-width: calc((100% / 6) - 20px);  
+          margin: 0 10px;
+          transition: all 300ms ease-in-out;
+      }
+      
+      label {
+          display: block;
+          @include aspect-ratio(1,1);
+          
+                    
+          &:hover,
+          &:focus {
+              cursor: pointer;
+              
+              img {
+                  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                  transition: all 300ms ease-in-out;
+              }
+          }
+      }
+      
+      img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
   }
-  
-.poppins-regular-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-.poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-.poppins-medium-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-.poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-.poppins-semibold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-.poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-.poppins-bold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-.poppins-extrabold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-.poppins-extrabold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  
-.poppins-black {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-.poppins-black-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: italic;
+  figcaption{
+    color:#986e45;
+    background-color: #f2e6d9;
   }
 
-    
+  /* phoneversion */
 
-  /* screen sizes */
-
-@media (max-width: 600px){
-    .fotodiv1{
-        background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        font-family: "Poppins";
-        color: #fff;
-        text-shadow: 0.6px 0.6px rgba(255, 255, 255, 0.383);
-        width: 100%;
-        padding: 0;
+  @media (max-width:600px){
+    *{
         margin: 0;
-        z-index: 3;
-    }
-    .fotodiv1 h1{
-        margin-left: 15%;
-        font-size: 3rem;
-        margin-top:0;
-    }
-    .fotodiv1 p{
-        margin-top: 10%;
-        font-size: 1rem;
-        position: absolute;
-        margin-left: 2%
-    }
-    .golfpagina1{
-        background-color: #f2e6d9;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height:28rem;
-        z-index: 1;
         padding: 0;
-        justify-content: center;
-        align-items: center;
-        text-shadow: #999;
-        position: absolute;
-        margin-top: -5%;
-        border-radius: 5%;
-    }
-    
-    .golfpagina1 h3{
-        color: #986e45;
-        font-size: 2rem;
-        margin-bottom: -2rem;
-        font-family: "poppins";
-        position: relative;
-        margin-left: 0rem;
-
-    
-    }
-    
-    .golfpagina1 h4{
-        margin-bottom: 35rem;
-        color: #986e45;
-        font-family: "Poppins";
-        font-size: 2rem;
-        position: relative;
-    }
-    
-    .test{
-        padding: 16% 23%;
-        background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
-        margin-top: 15rem;
-        background-size: cover;
-    }
-    .test h3{
-        color: #fff;
-        font-size: 3rem;
-        font-family: "poppins";
-        margin-top: 57%;
-        text-shadow: #999;
-        margin-left:-28%;
-    }
-    .test p{
-        color: #fff;
-        font-size: 1.5rem;
-        font-family: "poppins";
-        margin-bottom: 4vh;
-        text-shadow: #999;
-        margin-left: 16%
-    }
-    
-    .col{
-        display: flex;
-        position: absolute;
-    }
-    .card{
-        width: 280px;
-        height: 310px;
-        display: inline-block;
-        border-radius: 10px;
-        padding: 10px 25px;
+        font-weight: 500;
+        line-height: 1.5;
         box-sizing: border-box;
-        cursor: pointer;
-        margin: 10px 15px;
-        background-image: url(../fotos/mexico.jpg);
-        background-position: center;
-        background-size: cover;
-        transition: transform 0.5s;
-    
+        font-family: "Poppins";
     }
-    .card1{
-        background-image: url(../fotos/mexico.jpg);
-    }
-    .card2{
-        background-image: url(../fotos/massimiliano-donghi-JXsxH2shRgY-unsplash.jpg);
-        display: none;
-    }
-    .card3{
-        background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
-        display: none;
-    }
-    .card4{
-        background-image: url(../fotos/charles-postiaux-WOw3Pcdmw4I-unsplash.jpg);
-        display: none;
-    }
-    .card:hover{
-        transform: translatey(-10px);
-    }
-    h5{
-        font-size: 25px;
-        color: #fff;
-        text-shadow: 0 0 5px #999;
-    }
-    .card p{
-        text-shadow: 0 0 5px #000;
-        font-size: 20px;
-        color: #fff;
-    }
-    .golfpagina2{
-        background-color:#f2e6d9;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height:28rem;
-        z-index: 8;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        text-shadow: #999;
-        position: absolute;
-        border-radius: 5%;
-        margin-top: -5%;
-    }
-    .gallery h3{
-        color: #986e45;
-        font-size: 2rem;
-        font-family: "poppins";
-        position: relative;
-    }
-    
-    .exploreknop{
-        padding-left: 3rem;
-        padding-right: 3rem;
-        height: 3rem;
-        border-radius: 5px;
-        background-color: #986e45;
-        color: #fff;
-        font-size: 2rem;
-        margin-left: 2%;
-        border: none;
-    }
-    .exploreknop:hover{
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-    
-    /* Font*/
     .poppins-thin {
         font-family: "Poppins", sans-serif;
         font-weight: 100;
@@ -905,27 +719,117 @@ h5{
         font-weight: 900;
         font-style: italic;
       }
+      
+    html, body {
+        height: 100%;
+    }
     
-      /* Gallery*/
-      .container {
+    body {
+        background-image: linear-gradient(rgb(141 58 58 / 41%), rgb(219 199 182 / 57%)), url(../fotos/ballon.jpg);
+        background-size:cover;
+        background-position: center;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+    }
+    header.scroll{
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: -5rem;
+        background-color: rgba(0,0,0,0.1);
+        z-index: 1;
+        transition: 0.5s;
+    }
+    .containertekst{
+        width:100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color:#f2e6d9;
+        height: 25%;
+    }
+    .containertekst h1{
+        color:#986e45;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+    .containertekst p{
+         color: #986e45;
+         text-decoration: none;
+         font-size: 1rem;
+    }
+    
+    .btn{
+        align-items: center;
+        padding: 10px 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 5%;
+        cursor: pointer;
+        background-color: #f5168d;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+      
+    .overlay-content {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: left;
+        margin-top: 30px;
+    }
+      
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+      
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+      
+    .overlay .closebtn {
         position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 90px;
+        z-index: 2;
+    }
+    
+    /* Gallery blog */
+    .container {
+        width: 100%;
+        position: relative;
         display: flex;
         justify-content: center;
-        margin-top: 5rem;
+        margin-top: 6rem;
         flex-direction: column;
     }
     .gallery {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(7, 5vw);
-        grid-gap: 20px;
-        margin-left: 0%;
-        margin-top: -5rem;
-        padding-left: 5;
-        padding-right: 5;
-        padding-top: 5;
-        
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 15px;
+        margin: auto
     }
     .gallery__img {
         width: 100%;
@@ -934,35 +838,44 @@ h5{
     }
     .gallery__item--1 {
         grid-column-start: 1;
-        grid-column-end: 8;
+        grid-column-end: 3;
         grid-row-start: 1;
-        grid-row-end: 8;
+        grid-row-end: 3;
+        display: none;
     }
     .gallery__item--2 {
-        grid-column-start: 4;
-        grid-column-end: 7;
+        grid-column-start: 3;
+        grid-column-end: 5;
         grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row-end: 3;
         display: none;
     }
     .gallery__item--3 {
-        grid-column-start: 4;
-        grid-column-end: 7;
-        grid-row-start: 4;
-        grid-row-end: 7;
-        display: none;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        display:none;
     }
     .gallery__item--4 {
         grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 7;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    .gallery__item--5 {
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 7;
+        grid-row-end: 9;
         display: none;
     }
-    .gallery__item a{
-        text-decoration: none;
+    .gallery__item--6 {
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 5;
+        grid-row-end: 9;
     }
-    
     .imagediv--1{
         background-image: url(../fotos/rahul-chakraborty-5aN2I852PTs-unsplash.jpg);
         width: 100%;
@@ -972,10 +885,9 @@ h5{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        text-decoration: none;
     }
     .imagediv--2{
-        background-image: url(../fotos/mikail-mcverry-6WRjFofNhPs-unsplash.jpg);
+        background-image: url(../fotos/joachim-lesne-ciNvnoptI20-unsplash.jpg);
         width: 100%;
         height: 100%;
         background-size: cover;
@@ -983,10 +895,9 @@ h5{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        text-decoration: none;
     }
     .imagediv--3{
-        background-image: url(../fotos/florian-schneider-NdBsn0WQadw-unsplash.jpg);
+        background-image: url(../fotos/pema-lama-6cfK0SEtpbY-unsplash.jpg);
         width: 100%;
         height: 100%;
         background-size: cover;
@@ -994,10 +905,9 @@ h5{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        text-decoration: none;
     }
     .imagediv--4{
-        background-image: url(../fotos/jonatan-pie-8I49k45G-3A-unsplash.jpg);
+        background-image: url(../fotos/trevor-gerzen-r_XS7sml57o-unsplash.jpg);
         width: 100%;
         height: 100%;
         background-size: cover;
@@ -1005,66 +915,95 @@ h5{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+    }
+    .imagediv--5{
+        background-image: url(../fotos/fineas-anton-kC1-9Snr9hI-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .imagediv--6{
+        background-image: url(../fotos/wallpaperflare.com_wallpaper.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    h5, p{
+        color: #f1f1f1;
+        text-decoration: none;
+        font-family:"poppins";
+    }
+    h5 {
+        font-weight: 800;
+    }
+    a {
         text-decoration: none;
     }
-    
     .imagediv--1 h5{
-        margin-bottom: 7rem;
+        margin-bottom: 3.5rem;
+        text-shadow: #000000;
         margin-left: 1rem;
-        color: #fff;
-        font-family: "poppins";
-        text-decoration: none !important;
-        text-shadow: 0 0 5px #000;
-        font-size: 2rem;
     }
-    .imagediv--4 h5{
+    .imagediv--2 h5{
         margin-bottom: 4rem;
-        margin-left: 1rem;
     }
     .imagediv--3 h5{
-        margin-left: 1rem;
-        margin-bottom: 4rem;
-        font-family: "poppins";
-        text-decoration: none !important;
+        margin-bottom: 15rem;
         text-shadow: 0 0 5px #000;
-        font-size: 2rem;
-    }
-    .imagediv--2 h5{
+        font-size: 2.5em;
         margin-left: 1rem;
-        margin-bottom: 3rem;
-        font-family: "poppins";
-        text-shadow: 0 0 5px #000;
-        font-size: 2rem;
     }
-    .imagediv--3 h5,
     .imagediv--4 h5{
-        text-decoration: none !important;
-        font-family: "poppins";
-        text-shadow: 0 0 5px #000;
-        font-size: 2rem;
+        margin-bottom: -15vh;
+        font-size: 1rem;
+        margin-left: 1rem;
     }
-    .imagediv--2 h5{
-        margin-bottom: 6rem;
-    
+    .imagediv--5 h5{
+        margin-bottom: 0rem;
+        text-shadow: #000;
+        margin-left: 2rem;
+        font-size: 1.6rem;
     }
-    .imagediv--1 p,
+    .imagediv--6 h5{
+        margin-bottom: -4%;
+        margin-left: 1rem;
+        font-size: 1.3rem;
+    }
     .imagediv--2 p,
     .imagediv--3 p,
-    .imagediv--4 p{
+    .imagediv--4 p,
+    .imagediv--5 p,
+    .imagediv--6 p{
         visibility: hidden;
         transition: visibility 0.3s ease;
-        color: #fff;
-        font-family: "poppins";
-        text-shadow: 0 0 10px #000;
+        font-style: "poppins";
+    }
+    .imagediv--1 p{
         margin-left: 0.5rem;
+    }
+    .imagediv--4 p{
+        margin-left: 1.6rem;
+    }
+    .imagediv--5 p{
+        margin-left: 1.6rem;
+        font-size: 1.2rem;
     }
     .gallery__item:hover .imagediv--1 p,
     .gallery__item:hover .imagediv--2 p,
     .gallery__item:hover .imagediv--3 p,
-    .gallery__item:hover .imagediv--4 p{
-        visibility: visible;
-        text-decoration: none !important;
-        font-family: "poppins";
+    .gallery__item:hover .imagediv--4 p,
+    .gallery__item:hover .imagediv--5 p,
+    .gallery__item:hover .imagediv--6 p {
+        visibility: hidden;
+        text-shadow:#818181
     }
     .gallery__item:hover, 
     .gallery__item:hover,
@@ -1072,7 +1011,7 @@ h5{
     .gallery__item:hover,
     .gallery__item:hover,
     .gallery__item:hover{
-        transform:scale(1.05);
+        transform: scale(1.05);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     }
     .gallery__item,
@@ -1084,5 +1023,193 @@ h5{
         transition: transform 0.3s ease;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
-    
-}
+    .title2{
+        background-color: #f2e6d9;
+        width:100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+    }
+    .title2 h2{
+        color: #986e45;
+    }
+    .title2 p{
+        color: #986e45;
+        margin-top: 5%;
+    }
+    /* carousel*/
+    @mixin aspect-ratio($width, $height) {
+        position: relative;
+          
+        &:before {
+          display: block;
+          content: "";
+          width: 100%;
+          padding-top: ($height / $width) * 100%;
+        }
+          
+        > img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              height: 100%;
+        }
+      }
+      
+      /* Styling*/
+      
+      section {
+          background: #F4F4F4;
+          padding: 50px 0;
+      }
+      
+      .containercarousel {
+          max-width: 90%;
+          margin: 0 auto;
+          padding: 0 20px;
+          margin-left:0;
+      }
+      
+      .carousel {
+          display: block;
+          text-align: left;
+          position: relative;
+          margin-bottom: 22px;
+          
+          > input {
+              clip: rect(1px, 1px, 1px, 1px);
+              clip-path: inset(50%);
+              height: 1px;
+              width: 1px;
+              margin: -1px;
+              overflow: hidden;
+              padding: 0;
+              position: absolute;
+              
+              &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+              &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+              &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+              &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+              &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+              &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+              
+              &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+              &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+              &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+              &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+              &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+              &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          }
+      }
+      
+      .carousel__slides {
+          position: relative;
+          z-index: 1;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          box-sizing: border-box;
+          display: flex;
+      }
+      
+      .carousel__slide {
+          position: relative;
+          display: block;
+          flex: 1 0 100%;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          transition: all 300ms ease-out;
+          vertical-align: top;
+          box-sizing: border-box;
+          white-space: normal;
+          
+          figure {
+              display: flex;
+              margin: 0;
+          }
+          
+          div {
+              @include aspect-ratio(3, 2);
+              width: 100%;
+          }
+          
+          img {
+              display: block;
+              flex: 1 1 auto;
+              object-fit: cover;
+          }
+          
+          figcaption {
+              align-self: flex-end;
+              padding: 20px 20px 0 20px;
+              flex: 0 0 auto;
+              width: 25%;
+              min-width: 150px;
+          }
+          
+          .credit {
+              margin-top: 1rem;
+              color: rgba(0, 0, 0, 0.5);
+              display: block;        
+          }
+          
+          &.scrollable {
+              overflow-y: scroll;
+          }
+      }
+      
+      .carousel__thumbnails {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          
+          margin: 0 -10px;
+          
+          .carousel__slides + & {
+              margin-top: 20px;
+          }
+          
+          li {        
+              flex: 1 1 auto;
+              max-width: calc((100% / 6) - 20px);  
+              margin: 0 10px;
+              transition: all 300ms ease-in-out;
+          }
+          
+          label {
+              display: block;
+              @include aspect-ratio(1,1);
+              
+                        
+              &:hover,
+              &:focus {
+                  cursor: pointer;
+                  
+                  img {
+                      box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                      transition: all 300ms ease-in-out;
+                  }
+              }
+          }
+          
+          img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+          }
+      }
+      figcaption{
+        color:#986e45;
+        background-color: #f2e6d9;
+      }
+
+
+  }
