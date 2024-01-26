@@ -54,7 +54,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <ul class="mega-links">
                   <li><a href="hotelbooker.php">Hotel finder</a></li>
                   <li><a href="savedhotels.php">Saved hotels</a></li>
-                  <li><a href="#">Past bookings</a></li>
+                  <li><a href="pasthotels.php">Past bookings</a></li>
                   <li><a href="#">Hotel reviews</a></li>
                 </ul>
               </div>
