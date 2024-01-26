@@ -30,7 +30,7 @@ $roomDescription = $_POST['roomDescription'] ?? '';
 $priceTotal = $_POST['priceTotal'] ?? 0.0;
 $currency = $_POST['currency'] ?? '';
 $paymentType = $_POST['paymentType'] ?? '';
-$cancellationDeadline = $_POST['cancellationDeadline'] ?? '';
+$cancellationDeadline = $_POST['cancellationDeadline'] ?? null;
 $cancellationFee = $_POST['cancellationFee'] ?? '';
 
 
