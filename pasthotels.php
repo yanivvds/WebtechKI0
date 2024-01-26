@@ -147,7 +147,7 @@
     ?>
     </div>
     <div style='text-align: center; margin-top: 2%;'>
-    <a href="pasthotels.php" class='btn'>View Saved Hotel reservations.</a>
+    <a href="savedhotels.php" class='btn'>View Saved Hotel reservations.</a>
     </div>
 </body>
 </html>
