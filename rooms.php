@@ -160,7 +160,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
                     }
                 }
                 $offerJson = htmlspecialchars(json_encode($hotelOffer), ENT_QUOTES, 'UTF-8');
-                echo "<button class='save-button' onclick='saveRoom($offerJson, $userID)'>Save</button>";    
+                echo "<button class='save-room-button' onclick='saveRoom($offerJson, $userID)'>Save</button>";    
                 echo "</div>"; 
             }
         }
