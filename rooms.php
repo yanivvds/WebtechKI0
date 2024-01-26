@@ -182,7 +182,7 @@ function saveRoom(offer, userID) {
         alert('User is not logged in.');
         return;
     }
-    let parsedData = JSON.parse(responseData);
+    let parsedData = JSON.parse(offer);
     let hotel = parsedData.data[0].hotel;
     const typeEstimated = offer.room.typeEstimated || {};
 
