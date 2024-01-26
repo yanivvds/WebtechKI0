@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL); // remove after testing
-ini_set('display_errors', 1); // remove after testing
 
 
 if (session_status() == PHP_SESSION_NONE) {

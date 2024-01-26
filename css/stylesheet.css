@@ -11,7 +11,7 @@ body{
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    min-height: 100vh;
+    min-height: 100%;
 }
 /* header{
     position: fixed;
