@@ -70,10 +70,8 @@
         exit; 
     }
 
-    include('../database.php');
-
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['remove_room_id'])) {
-        $removeRoomID = $_POST['remove_room_id'];
+        $removeFlightID = $_POST['remove_room_id'];
         
         $removeSql = "DELETE FROM UserRooms WHERE UserID = ? AND RoomID = ?";
         if ($removeStmt = $mysqli->prepare($removeSql)) {

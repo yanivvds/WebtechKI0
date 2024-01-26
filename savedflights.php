@@ -82,20 +82,23 @@
         echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
         exit; 
     }
+    $isRoomRemoved = false;
 
     include('../database.php');
 
-    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['remove_flight_id'])) {
-        $removeFlightID = $_POST['remove_flight_id'];
-        
-        $removeSql = "DELETE FROM UserFlights WHERE UserID = ? AND FlightID = ?";
-        if ($removeStmt = $mysqli->prepare($removeSql)) {
-            $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeFlightID);
-            $removeStmt->execute();
-            $removeStmt->close();
-            echo "<p>Flight removed successfully.</p>";
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['remove_room_id'])) {
+    $removeRoomID = $_POST['remove_room_id'];
+    
+    $removeSql = "DELETE FROM UserRooms WHERE UserID = ? AND RoomID = ?";
+    if ($removeStmt = $mysqli->prepare($removeSql)) {
+        $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeRoomID);
+        $removeStmt->execute();
+        if ($removeStmt->affected_rows > 0) {
+            $isRoomRemoved = true; 
         }
+        $removeStmt->close();
     }
+}
 
     $userID = $_SESSION["user_id"];
 
