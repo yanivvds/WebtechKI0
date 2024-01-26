@@ -33,7 +33,7 @@
 
     .hotel-offer {
         border: 1px solid #ddd;
-        background-color: #986e43;
+        background-color: #ffffff33;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@
     }
 
     .save-room-button {
-        background-color: #f0f8ff33;
+        background-color: #f44336;
         color: white;
         padding: 5px 10px;
         border: none;
