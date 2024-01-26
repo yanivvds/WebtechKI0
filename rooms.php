@@ -41,7 +41,7 @@
     }
 
     .offer-details {
-        background-color: #e2d0c5;
+        background-color: #d5b29c;
         margin-top: 10px;
         padding: 10px;
         border-radius: 5px;
