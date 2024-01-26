@@ -78,7 +78,7 @@
     <?php
 ini_set('log_errors', '1');
 error_reporting(E_ALL);
-include('/flights/flightapi.php');
+include('hotelapi.php');
 if (isset($_GET['hotelId'])) {
     $hotelId = $_GET['hotelId'];
 }

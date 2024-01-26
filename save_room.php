@@ -9,7 +9,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 header('Content-Type: application/json');
 
-include('/flights/flightapi.php');
+include('hotelapi.php');
 include('../database.php');
 
 if (!isset($_SESSION["user_id"])) {
