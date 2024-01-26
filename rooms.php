@@ -85,6 +85,14 @@ $checkOutDate = $_GET['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_GET['adults'] ?? 1;
 $cityCode = $_GET['cityCode'] ?? 'PAR';
 
+$userID = null;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_SESSION["user_id"])) {
+        $userID = $_SESSION["user_id"];
+    }
+}
+
 $hotelOffersCh = curl_init();
 $hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
 
