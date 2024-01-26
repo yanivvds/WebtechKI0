@@ -14,6 +14,11 @@
             padding: 20px;
             justify-content: center;
         }
+        .card p {
+            text-shadow: 0 0 5px #000;
+            font-size: 15px;
+            margin: 12px;
+        }
 
         .card {
             background-color: #704b448c;
