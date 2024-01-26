@@ -12,6 +12,8 @@ header('Content-Type: application/json');
 include('hotelapi.php');
 include('../database.php');
 
+var_dump($_POST);
+
 if (!isset($_SESSION["user_id"])) {
 } else {
     $userID = $_SESSION["user_id"];
@@ -32,8 +34,6 @@ $currency = $_POST['currency'] ?? '';
 $paymentType = $_POST['paymentType'] ?? '';
 $cancellationDeadline = $_POST['cancellationDeadline'] ?? null;
 $cancellationFee = $_POST['cancellationFee'] ?? null;
-
-var_dump($_POST);
 
     $mysqli = require __DIR__ . "/../database.php";
 
