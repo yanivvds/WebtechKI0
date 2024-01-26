@@ -16,8 +16,8 @@
         }
 
         .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: #704b448c;
+            border: 1px solid #986e43;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             width: 300px;
@@ -54,12 +54,16 @@
         }
 
 
-        .hotel-card .remove-button {
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            font-size: 16px;
-            margin-top: 15px;
+        .remove-button {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .remove-button:hover {
+            background-color: #d32f2f;
         }
     </style>
 </head>
