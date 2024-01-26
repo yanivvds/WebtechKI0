@@ -33,7 +33,7 @@
 
     .hotel-offer {
         border: 1px solid #ddd;
-        background-color: #f0f8ff33;
+        background-color: #986e43;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -160,14 +160,16 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
                     }
                 }
                 $offerJson = htmlspecialchars(json_encode($hotelOffer), ENT_QUOTES, 'UTF-8');
-                echo "<button class='save-room-button' onclick='saveRoom($offerJson, $userID)'>Save</button>";    
+                echo "<div style='text-align: center;'>";
+                echo "<button class='save-room-button' onclick='saveRoom($offerJson, $userID)'>Save</button>";
+                echo "</div>";
                 echo "</div>"; 
             }
         }
         
         echo "</div>"; // Close hotel-offer container
     }
-    echo "</div>"; // Close hotel-offers-container
+    echo "</div>"; 
 } else {
     echo "<h1 style='color: #e2d1c6;font-size: 250%;text-align: center;margin-top: 2%;'>No hotel offers found at this time.</h1>";
     echo "<p style='color: #efe9e6;font-size: 20px;text-align: center;'>Because we are still in a testing environment from this API not all hotel options will load.</p>";
