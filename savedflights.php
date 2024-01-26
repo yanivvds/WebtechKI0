@@ -69,8 +69,9 @@
 <body>
     <?php require_once("navbar.php"); ?>
     <h2 style="text-align: center;">Your Saved Flights</h2>
-
+    
     <?php
+    $isRoomRemoved = false;
     
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
@@ -82,23 +83,23 @@
         echo "<script>setTimeout(function(){ window.location.href = 'login.php'; }, 3000);</script>";
         exit; 
     }
-    $isRoomRemoved = false;
+    
 
     include('../database.php');
 
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['remove_room_id'])) {
     $removeRoomID = $_POST['remove_room_id'];
     
-    $removeSql = "DELETE FROM UserRooms WHERE UserID = ? AND RoomID = ?";
-    if ($removeStmt = $mysqli->prepare($removeSql)) {
-        $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeRoomID);
-        $removeStmt->execute();
-        if ($removeStmt->affected_rows > 0) {
-            $isRoomRemoved = true; 
+        $removeSql = "DELETE FROM UserRooms WHERE UserID = ? AND RoomID = ?";
+        if ($removeStmt = $mysqli->prepare($removeSql)) {
+            $removeStmt->bind_param("ii", $_SESSION["user_id"], $removeRoomID);
+            $removeStmt->execute();
+            if ($removeStmt->affected_rows > 0) {
+                $isRoomRemoved = true; 
+            }
+            $removeStmt->close();
         }
-        $removeStmt->close();
     }
-}
 
     $userID = $_SESSION["user_id"];
 
