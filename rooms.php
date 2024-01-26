@@ -70,6 +70,7 @@
     }
 
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body style="height: 100%; min-height: 100vh;">
