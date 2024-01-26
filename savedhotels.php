@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
         .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px; 
             padding: 20px;
+            justify-content: center;
         }
 
         .card {
