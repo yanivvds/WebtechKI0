@@ -33,6 +33,8 @@ $paymentType = $_POST['paymentType'] ?? '';
 $cancellationDeadline = $_POST['cancellationDeadline'] ?? null;
 $cancellationFee = $_POST['cancellationFee'] ?? null;
 
+echo "HotelName: $HotelName";
+echo "offerId: $offerId";
 
     $mysqli = require __DIR__ . "/../database.php";
 

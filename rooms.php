@@ -113,10 +113,6 @@ $hotelOffersArray = json_decode($hotelOffersResponse, true);
 
 curl_close($hotelOffersCh);
 
-echo '<pre>';
-echo htmlspecialchars($hotelOffersResponse);
-echo '</pre>';
-
 $roomDetails = [];
 
 if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
