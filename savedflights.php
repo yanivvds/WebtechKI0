@@ -7,43 +7,22 @@
     <title>Saved Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-
-        .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            overflow: hidden;
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            background-color: #e2d1c68f;
         }
-
-        .card-header {
+        th {
             background-color: #E3D1C5;
-            color: #333;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
         }
-
-        .card-body {
-            padding: 10px;
-            line-height: 1.6;
-            color: #333;
+        tr:hover {
+            background-color: #f5f5f5;
         }
-
-        .card-footer {
-            padding: 10px;
-            text-align: right;
-        }
-
         .remove-button {
             background-color: #f44336;
             color: white;
@@ -135,25 +114,51 @@
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
+            echo "<table>";
+            echo "<tr>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Departure Airport</th>
+                <th>Arrival Airport</th>
+                <th>Departure Date/Time</th>
+                <th>Arrival Date/Time</th>
+                <th>Ticket Price</th>
+                <th>Layovers</th>
+                <th></th>
+                <th></th>";
+            echo "</tr>";
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='card'>";
-                echo "<div class='card-header'>" . htmlspecialchars($row['Airline']) . " - " . htmlspecialchars($row['FlightNumber']) . "</div>";
-                echo "<div class='card-body'>";
-                echo "<p>Departure: " . htmlspecialchars($row['DepartureAirport']) . "</p>";
-                echo "<p>Arrival: " . htmlspecialchars($row['ArrivalAirport']) . "</p>";
-                echo "<p>Depart: " . htmlspecialchars($row['DepartureDateTime']) . "</p>";
-                echo "<p>Arrive: " . htmlspecialchars($row['ArrivalDateTime']) . "</p>";
-                echo "<p>Price: €" . htmlspecialchars($row['Ticketprice']) . "</p>";
-                echo "<p>Layovers: " . htmlspecialchars($row['Layovers']) . "</p>";
-                echo "</div>";
-                echo "<div class='card-footer'>";
-                echo "<form action='' method='post'>
-                        <input type='hidden' name='remove_flight_id' value='" . $row['FlightID'] . "'>
-                        <input type='submit' class='remove-button' value='Remove'>
-                      </form>";
-                echo "</div>";
-                echo "</div>";
+                echo "<tr>";
+                echo "<td>" . htmlspecialchars($row['Airline']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['FlightNumber']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['DepartureAirport']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ArrivalAirport']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['DepartureDateTime']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ArrivalDateTime']) . "</td>";
+                echo "<td>€" . htmlspecialchars($row['Ticketprice']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['Layovers']) . "</td>";
+                echo "<td>
+                        <form action='' method='post'>
+                            <input type='hidden' name='remove_flight_id' value='" . $row['FlightID'] . "'>
+                            <input type='submit' class='remove-button' value='Remove'>
+                        </form>
+                      </td>";
+                echo "<td><button type='button' class='return-button collapsible'>Return Details</button></td>";
+                echo "</tr>";
+                echo "<tr class='content'>"; // Inklapbare rij voor return flights
+                echo "<td>" . htmlspecialchars($row['ReturnAirline']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnFlightNumber']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnDepartureAirport']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnArrivalAirport']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnDepartureDateTime']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['ReturnArrivalDateTime']) . "</td>";
+                echo "<td></td>"; 
+                echo "<td>" . htmlspecialchars($row['ReturnLayovers']) . "</td>";
+                echo "<td></td>";
+                echo "<td></td>";
+                echo "</tr>";
             }
+            echo "</table>";
         } else {
             echo "<p style='text-align: center;'>No saved flights found.</p>";
         }

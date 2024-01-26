@@ -7,72 +7,42 @@
     <title>Saved Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
-                body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f4f4f4;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        background-color: #ddc6ad;
-        background-size: cover;
-        background-position: center;
-        box-sizing: border-box;
-    }
-
-
-    .hotel-offers-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;
-        
-    }
-
-    .hotel-offer {
-        background: #f3eae0;
-        border: 1px solid #ddd;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: calc(33% - 20px);
-        margin-bottom: 20px; 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .hotel-offer h2 {
-        margin-top: 0;
-        color: #333333;
-        font-size: 24px;
-    }
-
-        .remove-button {
-            background-color: #f44336;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .remove-button:hover {
-            background-color: #d32f2f;
+        .hotel-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            transition: transform 0.2s; /* Animation */
         }
 
-        .content {
-            display: none;
-            overflow: hidden;
-            background-color: #f1f1f1;
-            padding: 0 18px;
+        .hotel-card:hover {
+            transform: scale(1.03); /* Slight zoom on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hotel-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .hotel-card p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .hotel-card .remove-button {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
     <?php require_once("navbar.php"); ?>
-    <h2 style="text-align: center;">Your Saved Flights</h2>
+    <h2 style="text-align: center;">Your Saved Hotels</h2>
 
     <?php
     
@@ -117,39 +87,21 @@
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            echo "<table>";
-            echo "<tr>
-                <th>Hotel name</th>
-                <th>City code</th>
-                <th>Check-in date</th>
-                <th>Check-out date</th>
-                <th>Room type/Time</th>
-                <th>Bed type</th>
-                <th>Room Description</th>
-                <th>Price total</th>
-                <th></th>
-                <th></th>";
-            echo "</tr>";
             while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . htmlspecialchars($row['HotelName']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['CityCode']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['CheckInDate']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['CheckOutDate']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['RoomType']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['BedDetails']) . "</td>";
-                echo "<td>€" . htmlspecialchars($row['RoomDescription']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['PriceTotal']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['PriceTotal']) . "</td>";
-                echo "<td>
-                        <form action='' method='post'>
-                            <input type='hidden' name='remove_room_id' value='" . $row['RoomID'] . "'>
-                            <input type='submit' class='remove-button' value='Remove'>
-                        </form>
-                      </td>";
-                echo "</tr>";
+                echo "<div class='hotel-card'>";
+                echo "<h3>" . htmlspecialchars($row['HotelName']) . " - " . htmlspecialchars($row['CityCode']) . "</h3>";
+                echo "<p>Check-in: " . htmlspecialchars($row['CheckInDate']) . "</p>";
+                echo "<p>Check-out: " . htmlspecialchars($row['CheckOutDate']) . "</p>";
+                echo "<p>Room Type: " . htmlspecialchars($row['RoomType']) . "</p>";
+                echo "<p>Bed Details: " . htmlspecialchars($row['BedDetails']) . "</p>";
+                echo "<p>Description: €" . htmlspecialchars($row['RoomDescription']) . "</p>";
+                echo "<p>Price: " . htmlspecialchars($row['PriceTotal']) . " " . htmlspecialchars($row['PriceTotal']) . "</p>";
+                echo "<form action='' method='post'>
+                        <input type='hidden' name='remove_room_id' value='" . $row['RoomID'] . "'>
+                        <input type='submit' class='remove-button' value='Remove'>
+                      </form>";
+                echo "</div>";
             }
-            echo "</table>";
         } else {
             echo "<p style='text-align: center;'>No saved flights found.</p>";
         }
@@ -163,7 +115,7 @@
     $mysqli->close();
     ?>
     <div style='text-align: center; margin-top: 2%;'>
-    <a href="pastflights.php" class='btn'>View Past Flights</a>
+    <a href="pastflights.php" class='btn'>View Past Hotel reservations.</a>
     </div>
 </body>
 </html>
