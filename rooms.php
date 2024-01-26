@@ -174,7 +174,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     const postData = {
         hotelId: hotelOffers.data[0].hotel.hotelId,
         offerId: hotelOffers.data[0].offers[0].id,
-        checkInDate: otelOffers.data[0].offers[0].checkInDate,
+        checkInDate: hotelOffers.data[0].offers[0].checkInDate,
         checkOutDate: hotelOffers.data[0].offers[0].checkOutDate,
         cityCode: hotelOffers.data[0].hotel.cityCode,
         roomType: hotelOffers.data[0].offers[0].room.typeEstimated ? hotelOffers.data[0].offers[0].room.typeEstimated.category : ''
