@@ -57,7 +57,7 @@
     }
 
     .save-room-button {
-        background-color: #f44336;
+        background-color: #f0f8ff33;
         color: white;
         padding: 5px 10px;
         border: none;
