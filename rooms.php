@@ -184,7 +184,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
         offerId: offer.id,
         checkInDate: offer.checkInDate,
         checkOutDate: offer.checkOutDate,
-        cityCode: ciityCode,
+        cityCode: cityCode,
         roomType: roomDetails.typeEstimated.category,
         bedDetails: `${roomDetails.typeEstimated.beds} ${roomDetails.typeEstimated.bedType}`,
         roomDescription: roomDetails.description.text,
