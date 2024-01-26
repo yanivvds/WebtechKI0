@@ -57,7 +57,7 @@
 <body>
     <?php require_once("navbar.php"); ?>
     <h2 style="text-align: center;">Your Saved Hotels</h2>
-
+    <div class="card-container">
     <?php
     
     if (session_status() == PHP_SESSION_NONE) {
@@ -100,7 +100,7 @@
 
         $result = $stmt->get_result();
 
-        echo "<div class='card-container'>";
+        
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='card'>";
@@ -122,7 +122,7 @@
         } else {
             echo "<p style='text-align: center;'>No saved flights found.</p>";
         }
-        echo "</div>";
+        
 
         $stmt->close();
     } else {
@@ -132,6 +132,7 @@
 
     $mysqli->close();
     ?>
+    </div>
     <div style='text-align: center; margin-top: 2%;'>
     <a href="pastflights.php" class='btn'>View Past Hotel reservations.</a>
     </div>
