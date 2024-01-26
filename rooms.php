@@ -176,65 +176,65 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 }
 ?>
 <script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-function saveRoom(offer, userID) {
+
+
+    function saveRoom(offer, userID) {
         if (userID === null) {
         alert('User is not logged in.');
         return;
-    }
-
-    {"data":[{"type":"hotel-offers","hotel":{"type":"hotel","hotelId":"BRAMSRDB","chainCode":"BR","dupeId":"700024365","name":"Renaissance Amsterdam Hotel","cityCode":"AMS","latitude":52.37775,"longitude":4.89422},"available":true,"offers":[{"id":"PLL0YZYT0Y","checkInDate":"2024-04-04","checkOutDate":"2024-04-05","rateCode":"RAC","rateFamilyEstimated":{"code":"BAR","type":"P"},"room":{"type":"REG","typeEstimated":{"category":"STANDARD_ROOM"},"description":{"text":"Flexible Rate\nGuest Room, 1 King or 1 Queen(s) or 2 Twins,\nMini fridge, 22sqm/237sqft, Living/sitting","lang":"EN"}},"guests":{"adults":1},"price":{"currency":"EUR","base":"329.00","total":"366.73","variations":{"average":{"base":"329.00"},"changes":[{"startDate":"2024-04-04","endDate":"2024-04-05","base":"329.00"}]}},"policies":{"cancellations":[{"deadline":"2024-04-03T23:59:00+02:00","amount":"329.00"}],"paymentType":"guarantee"},"self":"https://test.api.amadeus.com/v3/shopping/hotel-offers/PLL0YZYT0Y"}],"self":"https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=BRAMSRDB&adults=1&checkInDate=2024-04-04&checkOutDate=2024-04-05"}]}
-    // Extract relevant data from the offer JSON
-    const hotelName = offer.hotel.name;
-    const offerID = offer.offers[0].id;
-    const checkInDate = offer.offers[0].checkInDate; // Assuming there's only one offer
-    const checkOutDate = offer.offers[0].checkOutDate;
-    const cityCode = offer.hotel.cityCode;
-    const bedDetails = offer.offers[0].room.typeEstimated.beds + ' ' + offer.offers[0].room.typeEstimated.bedType;
-    const roomDescription = offer.offers[0].room.description.text;
-    const roomType = offer.offers[0].room.typeEstimated.category;
-    const priceTotal = offer.offers[0].price.total;
-    const currency = offer.offers[0].price.currency;
-    const paymentType = offer.offers[0].policies.paymentType;
-    const cancellationDeadline = offer.offers[0].policies.cancellations[0].deadline;
-    const cancellationFee = offer.offers[0].policies.cancellations[0].amount;
-
-    // Construct the data to send in the AJAX request
-    const requestData = {
-        userID: userID,
-        hotelName: hotelName,
-        offerID: offerID,
-        checkInDate: checkInDate,
-        checkOutDate: checkOutDate,
-        cityCode: cityCode,
-        bedDetails: bedDetails,
-        roomDescription: roomDescription,
-        roomType: roomType,
-        priceTotal: priceTotal,
-        currency: currency,
-        paymentType: paymentType,
-        cancellationDeadline: cancellationDeadline,
-        cancellationFee: cancellationFee
-    };
-
-    // Perform the AJAX POST request to save the room offer
-    $.ajax({
-        url: '/save_room.php', // Replace with the actual URL to save the room
-        type: 'POST',
-        data: requestData,
-        dataType: 'json',
-        success: function(response) {
-            if (response.success) {
-                alert('Room saved successfully!');
-            } else {
-                alert('Error saving room: ' + response.error);
-            }
-        },
-        error: function(xhr, status, error) {
-            alert('An error occurred: ' + error);
         }
-    });
-}
+
+       // Extract relevant data from the offer JSON
+        const hotelName = offer.hotel.name;
+        const offerID = offer.offers[0].id;
+        const checkInDate = offer.offers[0].checkInDate; // Assuming there's only one offer
+        const checkOutDate = offer.offers[0].checkOutDate;
+        const cityCode = offer.hotel.cityCode;
+        const bedDetails = offer.offers[0].room.typeEstimated.beds + ' ' + offer.offers[0].room.typeEstimated.bedType;
+        const roomDescription = offer.offers[0].room.description.text;
+        const roomType = offer.offers[0].room.typeEstimated.category;
+        const priceTotal = offer.offers[0].price.total;
+        const currency = offer.offers[0].price.currency;
+        const paymentType = offer.offers[0].policies.paymentType;
+        const cancellationDeadline = offer.offers[0].policies.cancellations[0].deadline;
+        const cancellationFee = offer.offers[0].policies.cancellations[0].amount;
+
+        // Construct the data to send in the AJAX request
+        const requestData = {
+            userID: userID,
+            hotelName: hotelName,
+            offerID: offerID,
+            checkInDate: checkInDate,
+            checkOutDate: checkOutDate,
+            cityCode: cityCode,
+            bedDetails: bedDetails,
+            roomDescription: roomDescription,
+            roomType: roomType,
+            priceTotal: priceTotal,
+            currency: currency,
+            paymentType: paymentType,
+            cancellationDeadline: cancellationDeadline,
+            cancellationFee: cancellationFee
+        };
+
+        // Perform the AJAX POST request to save the room offer
+        $.ajax({
+            url: '/save_room.php', // Replace with the actual URL to save the room
+            type: 'POST',
+            data: requestData,
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    alert('Room saved successfully!');
+                } else {
+                    alert('Error saving room: ' + response.error);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('An error occurred: ' + error);
+            }
+        });
+    }
 </script>
 </body>
 </html>
