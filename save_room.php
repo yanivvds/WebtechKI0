@@ -19,8 +19,8 @@ if (!isset($_SESSION["user_id"])) {
 }
     
 // All hotel room info
-$HotelName = $_POST['HotelName'] ?? '';
-$offerId = $_POST['offerId'] ?? '';
+$HotelName = $_POST['hotelName'] ?? '';
+$offerId = $_POST['offerID'] ?? '';
 $checkInDate = date('Y-m-d', strtotime($_POST['checkInDate'] ?? ''));
 $checkOutDate = date('Y-m-d', strtotime($_POST['checkOutDate'] ?? ''));
 $cityCode = $_POST['cityCode'] ?? '';
