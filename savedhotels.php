@@ -7,22 +7,49 @@
     <title>Saved Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            background-color: #e2d1c68f;
-        }
-        th {
-            background-color: #E3D1C5;
-        }
-        tr:hover {
-            background-color: #f5f5f5;
-        }
+                body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: #ddc6ad;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+    }
+
+
+    .hotel-offers-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        
+    }
+
+    .hotel-offer {
+        background: #f3eae0;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: calc(33% - 20px);
+        margin-bottom: 20px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hotel-offer h2 {
+        margin-top: 0;
+        color: #333333;
+        font-size: 24px;
+    }
+
         .remove-button {
             background-color: #f44336;
             color: white;
