@@ -747,6 +747,7 @@ a {
         flex-direction: column;
         background-color:#f2e6d9;
         height: 25%;
+        margin-top: -23%;
     }
     .containertekst h1{
         color:#986e45;
@@ -857,7 +858,7 @@ a {
     }
     .gallery__item--4 {
         grid-column-start: 1;
-        grid-column-end: 8;
+        grid-column-end: 9;
         grid-row-start: 1;
         grid-row-end: 5;
     }
@@ -870,7 +871,7 @@ a {
     }
     .gallery__item--6 {
         grid-column-start: 1;
-        grid-column-end: 8;
+        grid-column-end: 9;
         grid-row-start: 5;
         grid-row-end: 9;
     }
@@ -960,7 +961,7 @@ a {
         margin-left: 1rem;
     }
     .imagediv--4 h5{
-        margin-bottom: -10vh;
+        margin-bottom: -38%;
         font-size: 1rem;
         margin-left: 1rem;
     }
@@ -971,7 +972,7 @@ a {
         font-size: 1.6rem;
     }
     .imagediv--6 h5{
-        margin-bottom: -2%;
+        margin-bottom: -3vh;
         margin-left: 1rem;
         font-size: 1.3rem;
     }
@@ -1027,14 +1028,16 @@ a {
         align-items: center;
         display: flex;
         flex-direction: column;
-        height: 10vh;
+        height: 7vh;
     }
     .title2 h2{
         color: #986e45;
+        font-size: 2rem;
     }
     .title2 p{
         color: #986e45;
         margin-top: 5%;
+        display: none;
     }
     /* carousel*/
     @mixin aspect-ratio($width, $height) {
@@ -1069,7 +1072,7 @@ a {
           max-width: 90%;
           margin: 0 auto;
           padding: 0 20px;
-          margin-left:0;
+          margin-left:1;
       }
       
       .carousel {
