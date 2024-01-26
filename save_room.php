@@ -19,7 +19,7 @@ if (!isset($_SESSION["user_id"])) {
 }
     
 // All hotel room info
-$hotelId = $_POST['hotelId'] ?? '';
+$HotelName = $_POST['HotelName'] ?? '';
 $offerId = $_POST['offerId'] ?? '';
 $checkInDate = date('Y-m-d', strtotime($_POST['checkInDate'] ?? ''));
 $checkOutDate = date('Y-m-d', strtotime($_POST['checkOutDate'] ?? ''));
@@ -36,13 +36,13 @@ $cancellationFee = $_POST['cancellationFee'] ?? '';
 
     $mysqli = require __DIR__ . "../database.php";
 
-    $sql = "INSERT INTO HotelRoom (HotelId, OfferId, CheckInDate, CheckOutDate, CityCode, RoomType, BedDetails, RoomDescription, PriceTotal, Currency, PaymentType, CancellationDeadline, CancellationFee) 
+    $sql = "INSERT INTO HotelRoom (HotelName, OfferId, CheckInDate, CheckOutDate, CityCode, RoomType, BedDetails, RoomDescription, PriceTotal, Currency, PaymentType, CancellationDeadline, CancellationFee) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $mysqli->stmt_init();
     if ($stmt->prepare($sql)) {
        $stmt->bind_param("ssssssssdssss", 
-       $hotelId, $offerId, $checkInDate, $checkOutDate, $cityCode, 
+       $HotelName, $offerId, $checkInDate, $checkOutDate, $cityCode, 
        $roomType, $bedDetails, $roomDescription, $priceTotal, $currency,
        $paymentType, $cancellationDeadline, $cancellationFee);
         
