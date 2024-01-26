@@ -37,19 +37,19 @@
                 <h1>Top 5 spots<br>you need to visit!</h1>    
                 <ol>
                     <li>
-                    <strong>Tikal, Guatemala:</strong> Explore the ancient Mayan city of Tikal, nestled in the jungles of Guatemala. Climb towering pyramids for panoramic views of the lush surroundings and immerse yourself in the rich history of this archaeological marvel.
+                        <strong>Tikal, Guatemala:</strong> Explore the ancient Mayan city of Tikal, nestled in the jungles of Guatemala. Climb towering pyramids for panoramic views of the lush surroundings and immerse yourself in the rich history of this archaeological marvel.
                     </li>
                     <li>
-                    <strong>Arenal Volcano, Costa Rica:</strong> Witness the majesty of Arenal Volcano in Costa Rica. Surrounded by lush rainforests, the volcano offers hiking trails, hot springs, and the opportunity to relax in thermal baths with a stunning view of the active peak.
+                        <strong>Arenal Volcano, Costa Rica:</strong> Witness the majesty of Arenal Volcano in Costa Rica. Surrounded by lush rainforests, the volcano offers hiking trails, hot springs, and the opportunity to relax in thermal baths with a stunning view of the active peak.
                     </li>
                     <li>
-                    <strong>Caye Caulker, Belize:</strong> Experience the laid-back charm of Caye Caulker in Belize. This idyllic island paradise is known for its crystal-clear waters, vibrant coral reefs, and a relaxed atmosphere. Snorkel or dive in the Great Blue Hole, a UNESCO World Heritage Site.
+                        <strong>Caye Caulker, Belize:</strong> Experience the laid-back charm of Caye Caulker in Belize. This idyllic island paradise is known for its crystal-clear waters, vibrant coral reefs, and a relaxed atmosphere. Snorkel or dive in the Great Blue Hole, a UNESCO World Heritage Site.
                     </li>
                     <li>
-                    <strong>Antigua, Guatemala:</strong> Step into the colonial beauty of Antigua, Guatemala. This UNESCO World Heritage Site boasts well-preserved Spanish Baroque-influenced architecture, cobblestone streets, and vibrant markets. It's a cultural hub surrounded by volcanoes.
+                        <strong>Antigua, Guatemala:</strong> Step into the colonial beauty of Antigua, Guatemala. This UNESCO World Heritage Site boasts well-preserved Spanish Baroque-influenced architecture, cobblestone streets, and vibrant markets. It's a cultural hub surrounded by volcanoes.
                     </li>
                     <li>
-                    <strong>Manuel Antonio National Park, Costa Rica:</strong> Discover the biodiversity of Manuel Antonio National Park in Costa Rica. This coastal gem combines tropical rainforests with pristine beaches. Encounter diverse wildlife, including monkeys and sloths, as you hike the park's trails.
+                        <strong>Manuel Antonio National Park, Costa Rica:</strong> Discover the biodiversity of Manuel Antonio National Park in Costa Rica. This coastal gem combines tropical rainforests with pristine beaches. Encounter diverse wildlife, including monkeys and sloths, as you hike the park's trails.
                     </li>
                 </ol>
             </div>

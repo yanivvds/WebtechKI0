@@ -26,32 +26,32 @@
             </div>
             <div class="grid-text1">
                 <h1>Travelling to<br> Asia</h1>
-<p>Asia, the largest and most diverse continent on Earth, is a mosaic of enchanting landscapes, captivating cultures, and millennia-old histories.<br>
-Comprising a vast expanse of nations, including but not limited to:<br> China, India, Japan, Thailand, Vietnam, Indonesia, and many more,<br> Asia promises a captivating journey for every type of traveler.<br>
-From the iconic Great Wall of China to the serene beaches of Thailand and the bustling streets of Tokyo,<br> each country in Asia unfolds a unique narrative waiting to be discovered.<br>
-Immerse yourself in the splendor of ancient temples, savor the aromas of diverse cuisines,<br>and engage in adventures that range from trekking through the Himalayas to relaxing on tropical islands.<br>
-Asia invites exploration with its breathtaking landscapes, cultural diversity,<br> and the genuine hospitality that creates unforgettable memories for every visitor.
-</p>
+                <p>Asia, the largest and most diverse continent on Earth, is a mosaic of enchanting landscapes, captivating cultures, and millennia-old histories.<br>
+                Comprising a vast expanse of nations, including but not limited to:<br> China, India, Japan, Thailand, Vietnam, Indonesia, and many more,<br> Asia promises a captivating journey for every type of traveler.<br>
+                From the iconic Great Wall of China to the serene beaches of Thailand and the bustling streets of Tokyo,<br> each country in Asia unfolds a unique narrative waiting to be discovered.<br>
+                Immerse yourself in the splendor of ancient temples, savor the aromas of diverse cuisines,<br>and engage in adventures that range from trekking through the Himalayas to relaxing on tropical islands.<br>
+                Asia invites exploration with its breathtaking landscapes, cultural diversity,<br> and the genuine hospitality that creates unforgettable memories for every visitor.
+                </p>
             </div>
             <div class="grid-text2">
                 <h1>Top 5 Destinations<br>you need to explore in Asia!</h1>
-<ol>
-    <li>
-        <strong>Great Wall of China, China:</strong> Embark on a journey to the iconic Great Wall of China, winding its way through picturesque landscapes. Climb the ancient watchtowers for breathtaking views and immerse yourself in the rich history spanning centuries.
-    </li>
-    <li>
-        <strong>Taj Mahal, India:</strong> Witness the timeless beauty of the Taj Mahal in India. This architectural masterpiece, with its intricate marble design, stands as a symbol of eternal love. Explore the surrounding gardens and marvel at the grandeur of this UNESCO World Heritage Site.
-    </li>
-    <li>
-        <strong>Mount Fuji, Japan:</strong> Experience the awe-inspiring presence of Mount Fuji in Japan. This iconic volcano is a symbol of natural beauty and tranquility. Whether you admire it from a distance or embark on a hiking adventure, Mount Fuji promises a memorable experience.
-    </li>
-    <li>
-        <strong>Phi Phi Islands, Thailand:</strong> Escape to the paradise of Phi Phi Islands in Thailand. With crystal-clear waters, vibrant coral reefs, and stunning limestone cliffs, these islands offer a tropical haven. Snorkel in emerald waters or relax on pristine beaches surrounded by lush greenery.
-    </li>
-    <li>
-        <strong>Bali, Indonesia:</strong> Immerse yourself in the enchanting beauty of Bali, Indonesia. Known for its lush landscapes, ancient temples, and vibrant culture, Bali offers a perfect blend of relaxation and adventure. Explore rice terraces, visit sacred temples, and unwind on stunning beaches.
-    </li>
-</ol>
+                <ol>
+                    <li>
+                        <strong>Great Wall of China, China:</strong> Embark on a journey to the iconic Great Wall of China, winding its way through picturesque landscapes. Climb the ancient watchtowers for breathtaking views and immerse yourself in the rich history spanning centuries.
+                    </li>
+                    <li>
+                        <strong>Taj Mahal, India:</strong> Witness the timeless beauty of the Taj Mahal in India. This architectural masterpiece, with its intricate marble design, stands as a symbol of eternal love. Explore the surrounding gardens and marvel at the grandeur of this UNESCO World Heritage Site.
+                    </li>
+                    <li>
+                        <strong>Mount Fuji, Japan:</strong> Experience the awe-inspiring presence of Mount Fuji in Japan. This iconic volcano is a symbol of natural beauty and tranquility. Whether you admire it from a distance or embark on a hiking adventure, Mount Fuji promises a memorable experience.
+                    </li>
+                    <li>
+                        <strong>Phi Phi Islands, Thailand:</strong> Escape to the paradise of Phi Phi Islands in Thailand. With crystal-clear waters, vibrant coral reefs, and stunning limestone cliffs, these islands offer a tropical haven. Snorkel in emerald waters or relax on pristine beaches surrounded by lush greenery.
+                    </li>
+                    <li>
+                        <strong>Bali, Indonesia:</strong> Immerse yourself in the enchanting beauty of Bali, Indonesia. Known for its lush landscapes, ancient temples, and vibrant culture, Bali offers a perfect blend of relaxation and adventure. Explore rice terraces, visit sacred temples, and unwind on stunning beaches.
+                    </li>
+                </ol>
             </div>
             <div class="grid-pic2">
                 <div class="picture-container">

@@ -322,6 +322,7 @@ body{
     font-weight: bold;
 }
 
+/*-----------------Asia-------------------*/
 /*----------------------------------------*/
 
 
@@ -504,5 +505,190 @@ body{
 }
 
 .picture-pic5-asia:hover::before {
+    opacity: 1; 
+}
+
+/*-----------------Oceania-------------------*/
+/*----------------------------------------*/
+
+.picture-pic1-oceania {
+    background-image: url(../fotos/operahouse.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 1 / 1 / 3 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic1-oceania {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic1-oceania::before {
+    content: "Sydney Opera House, Australia";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+
+.picture-pic1-oceania:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic2-oceania {
+    background-image: url(../fotos/milfordsound.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 2 / 2 / 4 / 3;
+    border-radius: 15px;
+}
+
+.picture-pic2-oceania {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic2-oceania::before {
+    content: "Milford Sound, New Zealand";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic2-oceania:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic3-oceania {
+    background-image: url(../fotos/borabora.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 3 / 1 / 5 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic3-oceania {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic3-oceania::before {
+    content: "Bora Bora, French Polynesia";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic3-oceania:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic4-oceania {
+    background-image: url(../fotos/barrierreef.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    grid-area: 4 / 2 / 6 / 3;
+    border-radius: 15px;
+}
+
+.picture-pic4-oceania {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic4-oceania::before {
+    content: "The Great Barrier Reef, Australia";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic4-oceania:hover::before {
+    opacity: 1; 
+}
+
+.picture-pic5-oceania {
+    background-image: url(../fotos/rotorua.jpg);
+    background-size: cover;
+    background-position: 0;
+    color: #fff;
+    text-align: center;
+    grid-area: 5 / 1 / 7 / 2;
+    border-radius: 15px;
+}
+
+.picture-pic5-oceania {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-pic5-oceania::before {
+    content: "Rotorua, New Zealand";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: opacity 0.3s;
+    font-size: 1.5vw;
+}
+
+.picture-pic5-oceania:hover::before {
     opacity: 1; 
 }
