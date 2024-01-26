@@ -648,7 +648,7 @@ h5{
     }
     .fotodiv1 p{
         margin-top: 10%;
-        font-size: 0.8rem;
+        font-size: 1rem;
         position: absolute;
         margin-left: 2%
     }
@@ -665,8 +665,8 @@ h5{
         align-items: center;
         text-shadow: #999;
         position: absolute;
-        margin-top: 0;
-        border-radius: 0;
+        margin-top: -5%;
+        border-radius: 5%;
     }
     
     .golfpagina1 h3{
@@ -698,7 +698,7 @@ h5{
         color: #fff;
         font-size: 3rem;
         font-family: "poppins";
-        margin-top: 35%;
+        margin-top: 57%;
         text-shadow: #999;
         margin-left:-28%;
     }
@@ -771,9 +771,8 @@ h5{
         align-items: center;
         text-shadow: #999;
         position: absolute;
-        border-top-left-radius: 0%;
-        border-top-right-radius: 0%;
-        margin-top: 0rem;
+        border-radius: 5%;
+        margin-top: -5%;
     }
     .gallery h3{
         color: #986e45;
@@ -921,8 +920,11 @@ h5{
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(7, 5vw);
         grid-gap: 20px;
-        margin-left: 10rem;
+        margin-left: 0%;
         margin-top: -5rem;
+        padding-left: 5;
+        padding-right: 5;
+        padding-top: 5;
         
     }
     .gallery__img {
