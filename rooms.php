@@ -76,6 +76,8 @@
 <body style="height: 100%; min-height: 100vh;">
 <?php require_once("navbar.php"); ?>
     <?php
+ini_set('log_errors', '1');
+error_reporting(E_ALL);
 include('hotelapi.php');
 if (isset($_GET['hotelId'])) {
     $hotelId = $_GET['hotelId'];
@@ -84,7 +86,7 @@ if (isset($_GET['hotelId'])) {
 $checkInDate = $_GET['checkInDate'] ?? date('Y-m-d', strtotime('+1 day'));
 $checkOutDate = $_GET['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_GET['adults'] ?? 1;
-$cityCode = $_GET['cityCode'] ?? 'PAR';
+$cityCode = $_GET['cityCode'] ?? 'AMS';
 
 $userID = null;
 
@@ -154,8 +156,10 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
                 if (isset($offer['policies']['cancellations']) && !empty($offer['policies']['cancellations'])) {
                     foreach ($offer['policies']['cancellations'] as $cancellation) {
                         echo "<div class='cancellation-policy'>";
-                        echo "<p><strong>Cancellation Deadline:</strong> " . htmlspecialchars($cancellation['deadline']) . "</p>"; // Cancellation Deadline
-                        echo "<p><strong>Cancellation Fee:</strong> " . htmlspecialchars($cancellation['amount']) . "</p>"; // Cancellation Fee
+                        if (isset($offer['policies']['cancellations']['deadline']) && !empty($offer['policies']['cancellations']['deadline'])) {
+                            echo "<p><strong>Cancellation Deadline:</strong> " . htmlspecialchars($cancellation['deadline']) . "</p>"; }// Cancellation Deadline
+                        if (isset($offer['policies']['cancellations']['amount']) && !empty($offer['policies']['cancellations']['amount'])) {
+                        echo "<p><strong>Cancellation Fee:</strong> " . htmlspecialchars($cancellation['amount']) . "</p>"; } // Cancellation Fee
                         echo "</div>"; 
                     }
                 }
