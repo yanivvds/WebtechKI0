@@ -827,7 +827,7 @@ a {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(8, 5vw);
         grid-gap: 15px;
-        margin: auto
+        margin: auto;
     }
     .gallery__img {
         width: 100%;
