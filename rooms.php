@@ -171,9 +171,9 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     }
 
     // Extract details from the offer object 
-    const hotelDetails = offer.hotel;
-    const roomDetails = offer.room;
-    const priceDetails = offer.price;
+    const hotelDetails = HotelOffer.hotel;
+    const roomDetails = HotelOffer.room;
+    const priceDetails = HotelOffer.price;
     const policies = offer.policies;
     var hotelId = "<?php echo $hotelId; ?>";
     var cityCode = "<?php echo $cityCode; ?>";
@@ -181,9 +181,9 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     // Data that will be send to the server
     const postData = {
         hotelId: hotelId,
-        offerId: offer.id,
-        checkInDate: offer.checkInDate,
-        checkOutDate: offer.checkOutDate,
+        offerId: HotelOffer.id,
+        checkInDate: HotelOffer.checkInDate,
+        checkOutDate: HotelOffer.checkOutDate,
         cityCode: cityCode,
         roomType: roomDetails.typeEstimated.category,
         bedDetails: `${roomDetails.typeEstimated.beds} ${roomDetails.typeEstimated.bedType}`,
