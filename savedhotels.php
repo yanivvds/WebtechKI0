@@ -7,41 +7,40 @@
     <title>Saved Flights</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
-        body {
+            body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        h2 {
-            text-align: center;
-            color: #333;
+        .room-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            width: 80%;
             margin-top: 20px;
         }
 
-        table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
+        .room {
             background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        th, td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            text-align: left;
+        .room h3 {
+            margin-top: 0;
+            color: #007bff;
         }
 
-        th {
-            background-color: #007bff;
-            color: white;
-            font-weight: normal;
-        }
-
-        tr:hover {
-            background-color: #f2f2f2;
+        .room p {
+            margin: 10px 0;
+            line-height: 1.5;
         }
         .remove-button {
             background-color: #f44336;
@@ -54,7 +53,30 @@
         .remove-button:hover {
             background-color: #d32f2f;
         }
-        
+        .return-button {
+            background-color: #ffffff;
+            color: black;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .return-button:hover {
+            background-color: #f3f2ee;
+        }
+        .collapsible {
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #555;
+            color: white;
+        }
+
         .content {
             display: none;
             overflow: hidden;
@@ -124,6 +146,7 @@
                 <th></th>";
             echo "</tr>";
             while ($row = $result->fetch_assoc()) {
+                echo "<div class='room'>";
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row['HotelName']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['CityCode']) . "</td>";
@@ -141,10 +164,11 @@
                         </form>
                       </td>";
                 echo "</tr>";
+                echo "</div>";
             }
             echo "</table>";
         } else {
-            echo "<p style='text-align: center;'>No saved flights found.</p>";
+            echo "<p style='text-align: center;'>No saved hotels found.</p>";
         }
 
         $stmt->close();
