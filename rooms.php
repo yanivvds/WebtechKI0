@@ -186,21 +186,21 @@ function saveRoom(offer, userID) {
     const typeEstimated = offer.room.typeEstimated || {};
 
     const postData = {
-        RoomID: offer.id,
-        HotelId: hotel.hotelId,
-        OfferId: offer.id,
-        CheckInDate: offer.checkInDate,
-        CheckOutDate: offer.checkOutDate,
-        CityCode: hotel.cityCode,
-        RoomType: typeEstimated.category || 'Not specified',
-        BedDetails: typeEstimated.beds && typeEstimated.bedType ? `${typeEstimated.beds} ${typeEstimated.bedType}` : 'Not specified',
-        RoomDescription: offer.room.description ? offer.room.description.text : 'Not specified',
-        PriceTotal: offer.price.total,
-        Currency: offer.price.currency,
-        PaymentType: offer.policies.paymentType,
-        CancellationDeadline: offer.policies.cancellations && offer.policies.cancellations.length > 0 ? offer.policies.cancellations[0].deadline : 'Not specified',
-        CancellationFee: offer.policies.cancellations && offer.policies.cancellations.length > 0 ? offer.policies.cancellations[0].amount : 'Not specified'
-    };
+    RoomID: offer.id, 
+    HotelId: hotel.hotelId, 
+    OfferId: offer.id, 
+    CheckInDate: offer.checkInDate,
+    CheckOutDate: offer.checkOutDate,
+    CityCode: hotel.cityCode,
+    RoomType: offer.room.typeEstimated.category || 'Not specified', 
+    BedDetails: offer.room.description.text.includes('King') ? '1 King' : offer.room.description.text.includes('Queen') ? '1 Queen' : offer.room.description.text.includes('Twins') ? '2 Twins' : 'Not specified', // Based on "Flexible Rate\nGuest Room, 1 King or 1 Queen(s) or 2 Twins,\nMini fridge, 22sqm/237sqft, Living/sitting"
+    RoomDescription: offer.room.description.text || 'Not specified', 
+    PriceTotal: offer.price.total, 
+    Currency: offer.price.currency, 
+    PaymentType: offer.policies.paymentType, 
+    CancellationDeadline: offer.policies.cancellations && offer.policies.cancellations.length > 0 ? offer.policies.cancellations[0].deadline : 'Not specified', // "2024-04-03T23:59:00+02:00" or 'Not specified'
+    CancellationFee: offer.policies.cancellations && offer.policies.cancellations.length > 0 ? offer.policies.cancellations[0].amount : 'Not specified' // "329.00" or 'Not specified'
+};
 
     $.ajax({
         url: 'save_room.php', 
