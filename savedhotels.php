@@ -114,7 +114,7 @@
             echo "<p>Room Type: " . htmlspecialchars($row['RoomType']) . "</p>";
             echo "<p>Bed Details: " . htmlspecialchars($row['BedDetails']) . "</p>";
             echo "<p>Description: €" . htmlspecialchars($row['RoomDescription']) . "</p>";
-            echo "<p>Price: " . htmlspecialchars($row['PriceTotal']) . " " . htmlspecialchars($row['PriceTotal']) . "</p>";
+            echo "<p>Price: " . htmlspecialchars($row['Currency']) . " " . htmlspecialchars($row['PriceTotal']) . "</p>";
             echo "</div>"; // Close card-body
             echo "<div class='card-footer'>";
             echo "<form action='' method='post'>";
