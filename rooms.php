@@ -177,14 +177,14 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
         checkInDate: otelOffers.data[0].offers[0].checkInDate,
         checkOutDate: hotelOffers.data[0].offers[0].checkOutDate,
         cityCode: hotelOffers.data[0].hotel.cityCode,
-        roomType: hotelOffers.data[0].offers[0].room.typeEstimated.category,
+        roomType: hotelOffers.data[0].offers[0].room.typeEstimated ? hotelOffers.data[0].offers[0].room.typeEstimated.category : ''
         bedDetails: `${hotelOffers.data[0].offers[0].room.typeEstimated.beds} ${hotelOffers.data[0].offers[0].room.typeEstimated.bedType}`,
         roomDescription: hotelOffers.data[0].offers[0].room.description.text,
         priceTotal: hotelOffers.data[0].offers[0].price.total,
         currency: hotelOffers.data[0].offers[0].price.currency,
         paymentType: hotelOffers.data[0].offers[0].policies.paymentType,
-        cancellationDeadline: hotelOffers.data[0].offers[0].policies.cancellations[0].deadline : '',
-        cancellationFee: policies.cancellations ? hotelOffers.data[0].offers[0].policies.cancellations[0].amount : ''
+        cancellationDeadline: hotelOffers.data[0].offers[0].policies.cancellations ? hotelOffers.data[0].offers[0].policies.cancellations[0].deadline : '',
+        cancellationFee: hotelOffers.data[0].offers[0].policies.cancellations ? hotelOffers.data[0].offers[0].policies.cancellations[0].amount : ''
     };
 
     $.ajax({
