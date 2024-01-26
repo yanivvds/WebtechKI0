@@ -176,6 +176,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
     const priceDetails = offer.price;
     const policies = offer.policies;
     var hotelId = "<?php echo $hotelId; ?>";
+    var cityCode = "<?php echo $cityCode; ?>";
 
     // Data that will be send to the server
     const postData = {
@@ -183,7 +184,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
         offerId: offer.id,
         checkInDate: offer.checkInDate,
         checkOutDate: offer.checkOutDate,
-        cityCode: hotelDetails.cityCode,
+        cityCode: ciityCode,
         roomType: roomDetails.typeEstimated.category,
         bedDetails: `${roomDetails.typeEstimated.beds} ${roomDetails.typeEstimated.bedType}`,
         roomDescription: roomDetails.description.text,
