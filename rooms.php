@@ -76,8 +76,7 @@
 <body style="height: 100%; min-height: 100vh;">
 <?php require_once("navbar.php"); ?>
     <?php
-ini_set('log_errors', '1');
-error_reporting(E_ALL);
+    
 include('hotelapi.php');
 if (isset($_GET['hotelId'])) {
     $hotelId = $_GET['hotelId'];
@@ -112,6 +111,7 @@ $hotelOffersResponse = curl_exec($hotelOffersCh);
 $hotelOffersArray = json_decode($hotelOffersResponse, true);
 
 curl_close($hotelOffersCh);
+
 
 $roomDetails = [];
 
