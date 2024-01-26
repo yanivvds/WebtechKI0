@@ -155,7 +155,7 @@
     $mysqli->close();
     ?>
     </div>
-    <div style='text-align: center; margin-top: 2%;'>
+    <div style='text-align: center; margin-top: 2%;margin-bottom: 15%;'>
     <a href="pasthotels.php" class='btn'>View Past Hotel reservations.</a>
     </div>
 </body>
