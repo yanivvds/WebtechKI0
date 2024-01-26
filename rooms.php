@@ -57,13 +57,12 @@
     }
 
     .save-room-button {
-        padding: 10px 20px;
-        background-color: #4CAF50; 
+        background-color: #f44336;
         color: white;
+        padding: 5px 10px;
         border: none;
-        cursor: pointer;
         border-radius: 5px;
-        font-size: 16px;
+        cursor: pointer;
     }
 
     .save-room-button:hover {
