@@ -973,6 +973,7 @@ h5{
         flex-direction: column;
         justify-content: flex-end;
         text-decoration: none;
+        display: none;
     }
     .imagediv--3{
         background-image: url(../fotos/florian-schneider-NdBsn0WQadw-unsplash.jpg);
@@ -984,6 +985,7 @@ h5{
         flex-direction: column;
         justify-content: flex-end;
         text-decoration: none;
+        display: none;
     }
     .imagediv--4{
         background-image: url(../fotos/jonatan-pie-8I49k45G-3A-unsplash.jpg);
@@ -995,6 +997,7 @@ h5{
         flex-direction: column;
         justify-content: flex-end;
         text-decoration: none;
+        display: none;
     }
     
     .imagediv--1 h5{
