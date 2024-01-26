@@ -164,7 +164,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
 }
 ?>
 <script>
-    function saveRoom(offer, userID) {
+function saveRoom(offer, userID) {
     if (userID === null) {
         alert('User is not logged in.');
         return;
