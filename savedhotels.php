@@ -50,7 +50,7 @@
 
         .card-footer {
             padding: 10px;
-            text-align: right;
+            text-align: center;
         }
 
 
