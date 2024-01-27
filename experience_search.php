@@ -32,9 +32,16 @@
         right: 10px;
         width: 20px;
         height: 20px;
-        background-image: url('heart-icon.png'); /* Replace 'heart-icon.png' with your icon image */
-        background-size: cover;
         cursor: pointer;
+        background-size: cover;
+    }
+
+    .save-icon.empty {
+        background-image: url('/fotos/bookmark-empty.svg'); /* Path to the empty bookmark icon */
+    }
+
+    .save-icon.filled {
+        background-image: url('/fotos/bookmark-icon.svg'); /* Path to the filled bookmark icon */
     }
 
     .activity-offer::before {
@@ -140,7 +147,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<h2>" . $activity['name'] .  "</h2>";
-            echo "<div class='save-icon'></div>";
+            echo "<div class='save-icon empty'></div>";
             echo "<p class='short-description'>$shortDescription</p>"; 
             echo "<button class='read-more-button'>Read More</button>";
             echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
@@ -167,22 +174,24 @@ echo "</div>";
             };
         });
         document.querySelectorAll('.save-icon').forEach(icon => {
-            icon.saved = false; // Initialize the saved state
+            icon.saved = false; 
             icon.onclick = function() {
                 if (this.saved) {
-                    this.style.backgroundImage = "url('/fotos/bookmark-empty.svg')"; 
+                    this.classList.remove('filled');
+                    this.classList.add('empty');
                     this.saved = false;
                     // Add code to save state to the server (PHP script)
                     // You may want to use AJAX or submit a form to update the saved state.
                 } else {
-                    this.style.backgroundImage = "url('/fotos/bookmark.svg')";
+                    this.classList.remove('empty');
+                    this.classList.add('filled');
                     this.saved = true;
                     // Add code to save state to the server (PHP script)
                     // You may want to use AJAX or submit a form to update the saved state.
                 }
             };
         });
-    });
+});
 </script>
 </body>
 </html>
