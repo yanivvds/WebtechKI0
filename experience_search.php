@@ -144,8 +144,8 @@ include('activitiesapi.php');
 $latitude = $_POST['latitude'] ?? '41.390154'; // Default latitude
 $longitude = $_POST['longitude'] ?? '2.173691'; // Default longitude
 $radius = 4; // 4 km radius
-$minPrice = $_POST['minPrice'] ?? 0;
-$maxPrice = $_POST['maxPrice'] ?? 5000;
+$minPrice = $_POST['minPrice'] ?? 0.0;
+$maxPrice = $_POST['maxPrice'] ?? 5000.0;
 console_log($minPrice);
 console_log($maxPrice);
 
