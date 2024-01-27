@@ -212,7 +212,7 @@ echo "</div>";
         const activityCurrency = activity.price.currencyCode;
         const activityBookingLink = activity.bookingLink;
         const activityDescription = activity.description;
-        const activityPicture = activity.pictures[0] ?? '';
+        const activityPicture = '<?php echo isset($activity['pictures'][0]) ? $activity['pictures'][0] : ''; ?>';
         console.log('Activity picture:', activityPicture);
         console.log('Link:', activityBookingLink);
         const saveIcon = $(event.target);
