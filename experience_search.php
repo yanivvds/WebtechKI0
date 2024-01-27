@@ -236,26 +236,27 @@ echo "</div>";
         });
 
         document.querySelectorAll('.save-icon').forEach(icon => {
-            icon.saved = false; 
+            icon.saved = false;
             icon.onclick = function() {
+                const activityOffer = this.closest('.activity-offer'); // Get the closest parent '.activity-offer' element
+
                 if (this.saved) {
                     this.classList.remove('filled');
                     this.classList.add('empty');
                     this.saved = false;
-                    // Add code to save state to the server (PHP script)
-                    // You may want to use AJAX or submit a form to update the saved state.
+                    // Here, you may want to add code to remove the saved experience from the server using AJAX.
                 } else {
                     this.classList.remove('empty');
                     this.classList.add('filled');
                     this.saved = true;
 
-                    
+                    // Ensure that you are targeting the correct elements within the same '.activity-offer' container
                     const activityData = {
-                        name: this.parentNode.querySelector('.activity-title').textContent,
-                        description: this.parentNode.querySelector('.full-description p').textContent,
+                        name: activityOffer.querySelector('.activity-title').textContent,
+                        description: activityOffer.querySelector('.full-description p').textContent,
                         price: {
-                            amount: parseFloat(this.parentNode.querySelector('p').textContent.split(' ')[1]),
-                            currencyCode: this.parentNode.querySelector('p').textContent.split(' ')[2]
+                            amount: parseFloat(activityOffer.querySelector('.activity-offer p:last-of-type').textContent.split(' ')[1]), // Assuming the price is in the last <p> tag within '.activity-offer'
+                            currencyCode: activityOffer.querySelector('.activity-offer p:last-of-type').textContent.split(' ')[2] // Assuming the currency code is in the last <p> tag within '.activity-offer'
                         }
                     };
 
