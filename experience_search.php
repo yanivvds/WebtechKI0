@@ -137,7 +137,7 @@ echo "</div>";
     document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.read-more-button').forEach(button => {
             button.onclick = function() {
-                let fullDescription = this.nextElementSibling.querySelector('.full-description');;
+                let fullDescription = this.parentNode.querySelector('.full-description');
                 let isExpanded = fullDescription.style.maxHeight !== '0px';
                 fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
                 this.textContent = isExpanded ? 'Read More' : 'Show Less';
