@@ -136,6 +136,13 @@ include('activitiesapi.php');
 $latitude = $_POST['latitude'] ?? '41.390154'; // Default latitude
 $longitude = $_POST['longitude'] ?? '2.173691'; // Default longitude
 $radius = 4; // 4 km radius
+$userID = null;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_SESSION["user_id"])) {
+        $userID = $_SESSION["user_id"];
+    }
+}
 
 $ch = curl_init();
 
@@ -162,7 +169,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<div class='title-section'>";
                 echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'>" . $activity['name'] .  "</h2>";
-                echo "<div class='save-icon empty' style='position: absolute;right: 2px;top: 15px;width: 35px;'></div>";
+                echo "<div class='save-icon empty' style='position: absolute;right: 2px;top: 15px;width: 35px;' onclick='saveExperience(activityData, userID)'></div>";
             echo "</div>";
             echo "<p class='short-description'>$shortDescription</p>"; 
             echo "<button class='read-more-button'>Read More</button>";
@@ -202,8 +209,42 @@ echo "</div>";
                     this.classList.remove('empty');
                     this.classList.add('filled');
                     this.saved = true;
-                    // Add code to save state to the server (PHP script)
-                    // You may want to use AJAX or submit a form to update the saved state.
+                    function saveExperience(activity, userID) {
+                        if (userID === null) {
+                            alert('User is not logged in.');
+                            return;
+                        }
+
+                        
+                        const activityName = activity.name;
+                        const activityDescription = activity.description;
+                        const activityPrice = activity.price.amount;
+                        const activityCurrency = activity.price.currencyCode;
+
+                        // Perform the AJAX POST request to save the experience
+                        $.ajax({
+                            url: 'save_experience.php',
+                            type: 'POST',
+                            data: {
+                                userID: userID,
+                                activityName: activityName,
+                                activityDescription: activityDescription,
+                                activityPrice: activityPrice,
+                                activityCurrency: activityCurrency,
+                            },
+                            dataType: 'json',
+                            success: function(response) {
+                                if (response.success) {
+                                    alert('Experience saved successfully!');
+                                } else {
+                                    alert('Error saving experience: ' + response.error);
+                                }
+                            },
+                            error: function(xhr, status, error) {
+                                alert('An error occurred: ' + error);
+                            }
+                        });
+                    }
                 }
             };
         });
