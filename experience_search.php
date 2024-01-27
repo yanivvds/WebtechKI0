@@ -56,6 +56,12 @@
         border-radius: 10px;
     }
 
+    .title-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .activity-offer * {
         position: relative;
         z-index: 1;
@@ -94,6 +100,12 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
+    }
+
+    .activity-title {
+        font-size: 1.5em;
+        margin: 10px;
+        flex-grow: 1;
     }
 
     .view-details-button {
@@ -146,8 +158,10 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             $shortDescription = substr($activity['description'], 0, 100) . '...'; 
             
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
-            echo "<h2>" . $activity['name'] .  "</h2>";
-            echo "<div class='save-icon empty'></div>";
+            echo "<div class='title-section'>";
+                echo "<h2 class='activity-title'>" . $activity['name'] .  "</h2>";
+                echo "<div class='save-icon empty'></div>";
+            echo "</div>";
             echo "<p class='short-description'>$shortDescription</p>"; 
             echo "<button class='read-more-button'>Read More</button>";
             echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
