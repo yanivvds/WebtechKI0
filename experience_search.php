@@ -189,6 +189,18 @@ echo "</div>";
 ?>
 <script>
     var userID = <?php echo isset($userID) ? $userID : 'null'; ?>;
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.read-more-button').forEach(button => {
+            button.onclick = function() {
+                let fullDescription = this.parentNode.querySelector('.full-description');
+                let shortDescription = this.parentNode.querySelector('.short-description');
+                let isExpanded = fullDescription.style.maxHeight !== '0px';
+                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
+                shortDescription.style.display = isExpanded ? 'block' : 'none';
+                this.textContent = isExpanded ? 'Read More' : 'Show Less';
+            };
+        });
+    });
     function saveExperience(activity, userID) {
         if (userID === null) {
             alert('User is not logged in.');
