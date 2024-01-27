@@ -146,7 +146,8 @@ $longitude = $_POST['longitude'] ?? '2.173691'; // Default longitude
 $radius = 4; // 4 km radius
 $minPrice = $_POST['minPrice'] ?? 0;
 $maxPrice = $_POST['maxPrice'] ?? 5000;
-
+console_log($minPrice);
+console_log($maxPrice);
 
 $ch = curl_init();
 
