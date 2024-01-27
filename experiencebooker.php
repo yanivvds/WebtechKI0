@@ -49,7 +49,9 @@ if (!isset($_SESSION["user_id"])) {
             <div class="input-container ic1">
             <input id="cityName" class="input" type="text" placeholder=" " name="cityName" required/>
                 <div class="cut"></div>
-            <label for="cityname" class="placeholder">Bestemming</label>    
+            <label for="cityname" class="placeholder">Bestemming</label>
+            <input type="hidden" id="latitude" name="latitude" />
+            <input type="hidden" id="longitude" name="longitude" />
             </div>
             <div class="input-container ic1">
                 <input id="date" class="input" type="date" placeholder=" " name="date" required/>
@@ -81,16 +83,16 @@ $(document).ready(function() {
                     },
                     success: function(data) {
                         console.log("Data received from server:", data);
-                        response($.map(data.data, function(item) {
-                            var cityName = item.name;
-                            var cityLat = item.geoCode.latitude;
-                            var cityLng = item.geoCode.longitude;
+                        response($.map(data, function(item) {
+                            var cityName = item.address.cityName; 
+                            var cityLat = item.geoCode.latitude; 
+                            var cityLng = item.geoCode.longitude; 
                             if (!uniqueCities.has(cityName)) {
                                 uniqueCities.add(cityName);
                                 return {
                                     label: cityName, 
-                                    value: cityName,
-                                    lat: cityLat,
+                                    value: cityName, 
+                                    lat: cityLat,    
                                     lng: cityLng
                                 };
                             }
@@ -100,9 +102,8 @@ $(document).ready(function() {
             },
             select: function(event, ui) {
                 event.preventDefault();
-                $("#cityName").val(ui.item.label);
+                $("#cityName").val(ui.item.label); 
 
-                
                 $("#latitude").val(ui.item.lat);
                 $("#longitude").val(ui.item.lng);
             }
