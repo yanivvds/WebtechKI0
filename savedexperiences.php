@@ -26,17 +26,20 @@
             border-radius: 10px;
             height: 400px; 
         }   
-        .remove-button {
-            background-color: #f44336;
-            color: white;
-            position: absolute;
-            top: -13px;
-            right: 15px;
-            width: 51px;
-            height: 32px;
-            cursor: pointer;
-            background-size: cover;
-        }
+    .remove-button {
+        top: -13px;
+        right: 15px;
+        width: 72px;
+        height: 35px;
+        cursor: pointer;
+        background-size: cover;
+        background-color: #f44336;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
         .remove-button:hover {
             background-color: #d32f2f;
@@ -180,7 +183,7 @@
             
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<div class='title-section'>";
-                echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'>" . htmlspecialchars($row['ActivityName']) .  "</h2>";
+                echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 16px 10px 10px;'>" . htmlspecialchars($row['ActivityName']) .  "</h2>";
                 // $offerJson = htmlspecialchars(json_encode($activity), ENT_QUOTES, 'UTF-8');
                 echo "<form action='' method='post'>";
                 echo "<input type='hidden' name='remove_experience_id' value='" . $row['ActivityID'] . "'>";
