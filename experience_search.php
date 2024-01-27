@@ -147,8 +147,7 @@ $radius = 4; // 4 km radius
 $minPrice = $_POST['minPrice'] ?? 0.0;
 $maxPrice = $_POST['maxPrice'] ?? 5000.0;
 
-console_log('Min price: ' . $minPrice);
-console_log('Max price: ' . $maxPrice);
+var_dump($_POST);
 
 $ch = curl_init();
 
