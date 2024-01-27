@@ -15,7 +15,7 @@ if (!isset($_SESSION["user_id"])) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Bookings</title>
+<title>Experience booker</title>
 <link rel="stylesheet" href="/css/stylesheet.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -44,29 +44,26 @@ if (!isset($_SESSION["user_id"])) {
 <?php require_once("navbar.php"); ?>
 <div class="form-container" style="margin: 3%;text-align: -webkit-center;">
     <div class="formsignup">
-        <div class="title">Book hotel</div>
-        <form action="/hotel_search.php" method="post">
+        <div class="title">Book your experience!</div>
+        <form action="/experience_search.php" method="post">
             <div class="input-container ic1">
-                <input id="bestemming" class="input" type="text" placeholder=" " name="bestemming" required/>
+            <input id="cityName" class="input" type="text" placeholder=" " name="cityName" required/>
+            <input id="latitude" type="hidden" name="latitude" />
+            <input id="longitude" type="hidden" name="longitude" />
                 <div class="cut"></div>
                 <label for="bestemming" class="placeholder">Bestemming</label>
             </div>
             <div class="input-container ic1">
-                <input id="checkInDate" class="input" type="date" placeholder=" " name="checkInDate" required/>
+                <input id="date" class="input" type="date" placeholder=" " name="date" required/>
                 <div class="cut"></div>
-                <label for="checkInDate" class="placeholder">Arrival</label>
-            </div>
-            <div class="input-container ic1">
-                <input id="checkOutDate" class="input" type="date" placeholder=" " name="checkOutDate" required/>
-                <div class="cut cut-short"></div>
-                <label for="checkOutDate" class="placeholder">Departure</label>
+                <label for="date" class="placeholder">Date</label>
             </div>
             <div class="input-container ic1">
                 <input id="adults" class="input" type="number" placeholder=" " name="adults" required/>
                 <div class="cut"></div>
                 <label for="adults" class="placeholder">Adults</label>
             </div>
-            <button type="submit" class="submit">Search Hotels</button>
+            <button type="submit" class="submit">Search Experiences</button>
         </form>
     </div>
 </div>
@@ -85,33 +82,37 @@ $(document).ready(function() {
                         search_query: request.term
                     },
                     success: function(data) {
-                        response($.map(data, function(item) {
-                            var cityName = item.address.cityName;
-                            var cityCode = item.address.cityCode;
-                            if (!uniqueCities.has(cityName)) { 
+                        response($.map(data.data, function(item) {
+                            var cityName = item.name;
+                            var cityLat = item.geoCode.latitude;
+                            var cityLng = item.geoCode.longitude;
+                            if (!uniqueCities.has(cityName)) {
                                 uniqueCities.add(cityName);
                                 return {
                                     label: cityName, 
-                                    value: cityCode  
+                                    value: cityName,
+                                    lat: cityLat,
+                                    lng: cityLng
                                 };
                             }
                         }));
-                        response(filteredData);
                     }
                 });
             },
             select: function(event, ui) {
                 event.preventDefault();
-                $(this).val(ui.item.value);
+                $("#cityName").val(ui.item.label);
+                $("#latitude").val(ui.item.lat);
+                $("#longitude").val(ui.item.lng);
             }
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
-                .append("<div>" + item.label + "</div>") 
+                .append("<div>" + item.label + "</div>")
                 .appendTo(ul);
         };
     }
 
-    setupCityAutocomplete('#bestemming');
+    setupCityAutocomplete('#cityName');
 });
 </script>
 </body>
