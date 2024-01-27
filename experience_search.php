@@ -214,7 +214,6 @@ echo "</div>";
         const activityDescription = activity.description;
         const activityPicture = '<?php echo isset($activity['pictures'][0]) ? $activity['pictures'][0] : ''; ?>';
         console.log('Activity picture:', activityPicture);
-        console.log('Activity picture:', activityPicture);
         console.log('Link:', activityBookingLink);
         const saveIcon = $(event.target);
         if (saveIcon.hasClass('empty')) {
@@ -232,7 +231,7 @@ echo "</div>";
                 activityDescription: activityDescription,
                 activityPrice: activityPrice,
                 activityCurrency: activityCurrency,
-                activityBookingLink: activityBookingLink
+                activityBookingLink: activityBookingLink,
                 activityPicture: activityPicture
             },
             dataType: 'json',
