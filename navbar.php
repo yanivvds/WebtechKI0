@@ -61,8 +61,8 @@ if (session_status() == PHP_SESSION_NONE) {
               <div class="rownav">
                 <header>Experiences</header>
                 <ul class="mega-links">
-                  <li><a href="#">Experience finder</a></li>
-                  <li><a href="#">Saved experiences</a></li>
+                  <li><a href="experiencebooker.php">Experience finder</a></li>
+                  <li><a href="savedexperiences.php">Saved experiences</a></li>
                   <li><a href="#">Past experiences</a></li>
                   <li><a href="#">Experience reviews</a></li>
                 </ul>
