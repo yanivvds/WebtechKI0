@@ -201,6 +201,12 @@ echo "</div>";
         const activityBookingLink = activity.bookingLink;
         const activityDescription = activity.description;
 
+        const saveIcon = $(this).find('.save-icon');
+        if (saveIcon.hasClass('empty')) {
+            saveIcon.removeClass('empty').addClass('filled');
+        } else {
+            saveIcon.removeClass('filled').addClass('empty');
+        }
         // Perform the AJAX POST request 
         $.ajax({
             url: 'save_experience.php',
