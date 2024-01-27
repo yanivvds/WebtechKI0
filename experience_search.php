@@ -195,7 +195,7 @@ echo "</div>";
         }
 
         const activityName = activity.name;
-        const activityPrice = activity.price.amount;
+        const activityPrice = activity.price;
         const activityCurrency = activity.price.currencyCode;
         const activityBookingLink = activity.bookingLink;
         const activityDescription = activity.description;
