@@ -48,9 +48,8 @@ if (!isset($_SESSION["user_id"])) {
         <form action="/experience_search.php" method="post">
             <div class="input-container ic1">
             <input id="cityName" class="input" type="text" placeholder=" " name="cityName" required/>
-            <label for="cityname" class="placeholder">Bestemming</label>
                 <div class="cut"></div>
-                
+            <label for="cityname" class="placeholder">Bestemming</label>    
             </div>
             <div class="input-container ic1">
                 <input id="date" class="input" type="date" placeholder=" " name="date" required/>
@@ -101,8 +100,6 @@ $(document).ready(function() {
             select: function(event, ui) {
                 event.preventDefault();
                 $("#cityName").val(ui.item.label);
-                $("#latitude").val(ui.item.lat);
-                $("#longitude").val(ui.item.lng);
             }
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
