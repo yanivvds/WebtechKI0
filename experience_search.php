@@ -171,7 +171,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<div class='title-section'>";
                 echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'>" . $activity['name'] .  "</h2>";
-                echo "<div class='save-icon empty' style='position: absolute;right: 2px;top: 15px;width: 35px;' onclick='saveExperience(activityData, userID)'></div>";
+                echo "<div class='save-icon empty' style='position: absolute;right: 2px;top: 15px;width: 35px;' onclick='saveExperience($activityData, $userID)'></div>";
             echo "</div>";
             echo "<p class='short-description'>$shortDescription</p>"; 
             echo "<button class='read-more-button'>Read More</button>";
@@ -188,49 +188,6 @@ echo "</div>";
 ?>
 <script>
     var userID = <?php echo isset($userID) ? $userID : 'null'; ?>;
-    
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll('.read-more-button').forEach(button => {
-            button.onclick = function() {
-                let fullDescription = this.parentNode.querySelector('.full-description');
-                let shortDescription = this.parentNode.querySelector('.short-description');
-                let isExpanded = fullDescription.style.maxHeight !== '0px';
-                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
-                shortDescription.style.display = isExpanded ? 'block' : 'none';
-                this.textContent = isExpanded ? 'Read More' : 'Show Less';
-            };
-        });
-
-        document.querySelectorAll('.save-icon').forEach(icon => {
-            icon.onclick = function() {
-                const activityOffer = this.closest('.activity-offer'); // Get the closest parent '.activity-offer' element
-                const isSaved = this.classList.contains('filled'); // Check if the activity is already saved
-
-                if (isSaved) {
-                    this.classList.remove('filled');
-                    this.classList.add('empty');
-                } else {
-                    this.classList.remove('empty');
-                    this.classList.add('filled');
-
-                    // Extract activity data from the activityOffer element
-                    const activityData = {
-                        name: activityOffer.querySelector('.activity-title').textContent,
-                        description: activityOffer.querySelector('.full-description p').textContent,
-                        price: {
-                            // Assuming the price format is "Price: amount currencyCode"
-                            amount: activityOffer.querySelector('p:contains("Price:")').textContent.split(' ')[1],
-                            currencyCode: activityOffer.querySelector('p:contains("Price:")').textContent.split(' ')[2]
-                        },
-                        bookingLink: activityOffer.querySelector('.view-details-button').href
-                    };
-
-                    saveExperience(activityData, userID); // Pass the constructed activityData
-                }
-            };
-        });
-    });
     function saveExperience(activity, userID) {
         if (userID === null) {
             alert('User is not logged in.');
