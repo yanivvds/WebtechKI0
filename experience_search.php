@@ -263,9 +263,8 @@ echo "</div>";
                         name: activityOffer.querySelector('.activity-title').textContent,
                         description: activityOffer.querySelector('.full-description p').textContent,
                         price: {
-                            amount: activityOffer.querySelector('p:nth-of-type(2)').textContent,
-                            currencyCode: activityOffer.querySelector('p:nth-of-type(2)').textContent
-                        },
+                            amount: parseFloat(activity['price']['amount']), // Correctly accessing the price amount from the API response
+                            currencyCode: activity['price']['currencyCode'] // Correctly accessing the currency code from the API response
                         }
                     };
 
