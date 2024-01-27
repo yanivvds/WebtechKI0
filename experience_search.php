@@ -213,7 +213,8 @@ echo "</div>";
         const activityBookingLink = activity.bookingLink;
         const activityDescription = activity.description;
         const activityPicture = activity.pictures[0] ?? '';
-
+        console.log(activityPicture);
+        console.log(activityBookingLink);
         const saveIcon = $(event.target);
         if (saveIcon.hasClass('empty')) {
             saveIcon.removeClass('empty').addClass('filled');
