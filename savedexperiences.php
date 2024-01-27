@@ -7,6 +7,7 @@
     <title>Saved Hotels</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
+        
         .activity-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -178,8 +179,9 @@
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-            echo $backgroundImage = ($row['ActivityPicture']);
-            echo $shortDescription = substr(htmlspecialchars($row['ActivityDescription']), 0, 100) . '...'; 
+            $backgroundImage = htmlspecialchars($row['ActivityPicture']);
+            $shortDescription = substr(htmlspecialchars($row['ActivityDescription']), 0, 100) . '...'; 
+            
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<div class='title-section'>";
                 echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 16px 10px 10px;'>" . htmlspecialchars($row['ActivityName']) .  "</h2>";
