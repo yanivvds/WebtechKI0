@@ -231,7 +231,7 @@ echo "</div>";
                 activityDescription: activityDescription,
                 activityPrice: activityPrice,
                 activityCurrency: activityCurrency,
-                activityBookingLink: activityBookingLink
+                activityBookingLink: activityBookingLink,
                 activityPicture: activityPicture
             },
             dataType: 'json',
