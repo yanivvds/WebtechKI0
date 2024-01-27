@@ -159,6 +159,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $response = curl_exec($ch);
+var_dump($response);
 $responseArray = json_decode($response, true);
 
 curl_close($ch);
