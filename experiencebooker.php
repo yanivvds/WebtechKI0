@@ -120,8 +120,8 @@ if (!isset($_SESSION["user_id"])) {
             <p style="margin-top: 17px;font-size: large;color: #65657c;">Price Range</p>
               <p id="amount" style="border: 0; color: #eeeeee; font-weight: bold; padding-top: 10px;"></p>
               <div id="price-range-slider" style="margin-bottom: 20px;"></div> <!-- Slider will be inserted here -->
-              <input type="hidden" id="minPrice" name="minPrice" />
-              <input type="hidden" id="maxPrice" name="maxPrice" />
+              <input type="text" id="minPrice" name="minPrice" />
+              <input type="text" id="maxPrice" name="maxPrice" />
           </div>
             <button type="submit" class="submit">Search Experiences</button>
         </form>
@@ -201,7 +201,6 @@ $(document).ready(function() {
     $("#minPrice").val(parseFloat($("#price-range-slider").slider("values", 0)));
     $("#maxPrice").val(parseFloat($("#price-range-slider").slider("values", 1)));
 
-    // ... your existing JavaScript code ...
 });
 </script>
 
