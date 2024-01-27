@@ -178,12 +178,10 @@
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-
-            
+            echo $backgroundImage = htmlspecialchars($row['ActivityPicture']);
+            echo $shortDescription = substr(htmlspecialchars($row['ActivityDescription']), 0, 100) . '...'; 
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<div class='title-section'>";
-            echo $backgroundImage = htmlspecialchars($row['ActivityPicture']) ?? '';
-            echo $shortDescription = substr(htmlspecialchars($row['ActivityDescription']), 0, 100) . '...'; 
                 echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 16px 10px 10px;'>" . htmlspecialchars($row['ActivityName']) .  "</h2>";
                 // $offerJson = htmlspecialchars(json_encode($activity), ENT_QUOTES, 'UTF-8');
                 echo "<form action='' method='post'>";
