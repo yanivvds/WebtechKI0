@@ -252,24 +252,14 @@ echo "</div>";
                     this.classList.remove('filled');
                     this.classList.add('empty');
                     this.saved = false;
-                    // Here, you may want to add code to remove the saved experience from the server using AJAX.
+                    
                 } else {
                     this.classList.remove('empty');
                     this.classList.add('filled');
                     this.saved = true;
 
-                    // Ensure that you are targeting the correct elements within the same '.activity-offer' container
-                    const activityData = {
-                        name: activityName,
-                        description: activityDescription,
-                        price: {
-                            amount: activityPrice,
-                            currencyCode: activityCurrency
-                        },
-                    };
-
                     // Call the saveExperience function 
-                    saveExperience(activityData, userID);
+                    saveExperience(activityOffer, userID);
                 }
             };
         });
