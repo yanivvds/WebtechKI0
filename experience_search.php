@@ -222,7 +222,7 @@ echo "</div>";
             dataType: 'json',
             success: function(response) {
                 if (response.success) {
-                    alert('Experience saved successfully!');
+                    console.log('Experience saved successfully');
                 } else {
                     alert('Error saving experience: ' + response.error);
                 }
