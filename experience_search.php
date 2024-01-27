@@ -204,6 +204,7 @@ echo "</div>";
         console.log("Activity Description: ", activityDescription);
         console.log("Activity Price: ", activityPrice);
         console.log("Activity Currency: ", activityCurrency);
+        console.log("Activity Booking Link: ", activityBookingLink);
         // Perform the AJAX POST request 
         $.ajax({
             url: 'save_experience.php',
