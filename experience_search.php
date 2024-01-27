@@ -28,13 +28,15 @@
     }   
     .save-icon {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 20px;
-        height: 20px;
+        top: -13px;
+        right: 15px;
+        width: 51px;
+        height: 32px;
         cursor: pointer;
         background-size: cover;
     }
+
+
 
     .save-icon.empty {
         background-image: url('/fotos/bookmark-empty.svg'); /* Path to the empty bookmark icon */
