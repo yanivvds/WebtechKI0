@@ -108,5 +108,17 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 echo "</div>"; 
 
 ?>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.read-more-button').forEach(button => {
+            button.onclick = function() {
+                let fullDescription = this.nextElementSibling;
+                let isExpanded = fullDescription.style.maxHeight !== '0px';
+                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; // Adjust '500px' as needed
+                this.textContent = isExpanded ? 'Read More' : 'Show Less';
+            };
+        });
+    });
+</script>
 </body>
 </html>
