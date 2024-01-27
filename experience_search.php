@@ -196,16 +196,11 @@ echo "</div>";
         }
 
         const activityName = activity.name;
-        const activityPrice = activity.price;
+        const activityPrice = activity.price.amount;
         const activityCurrency = activity.price.currencyCode;
         const activityBookingLink = activity.bookingLink;
         const activityDescription = activity.description;
-        console.log("User ID: ", userID);
-        console.log("Activity Name: ", activityName);
-        console.log("Activity Description: ", activityDescription);
-        console.log("Activity Price: ", activityPrice);
-        console.log("Activity Currency: ", activityCurrency);
-        console.log("Activity Booking Link: ", activityBookingLink);
+
         // Perform the AJAX POST request 
         $.ajax({
             url: 'save_experience.php',
