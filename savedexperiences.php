@@ -178,7 +178,7 @@
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-            echo $backgroundImage = htmlspecialchars($row['ActivityPicture']);
+            echo $backgroundImage = ($row['ActivityPicture']);
             echo $shortDescription = substr(htmlspecialchars($row['ActivityDescription']), 0, 100) . '...'; 
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<div class='title-section'>";
