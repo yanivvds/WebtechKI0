@@ -32,8 +32,8 @@ $userID = $_SESSION["user_id"];
     VALUES (?, ?, ?, ?)";
 
     $stmt = $mysqli->stmt_init();
+    var_dump($activityName, $activityDescription, $activityPrice, $activityCurrency);
     if ($stmt->prepare($sql)) {
-        var_dump($activityName, $activityDescription, $activityPrice, $activityCurrency);
        $stmt->bind_param("ssds", 
        $activityName, $activityDescription, $activityPrice, $activityCurrency);
         
