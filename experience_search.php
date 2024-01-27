@@ -132,18 +132,19 @@
 <body style="height: 100%;">
 <?php require_once("navbar.php"); ?>
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+$userID = null;
+if (isset($_SESSION["user_id"])) {
+    $userID = $_SESSION["user_id"];
+}
 include('activitiesapi.php'); 
 
 $latitude = $_POST['latitude'] ?? '41.390154'; // Default latitude
 $longitude = $_POST['longitude'] ?? '2.173691'; // Default longitude
 $radius = 4; // 4 km radius
-$userID = null;
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_SESSION["user_id"])) {
-        $userID = $_SESSION["user_id"];
-    }
-}
 
 $ch = curl_init();
 
