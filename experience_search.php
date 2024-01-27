@@ -166,6 +166,8 @@ curl_close($ch);
 
 echo '<div class="activity-container">';
 
+$offerCount = 0;
+
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $activity) {
         $activityPrice = $activity['price']['amount'] ?? 0;
@@ -186,9 +188,15 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
                 echo "<p>Price: " . $activity['price']['amount'] . " " . $activity['price']['currencyCode'] . "</p>"; 
                 echo "<a href='" . $activity['bookingLink'] . "' target='_blank' class='view-details-button'>Book Now</a>";
                 echo "</div>"; 
+                $offerCount++;
+                if ($offerCount >= 15) {
+                    break; // Exit the loop
+
             }
         }
     }
+}
+
 } else {
     echo "<p>No activities found.</p>";
 }
