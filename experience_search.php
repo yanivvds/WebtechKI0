@@ -71,6 +71,12 @@
     .read-more-button {
         align-self: center;
         margin-bottom: 10px;
+        background-color: #b79079;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
     .view-details-button {
@@ -123,7 +129,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             $shortDescription = substr($activity['description'], 0, 100) . '...'; 
             
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
-            echo "<h2>" . $activity['name'] . "</h2>";
+            echo "<h2>" . $activity['name'] . "<span class='save-icon'>&#9733;</span></h2>";
             echo "<p class='short-description'>$shortDescription</p>"; 
             echo "<button class='read-more-button'>Read More</button>";
             echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
