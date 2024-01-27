@@ -56,6 +56,11 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+    p {
+        color: #fff;
+        font-size: 20px;
+        margin: 10px;
+    }
 
     .full-description {
         max-height: 0;
@@ -137,15 +142,11 @@ echo "</div>";
         document.querySelectorAll('.read-more-button').forEach(button => {
             button.onclick = function() {
                 let fullDescription = this.parentNode.querySelector('.full-description');
+                let shortDescription = this.parentNode.querySelector('.short-description');
                 let isExpanded = fullDescription.style.maxHeight !== '0px';
-
-                if (!isExpanded) {
-                    fullDescription.style.maxHeight = fullDescription.scrollHeight + 'px';
-                    this.textContent = 'Show Less';
-                } else {
-                    fullDescription.style.maxHeight = '0';
-                    this.textContent = 'Read More';
-                }
+                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
+                shortDescription.style.display = isExpanded ? 'block' : 'none';
+                this.textContent = isExpanded ? 'Read More' : 'Show Less';
             };
         });
     });
