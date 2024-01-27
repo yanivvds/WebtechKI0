@@ -38,7 +38,59 @@ if (!isset($_SESSION["user_id"])) {
             background-color: #d0d0d0; 
             color: #212121; /* Hover text color */
         }
-        
+        .price-range-container {
+        margin: 10px 0;
+    }
+
+    /* Style for price range display */
+    .price-range-display {
+        font-size: 14px;
+        font-weight: bold;
+        color: #555;
+        margin-bottom: 4px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Style for the jQuery UI Slider */
+    .ui-slider {
+        position: relative;
+        text-align: left;
+    }
+
+    .ui-slider .ui-slider-handle {
+        position: absolute;
+        z-index: 2;
+        width: 1.2em;
+        height: 1.2em;
+        cursor: pointer;
+        border: 1px solid #AAA;
+        background: #FFF;
+        border-radius: 50%;
+        outline: none;
+    }
+
+    .ui-slider .ui-slider-range {
+        position: absolute;
+        z-index: 1;
+        background: #337ab7;
+        border-radius: 4px;
+    }
+
+    .ui-slider-horizontal {
+        height: .8em;
+    }
+
+    .ui-slider-horizontal .ui-slider-handle {
+        top: -.3em;
+        margin-left: -.6em;
+    }
+
+    .ui-slider-horizontal .ui-slider-range {
+        top: 0;
+        height: 100%;
+    }
+
     </style>
 </head>
 <body style="height: 100vh;">
@@ -126,5 +178,32 @@ $(document).ready(function() {
     setupCityAutocomplete('#cityName');
 });
 </script>
+<script>
+$(document).ready(function() {
+    // ... your existing JavaScript code ...
+
+    // Initialize Price Range Slider
+    $("#price-range-slider").slider({
+        range: true,
+        min: 0,
+        max: 5000,
+        values: [0, 5000], // Default values
+        slide: function(event, ui) {
+            $("#amount").html("€" + ui.values[0] + " - €" + ui.values[1]);
+            $("#minPrice").val(ui.values[0]);
+            $("#maxPrice").val(ui.values[1]);
+        }
+    });
+
+    // Set initial values
+    $("#amount").html("€" + $("#price-range-slider").slider("values", 0) +
+                      " - €" + $("#price-range-slider").slider("values", 1));
+    $("#minPrice").val($("#price-range-slider").slider("values", 0));
+    $("#maxPrice").val($("#price-range-slider").slider("values", 1));
+
+    // ... your existing JavaScript code ...
+});
+</script>
+
 </body>
 </html>
