@@ -203,22 +203,30 @@ echo "</div>";
         });
 
         document.querySelectorAll('.save-icon').forEach(icon => {
-            icon.saved = false;
             icon.onclick = function() {
                 const activityOffer = this.closest('.activity-offer'); // Get the closest parent '.activity-offer' element
+                const isSaved = this.classList.contains('filled'); // Check if the activity is already saved
 
-                if (this.saved) {
+                if (isSaved) {
                     this.classList.remove('filled');
                     this.classList.add('empty');
-                    this.saved = false;
-                    
                 } else {
                     this.classList.remove('empty');
                     this.classList.add('filled');
-                    this.saved = true;
 
-                    // Call the saveExperience function 
-                    saveExperience(activityOffer, userID);
+                    // Extract activity data from the activityOffer element
+                    const activityData = {
+                        name: activityOffer.querySelector('.activity-title').textContent,
+                        description: activityOffer.querySelector('.full-description p').textContent,
+                        price: {
+                            // Assuming the price format is "Price: amount currencyCode"
+                            amount: activityOffer.querySelector('p:contains("Price:")').textContent.split(' ')[1],
+                            currencyCode: activityOffer.querySelector('p:contains("Price:")').textContent.split(' ')[2]
+                        },
+                        bookingLink: activityOffer.querySelector('.view-details-button').href
+                    };
+
+                    saveExperience(activityData, userID); // Pass the constructed activityData
                 }
             };
         });
