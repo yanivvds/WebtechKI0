@@ -190,8 +190,8 @@ $(document).ready(function() {
         values: [0, 5000], // Default values
         slide: function(event, ui) {
             $("#amount").html("€" + ui.values[0] + " - €" + ui.values[1]);
-            $("#minPrice").val(ui.values[0]);
-            $("#maxPrice").val(ui.values[1]);
+            $("#minPrice").val(parseFloat(ui.values[0]));
+            $("#maxPrice").val(parseFloat(ui.values[1]));
         }
     });
 
