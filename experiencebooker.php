@@ -48,10 +48,9 @@ if (!isset($_SESSION["user_id"])) {
         <form action="/experience_search.php" method="post">
             <div class="input-container ic1">
             <input id="cityName" class="input" type="text" placeholder=" " name="cityName" required/>
-            <input id="latitude" type="hidden" name="latitude" />
-            <input id="longitude" type="hidden" name="longitude" />
+            <label for="cityname" class="placeholder">Bestemming</label>
                 <div class="cut"></div>
-                <label for="bestemming" class="placeholder">Bestemming</label>
+                
             </div>
             <div class="input-container ic1">
                 <input id="date" class="input" type="date" placeholder=" " name="date" required/>
