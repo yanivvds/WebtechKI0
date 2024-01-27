@@ -117,8 +117,8 @@ if (!isset($_SESSION["user_id"])) {
                 <label for="adults" class="placeholder">Adults</label>
             </div>
             <div class="">
-            <p>Price Range</p>
-              <p id="amount" style="border: 0; color: #f6931f; font-weight: bold; padding-top: 10px;"></p>
+            <p style="margin-top: 17px;font-size: large;color: #65657c;">Price Range</p>
+              <p id="amount" style="border: 0; color: #eeeeee; font-weight: bold; padding-top: 10px;"></p>
               <div id="price-range-slider" style="margin-bottom: 20px;"></div> <!-- Slider will be inserted here -->
               <input type="hidden" id="minPrice" name="minPrice" />
               <input type="hidden" id="maxPrice" name="maxPrice" />
