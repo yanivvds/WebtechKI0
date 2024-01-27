@@ -170,12 +170,12 @@ echo "</div>";
             icon.saved = false; // Initialize the saved state
             icon.onclick = function() {
                 if (this.saved) {
-                    this.style.backgroundImage = "url('heart-icon.png')"; // Replace with unsaved icon
+                    this.style.backgroundImage = "url('/fotos/bookmark-empty.svg')"; 
                     this.saved = false;
                     // Add code to save state to the server (PHP script)
                     // You may want to use AJAX or submit a form to update the saved state.
                 } else {
-                    this.style.backgroundImage = "url('filled-heart-icon.png')"; // Replace with saved icon
+                    this.style.backgroundImage = "url('/fotos/bookmark.svg')";
                     this.saved = true;
                     // Add code to save state to the server (PHP script)
                     // You may want to use AJAX or submit a form to update the saved state.
