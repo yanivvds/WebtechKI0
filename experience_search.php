@@ -3,141 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Search</title>
+    <title>Tours and Activities</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: #ddc6ad;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-}
-
-
-.hotel-offers-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-    
-}
-
-.hotel-offer {
-    background: #f3eae0;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: calc(33% - 20px);
-    margin-bottom: 20px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.hotel-offer h2 {
-    margin-top: 0;
-    color: #333333;
-    font-size: 24px;
-}
-
-
-.view-rooms-button {
-    background-color: #986e43;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    text-decoration: none;
-}
-
-.view-rooms-button:hover {
-    background-color: #ab7946;
-}
-
-    </style>
-</head>
-<body style="height: 100%;">
-<?php require_once("navbar.php"); ?>
-<?php
-include('hotelapi.php');
-
-$query = $_POST['search_query'] ?? '';
-
-$ch = curl_init();
-
-
-$cityCode = $_POST['bestemming'] ?? 'PAR';
-$day = $_POST['date'] ?? date('Y-m-d', strtotime('+1 day'));
-$adults = $_POST['adults'] ?? 1;
-
-curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=$cityCode");
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Authorization: Bearer ' . $access_token,
-    'Content-Type: application/x-www-form-urlencoded'
-));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-$response = curl_exec($ch);
-$responseArray = json_decode($response, true);
-
-curl_close($ch);
-
-echo '<div class="hotel-offers-container">';
-
-if (isset($responseArray['data']) && is_array($responseArray['data'])) {
-    foreach ($responseArray['data'] as $hotel) {
-        echo "<div class='hotel-offer'>";
-        // Show the hotel name
-        echo "<h2 style='color: #986e43;'>Hotel Name: " . $hotel['name'] . "</h2>";
-
-        // Show the city
-        echo "<p style='text-shadow: -0.3px -0.3px #986e45;'>City: " . $hotel['iataCode'] . "</p>"; 
-        $hotelId = $hotel['hotelId'];
-        if (isset($hotel['address'])) {
-            echo "<p style='text-shadow: -0.3px -0.3px #986e45;'>Country: " . $hotel['address']['countryCode'] . "</p>"; 
-        }
-        // View the rooms button
-        echo "<button class='view-rooms-button' data-hotel-id='{$hotel['hotelId']}'>View Rooms</button>";
-
-
-        echo "</div>"; // .hotel-offer
+    .activity-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
     }
-} else {
-    echo "<p>No hotel offers found.</p>";
-}
-echo "</div>"; 
 
-echo "<script>
-var viewRoomsButtons = document.querySelectorAll('.view-rooms-button');
-viewRoomsButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        var hotelId = button.getAttribute('data-hotel-id');
-        window.location.href = 'rooms.php?hotelId=' + hotelId +
-                               '&checkInDate=" . urlencode($checkInDate) .
-                               "&checkOutDate=" . urlencode($checkOutDate) .
-                               "&adults=" . urlencode($adults) .
-                               "&cityCode=" . urlencode($cityCode) . "';
-                               
-    });
-});
-</script>";
-    
-    
+    .activity-offer {
+        border: 1px solid #ddd;
+        background-color: #ffffff33;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: calc(33% - 20px);
+    }
 
-?>
+    .activity-details {
+        background-color: #d5b29c;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+    p {
+        color: #fff;
+        font-size: 20px;
+        margin: 12px;
+    }
+
+    .backbtn {
+        align-items: center;
+        padding: 10px 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 5%;
+        cursor: pointer;
+        background-color: #986E43;
+        color: #fff;
+        font-size: 20px;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body style="height: 100%; min-height: 100vh;">
+    <?php require_once("navbar.php"); ?>
+    <div class='activity-container'>
+        <!-- Activities will be loaded here -->
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            const latitude = $_POST['latitude'];
+            const longitude = $_POST['longitude'];
+            const radius = 4; // 4 km radius
+
+            $.ajax({
+                url: 'https://test.api.amadeus.com/v1/shopping/activities',
+                type: 'GET',
+                data: {
+                    latitude: latitude,
+                    longitude: longitude,
+                    radius: radius
+                },
+                headers: {
+                    'Authorization: Bearer ' . $access_token,
+
+                },
+                success: function(response) {
+                    const activities = response.data;
+                    activities.forEach(function(activity) {
+                        const activityElement = `
+                            <div class='activity-offer'>
+                                <h2 style='color: #986e43;'>${activity.name}</h2>
+                                <img src="${activity.pictures[0]}" alt="Activity Image" style="width:100%; border-radius: 5px;">
+                                <div class='activity-details'>
+                                    <p>${activity.description}</p>
+                                    <p><strong>Price:</strong> ${activity.price.amount} ${activity.price.currencyCode}</p>
+                                    <p><strong>Duration:</strong> ${activity.minimumDuration}</p>
+                                    <a href="${activity.bookingLink}" target="_blank" class="backbtn">Book Now</a>
+                                </div>
+                            </div>
+                        `;
+                        $('.activity-container').append(activityElement);
+                    });
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
