@@ -198,6 +198,7 @@ echo "</div>";
         const activityDescription = activity.description;
         const activityPrice = activity.price.amount;
         const activityCurrency = activity.price.currencyCode;
+        const activityBookingLink = activity.bookingLink;
         console.log("User ID: ", userID);
         console.log("Activity Name: ", activityName);
         console.log("Activity Description: ", activityDescription);
@@ -213,6 +214,7 @@ echo "</div>";
                 activityDescription: activityDescription,
                 activityPrice: activityPrice,
                 activityCurrency: activityCurrency,
+                activityBookingLink: activityBookingLink
             },
             dataType: 'json',
             success: function(response) {
