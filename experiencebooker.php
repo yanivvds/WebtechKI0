@@ -41,6 +41,8 @@ if (!isset($_SESSION["user_id"])) {
         .price-range-container {
         margin: 20px 0;
         padding: 10px 0;
+        display: flex;
+        flex-direction: column;
     }
 
     /* Style for price range display */
@@ -118,7 +120,7 @@ if (!isset($_SESSION["user_id"])) {
                 <label for="adults" class="placeholder">Adults</label>
             </div>
             <div class="input-container ic1 price-range-container">
-                <label for="amount" class="placeholder price-range-display">Price range:</label>
+                <label for="amount" class="placeholder price-range-display" style="margin-top: -4%;">Price range:</label>
                 <p id="amount" class="price-range-display" style="border: 0; color: #f6931f; font-weight: bold; padding-top: 10px;"></p>
                 <div id="price-range-slider" style="margin-bottom: 20px;"></div> <!-- Slider will be inserted here -->
                 <input type="hidden" id="minPrice" name="minPrice" />
