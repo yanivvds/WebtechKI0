@@ -185,6 +185,43 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 echo "</div>"; 
 ?>
 <script>
+    
+    function saveExperience(activity, userID) {
+        if (userID === null) {
+            alert('User is not logged in.');
+            return;
+        }
+
+        const activityName = activity.name;
+        const activityDescription = activity.description;
+        const activityPrice = activity.price.amount;
+        const activityCurrency = activity.price.currencyCode;
+
+        // Perform the AJAX POST request 
+        $.ajax({
+            url: 'save_experience.php',
+            type: 'POST',
+            data: {
+                userID: userID,
+                activityName: activityName,
+                activityDescription: activityDescription,
+                activityPrice: activityPrice,
+                activityCurrency: activityCurrency,
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    alert('Experience saved successfully!');
+                } else {
+                    alert('Error saving experience: ' + response.error);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('An error occurred: ' + error);
+            }
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.read-more-button').forEach(button => {
             button.onclick = function() {
@@ -196,6 +233,7 @@ echo "</div>";
                 this.textContent = isExpanded ? 'Read More' : 'Show Less';
             };
         });
+
         document.querySelectorAll('.save-icon').forEach(icon => {
             icon.saved = false; 
             icon.onclick = function() {
@@ -209,46 +247,24 @@ echo "</div>";
                     this.classList.remove('empty');
                     this.classList.add('filled');
                     this.saved = true;
-                    function saveExperience(activity, userID) {
-                        if (userID === null) {
-                            alert('User is not logged in.');
-                            return;
+
+                    
+                    const activityData = {
+                        name: this.parentNode.querySelector('.activity-title').textContent,
+                        description: this.parentNode.querySelector('.full-description p').textContent,
+                        price: {
+                            amount: parseFloat(this.parentNode.querySelector('p').textContent.split(' ')[1]),
+                            currencyCode: this.parentNode.querySelector('p').textContent.split(' ')[2]
                         }
+                    };
 
-                        
-                        const activityName = activity.name;
-                        const activityDescription = activity.description;
-                        const activityPrice = activity.price.amount;
-                        const activityCurrency = activity.price.currencyCode;
-
-                        // Perform the AJAX POST request to save the experience
-                        $.ajax({
-                            url: 'save_experience.php',
-                            type: 'POST',
-                            data: {
-                                userID: userID,
-                                activityName: activityName,
-                                activityDescription: activityDescription,
-                                activityPrice: activityPrice,
-                                activityCurrency: activityCurrency,
-                            },
-                            dataType: 'json',
-                            success: function(response) {
-                                if (response.success) {
-                                    alert('Experience saved successfully!');
-                                } else {
-                                    alert('Error saving experience: ' + response.error);
-                                }
-                            },
-                            error: function(xhr, status, error) {
-                                alert('An error occurred: ' + error);
-                            }
-                        });
-                    }
+                    // Call the saveExperience function 
+                    saveExperience(activityData, userID);
                 }
             };
         });
-});
+    });
 </script>
+
 </body>
 </html>
