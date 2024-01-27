@@ -1,6 +1,6 @@
 <?php
 $config = [
-    'client_id' => '2y4W4ZVXN2aHfxuIPZgJfA7oDnhaL2Ob',
-    'client_secret' => 'KwgFTzwlK7WI1EHR'
+    'client_id' => 'wX1FA5hronxsdQMyQ9WQi6tHvLx1bfHx',
+    'client_secret' => 'ROnlqp8vsL5UExCZ'
 ];
 ?>
