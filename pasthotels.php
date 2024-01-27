@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Hotel Bookings</title>
+    <title>Past Hotels</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <style>
         .card-container {
@@ -14,10 +14,15 @@
             padding: 20px;
             justify-content: center;
         }
+        .card p {
+            text-shadow: 0 0 5px #000;
+            font-size: 15px;
+            margin: 12px;
+        }
 
         .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: #704b448c;
+            border: 1px solid #986e43;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             width: 300px;
@@ -50,16 +55,20 @@
 
         .card-footer {
             padding: 10px;
-            text-align: right;
+            text-align: center;
         }
 
 
-        .hotel-card .remove-button {
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            font-size: 16px;
-            margin-top: 15px;
+        .remove-button {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .remove-button:hover {
+            background-color: #d32f2f;
         }
     </style>
 </head>
@@ -146,7 +155,7 @@
     $mysqli->close();
     ?>
     </div>
-    <div style='text-align: center; margin-top: 2%;'>
+    <div style='text-align: center; margin-top: 2%;margin-bottom: 15%;'>
     <a href="savedhotels.php" class='btn'>View Saved Hotel reservations.</a>
     </div>
 </body>
