@@ -188,6 +188,41 @@ echo "</div>";
 ?>
 <script>
     var userID = <?php echo isset($userID) ? $userID : 'null'; ?>;
+    
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.read-more-button').forEach(button => {
+            button.onclick = function() {
+                let fullDescription = this.parentNode.querySelector('.full-description');
+                let shortDescription = this.parentNode.querySelector('.short-description');
+                let isExpanded = fullDescription.style.maxHeight !== '0px';
+                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
+                shortDescription.style.display = isExpanded ? 'block' : 'none';
+                this.textContent = isExpanded ? 'Read More' : 'Show Less';
+            };
+        });
+
+        document.querySelectorAll('.save-icon').forEach(icon => {
+            icon.saved = false;
+            icon.onclick = function() {
+                const activityOffer = this.closest('.activity-offer'); // Get the closest parent '.activity-offer' element
+
+                if (this.saved) {
+                    this.classList.remove('filled');
+                    this.classList.add('empty');
+                    this.saved = false;
+                    
+                } else {
+                    this.classList.remove('empty');
+                    this.classList.add('filled');
+                    this.saved = true;
+
+                    // Call the saveExperience function 
+                    saveExperience(activityOffer, userID);
+                }
+            };
+        });
+    });
     function saveExperience(activity, userID) {
         if (userID === null) {
             alert('User is not logged in.');
@@ -230,40 +265,6 @@ echo "</div>";
             }
         });
     }
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll('.read-more-button').forEach(button => {
-            button.onclick = function() {
-                let fullDescription = this.parentNode.querySelector('.full-description');
-                let shortDescription = this.parentNode.querySelector('.short-description');
-                let isExpanded = fullDescription.style.maxHeight !== '0px';
-                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
-                shortDescription.style.display = isExpanded ? 'block' : 'none';
-                this.textContent = isExpanded ? 'Read More' : 'Show Less';
-            };
-        });
-
-        document.querySelectorAll('.save-icon').forEach(icon => {
-            icon.saved = false;
-            icon.onclick = function() {
-                const activityOffer = this.closest('.activity-offer'); // Get the closest parent '.activity-offer' element
-
-                if (this.saved) {
-                    this.classList.remove('filled');
-                    this.classList.add('empty');
-                    this.saved = false;
-                    
-                } else {
-                    this.classList.remove('empty');
-                    this.classList.add('filled');
-                    this.saved = true;
-
-                    // Call the saveExperience function 
-                    saveExperience(activityOffer, userID);
-                }
-            };
-        });
-    });
 </script>
 
 </body>
