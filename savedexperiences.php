@@ -174,7 +174,8 @@
 
         $result = $stmt->get_result();
 
-        
+        echo '<div class="activity-container">';
+
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
             $backgroundImage = $activity['pictures'][0] ?? '';
@@ -197,6 +198,7 @@
             echo "<p style='text-align: center;'>No saved activities found.</p>";
         }
         
+        echo "</div>";
 
         $stmt->close();
     } else {
