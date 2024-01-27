@@ -56,7 +56,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="gallery__item gallery__item--1">
                 <a href="#">
                     <div class="imagediv--1">
-                        <h5>Tuscany</h5>
+                        <h5>Amalfi Coast</h5>
                         <p class="hide1">Central Italy, renowned for its scenic landscapes, historic architecture, and world-class vineyards</p>
                     </div>
                     </a>
