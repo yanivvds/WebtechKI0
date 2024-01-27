@@ -191,7 +191,7 @@
             echo "<button class='read-more-button'>Read More</button>";
             echo "<div class='full-description'><p>" . htmlspecialchars($row['ActivityDescription']) . "</p></div>";
             echo "<p>Price: " . htmlspecialchars($row['ActivityPrice']) . " " . htmlspecialchars($row['ActivityCurrency']) . "</p>"; 
-            echo "<a href='" . htmlspecialchars($row['ActivityLink']) . "' target='_blank' class='view-details-button'>Book Now</a>";
+            echo "<a href='" . htmlspecialchars($row['ActivityBookingLink']) . "' target='_blank' class='view-details-button'>Book Now</a>";
             echo "</div>"; 
             }
         } else {
