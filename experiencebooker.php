@@ -186,8 +186,8 @@ $(document).ready(function() {
     $("#price-range-slider").slider({
         range: true,
         min: 0,
-        max: 5000,
-        values: [0, 5000], // Default values
+        max: 2000,
+        values: [0.0, 2000.0], // Default values
         slide: function(event, ui) {
             $("#amount").html("€" + ui.values[0] + " - €" + ui.values[1]);
             $("#minPrice").val(parseFloat(ui.values[0]));
@@ -198,8 +198,8 @@ $(document).ready(function() {
     // Set initial values
     $("#amount").html("€" + $("#price-range-slider").slider("values", 0) +
                       " - €" + $("#price-range-slider").slider("values", 1));
-    $("#minPrice").val($("#price-range-slider").slider("values", 0));
-    $("#maxPrice").val($("#price-range-slider").slider("values", 1));
+    $("#minPrice").val(parseFloat($("#price-range-slider").slider("values", 0)));
+    $("#maxPrice").val(parseFloat($("#price-range-slider").slider("values", 1)));
 
     // ... your existing JavaScript code ...
 });
