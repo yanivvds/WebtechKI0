@@ -20,11 +20,11 @@ if (!isset($_SESSION["user_id"])) {
 }
     
 // All experience room info
-$userID = $_SESSION["user_id"];
 $activityName = $_POST['activityName'] ?? '';
 $activityDescription = $_POST['activityDescription'] ?? '';
 $activityPrice = $_POST['activityPrice'] ?? 0.0;
 $activityCurrency = $_POST['activityCurrency'] ?? '';
+$userID = $_SESSION["user_id"];
 
     $mysqli = require __DIR__ . "/../database.php";
 
@@ -33,6 +33,7 @@ $activityCurrency = $_POST['activityCurrency'] ?? '';
 
     $stmt = $mysqli->stmt_init();
     if ($stmt->prepare($sql)) {
+        var_dump($activityName, $activityDescription, $activityPrice, $activityCurrency);
        $stmt->bind_param("ssds", 
        $activityName, $activityDescription, $activityPrice, $activityCurrency);
         
