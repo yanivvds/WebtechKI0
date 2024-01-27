@@ -177,9 +177,6 @@
         
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='card'>";
-            echo "<div class='card-header'>";
-            echo "<h3>" . htmlspecialchars($row['HotelName']) . "</h3>";
             $backgroundImage = $activity['pictures'][0] ?? '';
             $shortDescription = substr(htmlspecialchars($row['ActivityDescription']), 0, 100) . '...'; 
             
