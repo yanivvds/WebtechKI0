@@ -25,6 +25,16 @@
         justify-content: space-between;
         border-radius: 10px;
         height: 400px; 
+    }   
+    .save-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background-image: url('heart-icon.png'); /* Replace 'heart-icon.png' with your icon image */
+        background-size: cover;
+        cursor: pointer;
     }
 
     .activity-offer::before {
@@ -129,7 +139,8 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
             $shortDescription = substr($activity['description'], 0, 100) . '...'; 
             
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
-            echo "<h2>" . $activity['name'] . "<span class='save-icon'>&#9733;</span></h2>";
+            echo "<h2>" . $activity['name'] .  "</h2>";
+            echo "<div class='save-icon'></div>";
             echo "<p class='short-description'>$shortDescription</p>"; 
             echo "<button class='read-more-button'>Read More</button>";
             echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
@@ -153,6 +164,22 @@ echo "</div>";
                 fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
                 shortDescription.style.display = isExpanded ? 'block' : 'none';
                 this.textContent = isExpanded ? 'Read More' : 'Show Less';
+            };
+        });
+        document.querySelectorAll('.save-icon').forEach(icon => {
+            icon.saved = false; // Initialize the saved state
+            icon.onclick = function() {
+                if (this.saved) {
+                    this.style.backgroundImage = "url('heart-icon.png')"; // Replace with unsaved icon
+                    this.saved = false;
+                    // Add code to save state to the server (PHP script)
+                    // You may want to use AJAX or submit a form to update the saved state.
+                } else {
+                    this.style.backgroundImage = "url('filled-heart-icon.png')"; // Replace with saved icon
+                    this.saved = true;
+                    // Add code to save state to the server (PHP script)
+                    // You may want to use AJAX or submit a form to update the saved state.
+                }
             };
         });
     });
