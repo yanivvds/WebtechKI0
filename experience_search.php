@@ -58,11 +58,10 @@
     }
 
     .full-description {
-        display: none;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
 
     .read-more-button {
         align-self: center;
