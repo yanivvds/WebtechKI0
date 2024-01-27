@@ -212,6 +212,7 @@ echo "</div>";
         const activityCurrency = activity.price.currencyCode;
         const activityBookingLink = activity.bookingLink;
         const activityDescription = activity.description;
+        const activityPicture = activity.pictures[0] ?? '';
 
         const saveIcon = $(event.target);
         if (saveIcon.hasClass('empty')) {
@@ -230,6 +231,7 @@ echo "</div>";
                 activityPrice: activityPrice,
                 activityCurrency: activityCurrency,
                 activityBookingLink: activityBookingLink
+                activityPicture: activityPicture
             },
             dataType: 'json',
             success: function(response) {

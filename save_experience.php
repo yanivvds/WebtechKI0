@@ -24,17 +24,19 @@ $activityName = $_POST['activityName'] ?? '';
 $activityDescription = $_POST['activityDescription'] ?? '';
 $activityPrice = $_POST['activityPrice'] ?? 0.0;
 $activityCurrency = $_POST['activityCurrency'] ?? '';
+$activityLink = $_POST['activityBookingLink'] ?? '';
+$activityPicture = $_POST['activityPicture'] ?? '';
 $userID = $_SESSION["user_id"];
 
     $mysqli = require __DIR__ . "/../database.php";
 
-    $sql = "INSERT INTO Experience (ActivityName, ActivityDescription, ActivityPrice, ActivityCurrency) 
-    VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO Experience (ActivityName, ActivityDescription, ActivityPrice, ActivityCurrency, ActivityBookingLink, ActivityPicture) 
+    VALUES (?, ?, ?, ?, ?, ?)";
 
     $stmt = $mysqli->stmt_init();
     if ($stmt->prepare($sql)) {
-       $stmt->bind_param("ssds", 
-       $activityName, $activityDescription, $activityPrice, $activityCurrency);
+       $stmt->bind_param("ssdsss", 
+       $activityName, $activityDescription, $activityPrice, $activityCurrency, $activityLink, $activityPicture);
         
         if ($stmt->execute()) {
             // Get the generated FlightID

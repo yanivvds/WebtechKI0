@@ -26,7 +26,9 @@
             border-radius: 10px;
             height: 400px; 
         }   
-        .save-icon {
+        .remove-button {
+            background-color: #f44336;
+            color: white;
             position: absolute;
             top: -13px;
             right: 15px;
@@ -36,15 +38,10 @@
             background-size: cover;
         }
 
-
-
-        .save-icon.empty {
-            background-image: url('/fotos/bookmark-empty.svg'); 
+        .remove-button:hover {
+            background-color: #d32f2f;
         }
 
-        .save-icon.filled {
-            background-image: url('/fotos/bookmark.svg'); 
-        }
 
         .activity-offer::before {
             content: '';
@@ -178,20 +175,23 @@
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-            $backgroundImage = $activity['pictures'][0] ?? '';
+            $backgroundImage = htmlspecialchars($row['ActivityPicture']);
             $shortDescription = substr(htmlspecialchars($row['ActivityDescription']), 0, 100) . '...'; 
             
             echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
             echo "<div class='title-section'>";
                 echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'>" . htmlspecialchars($row['ActivityName']) .  "</h2>";
                 // $offerJson = htmlspecialchars(json_encode($activity), ENT_QUOTES, 'UTF-8');
-                // echo "<div class='delete-icon '>";
+                echo "<form action='' method='post'>";
+                echo "<input type='hidden' name='remove_experience_id' value='" . $row['ActivityID'] . "'>";
+                echo "<input type='submit' class='remove-button' value='Remove'>";
+                echo "</form>";
             echo "</div>";
             echo "<p class='short-description'>$shortDescription</p>"; 
             echo "<button class='read-more-button'>Read More</button>";
             echo "<div class='full-description'><p>" . htmlspecialchars($row['ActivityDescription']) . "</p></div>";
             echo "<p>Price: " . htmlspecialchars($row['ActivityPrice']) . " " . htmlspecialchars($row['ActivityCurrency']) . "</p>"; 
-            // echo "<a href='" . htmlspecialchars($row['ActivityLink']) . "' target='_blank' class='view-details-button'>Book Now</a>";
+            echo "<a href='" . htmlspecialchars($row['ActivityLink']) . "' target='_blank' class='view-details-button'>Book Now</a>";
             echo "</div>"; 
             }
         } else {
