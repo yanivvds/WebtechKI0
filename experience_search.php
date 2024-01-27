@@ -173,8 +173,8 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
                 echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'>" . $activity['name'] .  "</h2>";
                 echo "<div class='save-icon empty' style='position: absolute;right: 2px;top: 15px;width: 35px;' onclick='saveExperience(activityData, userID)'></div>";
             echo "</div>";
-            echo "<p class='short-description'>$shortDescription</p>"; 
-            echo "<button class='read-more-button'>Read More</button>";
+            // echo "<p class='short-description'>$shortDescription</p>"; 
+            // echo "<button class='read-more-button'>Read More</button>";
             echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
             echo "<p>Price: " . $activity['price']['amount'] . " " . $activity['price']['currencyCode'] . "</p>"; 
             echo "<a href='" . $activity['bookingLink'] . "' target='_blank' class='view-details-button'>Book Now</a>";
