@@ -6,43 +6,60 @@
     <title>Tours and Activities</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
-        // ... (keep the same CSS styles you have for hotel-offer)
-        .activity-offer {
-            background: #f3eae0;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: calc(33% - 20px);
-            margin-bottom: 20px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+        
+    .activity-offer {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        overflow: hidden;
+    }
 
-        .activity-offer h2 {
-            margin-top: 0;
-            color: #333333;
-            font-size: 24px;
-        }
+    .activity-offer::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); 
+    }
 
-        .view-details-button {
-            background-color: #986e43;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            display: block;
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-            text-decoration: none;
-        }
+    .activity-offer * {
+        position: relative;
+        z-index: 1;
+    }
 
-        .view-details-button:hover {
-            background-color: #ab7946;
-        }
+    .short-description {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+
+    .full-description {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .read-more-button {
+        background-color: #986e43;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .read-more-button:hover {
+        background-color: #ab7946;
+    }
     </style>
 </head>
 <body style="height: 100%;">
@@ -72,14 +89,18 @@ echo '<div class="activity-container">';
 
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $activity) {
-        echo "<div class='activity-offer'>";
-        // Show the activity name
-        echo "<h2 style='color: #986e43;'>Activity Name: " . $activity['name'] . "</h2>";
-        echo "<p>Description: " . $activity['description'] . "</p>"; 
+        $backgroundImage = $activity['picture'][0]; // Get the first picture
+        $shortDescription = substr($activity['description'], 0, 100) . '...'; 
+        $fullDescription = $activity['description'];
+        echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
+        // Show the activity name and short description
+        echo "<h2>Activity Name: " . $activity['name'] . "</h2>";
+        echo "<p class='short-description'>Description: $shortDescription</p>"; 
+        echo "<button class='read-more-button'>Read More</button>";
+        echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
         echo "<p>Price: " . $activity['price']['amount'] . " " . $activity['price']['currencyCode'] . "</p>"; 
         echo "<a href='" . $activity['bookingLink'] . "' target='_blank' class='view-details-button'>Book Now</a>";
-
-        echo "</div>"; // .activity-offer
+        echo "</div>"; 
     }
 } else {
     echo "<p>No activities found.</p>";
