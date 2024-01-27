@@ -80,6 +80,7 @@ $(document).ready(function() {
                         search_query: request.term
                     },
                     success: function(data) {
+                        console.log("Data received from server:", data);
                         response($.map(data.data, function(item) {
                             var cityName = item.name;
                             var cityLat = item.geoCode.latitude;
