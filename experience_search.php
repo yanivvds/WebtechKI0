@@ -114,7 +114,7 @@ echo "</div>";
             button.onclick = function() {
                 let fullDescription = this.nextElementSibling;
                 let isExpanded = fullDescription.style.maxHeight !== '0px';
-                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; // Adjust '500px' as needed
+                fullDescription.style.maxHeight = isExpanded ? '0px' : '500px'; 
                 this.textContent = isExpanded ? 'Read More' : 'Show Less';
             };
         });
