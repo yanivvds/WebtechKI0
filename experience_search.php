@@ -186,7 +186,7 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 echo "</div>"; 
 ?>
 <script>
-    var userID = <?php echo $userID; ?>;
+    var userID = <?php echo isset($userID) ? $userID : 'null'; ?>;
     function saveExperience(activity, userID) {
         if (userID === null) {
             alert('User is not logged in.');
