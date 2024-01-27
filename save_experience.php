@@ -25,6 +25,7 @@ $activityDescription = $_POST['activityDescription'] ?? '';
 $activityPrice = $_POST['activityPrice'] ?? 0.0;
 $activityCurrency = $_POST['activityCurrency'] ?? '';
 $userID = $_SESSION["user_id"];
+var_dump($activityName, $activityDescription, $activityPrice, $activityCurrency);
 
     $mysqli = require __DIR__ . "/../database.php";
 
@@ -32,7 +33,6 @@ $userID = $_SESSION["user_id"];
     VALUES (?, ?, ?, ?)";
 
     $stmt = $mysqli->stmt_init();
-    var_dump($activityName, $activityDescription, $activityPrice, $activityCurrency);
     if ($stmt->prepare($sql)) {
        $stmt->bind_param("ssds", 
        $activityName, $activityDescription, $activityPrice, $activityCurrency);
