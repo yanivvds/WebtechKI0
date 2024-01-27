@@ -198,7 +198,11 @@ echo "</div>";
         const activityDescription = activity.description;
         const activityPrice = activity.price.amount;
         const activityCurrency = activity.price.currencyCode;
-
+        console.log("User ID: ", userID);
+        console.log("Activity Name: ", activityName);
+        console.log("Activity Description: ", activityDescription);
+        console.log("Activity Price: ", activityPrice);
+        console.log("Activity Currency: ", activityCurrency);
         // Perform the AJAX POST request 
         $.ajax({
             url: 'save_experience.php',
