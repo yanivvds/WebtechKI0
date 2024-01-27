@@ -101,7 +101,12 @@ $(document).ready(function() {
             select: function(event, ui) {
                 event.preventDefault();
                 $("#cityName").val(ui.item.label);
+
+                
+                $("#latitude").val(ui.item.lat);
+                $("#longitude").val(ui.item.lng);
             }
+
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
                 .append("<div>" + item.label + "</div>")
