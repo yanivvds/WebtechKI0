@@ -260,12 +260,12 @@ echo "</div>";
 
                     // Ensure that you are targeting the correct elements within the same '.activity-offer' container
                     const activityData = {
-                        name: activityOffer.querySelector('.activity-title').textContent,
-                        description: activityOffer.querySelector('.full-description p').textContent,
+                        name: activityName,
+                        description: activityDescription,
                         price: {
-                            amount: parseFloat(activity['price']['amount']), // Correctly accessing the price amount from the API response
-                            currencyCode: activity['price']['currencyCode'] // Correctly accessing the currency code from the API response
-                        }
+                            amount: activityPrice,
+                            currencyCode: activityCurrency
+                        },
                     };
 
                     // Call the saveExperience function 
