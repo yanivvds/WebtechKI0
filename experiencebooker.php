@@ -62,15 +62,15 @@ if (!isset($_SESSION["user_id"])) {
     }
 
     .ui-slider .ui-slider-handle {
-        position: absolute;
-        z-index: 2;
-        width: 1.2em;
-        height: 1.2em;
-        cursor: pointer;
-        border: 1px solid #AAA;
-        background: #FFF;
-        border-radius: 50%;
-        outline: none;
+        position: absolute !important;
+        z-index: 2 !important;
+        width: 1.2em !important;
+        height: 1.2em !important;
+        cursor: pointer !important;
+        border: 1px solid #AAA !important;
+        background: #FFF !important;
+        border-radius: 50% !important;
+        outline: none !important;
     }
 
     .ui-slider .ui-slider-range {
