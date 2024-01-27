@@ -25,7 +25,6 @@ $activityDescription = $_POST['activityDescription'] ?? '';
 $activityPrice = $_POST['activityPrice'] ?? 0.0;
 $activityCurrency = $_POST['activityCurrency'] ?? '';
 $userID = $_SESSION["user_id"];
-var_dump($activityName, $activityDescription, $activityPrice, $activityCurrency);
 
     $mysqli = require __DIR__ . "/../database.php";
 
