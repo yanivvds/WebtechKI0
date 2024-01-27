@@ -263,8 +263,9 @@ echo "</div>";
                         name: activityOffer.querySelector('.activity-title').textContent,
                         description: activityOffer.querySelector('.full-description p').textContent,
                         price: {
-                            amount: parseFloat(activityOffer.querySelector('.activity-offer p:last-of-type').textContent.split(' ')[1]), // Assuming the price is in the last <p> tag within '.activity-offer'
-                            currencyCode: activityOffer.querySelector('.activity-offer p:last-of-type').textContent.split(' ')[2] // Assuming the currency code is in the last <p> tag within '.activity-offer'
+                            amount: activityOffer.querySelector('p:nth-of-type(2)').textContent,
+                            currencyCode: activityOffer.querySelector('p:nth-of-type(2)').textContent
+                        },
                         }
                     };
 
