@@ -39,7 +39,8 @@ if (!isset($_SESSION["user_id"])) {
             color: #212121; /* Hover text color */
         }
         .price-range-container {
-        margin: 10px 0;
+        margin: 20px 0;
+        padding: 10px 0;
     }
 
     /* Style for price range display */
@@ -49,6 +50,7 @@ if (!isset($_SESSION["user_id"])) {
         color: #555;
         margin-bottom: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     /* Style for the jQuery UI Slider */
@@ -115,13 +117,13 @@ if (!isset($_SESSION["user_id"])) {
                 <div class="cut"></div>
                 <label for="adults" class="placeholder">Adults</label>
             </div>
-            <div class="input-container ic1">
-              <label for="amount" class="placeholder">Price range:</label>
-              <p id="amount" style="border: 0; color: #f6931f; font-weight: bold; padding-top: 10px;"></p>
-              <div id="price-range-slider" style="margin-bottom: 20px;"></div> <!-- Slider will be inserted here -->
-              <input type="hidden" id="minPrice" name="minPrice" />
-              <input type="hidden" id="maxPrice" name="maxPrice" />
-          </div>
+            <div class="input-container ic1 price-range-container">
+                <label for="amount" class="placeholder price-range-display">Price range:</label>
+                <p id="amount" class="price-range-display" style="border: 0; color: #f6931f; font-weight: bold; padding-top: 10px;"></p>
+                <div id="price-range-slider" style="margin-bottom: 20px;"></div> <!-- Slider will be inserted here -->
+                <input type="hidden" id="minPrice" name="minPrice" />
+                <input type="hidden" id="maxPrice" name="maxPrice" />
+            </div>
             <button type="submit" class="submit">Search Experiences</button>
         </form>
     </div>
