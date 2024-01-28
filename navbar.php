@@ -14,7 +14,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
   <nav>
     <div class="wrapper">
-    <div class="logo"><a href="index.php"><img src="/fotos/logomain.png" style="margin-top: 3%;max-width: 50%;" alt="Logo tit"></a></div>
+    <div class="logo"><a href="#">Logo</a></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
@@ -85,7 +85,7 @@ if (session_status() == PHP_SESSION_NONE) {
           <li><a class="login" href="login.php" id="loginnav">Login</a></li>
         <?php endif; ?>
       </ul>
-      <label for="menu-btn" class="btn menu-btn" style="background-color: #986e46;"></label>
+      <label for="menu-btn" class="btn menu-btn" style="background-color: #986e46;"><i class="fas fa-bars"></i></label>
     </div> 
   </nav>
 </body>
