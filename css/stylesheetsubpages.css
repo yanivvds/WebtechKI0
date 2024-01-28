@@ -820,7 +820,7 @@ a {
         position: relative;
         display: flex;
         justify-content: center;
-        margin-top: 6rem;
+        margin-top: 2vh;
         flex-direction: column;
     }
     .gallery {
