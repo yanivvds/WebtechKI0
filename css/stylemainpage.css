@@ -724,15 +724,15 @@ h5{
     }
     .card2{
         background-image: url(../fotos/massimiliano-donghi-JXsxH2shRgY-unsplash.jpg);
-        display: none;
+        display: none !important;
     }
     .card3{
         background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
-        display: none;
+        display: none !important;
     }
     .card4{
         background-image: url(../fotos/charles-postiaux-WOw3Pcdmw4I-unsplash.jpg);
-        display: none;
+        display: none !important;
     }
     .card:hover{
         transform: translatey(-10px);
