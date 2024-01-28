@@ -1,4 +1,6 @@
 <?php
+// This file is used to show the user profile where a user can update their 
+// profile name, email, city, phone number, and birthday.
 require_once 'config.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -11,7 +13,8 @@ if (!isset($_SESSION["username"])) {
 include '/var/www/database.php';
 
 $id = $_SESSION["user_id"];
-
+// Open a new connection to the MySQL server, retrieve the user's information
+// With the profileupdate.php the profile and database will be updated.
 $stmt = $mysqli->prepare("SELECT username, email, firstName, lastName, city, phoneNumber, birthday FROM Users WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();

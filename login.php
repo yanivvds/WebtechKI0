@@ -1,4 +1,6 @@
 <?php
+// This file is used to perform the login function by using the database.
+// And setting it to the session.
 require_once 'config.php';
 
 if (session_status() == PHP_SESSION_NONE) {

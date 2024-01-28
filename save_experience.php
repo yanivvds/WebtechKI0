@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL); // remove after testing
-ini_set('display_errors', 1); // remove after testing
-
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -18,7 +15,7 @@ if (!isset($_SESSION["user_id"])) {
     $userID = $_SESSION["user_id"];
     
 }
-    
+
 // All experience room info
 $activityName = $_POST['activityName'] ?? '';
 $activityDescription = $_POST['activityDescription'] ?? '';

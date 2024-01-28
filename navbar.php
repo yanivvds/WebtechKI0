@@ -13,7 +13,7 @@ if (session_status() == PHP_SESSION_NONE) {
 </head>
 <body>
   <nav>
-    <div class="wrapper">
+    <div class="wrapper"> 
     <div class="logo"><a href="index.php"><img src="/fotos/logomain.png" style="margin-top: 3%;max-width: 50%;" alt="Logo tit"></a></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
@@ -24,7 +24,8 @@ if (session_status() == PHP_SESSION_NONE) {
           <a href="destinations.php" class="desktop-item">Destinations</a>
           <input type="checkbox" id="showDrop">
           <label for="showDrop" class="mobile-item">Destinations</label>
-          <ul class="drop-menu">
+          <!-- Dropdown menu for destinations -->
+          <ul class="drop-menu"> 
             <li><a href="/centralamerica.php">Central America</a></li>
             <li><a href="europe.php">Europe</a></li>
             <li><a href="#">Oceania</a></li>
@@ -35,6 +36,7 @@ if (session_status() == PHP_SESSION_NONE) {
           <a href="#" class="desktop-item">Planner</a>
           <input type="checkbox" id="showMega">
           <label for="showMega" class="mobile-item">Other</label>
+          <!-- Mega menu for planning flights, hotels and experiences -->
           <div class="mega-box">
             <div class="content">
               <div class="rownav">
@@ -71,6 +73,7 @@ if (session_status() == PHP_SESSION_NONE) {
           </div> 
         </li>
         <li><a href="/about.php">About</a></li>
+        <!-- script for profile, if logged in the "login" button will change to Hello, "user" -->
         <?php if(isset($_SESSION['user_id'])): ?>
           <li style="text-align: end;">
             <a href="javascript:void(0)" class="desktop-item">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>

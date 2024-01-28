@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- This file displays all rooms after a hotel has been selected. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +82,8 @@ include('hotelapi.php');
 if (isset($_GET['hotelId'])) {
     $hotelId = $_GET['hotelId'];
 }
-
+// Retrieve information from the hotel_search.php
+// (from the EventListener from the "View rooms" button)
 $checkInDate = $_GET['checkInDate'] ?? date('Y-m-d', strtotime('+1 day'));
 $checkOutDate = $_GET['checkOutDate'] ?? date('Y-m-d', strtotime('+8 day'));
 $adults = $_GET['adults'] ?? 1;
@@ -94,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $userID = $_SESSION["user_id"];
     }
 }
-
+// Initiates an API request to find the room options of the hotel with the right dates
 $hotelOffersCh = curl_init();
 $hotelOffersUrl = "https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=$hotelId&checkInDate=$checkInDate&checkOutDate=$checkOutDate&adults=$adults";
 
@@ -108,11 +110,12 @@ curl_setopt($hotelOffersCh, CURLOPT_RETURNTRANSFER, true);
 
 $hotelOffersResponse = curl_exec($hotelOffersCh);
 
+// Decodeing og the JSON
 $hotelOffersArray = json_decode($hotelOffersResponse, true);
 
 curl_close($hotelOffersCh);
 
-
+// Set initial rooms details to an empty list
 $roomDetails = [];
 
 if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
@@ -148,7 +151,7 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
                 echo "<p><strong>Price total:</strong> " . htmlspecialchars($offer['price']['currency']) . " " . htmlspecialchars($offer['price']['total']) . "</p>"; // Price
                 echo "<p><strong>Payment Type:</strong> " . htmlspecialchars($offer['policies']['paymentType']) . "</p>"; // Payment Type
                 
-                // Cancellation Policy
+                // Cancellation Policy (if it exists)
                 if (isset($offer['policies']['cancellations']) && !empty($offer['policies']['cancellations'])) {
                     foreach ($offer['policies']['cancellations'] as $cancellation) {
                         echo "<div class='cancellation-policy'>";
@@ -167,20 +170,21 @@ if (isset($hotelOffersArray['data']) && !empty($hotelOffersArray['data'])) {
             }
         }
         
-        echo "</div>"; // Close hotel-offer container
+        echo "</div>";
     }
     echo "</div>"; 
 } else {
     echo "<h1 style='color: #e2d1c6;font-size: 250%;text-align: center;margin-top: 2%;'>No hotel offers found at this time.</h1>";
     echo "<p style='color: #efe9e6;font-size: 20px;text-align: center;'>Because we are still in a testing environment from this API not all hotel options will load.</p>";
     echo "<div style='text-align: center;margin-top: 2%;'>";
+    // Back to search query (with the right city and dates)
     echo "<a class='backbtn' href='hotel_search.php?bestemming=" . urlencode($cityCode) . "&checkInDate=" . urlencode($checkInDate) . "&checkOutDate=" . urlencode($checkOutDate) . "&adults=" . urlencode($adults) . "'>Go back</a>";
     echo "</div>";
 }
 ?>
 <script>
 
-
+// This function is meant to send all room information to the save_room.php script
     function saveRoom(offer, userID) {
         if (userID === null) {
         alert('User is not logged in.');
