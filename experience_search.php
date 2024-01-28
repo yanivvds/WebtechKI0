@@ -1,3 +1,5 @@
+<!-- This page uses the Tours and Activities API to generate a list of experience 
+based on price, latitude and longtitude and radius -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,7 @@
     <title>Tours and Activities</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
-        
+      /* Custom styling for this page  */
     .activity-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -148,7 +150,7 @@ $minPrice = isset($_POST['minPrice']) ? floatval($_POST['minPrice']) : 0.0;
 $maxPrice = isset($_POST['maxPrice']) ? floatval($_POST['maxPrice']) : 2000.0;
 
 
-
+// Get the access token
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://test.api.amadeus.com/v1/shopping/activities?latitude=$latitude&longitude=$longitude&radius=$radius");
@@ -162,7 +164,7 @@ $response = curl_exec($ch);
 $responseArray = json_decode($response, true);
 
 curl_close($ch);
-
+// Display the results
 echo '<div class="activity-container">';
 
 $offerCount = 0;
@@ -201,7 +203,9 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
 }
 echo "</div>"; 
 ?>
+
 <script>
+    // This script handles the saving of experiences and the read more button
     var userID = <?php echo isset($userID) ? $userID : 'null'; ?>;
     document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.read-more-button').forEach(button => {

@@ -1,3 +1,4 @@
+<!-- This file introduces the experience finder with a form and the right ajax to perform the city search -->
 <?php
 require_once 'config.php';
 
@@ -52,7 +53,7 @@ if (!isset($_SESSION["user_id"])) {
         margin-bottom: 10px;
     }
 
-    /* Style for the jQuery UI Slider */
+  
     .ui-slider {
         position: relative;
         text-align: left;
@@ -128,6 +129,7 @@ if (!isset($_SESSION["user_id"])) {
     </div>
 </div>
 <script>
+// This script is used to perform the city search by using the autocomplete function and the city_search.php file.
 $(document).ready(function() {
     function setupCityAutocomplete(selector) {
         $(selector).autocomplete({
@@ -160,6 +162,7 @@ $(document).ready(function() {
                     }
                 });
             },
+            // When a city is selected, set the hidden latitude and longitude fields
             select: function(event, ui) {
                 event.preventDefault();
                 $("#cityName").val(ui.item.label); 
@@ -167,7 +170,7 @@ $(document).ready(function() {
                 $("#latitude").val(ui.item.lat);
                 $("#longitude").val(ui.item.lng);
             }
-
+        // Render the autocomplete items
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
                 .append("<div>" + item.label + "</div>")
@@ -179,8 +182,8 @@ $(document).ready(function() {
 });
 </script>
 <script>
+// This script is used to perform the price range slider
 $(document).ready(function() {
-    // ... your existing JavaScript code ...
 
     // Initialize Price Range Slider
     $("#price-range-slider").slider({

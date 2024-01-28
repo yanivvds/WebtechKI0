@@ -1,3 +1,4 @@
+<!-- This file calls the API and makes sure the authorisation is set using cURL sessions. -->
 <?php
 include('/var/www/config.php');
 

@@ -76,6 +76,8 @@ if (!isset($_SESSION["user_id"])) {
   </div>
 </div>
 <script>
+// This script is used to setup the autocomplete feature for the origin and destination fields 
+// by using the IATA codes of the airports and cities.
 $(document).ready(function() {
     function setupAutocomplete(selector) {
         $(selector).autocomplete({
