@@ -144,6 +144,9 @@ include('activitiesapi.php');
 $latitude = $_POST['latitude'] ?? '41.390154'; // Default latitude
 $longitude = $_POST['longitude'] ?? '2.173691'; // Default longitude
 $radius = 4; // 4 km radius
+$minPrice = isset($_POST['minPrice']) ? floatval($_POST['minPrice']) : 0.0;
+$maxPrice = isset($_POST['maxPrice']) ? floatval($_POST['maxPrice']) : 2000.0;
+
 
 
 $ch = curl_init();
@@ -162,26 +165,37 @@ curl_close($ch);
 
 echo '<div class="activity-container">';
 
+$offerCount = 0;
+
 if (isset($responseArray['data']) && is_array($responseArray['data'])) {
     foreach ($responseArray['data'] as $activity) {
-        if (!empty($activity['description'])) { 
-            $backgroundImage = $activity['pictures'][0] ?? '';
-            $shortDescription = substr($activity['description'], 0, 100) . '...'; 
-            
-            echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
-            echo "<div class='title-section'>";
-                echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'>" . $activity['name'] .  "</h2>";
-                $offerJson = htmlspecialchars(json_encode($activity), ENT_QUOTES, 'UTF-8');
-                echo "<div class='save-icon empty' style='position: absolute;right: 2px;top: 15px;width: 35px;' onclick='saveExperience($offerJson, $userID)'></div>";
-            echo "</div>";
-            echo "<p class='short-description'>$shortDescription</p>"; 
-            echo "<button class='read-more-button'>Read More</button>";
-            echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
-            echo "<p>Price: " . $activity['price']['amount'] . " " . $activity['price']['currencyCode'] . "</p>"; 
-            echo "<a href='" . $activity['bookingLink'] . "' target='_blank' class='view-details-button'>Book Now</a>";
-            echo "</div>"; 
+        $activityPrice = $activity['price']['amount'] ?? 0;
+        if ($activityPrice >= $minPrice && $activityPrice <= $maxPrice) {
+            if (!empty($activity['description'])) { 
+                $backgroundImage = $activity['pictures'][0] ?? '';
+                $shortDescription = substr($activity['description'], 0, 100) . '...'; 
+                
+                echo "<div class='activity-offer' style='background-image: url(\"$backgroundImage\");'>";
+                echo "<div class='title-section'>";
+                    echo "<h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'>" . $activity['name'] .  "</h2>";
+                    $offerJson = htmlspecialchars(json_encode($activity), ENT_QUOTES, 'UTF-8');
+                    echo "<div class='save-icon empty' style='position: absolute;right: 2px;top: 15px;width: 35px;' onclick='saveExperience($offerJson, $userID)'></div>";
+                echo "</div>";
+                echo "<p class='short-description'>$shortDescription</p>"; 
+                echo "<button class='read-more-button'>Read More</button>";
+                echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
+                echo "<p>Price: " . $activity['price']['amount'] . " " . $activity['price']['currencyCode'] . "</p>"; 
+                echo "<a href='" . $activity['bookingLink'] . "' target='_blank' class='view-details-button'>Book Now</a>";
+                echo "</div>"; 
+                $offerCount++;
+                if ($offerCount >= 15) {
+                    break; // Exit the loop
+
+            }
         }
     }
+}
+
 } else {
     echo "<p>No activities found.</p>";
 }

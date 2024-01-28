@@ -117,9 +117,9 @@ if (!isset($_SESSION["user_id"])) {
                 <label for="adults" class="placeholder">Adults</label>
             </div>
             <div class="">
-            <p>Price Range</p>
-              <p id="amount" style="border: 0; color: #f6931f; font-weight: bold; padding-top: 10px;"></p>
-              <div id="price-range-slider" style="margin-bottom: 20px;"></div> <!-- Slider will be inserted here -->
+            <p style="margin-top: 17px;font-size: large;color: #65657c;">Price Range</p>
+              <p id="amount" style="border: 0; color: #eeeeee; font-weight: bold; padding-top: 10px;"></p>
+              <div id="price-range-slider" style="margin-bottom: 20px;"></div>
               <input type="hidden" id="minPrice" name="minPrice" />
               <input type="hidden" id="maxPrice" name="maxPrice" />
           </div>
@@ -186,22 +186,21 @@ $(document).ready(function() {
     $("#price-range-slider").slider({
         range: true,
         min: 0,
-        max: 5000,
-        values: [0, 5000], // Default values
+        max: 2000,
+        values: [0.0, 2000.0], // Default values
         slide: function(event, ui) {
             $("#amount").html("€" + ui.values[0] + " - €" + ui.values[1]);
-            $("#minPrice").val(ui.values[0]);
-            $("#maxPrice").val(ui.values[1]);
+            $("#minPrice").val(parseFloat(ui.values[0]));
+            $("#maxPrice").val(parseFloat(ui.values[1]));
         }
     });
 
     // Set initial values
     $("#amount").html("€" + $("#price-range-slider").slider("values", 0) +
                       " - €" + $("#price-range-slider").slider("values", 1));
-    $("#minPrice").val($("#price-range-slider").slider("values", 0));
-    $("#maxPrice").val($("#price-range-slider").slider("values", 1));
+    $("#minPrice").val(parseFloat($("#price-range-slider").slider("values", 0)));
+    $("#maxPrice").val(parseFloat($("#price-range-slider").slider("values", 1)));
 
-    // ... your existing JavaScript code ...
 });
 </script>
 
