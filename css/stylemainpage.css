@@ -1075,3 +1075,35 @@ h5{
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 }
+@media (min-width: 601px){
+.card2,
+.card3{
+    display: none;
+}
+.gallery__item--1 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: none;
+}
+.gallery__item--2 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    display: none;
+}
+.gallery__item--3{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.gallery__item--4{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+}
