@@ -141,6 +141,8 @@ nav .wrapper{
   .wrapper .btn{
     display: block;
     background-color: #986e46;
+    height: 10px;
+    width: 60px;
     }
   .wrapper .nav-links{
     position: fixed;
@@ -196,7 +198,7 @@ nav .wrapper{
   }
   .nav-links .mobile-item{
     display: block;
-    color: #f2f2f2;
+    color: #986e46;
     font-size: 20px;
     font-weight: 500;
     padding-left: 20px;
