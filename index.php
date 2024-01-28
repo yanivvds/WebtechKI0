@@ -40,7 +40,7 @@ if (session_status() == PHP_SESSION_NONE) {
         </div>
         <div class="card card4">
             <h5>Asia</h5>
-            <p>Explore Asia's allure: ancient wonders, modern marvels, and a tapestry of cultures. From Japan's serene temples to Bali's tropical paradise, Asia invites you to a world of adventure and enchantment.</p>
+            <p>Discover Asia's charm: ancient wonders, modern sights, and rich cultures. From Japan's tranquil temples to Bali's lush beauty, experience an enchanting adventure.</p>
         </div>
     </div>
     </div>
