@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php include 'navbar.php'; ?>
-    <div class="ImageBackgroundWrap Background-fixed" style="Background-image: url( ../fotos/eifeltoren.jpg)">
+    <div class="ImageBackgroundWrap Background-fixed" style="Background-image: url( ../fotos/europe.jpg)">
         <div class="ImageInnerWrap">
             <div class="TextBackground">
                 <div><h1>Europe</h1></div>
@@ -22,76 +22,81 @@
     <div class="capage">
         <div class="ca-container">
             <div class="grid-pic1">
-                <img src="../fotos/beachportrait.jpg" class="beachleft">
+                <img src="../fotos/paris.jpg" class="beachleft" alt="paris">
             </div>
             <div class="grid-text1">
                 <h1>Travelling to<br> Europe</h1>
-                <p>
-                    Europe, a continent nestled between Asia and Africa, is a mosaic of diverse landscapes, intricate cultures, and a storied past. Comprising 44 countries, including prominent ones such as France, Germany, Italy, and the United Kingdom, Europe unfolds a tapestry of experiences for travelers. From the medieval charm of castles in Germany to the romantic allure of the canals in Venice, and the majestic history of the Acropolis in Greece, each nation offers a distinct allure.
-                    
-                    Delve into the cultural richness of Europe, where centuries-old traditions coexist with modern cosmopolitan vibes. Savor the delectable cuisines that vary from the hearty stews of Eastern Europe to the delicate pastries of France. The continent invites exploration with adventures ranging from skiing in the Alps to lounging on the sun-kissed beaches of the Mediterranean.
-                    
-                    Europe entices with its architectural marvels, artistic treasures, and a warm hospitality that leaves an indelible mark on every traveler. Whether wandering through the historic streets of Rome, experiencing the vibrant nightlife of Berlin, or marveling at the natural beauty of the Scottish Highlands, Europe is a captivating destination that promises a rich and diverse journey for those who explore its enchanting realms.
+                <p>Europe, a continent steeped in history and cultural wealth, unfolds like a captivating tapestry of diverse landscapes and enchanting traditions.<br>
+                    Europe consists of a large number of countries including but not limited to France, Italy, Germany, Spain and many more, promising a fascinating journey for every type of traveler.<br>
+                    From the iconic Eiffel Tower in Paris to the sun-drenched beaches of the Mediterranean and the historic streets of Rome, every European country offers a distinctive story waiting to be discovered.<br>
+                    Immerse yourself in the grandeur of ancient cathedrals, sample the flavors of diverse cuisines and embark on adventures that range from exploring medieval castles to relaxing cruises along scenic rivers. Europe invites voyages of discovery with its picturesque landscapes, cultural diversity and warm hospitality that leave a lasting impression on every visitor.
                 </p>
             </div>
             <div class="grid-text2">
-                <h1>Top 5 spots<br>you need to visit!</h1>    
+                <h1>Top 5 Destinations<br>you need to explore in Europe!</h1>
                 <ol>
                     <li>
-                    <strong>Tikal, Guatemala:</strong> Explore the ancient Mayan city of Tikal, nestled in the jungles of Guatemala. Climb towering pyramids for panoramic views of the lush surroundings and immerse yourself in the rich history of this archaeological marvel.
+                        <strong>Eiffel Tower, France:</strong> Take a trip to the iconic Eiffel Tower in Paris, France. Admire the steel construction, climb to the top for a panoramic view and experience the romantic atmosphere of the City of Light.
                     </li>
                     <li>
-                    <strong>Arenal Volcano, Costa Rica:</strong> Witness the majesty of Arenal Volcano in Costa Rica. Surrounded by lush rainforests, the volcano offers hiking trails, hot springs, and the opportunity to relax in thermal baths with a stunning view of the active peak.
+                        <strong>Colosseum, Italy:</strong> Witness the magnificence of the Colosseum in Rome, Italy. Explore the ancient amphitheater, imagine gladiatorial contests and enjoy the history of this remarkable UNESCO World Heritage Site.
                     </li>
                     <li>
-                    <strong>Caye Caulker, Belize:</strong> Experience the laid-back charm of Caye Caulker in Belize. This idyllic island paradise is known for its crystal-clear waters, vibrant coral reefs, and a relaxed atmosphere. Snorkel or dive in the Great Blue Hole, a UNESCO World Heritage Site.
+                        <strong>Santorini, Greece:</strong> Experience the breathtaking beauty of Santorini, Greece. Known for its whitewashed buildings and beautiful sunsets, Santorini offers a scenic escape in the heart of the Aegean Sea.
                     </li>
                     <li>
-                    <strong>Antigua, Guatemala:</strong> Step into the colonial beauty of Antigua, Guatemala. This UNESCO World Heritage Site boasts well-preserved Spanish Baroque-influenced architecture, cobblestone streets, and vibrant markets. It's a cultural hub surrounded by volcanoes.
+                        <strong>Escape to the Swiss Alps, a nature lover's paradise. Admire the snow-capped peaks, pristine lakes and charming mountain villages, which provide an ideal setting for outdoor adventures.
                     </li>
                     <li>
-                    <strong>Manuel Antonio National Park, Costa Rica:</strong> Discover the biodiversity of Manuel Antonio National Park in Costa Rica. This coastal gem combines tropical rainforests with pristine beaches. Encounter diverse wildlife, including monkeys and sloths, as you hike the park's trails.
+                        <strong>Barcelona, Spain:</strong> Immerse yourself in the vibrant culture of Barcelona, Spain. Discover the architectural wonders of Antoni Gaudí, stroll along the vibrant La Rambla and enjoy the rich culinary scene of this dynamic city.
                     </li>
                 </ol>
             </div>
             <div class="grid-pic2">
                 <div class="picture-container">
-                    <div class="picture-pic1"></div>
-                    <div class="picture-pic2"></div>
-                    <div class="picture-pic3"> </div>
-                    <div class="picture-pic4"></div>
-                    <div class="picture-pic5"></div>
+                    <div class="picture-pic1-asia"></div>
+                    <div class="picture-pic2-asia"></div>
+                    <div class="picture-pic3-asia"></div>
+                    <div class="picture-pic4-asia"></div>
+                    <div class="picture-pic5-asia"></div>
                   </div>
             </div>
             <div class="card">
-                <img class="tempel" src="../fotos/guatamala.jpg"  style="width:100%">
-                <div class="container">
-
+                <img src="../fotos/china.jpg" alt="china">
+                <div class="card-content">
+                    <h2>China</h2>
+                    <p>A country with a history spanning 5,000 years, China seamlessly blends ancient traditions with modern progress, presenting a diverse range of culture and landscapes.</p>
+                    <a href="hotelbooker.php">Book now &rArr;</a>
+                </div>
+            </div>
+            <div class="card">  
+                <img src="../fotos/japan.jpg" alt="japan">
+                <div class="card-content">
+                    <h2>Japan</h2>
+                    <p>A blend of tradition and technology, Japan offers an enchanting blend of ancient beauty and modern vibrancy.</p>
+                    <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
-                <img class="tempel" src="../fotos/tikal.jpg"  style="width:100%">
-                <div class="container">
-
+                <img src="../fotos/vietnam.jpg" alt="vietnam">
+                <div class="card-content">
+                    <h2>Vietnam</h2>
+                    <p>A land of scenic beauty and age-old charm, Vietnam combines vibrant culture and warm hospitality, making it a captivating destination.</p>
+                    <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
-                <img class="tempel" src="../fotos/tempel.jpg"  style="width:100%">
-                <div class="container">
-
+                <img src="../fotos/indonesia.jpg" alt="indonesia">
+                <div class="card-content">
+                    <h2>Indonesia</h2>
+                    <p>A tropical paradise with diverse islands, Indonesia seamlessly blends natural beauty with vibrant cultures, creating a captivating destination.</p>
+                    <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
-            <div class="card">
-                <img class="tempel" src="../fotos/tempel.jpg"  style="width:100%">
-                <div class="container">
-                </div>
             </div>
           </div>
     </div>   
     <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
-    </div>
-    <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
-        <?php require_once("footer.php"); ?>
     </div>
 </body>
 </html>
