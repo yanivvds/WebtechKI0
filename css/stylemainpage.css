@@ -1738,4 +1738,8 @@ h5{
         transition: transform 0.3s ease;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
+    .gallery__item--1,
+    .gallery__item--2{
+        display: block;
+    }
 }
