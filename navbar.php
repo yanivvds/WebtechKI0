@@ -14,7 +14,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
   <nav>
     <div class="wrapper">
-    <div class="logo"><a href="index.php"><img src="/fotos/logomain.png" style="margin-top: 3%;max-width: 50%;" alt="Logo tit"></a></div>
+    <div class="logo"><a href="#">Logo</a></div>
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
