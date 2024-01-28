@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 nav{
-  position: fixed;
+  position: relative;
   z-index: 99;
   width: 100%;
   
@@ -84,6 +84,7 @@ nav .wrapper{
   top: 85px;
   opacity: 0;
   visibility: hidden;
+  margin-top: -1.5%;
 }
 .mega-box .content{
   background: #f2e6d9;
@@ -139,6 +140,9 @@ nav .wrapper{
 @media screen and (max-width: 970px) {
   .wrapper .btn{
     display: block;
+    background-color: #986e46;
+    height: 10px;
+    width: 60px;
     }
   .wrapper .nav-links{
     position: fixed;
@@ -268,3 +272,10 @@ nav input{
     font-size: 45px;
     font-weight: 600;
   }
+
+@media only screen and (max-width: 600px) {
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        }
+    }
