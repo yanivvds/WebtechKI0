@@ -67,7 +67,7 @@
                 <div class="card-content">
                     <h2>Costa Rica</h2>
                     <p>Costa Rica, a Central American gem, entices with its breathtaking biodiversity, lush rainforests, and pristine beaches, making it a nature lover's paradise.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -75,7 +75,7 @@
                 <div class="card-content">
                     <h2>Belize</h2>
                     <p>Belize, a Caribbean gem, charms with turquoise waters, coral reefs, and ancient Mayan sites, creating a blend of natural beauty and archaeological wonders.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -83,7 +83,7 @@
                 <div class="card-content">
                     <h2>Guatemala</h2>
                     <p>Guatemala, a Central American gem, captivates with Mayan ruins, colonial charm, and diverse landscapes, blending history and natural allure.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -91,7 +91,7 @@
                 <div class="card-content">
                     <h2>Panama</h2>
                     <p>Panama, a vibrant crossroads, combines modern cityscapes, lush rainforests, and the iconic Panama Canal for a dynamic blend of urban allure and natural marvels.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
           </div>

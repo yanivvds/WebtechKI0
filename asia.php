@@ -67,7 +67,7 @@
                 <div class="card-content">
                     <h2>China</h2>
                     <p>China, a nation with a 5,000-year history, seamlessly blends ancient traditions with modern progress, showcasing a diverse tapestry of culture and landscapes.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">  
@@ -75,7 +75,7 @@
                 <div class="card-content">
                     <h2>Japan</h2>
                     <p>Japan, a blend of tradition and technology, offers a mesmerizing mix of ancient beauty and modern vibrancy.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -83,7 +83,7 @@
                 <div class="card-content">
                     <h2>Vietnam</h2>
                     <p>Vietnam, a land of scenic beauty and ancient charm, weaves together vibrant culture and warm hospitality, making it a captivating destination.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -91,7 +91,7 @@
                 <div class="card-content">
                     <h2>Indonesia</h2>
                     <p>Indonesia, a tropical paradise of diverse islands, seamlessly combines natural beauty with vibrant cultures, creating a captivating destination.</p>
-                    <a href="#">Read More &rArr;</a>
+                    <a href="#">Book now &rArr;</a>
                 </div>
             </div>
             </div>

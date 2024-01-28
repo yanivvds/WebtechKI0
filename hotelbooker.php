@@ -21,7 +21,7 @@ if (!isset($_SESSION["user_id"])) {
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <style>
         .ui-autocomplete {
-            background-color: #f0f0f0; /* Background color of the dropdown */
+            background-color: #f0f0f0;
             border: 1px solid #ccc;
             max-height: 200px;
             overflow-y: auto;
@@ -31,12 +31,12 @@ if (!isset($_SESSION["user_id"])) {
         .ui-menu-item {
             padding: 3px 15px;
             background-color: #f0f0f0; 
-            color: #333; /* Text color */
+            color: #333; 
         }
 
         .ui-menu-item:hover, .ui-menu-item.ui-state-focus {
             background-color: #d0d0d0; 
-            color: #212121; /* Hover text color */
+            color: #212121; 
         }
     </style>
 </head>
