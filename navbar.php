@@ -85,7 +85,7 @@ if (session_status() == PHP_SESSION_NONE) {
           <li><a class="login" href="login.php" id="loginnav">Login</a></li>
         <?php endif; ?>
       </ul>
-      <label for="menu-btn" class="btn menu-btn" style="background-color: #986e46;"></label>
+      <label for="menu-btn" class="btn menu-btn" style="background-color: #986e46;"><i class="fas fa-bars"></i></label>
     </div> 
   </nav>
 </body>

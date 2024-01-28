@@ -169,6 +169,7 @@ nav .wrapper{
   #close-btn:checked ~ .btn.menu-btn{
     display: block;
   }
+  
   .nav-links li{
     margin: 15px 10px;
   }
