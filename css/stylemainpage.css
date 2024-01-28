@@ -126,11 +126,13 @@ h5{
     font-size: 25px;
     color: #fff;
     text-shadow: 0 0 5px #999;
+    font-family: "poppins";
 }
 .card p{
     text-shadow: 0 0 5px #000;
     font-size: 20px;
     color: #fff;
+    font:"poppins"
 }
 .golfpagina2{
     background-color:#f2e6d9;
@@ -784,116 +786,6 @@ h5{
         cursor: pointer;
         transform: scale(1.1);
     }
-    
-    /* Font*/
-    .poppins-thin {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-      }
-      
-    .poppins-thin-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: italic;
-      }
-      
-    .poppins-extralight {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: normal;
-      }
-      
-    .poppins-extralight-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic;
-      }
-      
-    .poppins-light {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-      }
-      
-    .poppins-light-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: italic;
-      }
-      
-    .poppins-regular {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
-    .poppins-regular-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: italic;
-      }
-      
-    .poppins-medium {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-      }
-      
-    .poppins-medium-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: italic;
-      }
-      
-    .poppins-semibold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-      }
-      
-    .poppins-semibold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: italic;
-      }
-      
-    .poppins-bold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
-      
-    .poppins-bold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: italic;
-      }
-      
-    .poppins-extrabold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-      }
-      
-    .poppins-extrabold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: italic;
-      }
-      
-    .poppins-black {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-      }
-      
-    .poppins-black-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: italic;
-      }
-    
       /* Gallery*/
       .container {
         width: 100%;
@@ -996,6 +888,778 @@ h5{
         justify-content: flex-end;
         text-decoration: none;
         display: none;
+    }
+    
+    .imagediv--1 h5{
+        margin-bottom: 7rem;
+        margin-left: 1rem;
+        color: #fff;
+        font-family: "poppins";
+        text-decoration: none !important;
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--4 h5{
+        margin-bottom: 4rem;
+        margin-left: 1rem;
+    }
+    .imagediv--3 h5{
+        margin-left: 1rem;
+        margin-bottom: 4rem;
+        font-family: "poppins";
+        text-decoration: none !important;
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--2 h5{
+        margin-left: 1rem;
+        margin-bottom: 3rem;
+        font-family: "poppins";
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--3 h5,
+    .imagediv--4 h5{
+        text-decoration: none !important;
+        font-family: "poppins";
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--2 h5{
+        margin-bottom: 6rem;
+    
+    }
+    .imagediv--1 p,
+    .imagediv--2 p,
+    .imagediv--3 p,
+    .imagediv--4 p{
+        visibility: hidden;
+        transition: visibility 0.3s ease;
+        color: #fff;
+        font-family: "poppins";
+        text-shadow: 0 0 10px #000;
+        margin-left: 0.5rem;
+    }
+    .gallery__item:hover .imagediv--1 p,
+    .gallery__item:hover .imagediv--2 p,
+    .gallery__item:hover .imagediv--3 p,
+    .gallery__item:hover .imagediv--4 p{
+        visibility: visible;
+        text-decoration: none !important;
+        font-family: "poppins";
+    }
+    .gallery__item:hover, 
+    .gallery__item:hover,
+    .gallery__item:hover,
+    .gallery__item:hover,
+    .gallery__item:hover,
+    .gallery__item:hover{
+        transform:scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+    .gallery__item,
+    .gallery__item,
+    .gallery__item,
+    .gallery__item,
+    .gallery__item,
+    .gallery__item{
+        transition: transform 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
+@media (min-width: 601px){
+.card2,
+.card3{
+    display: none;
+}
+.gallery__item--1 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: none;
+}
+.gallery__item--2 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    display: none;
+}
+.gallery__item--3{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.gallery__item--4{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+}
+/* bigger sizes*/
+@media (min-width:900px) {
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .fotodiv1{
+        background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/eugene-zhyvchik-kvP6b4aSxjI-unsplash.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 52rem;
+        font-family: "Poppins";
+        color: #fff;
+        text-shadow: 0.6px 0.6px rgba(255, 255, 255, 0.383);
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 3;
+    }
+    .fotodiv1 h1{
+        font-size: 6rem;
+        margin-bottom: 15rem;
+    }
+    .fotodiv1 p{
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: 7rem;
+    }
+    .golfpagina1{
+        background-color: #f2e6d9;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:37rem;
+        z-index: 1;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        text-shadow: #999;
+        position: absolute;
+        margin-top: -11rem;
+        border-radius: 30% 30% 30% 30%;
+        
+    }
+    
+    .golfpagina1 h3{
+        color: #986e45;
+        font-size: 2rem;
+        font-family: "poppins";
+        position: relative;
+        margin-top: -7rem;
+        margin-left: 0rem;
+    
+    }
+    
+    .golfpagina1 h4{
+        margin-bottom: 35rem;
+        color: #986e45;
+        font-family: "Poppins";
+        font-size: 2rem;
+        position: relative;
+    }
+    
+    .test{
+        padding: 16% 23%;
+        background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
+        margin-top: 15rem;
+        background-size: cover;
+    }
+    .test h3{
+        color: #fff;
+        font-size: 4rem;
+        font-family: "poppins";
+        margin-bottom: 4rem;
+        text-shadow: #999;
+        margin-left: 24%;
+    }
+    .test p{
+        color: #fff;
+        font-size: 1.5rem;
+        font-family: "poppins";
+        margin-bottom: 4vh;
+        text-shadow: #999;
+        margin-left: 16%
+    }
+    
+    .col{
+        display: flex;
+        position: absolute;
+    }
+    .card{
+        width: 280px;
+        height: 310px;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 10px 25px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 10px 15px;
+        background-image: url(../fotos/mexico.jpg);
+        background-position: center;
+        background-size: cover;
+        transition: transform 0.5s;
+    
+    }
+    .card1{
+        background-image: url(../fotos/mexico.jpg);
+    }
+    .card2{
+        background-image: url(../fotos/massimiliano-donghi-JXsxH2shRgY-unsplash.jpg);
+        display: none;
+    }
+    .card3{
+        background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
+        display: none;
+    }
+    .card4{
+        background-image: url(../fotos/charles-postiaux-WOw3Pcdmw4I-unsplash.jpg);
+    }
+    .card:hover{
+        transform: translatey(-10px);
+    }
+    h5{
+        font-size: 25px;
+        color: #fff;
+        text-shadow: 0 0 5px #999;
+    }
+    .card p{
+        text-shadow: 0 0 5px #000;
+        font-size: 20px;
+        color: #fff;
+    }
+    .golfpagina2{
+        background-color:#f2e6d9;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:60rem;
+        z-index: 8;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        text-shadow: #999;
+        position: absolute;
+        border-top-left-radius: 20%;
+        border-top-right-radius: 20%;
+        margin-top: -12rem;
+    }
+    .gallery h3{
+        color: #986e45;
+        font-size: 2rem;
+        font-family: "poppins";
+        position: relative
+    }
+    
+    .exploreknop{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        height: 3rem;
+        border-radius: 5px;
+        background-color: #986e45;
+        color: #fff;
+        font-size: 2rem;
+        margin-left: 35%;
+        border: none;
+    }
+    .exploreknop:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+      /* Gallery*/
+      .container {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        flex-direction: column;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 5vw);
+        grid-gap: 20px;
+        margin-left: 10rem;
+        margin-top: -5rem;
+        
+    }
+    .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .gallery__item--2 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .gallery__item--3 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+    .gallery__item--4 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+    .gallery__item a{
+        text-decoration: none;
+    }
+    
+    .imagediv--1{
+        background-image: url(../fotos/rahul-chakraborty-5aN2I852PTs-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+    .imagediv--2{
+        background-image: url(../fotos/mikail-mcverry-6WRjFofNhPs-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+    .imagediv--3{
+        background-image: url(../fotos/florian-schneider-NdBsn0WQadw-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+    .imagediv--4{
+        background-image: url(../fotos/jonatan-pie-8I49k45G-3A-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+    
+    .imagediv--1 h5{
+        margin-bottom: 7rem;
+        margin-left: 1rem;
+        color: #fff;
+        font-family: "poppins";
+        text-decoration: none !important;
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--4 h5{
+        margin-bottom: 4rem;
+        margin-left: 1rem;
+    }
+    .imagediv--3 h5{
+        margin-left: 1rem;
+        margin-bottom: 4rem;
+        font-family: "poppins";
+        text-decoration: none !important;
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--2 h5{
+        margin-left: 1rem;
+        margin-bottom: 3rem;
+        font-family: "poppins";
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--3 h5,
+    .imagediv--4 h5{
+        text-decoration: none !important;
+        font-family: "poppins";
+        text-shadow: 0 0 5px #000;
+        font-size: 2rem;
+    }
+    .imagediv--2 h5{
+        margin-bottom: 6rem;
+    
+    }
+    .imagediv--1 p,
+    .imagediv--2 p,
+    .imagediv--3 p,
+    .imagediv--4 p{
+        visibility: hidden;
+        transition: visibility 0.3s ease;
+        color: #fff;
+        font-family: "poppins";
+        text-shadow: 0 0 10px #000;
+        margin-left: 0.5rem;
+    }
+    .gallery__item:hover .imagediv--1 p,
+    .gallery__item:hover .imagediv--2 p,
+    .gallery__item:hover .imagediv--3 p,
+    .gallery__item:hover .imagediv--4 p{
+        visibility: visible;
+        text-decoration: none !important;
+        font-family: "poppins";
+    }
+    .gallery__item:hover, 
+    .gallery__item:hover,
+    .gallery__item:hover,
+    .gallery__item:hover,
+    .gallery__item:hover,
+    .gallery__item:hover{
+        transform:scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+    .gallery__item,
+    .gallery__item,
+    .gallery__item,
+    .gallery__item,
+    .gallery__item,
+    .gallery__item{
+        transition: transform 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* COOKIES */
+    
+    .containercook{
+        width: 85%;
+        margin: auto;
+    }
+    .subcontainer{
+        width: 85%;
+        margin: auto;
+    }
+    #cookies{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        color: #fff;
+        background-color: rgba(0.596, 0.431, 0.271, 0.7);
+        z-index: 1;
+        display: none;
+        height: 9%;
+    }
+    .cookies{
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .cookies a{
+        color: white;
+        font-weight: 500px;
+        text-decoration: none;
+    }
+    #cookies-btn{
+        border-radius: 5px;
+        padding: 8px 12px 8px 12px;
+        font-size: 1rem;
+        font-family: inherit;
+        cursor: pointer;
+        border: 3px solid white;
+        background-color: black;
+        color: white;
+    }
+}
+/* Biggest screen sizes */
+@media (min-width:1301px){
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .fotodiv1{
+        background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/eugene-zhyvchik-kvP6b4aSxjI-unsplash.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 52rem;
+        font-family: "Poppins";
+        color: #fff;
+        text-shadow: 0.6px 0.6px rgba(255, 255, 255, 0.383);
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 3;
+    }
+    .fotodiv1 h1{
+        font-size: 6rem;
+        margin-bottom: 15rem;
+    }
+    .fotodiv1 p{
+        font-size: 1.5rem;
+        position: absolute;
+        margin-top: 7rem;
+    }
+    .golfpagina1{
+        background-color: #f2e6d9;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:37rem;
+        z-index: 1;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        text-shadow: #999;
+        position: absolute;
+        margin-top: -11rem;
+        border-radius: 30% 30% 30% 30%;
+        
+    }
+    
+    .golfpagina1 h3{
+        color: #986e45;
+        font-size: 2rem;
+        font-family: "poppins";
+        position: relative;
+        margin-top: -7rem;
+        margin-left: 0rem;
+    
+    }
+    
+    .golfpagina1 h4{
+        margin-bottom: 35rem;
+        color: #986e45;
+        font-family: "Poppins";
+        font-size: 2rem;
+        position: relative;
+    }
+    
+    .test{
+        padding: 16% 23%;
+        background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
+        margin-top: 15rem;
+        background-size: cover;
+    }
+    .test h3{
+        color: #fff;
+        font-size: 4rem;
+        font-family: "poppins";
+        margin-bottom: 4rem;
+        text-shadow: #999;
+        margin-left: 24%;
+    }
+    .test p{
+        color: #fff;
+        font-size: 1.5rem;
+        font-family: "poppins";
+        margin-bottom: 4vh;
+        text-shadow: #999;
+        margin-left: 16%
+    }
+    
+    .col{
+        display: flex;
+        position: absolute;
+    }
+    .card{
+        width: 280px;
+        height: 310px;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 10px 25px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 10px 15px;
+        background-image: url(../fotos/mexico.jpg);
+        background-position: center;
+        background-size: cover;
+        transition: transform 0.5s;
+    
+    }
+    .card1{
+        background-image: url(../fotos/mexico.jpg);
+    }
+    .card2{
+        background-image: url(../fotos/massimiliano-donghi-JXsxH2shRgY-unsplash.jpg);
+    }
+    .card3{
+        background-image: url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
+    }
+    .card4{
+        background-image: url(../fotos/charles-postiaux-WOw3Pcdmw4I-unsplash.jpg);
+    }
+    .card:hover{
+        transform: translatey(-10px);
+    }
+    h5{
+        font-size: 25px;
+        color: #fff;
+        text-shadow: 0 0 5px #999;
+    }
+    .card p{
+        text-shadow: 0 0 5px #000;
+        font-size: 20px;
+        color: #fff;
+    }
+    .golfpagina2{
+        background-color:#f2e6d9;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:60rem;
+        z-index: 8;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        text-shadow: #999;
+        position: absolute;
+        border-top-left-radius: 20%;
+        border-top-right-radius: 20%;
+        margin-top: -12rem;
+    }
+    .gallery h3{
+        color: #986e45;
+        font-size: 2rem;
+        font-family: "poppins";
+        position: relative
+    }
+    
+    .exploreknop{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        height: 3rem;
+        border-radius: 5px;
+        background-color: #986e45;
+        color: #fff;
+        font-size: 2rem;
+        margin-left: 35%;
+        border: none;
+    }
+    .exploreknop:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    /* Gallery*/
+    .container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    flex-direction: column;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 5vw);
+        grid-gap: 20px;
+        margin-left: 10rem;
+        margin-top: -5rem;
+        
+    }
+    .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .gallery__item--2 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .gallery__item--3 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+    .gallery__item--4 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+    .gallery__item a{
+        text-decoration: none;
+    }
+    
+    .imagediv--1{
+        background-image: url(../fotos/rahul-chakraborty-5aN2I852PTs-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+    .imagediv--2{
+        background-image: url(../fotos/mikail-mcverry-6WRjFofNhPs-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+    .imagediv--3{
+        background-image: url(../fotos/florian-schneider-NdBsn0WQadw-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
+    .imagediv--4{
+        background-image: url(../fotos/jonatan-pie-8I49k45G-3A-unsplash.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
     }
     
     .imagediv--1 h5{
