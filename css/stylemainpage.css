@@ -623,7 +623,7 @@ h5{
     .title3{
         z-index: 9;
         position: absolute;
-        margin-bottom: 48vh;
+        margin-bottom: 46vh;
     }
     .title3 h3{
         color: #986e45;
@@ -1058,6 +1058,7 @@ h5{
         background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
         margin-top: 15rem;
         background-size: cover;
+        height: 180vh;
     }
     .test h3{
         color: #fff;
