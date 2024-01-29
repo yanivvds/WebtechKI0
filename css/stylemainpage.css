@@ -1261,36 +1261,40 @@ h5{
     }
     
     .imagediv--1 h5{
-        margin-bottom: 2vh;
+        margin-bottom: 0;
         margin-left: 1rem;
         color: #fff;
         font-family: "poppins";
         text-decoration: none !important;
         text-shadow: 0 0 5px #000;
         font-size: 1.3rem;
+        position: absolute;
     }
     .imagediv--3 h5{
         margin-left: 1rem;
-        margin-bottom: -25vh;
+        margin-bottom: 0;
         font-family: "poppins";
         text-decoration: none !important;
         text-shadow: 0 0 5px #000;
         font-size: 1.3rem;
+        position: absolute;
     }
     .imagediv--2 h5{
         margin-left: 1rem;
-        margin-bottom: -10vh;
+        margin-bottom:0;
         font-family: "poppins";
         text-shadow: 0 0 5px #000;
         font-size: 1.3rem;
+        position: absolute;
     }
     .imagediv--4 h5{
         text-decoration: none !important;
         font-family: "poppins";
         text-shadow: 0 0 5px #000;
         font-size: 1.3rem;
-        margin-bottom: -17vh;
+        margin-bottom: 0;
         margin-left: 1rem;
+        position: absolute;
     }
     .imagediv--1 p,
     .imagediv--2 p,
@@ -1307,7 +1311,7 @@ h5{
     .gallery__item:hover .imagediv--2 p,
     .gallery__item:hover .imagediv--3 p,
     .gallery__item:hover .imagediv--4 p{
-        visibility: visible;
+        visibility: none;
         text-decoration: none !important;
         font-family: "poppins";
     }
