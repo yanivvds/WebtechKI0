@@ -1580,7 +1580,7 @@ h5{
         grid-template-rows: repeat(7, 5vw);
         grid-gap: 20px;
         margin-left: 10rem;
-        margin-top: -5rem;
+        margin-top: 5vh
         
     }
     .gallery__img {
@@ -1742,5 +1742,13 @@ h5{
     .gallery__item--1,
     .gallery__item--2{
         display: block;
+    }
+    .title3{
+        margin-bottom:50vh;
+        position: absolute;
+    }
+    .title3 h3{
+        color: #986e45;
+        font-size: 2rem;
     }
 }
