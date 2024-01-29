@@ -45,7 +45,7 @@
                         <strong>Santorini, Greece:</strong> Experience the breathtaking beauty of Santorini, Greece. Known for its whitewashed buildings and beautiful sunsets, Santorini offers a scenic escape in the heart of the Aegean Sea.
                     </li>
                     <li>
-                        <strong>Escape to the Swiss Alps, a nature lover's paradise. Admire the snow-capped peaks, pristine lakes and charming mountain villages, which provide an ideal setting for outdoor adventures.
+                        <strong>Swiss Alps, Switzerland:</strong>Escape to the Swiss Alps, a nature lover's paradise. Admire the snow-capped peaks, pristine lakes and charming mountain villages, which provide an ideal setting for outdoor adventures.
                     </li>
                     <li>
                         <strong>Barcelona, Spain:</strong> Immerse yourself in the vibrant culture of Barcelona, Spain. Discover the architectural wonders of Antoni Gaudí, stroll along the vibrant La Rambla and enjoy the rich culinary scene of this dynamic city.
@@ -54,42 +54,43 @@
             </div>
             <div class="grid-pic2">
                 <div class="picture-container">
-                    <div class="picture-pic1-asia"></div>
-                    <div class="picture-pic2-asia"></div>
-                    <div class="picture-pic3-asia"></div>
-                    <div class="picture-pic4-asia"></div>
-                    <div class="picture-pic5-asia"></div>
+                    <div class="picture-pic1-europe"></div>
+                    <div class="picture-pic2-europe"></div>
+                    <div class="picture-pic3-europe"></div>
+                    <div class="picture-pic4-europe"></div>
+                    <div class="picture-pic5-europe"></div>
                   </div>
             </div>
             <div class="card">
-                <img src="../fotos/china.jpg" alt="china">
+                <img src="../fotos/italy.jpg" alt="italy">
                 <div class="card-content">
-                    <h2>China</h2>
-                    <p>A country with a history spanning 5,000 years, China seamlessly blends ancient traditions with modern progress, presenting a diverse range of culture and landscapes.</p>
+                    <h2>Italy</h2>
+                    <p>A cultural gem, Italy is filled with iconic sights, famous art, delicious cuisine and beautiful coasts, it is offering a taste of la dolce vita.</p>
                     <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">  
-                <img src="../fotos/japan.jpg" alt="japan">
+                <img src="../fotos/portugal.jpg" alt="portugal">
                 <div class="card-content">
-                    <h2>Japan</h2>
-                    <p>A blend of tradition and technology, Japan offers an enchanting blend of ancient beauty and modern vibrancy.</p>
+                    <h2>Portugal</h2>
+                    <p>A captivating blend of historic charm and scenic beauty, Portugal enchants with its rich culture, picturesque landscapes and warm hospitality.</p>
                     <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
-                <img src="../fotos/vietnam.jpg" alt="vietnam">
+                <img src="../fotos/norway.jpg" alt="norway">
                 <div class="card-content">
-                    <h2>Vietnam</h2>
-                    <p>A land of scenic beauty and age-old charm, Vietnam combines vibrant culture and warm hospitality, making it a captivating destination.</p>
+                    <h2>Norway</h2>
+                    <p>
+                        A land of breathtaking fjords and natural beauty, Norway captivates with its dramatic landscapes, vibrant cities and harmonious blend of tradition and modernity.</p>
                     <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
-                <img src="../fotos/indonesia.jpg" alt="indonesia">
+                <img src="../fotos/netherlands.jpg" alt="netherlands">
                 <div class="card-content">
-                    <h2>Indonesia</h2>
-                    <p>A tropical paradise with diverse islands, Indonesia seamlessly blends natural beauty with vibrant cultures, creating a captivating destination.</p>
+                    <h2>The Netherlands</h2>
+                    <p>Known for its picturesque canals, vibrant tulip fields and cultural heritage, the Netherlands charms visitors with a mix of history, art and picturesque landscapes.</p>
                     <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
