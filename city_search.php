@@ -1,6 +1,7 @@
-<!-- This file calls the city search API (which is needed for the Autocomplete in the form ), 
-the difference with this is that it also finds cities that dont have an airport.-->
 <?php
+// This file calls the city search API (which is needed for the Autocomplete in the form ), 
+// the difference with this is that it also finds cities that dont have an airport.
+
 include('flights/flightapi.php');
 
 $query = $_POST['search_query'] ?? '';

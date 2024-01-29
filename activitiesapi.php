@@ -1,5 +1,5 @@
-<!-- This file calls the API and makes sure the authorisation is set using cURL sessions. -->
 <?php
+// This file calls the API and makes sure the authorisation is set using cURL sessions.
 include('/var/www/config.php');
 
 $apiEndpoint = "https://test.api.amadeus.com/v1/security/oauth2/token";
