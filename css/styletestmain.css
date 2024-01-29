@@ -616,6 +616,16 @@ h5{
 
  /* phone */
  @media (max-width: 600px){
+    .title3{
+        z-index: 9;
+        position: absolute;
+        margin-bottom: 48vh;
+    }
+    .title3 h3{
+        color: #986e45;
+        font-family: "poppins";
+        font-weight: 2rem;
+    }
     .fotodiv1{
         background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
         background-size: cover;
@@ -1001,6 +1011,9 @@ h5{
     grid-column-end: 9;
     grid-row-start: 5;
     grid-row-end: 9;
+}
+.title3{
+    position: absolute;
 }
 }
 /* bigger sizes*/
@@ -1543,14 +1556,11 @@ h5{
         border-top-right-radius: 20%;
         margin-top: -12rem;
     }
-    .title3{
-        z-index: 9;
-        margin-top: -50vh;
-    }
-    .title3 h3{
+    .gallery h3{
         color: #986e45;
         font-size: 2rem;
         font-family: "poppins";
+        position: relative
     }
     
     .exploreknop{
@@ -1583,7 +1593,8 @@ h5{
         grid-template-rows: repeat(7, 5vw);
         grid-gap: 20px;
         margin-left: 10rem;
-        margin-top: 5vh;
+        margin-top: 5vh
+        
     }
     .gallery__img {
         width: 100%;
@@ -1746,10 +1757,11 @@ h5{
         display: block;
     }
     .title3{
-        margin-bottom:50vh;
+        margin-top: -95vh;
         position: absolute;
     }
     .title3 h3{
+        color: #986e45;
         font-size: 2rem;
     }
 }
