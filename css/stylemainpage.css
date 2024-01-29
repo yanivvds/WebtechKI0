@@ -625,6 +625,7 @@ h5{
         color: #986e45;
         font-family: "poppins";
         font-weight: 3rem;
+        margin-top: 20%;
     }
     .fotodiv1{
         background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/carles-rabada-yKAgTzz7jWk-unsplash.jpg);
@@ -681,7 +682,6 @@ h5{
         font-family: "poppins";
         position: relative;
         margin-left: 0rem;
-        margin-top: 20%;
 
     
     }
