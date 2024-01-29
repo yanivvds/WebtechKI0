@@ -26,20 +26,20 @@ if (session_status() == PHP_SESSION_NONE) {
         <h3 style="margin-top:-27rem;">Explore</h3>
     <div class="col">
         <div class="card card1">
-            <h5>Central America</h5>
+            <h5><a href="centralamerica.php">Central America</h5>
             <p>Pristine white beaches, azure waters, vibrant culture and delicious food</p>
         </div>
         <div class="card card2">
-            <h5>Europe</h5>
+            <h5><a href="europe.php">Europe</h5>
             <p>Explore the captivating blend of ancient charm and modern 
             allure in Europe, where iconic landmarks, diverse cuisines, and picturesque landscapes await. </p>
         </div>
         <div class="card card3">
-            <h5>Oceania</h5>
+            <h5><a href="oceania.php">Oceania</h5>
             <p>Pristine beaches, lush rainforests, and vibrant cities seamlessly blending natural beauty with urban sophistication.</p>
         </div>
         <div class="card card4">
-            <h5>Asia</h5>
+            <h5><a href="asia.php">Asia</h5>
             <p>Discover Asia's charm: ancient wonders, modern sights, and rich cultures. From Japan's tranquil temples to Bali's lush beauty, experience an enchanting adventure.</p>
         </div>
     </div>
@@ -47,7 +47,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="test">
         <h3>Enchanting Cappadocia</h3>
         <p>Where Magic Awakens Beneath the Rocks</p>
-        <button class="exploreknop">Explore</button>
+        <button class="exploreknop"><a href="inspiration.php">Explore</button>
         
     </div>
     <div class="golfpagina2">
