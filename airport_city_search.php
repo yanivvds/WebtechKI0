@@ -1,4 +1,3 @@
-<!-- This file calls the airport city search API (which is needed for the Autocomplete in the form ) -->
 <?php
 include('flights/flightapi.php');
 
