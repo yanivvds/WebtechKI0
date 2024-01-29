@@ -632,6 +632,10 @@ h5{
         margin: 0;
         z-index: 3;
     }
+    .cookies p{
+        display: none;
+
+    }
     .fotodiv1 h1{
         margin-left: 15%;
         font-size: 3rem;
@@ -1589,12 +1593,14 @@ h5{
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 4;
+        display: block;
     }
     .gallery__item--2 {
         grid-column-start: 4;
         grid-column-end: 7;
         grid-row-start: 1;
         grid-row-end: 4;
+        display: block;
     }
     .gallery__item--3 {
         grid-column-start: 4;
