@@ -71,7 +71,6 @@ if (!isset($_SESSION["user_id"])) {
     </div>
 </div>
 <script>
-// This script is used to setup the autocomplete functionality for the city input field.
 $(document).ready(function() {
     function setupCityAutocomplete(selector) {
         $(selector).autocomplete({
@@ -101,7 +100,6 @@ $(document).ready(function() {
                     }
                 });
             },
-            // When an item is selected, set the value of the input field to the city name
             select: function(event, ui) {
                 event.preventDefault();
                 $(this).val(ui.item.value);
