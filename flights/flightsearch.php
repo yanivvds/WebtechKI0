@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel='stylesheet' href='/css/stylesheet.css'>
 <style>
     body {
         font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
+        background-color: #E3D1C4;
         margin: 0;
         padding: 20px;
     }
@@ -16,8 +15,8 @@
     .flight-offer {
         margin-bottom: 20px;
         padding: 20px;
-        border: 1px solid #ccc;
-        background-color: #fff;
+        border: 1px solid #986E43;
+        background-color: #FFFFFF;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         border-radius: 8px;
         position: relative;
@@ -33,12 +32,12 @@
         margin-top: 10px;
         padding: 10px;
         background-color: #f9f9f9;
-        border-left: 3px solid #007bff;
+        border-left: 3px solid #986E43;
     }
 
     .segment {
         padding: 10px;
-        border-top: 1px solid #eee;
+        border-top: 1px solid #E3D1C4;
         background-color: #fff;
     }
 
@@ -46,7 +45,7 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        background-color: #007bff;
+        background-color: #937069;
         color: #fff;
         padding: 10px 15px;
         border: none;
@@ -56,11 +55,11 @@
     }
 
     .save-button:hover {
-        background-color: #0056b3;
+        background-color: #986E43;
     }
 
     .save-button:before {
-        content: '💾 ';
+        content: '✈️ ';
     }
 
     @media (max-width: 768px) {
