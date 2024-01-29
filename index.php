@@ -51,8 +51,10 @@ if (session_status() == PHP_SESSION_NONE) {
         
     </div>
     <div class="golfpagina2">
+        <div class="title3"><h3>Take the road</h3></div>
         <div class="gallery">
-            <h3 style="margin-top: -5rem; margin-left: -410%;">Take the road</h3>
+        
+            <!--<h3 style="margin-top: -15vh; margin-left: 20%; position: absolute;">Take the road</h3>-->
             <div class="gallery__item gallery__item--1">
                 <a href="#">
                     <div class="imagediv--1">

@@ -1,9 +1,11 @@
-* {
-    font-family: 'Helvetica, sans-serif' !important;
+body{
+    margin: 0;
+    background-color: #f2e6d9;
+    font-family: 'Poppins', sans-serif
 }
 
 .hero-about {
-    min-height: 80vh;
+    min-height: 60vh;
     background-image: url("../fotos/about-hero.webp");
     background-position: bottom;
     background-size: cover;
@@ -35,24 +37,26 @@
     text-shadow: .3px .3px gray;
 }
 
-/* .overflow-about {
-    margin-top: -10rem;
-} */
-
 .content-about p {
     line-height: 1.8rem;
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 300;
 }
 
-.general-information {
-    display: flex;
-    padding: 8rem 8rem 5rem 8rem;
-    gap: 5rem;
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
-.general-information img {
-    max-width: 40%;
+.about-item {
+    background-color: #f30000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 60vh;
 }
 
 @media screen and (max-width: 1120px) {
