@@ -48,7 +48,7 @@ if (session_status() == PHP_SESSION_NONE) {
                   <li><a href="/flightplanner.php">Flight finder</a></li>
                   <li><a href="/savedflights.php">Saved flights</a></li>
                   <li><a href="/pastflights.php">Past flights</a></li>
-                  <li><a href="#">Airline comparisons</a></li>
+                  <li><a href="https://www.airlinequality.com/">Airline comparisons</a></li>
                 </ul>
               </div>
               <div class="rownav">
@@ -57,7 +57,6 @@ if (session_status() == PHP_SESSION_NONE) {
                   <li><a href="hotelbooker.php">Hotel finder</a></li>
                   <li><a href="savedhotels.php">Saved hotels</a></li>
                   <li><a href="pasthotels.php">Past bookings</a></li>
-                  <li><a href="#">Hotel reviews</a></li>
                 </ul>
               </div>
               <div class="rownav">
@@ -65,8 +64,6 @@ if (session_status() == PHP_SESSION_NONE) {
                 <ul class="mega-links">
                   <li><a href="experiencebooker.php">Experience finder</a></li>
                   <li><a href="savedexperiences.php">Saved experiences</a></li>
-                  <li><a href="#">Past experiences</a></li>
-                  <li><a href="#">Experience reviews</a></li>
                 </ul>
               </div>
             </div>

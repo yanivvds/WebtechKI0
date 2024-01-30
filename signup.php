@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $errorMessage = "Name is required";
         $is_invalid = true;
     } elseif (strlen($_POST["username"]) > 10) {
-        $errorMessage = "Username must be at most 10 characters";
+        $errorMessage = "Username must be less than 10 characters";
         $is_invalid = true;
     }
 
