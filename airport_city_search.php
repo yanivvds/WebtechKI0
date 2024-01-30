@@ -5,7 +5,7 @@ include('flights/flightapi.php');
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-define('MAX_REQUESTS', 5); // Max requests per 60s
+define('MAX_REQUESTS', 10); // Max requests per 60s
 define('TIME_WINDOW', 60);
 
 // Initialise the session timer

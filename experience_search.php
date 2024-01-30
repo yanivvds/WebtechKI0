@@ -137,6 +137,31 @@ based on price, latitude and longtitude and radius -->
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
+define('MAX_REQUESTS', 2); // Max requests per 60s
+define('TIME_WINDOW', 60);
+
+// Initialise the session timer
+if (!isset($_SESSION['request_count'])) {
+    $_SESSION['request_count'] = 0;
+    $_SESSION['start_time'] = time();
+}
+
+// Check if the time window has expired and reset the counter if it has
+if (time() - $_SESSION['start_time'] > TIME_WINDOW) {
+    $_SESSION['request_count'] = 0;
+    $_SESSION['start_time'] = time();
+}
+
+// Increment the request count and check the rate limit
+$_SESSION['request_count']++;
+
+
+if ($_SESSION['request_count'] > MAX_REQUESTS) {
+    http_response_code(429);
+    echo json_encode(['error' => 'Rate limit exceeded. Please wait a moment before trying again.']);
+    exit;
+}
 $userID = null;
 if (isset($_SESSION["user_id"])) {
     $userID = $_SESSION["user_id"];
