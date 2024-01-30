@@ -23,6 +23,8 @@ $_SESSION['request_count']++;
 // Debugging
 error_log("Request count: " . $_SESSION['request_count']);
 error_log("Start time: " . $_SESSION['start_time']);
+error_log("Session ID: " . session_id());
+
 
 if ($_SESSION['request_count'] > MAX_REQUESTS) {
     http_response_code(429);
