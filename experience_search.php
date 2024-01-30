@@ -211,7 +211,8 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
                 echo "<p class='short-description'>$shortDescription</p>"; 
                 echo "<button class='read-more-button'>Read More</button>";
                 echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
-                echo "<p>Price: " . $activity['price']['amount'] . " " . $activity['price']['currencyCode'] . "</p>"; 
+                $currencyCode = !empty($activity['price']['currencyCode']) ? $activity['price']['currencyCode'] : 'EUR';
+                echo "<p>Price: " . $activity['price']['amount'] . " " . $currencyCode . "</p>";
                 echo "<a href='" . $activity['bookingLink'] . "' target='_blank' class='view-details-button'>Book Now</a>";
                 echo "</div>"; 
                 $offerCount++;
