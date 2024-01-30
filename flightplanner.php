@@ -40,7 +40,7 @@ if (!isset($_SESSION["user_id"])) {
         }
     </style>
 </head>
-<body style="height: 100vh;">
+<body style="height: 100%;">
 <?php require_once("navbar.php"); ?>
 <div class="form-container" style="margin: 3%;text-align: -webkit-center;">
   <div class="formsignup">
