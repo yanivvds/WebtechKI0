@@ -2,6 +2,9 @@
 // This file calls the airport city search API (which is needed for the Autocomplete in the form ).
 include('flights/flightapi.php');
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 define('MAX_REQUESTS', 5); // Max requests per 60s
 define('TIME_WINDOW', 60);
 
