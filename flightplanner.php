@@ -1,7 +1,5 @@
 <?php
 require_once 'config.php';
-define('MAX_REQUESTS', 5); // Max requests per 60s
-define('TIME_WINDOW', 60);
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -10,23 +8,6 @@ if (!isset($_SESSION["user_id"])) {
     echo "<script>setTimeout(function(){ window.location.href = 'login.php'; });</script>";
     exit; 
 }
-
-if (!isset($_SESSION['request_count'])) {
-    $_SESSION['request_count'] = 0;
-    $_SESSION['start_time'] = time();
-}
-
-if (time() - $_SESSION['start_time'] > TIME_WINDOW) {
-    $_SESSION['request_count'] = 0;
-    $_SESSION['start_time'] = time();
-} // Reset the counter if the time is expired.
-
-$_SESSION['request_count']++;
-
-if ($_SESSION['request_count'] > MAX_REQUESTS) {
-    echo "You have exceeded the maximum number of flight searches allowed. Please wait.";
-    exit;
-} // Exit if the number of requests is more then 20 in 60s.
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +21,7 @@ if ($_SESSION['request_count'] > MAX_REQUESTS) {
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <style>
         .ui-autocomplete {
-            background-color: #f0f0f0; 
+            background-color: #f0f0f0; /* Background color of the dropdown */
             border: 1px solid #ccc;
             max-height: 200px;
             overflow-y: auto;
@@ -50,12 +31,12 @@ if ($_SESSION['request_count'] > MAX_REQUESTS) {
         .ui-menu-item {
             padding: 3px 15px;
             background-color: #f0f0f0; 
-            color: #333; 
+            color: #333; /* Text color */
         }
 
         .ui-menu-item:hover, .ui-menu-item.ui-state-focus {
             background-color: #d0d0d0; 
-            color: #212121; 
+            color: #212121; /* Hover text color */
         }
     </style>
 </head>

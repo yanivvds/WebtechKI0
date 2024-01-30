@@ -2,6 +2,29 @@
 // This file calls the airport city search API (which is needed for the Autocomplete in the form ).
 include('flights/flightapi.php');
 
+define('MAX_REQUESTS', 5); // Max requests per 60s
+define('TIME_WINDOW', 60);
+
+// Initialise the session timer
+if (!isset($_SESSION['request_count'])) {
+    $_SESSION['request_count'] = 0;
+    $_SESSION['start_time'] = time();
+}
+
+// Check if the time window has expired and reset the counter if it has
+if (time() - $_SESSION['start_time'] > TIME_WINDOW) {
+    $_SESSION['request_count'] = 0;
+    $_SESSION['start_time'] = time();
+}
+
+// Increment the request count and check the rate limit
+$_SESSION['request_count']++;
+if ($_SESSION['request_count'] > MAX_REQUESTS) {
+    http_response_code(429);
+    echo json_encode(['error' => 'Rate limit exceeded. Please wait a moment before trying again.']);
+    exit;
+}
+
 $query = $_POST['search_query'] ?? '';
 
 // cURL-sessie initialiseren
