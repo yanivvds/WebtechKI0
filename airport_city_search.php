@@ -32,6 +32,7 @@ error_log("Session ID: " . session_id());
 if ($_SESSION['request_count'] > MAX_REQUESTS) {
     http_response_code(429);
     echo json_encode(['error' => 'Rate limit exceeded. Please wait a moment before trying again.']);
+    echo "<script type='text/javascript'>alert('$errorMessage');</script>";
     exit;
 }
 
