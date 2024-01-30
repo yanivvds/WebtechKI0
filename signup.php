@@ -1,4 +1,15 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require '/var/www/config.php'; 
+require '/var/www/libs/PHPMailer/src/Exception.php';
+require '/var/www/libs/PHPMailer/src/PHPMailer.php';
+require '/var/www/libs/PHPMailer/src/SMTP.php';
+
+
 $errorMessage = '';
 $is_invalid = false;
 
@@ -49,32 +60,48 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $is_invalid = true;
         } else {
             $stmt->bind_param("ssss", $_POST["username"], $_POST["email"], $password_hash, $token);
+    
+
+
         if ($stmt->execute()) {
-            // Send confirmation email
-            $to = $_POST['email'];
-            $subject = 'Confirm your email';
-            $message = "Please click on the following link to confirm your email: ";
-            $message .= "http://ki0.webtech-uva.nl/confirm.php?token=" . $token;
-            $headers = 'From: travelinsidertips@gmail.com' . "\r\n";
-            mail($to, $subject, $message, $headers);
-            
-            header("Location: signupsucces.html");
-            exit;
-            }
-            
-            if ($stmt->execute()) {
+            $mail = new PHPMailer(true);
+        
+            try {
+                $mail->isSMTP();
+                $mail->Host       = MAIL_HOST;
+                $mail->SMTPAuth   = true;
+                $mail->Username   = MAIL_USERNAME;
+                $mail->Password   = MAIL_PASSWORD;
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+                $mail->Port       = 587;
+        
+                //Recipients
+                $mail->setFrom('travelinsidertips@gmail.com', 'Travel Insider'); 
+                $mail->addAddress($_POST['email'], $_POST['username']); 
+        
+                
+                $mail->isHTML(true);
+                $mail->Subject = 'Confirm your email';
+                $mail->Body    = "Please click on the following link to confirm your email: ";
+                $mail->Body   .= "http://yourdomain.com/confirm.php?token=" . $token; 
+        
+                $mail->send();
                 header("Location: signupsucces.html");
                 exit;
+            } catch (Exception $e) {
+                $errorMessage = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                $is_invalid = true;
+            }
+        } else {
+            if ($stmt->errno === 1062) {
+                $errorMessage = "Email has already been used.";
+                $is_invalid = true;
             } else {
-                if ($stmt->errno === 1062) {
-                    $errorMessage = "Email has already been used.";
-                    $is_invalid = true;
-                } else {
-                    die($mysqli->error . " " . $mysqli->errno);
-                }
+                die($mysqli->error . " " . $mysqli->errno);
             }
         }
     }
+}
 }
 ?>
 
