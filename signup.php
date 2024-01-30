@@ -6,8 +6,8 @@ use PHPMailer\PHPMailer\SMTP;
 
 require '/var/www/config.php'; 
 require '/var/www/libs/PHPMailer-master/src/Exception.php';
-require '/var/www/libs/PHPMailer-maste/src/PHPMailer.php';
-require '/var/www/libs/PHPMailer-maste/src/SMTP.php';
+require '/var/www/libs/PHPMailer-master/src/PHPMailer.php';
+require '/var/www/libs/PHPMailer-master/src/SMTP.php';
 
 
 $errorMessage = '';
