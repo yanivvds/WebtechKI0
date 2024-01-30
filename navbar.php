@@ -48,7 +48,7 @@ if (session_status() == PHP_SESSION_NONE) {
                   <li><a href="/flightplanner.php">Flight finder</a></li>
                   <li><a href="/savedflights.php">Saved flights</a></li>
                   <li><a href="/pastflights.php">Past flights</a></li>
-                  <li><a href="https://www.airlinequality.com/">Airline comparisons</a></li>
+                  <li><a href="https://www.airlinequality.com/" target=”_blank”>Airline comparisons</a></li>
                 </ul>
               </div>
               <div class="rownav">
