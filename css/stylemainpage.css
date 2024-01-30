@@ -624,7 +624,7 @@ h5{
     .title3{
         z-index: 9;
         position: absolute;
-        margin-bottom: 46vh;
+        margin-bottom: 50vh;
     }
     .title3 h3{
         color: #986e45;
@@ -911,7 +911,7 @@ h5{
     }
     
     .imagediv--1 h5{
-        margin-bottom: 7rem;
+        margin-bottom: 10vh;
         margin-left: 1rem;
         color: #fff;
         font-family: "poppins";
@@ -1380,7 +1380,7 @@ h5{
         color: white;
     }
     .title3{
-        margin-top: -200vh;
+        margin-top: -220vh;
         position: absolute;
     }
     .title3 h3{
