@@ -19,6 +19,11 @@ if (time() - $_SESSION['start_time'] > TIME_WINDOW) {
 
 // Increment the request count and check the rate limit
 $_SESSION['request_count']++;
+
+// Debugging
+error_log("Request count: " . $_SESSION['request_count']);
+error_log("Start time: " . $_SESSION['start_time']);
+
 if ($_SESSION['request_count'] > MAX_REQUESTS) {
     http_response_code(429);
     echo json_encode(['error' => 'Rate limit exceeded. Please wait a moment before trying again.']);
