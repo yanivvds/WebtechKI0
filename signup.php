@@ -38,16 +38,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!$is_invalid) {
         // Ga alleen door als er geen errors zijn.
         $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        $token = bin2hex(random_bytes(50));
         $mysqli = require __DIR__ . "/../database.php";
-        $sql = "INSERT INTO Users (username, email, password_hash) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO Users (username, email, password_hash, token) VALUES (?, ?, ?, ?)";
         $stmt = $mysqli->stmt_init();
+        
 
         if (!$stmt->prepare($sql)) {
             $errorMessage = "SQL ERROR: " . $mysqli->error;
             $is_invalid = true;
         } else {
-            $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
-
+            $stmt->bind_param("ssss", $_POST["username"], $_POST["email"], $password_hash, $token);
+        if ($stmt->execute()) {
+            // Send confirmation email
+            $to = $_POST['email'];
+            $subject = 'Confirm your email';
+            $message = "Please click on the following link to confirm your email: ";
+            $message .= "http://ki0.webtech-uva.nl/confirm.php?token=" . $token;
+            $headers = 'From: travelinsidertips@gmail.com' . "\r\n";
+            mail($to, $subject, $message, $headers);
+            
+            header("Location: signupsucces.html");
+            exit;
+            }
+            
             if ($stmt->execute()) {
                 header("Location: signupsucces.html");
                 exit;
