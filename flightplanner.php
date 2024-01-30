@@ -1,6 +1,6 @@
 <?php
 require_once 'config.php';
-define('MAX_REQUESTS', 20); // Max requests per 60s
+define('MAX_REQUESTS', 5); // Max requests per 60s
 define('TIME_WINDOW', 60);
 
 if (session_status() == PHP_SESSION_NONE) {
