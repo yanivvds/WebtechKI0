@@ -1146,6 +1146,7 @@ h5{
         font-size: 2rem;
         font-family: "poppins";
         position: relative
+
     }
     
     .exploreknop{
@@ -1177,7 +1178,7 @@ h5{
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(7, 5vw);
         grid-gap: 20px;
-        margin-left: 10rem;
+        margin-left: 14%;
         margin-bottom: 20vh;
         
     }
