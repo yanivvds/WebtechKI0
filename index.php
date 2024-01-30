@@ -24,7 +24,7 @@ if (session_status() == PHP_SESSION_NONE) {
     </div>
     <div class="golfpagina1">
         <h3 style="margin-top:-27rem;">Explore</h3>
-    <div class="col">
+    <div class="cool">
         <a href="centralamerica.php"><div class="caard card--1">
             <h5>Central America</h5>
             <p>Pristine white beaches, azure waters, vibrant culture and delicious food</p>
