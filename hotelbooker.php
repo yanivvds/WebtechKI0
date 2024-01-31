@@ -50,7 +50,7 @@ $bestemmingFromUrl = isset($_GET['bestemming']) ? trim($_GET['bestemming']) : ''
             <div class="input-container ic1">
                 <input id="bestemming" class="input" type="text" placeholder=" " name="bestemming" value="<?php echo htmlspecialchars($bestemmingFromUrl); ?>" required/>
                 <div class="cut"></div>
-                <label for="bestemming" class="placeholder">Bestemming</label>
+                <label for="bestemming" class="placeholder">Destination</label>
             </div>
             <div class="input-container ic1">
                 <input id="checkInDate" class="input" type="date" placeholder=" " name="checkInDate" required/>
