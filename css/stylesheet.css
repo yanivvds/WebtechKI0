@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(rgb(141 58 58 / 41%), rgb(219 199 182 / 57%)), url(../fotos/ballon.jpg);
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
@@ -51,21 +50,21 @@ body{
     flex-basis: 50%;
     margin-top: 120px;
 }
-p{
+.nieuwe_footer_box p{
     color: #fff;
     font-size: 20px;
 }
-h1{
+.nieuwe_footer_box h1{
     color: #fff;
     font-size: 100px;
 }
-h2{
+.nieuwe_footer_box h2{
     color: #fff;
     font-size: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-h3{
+.nieuwe_footer_box h3{
     color: #441c5f;
     font-size: 23px;
     font-weight: 550;
