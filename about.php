@@ -68,9 +68,10 @@
                             <img src="../fotos/jev.webp" alt="">
                             <h4>Jeff Kroon</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
-                            ullamcorper lectus consequat vel. Mauris vel suscipit odio. Donec tempor sollicitudin purus,
-                            ac finibus nibh hendrerit sed.<br /><a href="mailto:jeff.kroon@student.uva.nl">jev.kroon@student.uva.nl</a></p>
+                        <p>Ik houd van natuur en cultuur. Door dit te combineren kom ik vaak op roadtrips uit. Maar een mooi resort zeg ik ook geen nee tegen.<br>
+                            Fav. land: Nieuw Zeeland.<br>
+                            Fav. activiteit: snowboarden/surfen.
+                            .<br /><a href="mailto:jeff.kroon@student.uva.nl">jev.kroon@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
