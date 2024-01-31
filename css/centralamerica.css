@@ -70,7 +70,7 @@ html, body{
 }
 
 .beachleft {
-    width: 17w;
+    width: 36vh;
     margin-left: 10vw;
     border-radius: 3%;
 }
@@ -95,6 +95,8 @@ html, body{
 
 .grid-text2 h1 {
     margin-left: 3vw;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .grid-pic2 img {
@@ -318,6 +320,7 @@ html, body{
     margin: 10vh auto;
     box-sizing: border-box;
     min-height: 47vh;
+    height: fit-content;
 }
 
 .card:hover {
