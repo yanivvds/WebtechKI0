@@ -28,8 +28,8 @@ if (session_status() == PHP_SESSION_NONE) {
           <ul class="drop-menu"> 
             <li><a href="/centralamerica.php">Central America</a></li>
             <li><a href="europe.php">Europe</a></li>
-            <li><a href="#">Oceania</a></li>
-            <li><a href="#">Asia</a></li>
+            <li><a href="oceania.php">Oceania</a></li>
+            <li><a href="asia.php">Asia</a></li>
           </ul>
         </li>
         <li>
