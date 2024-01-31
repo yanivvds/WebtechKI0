@@ -87,11 +87,18 @@ html, body{
     margin-left: 3vw;
 }
 
+.grid-pic2 img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
 .grid-pic2 {
     color: black;
     text-align: center;
     padding: 20px;
     grid-area: 2 / 3 / 3 / 5;
+    overflow: hidden;
 }
 
 .picture-container {
