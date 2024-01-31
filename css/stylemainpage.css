@@ -71,7 +71,7 @@ body{
 }
 
 .test{
-    padding: 16% 23%;
+    padding: 26% 23%;
     background-image: linear-gradient(rgba(248, 135, 14, 0.1), rgba(245, 145, 6, 0.1)),url(../fotos/ballon.jpg);
     margin-top: 15rem;
     background-size: cover;
