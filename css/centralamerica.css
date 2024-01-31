@@ -300,6 +300,7 @@ html, body{
     margin-left: 2vw;
     margin: 10vh auto;
     box-sizing: border-box;
+    min-height: 47vh;
 }
 
 .card:hover {
