@@ -100,7 +100,28 @@
     </div>   
     </div>
     <footer>
-    
+    <div class="nieuwe_footer_box">
+        <div class="box_van_contact_info">
+            <table class="footer_tabel">
+                <tr>
+                  <th><a href="index.php"><img class="footer_main" src="fotos/logomain.png" alt="Logomain"></a></th>
+                  <th id="footer_social"></th>
+                </tr>
+                <tr>
+                    <td><a href="https://www.freeprivacypolicy.com/live/3fb7887a-8566-419e-99c6-7db3f28c1e94" target='_blank'">Privacy Policy</a></td>
+                    <td><a class="footer_icon" href="https://www.instagram.com/travel_insinder_tips?igsh=dzNvMDVjcjRqMjY3&utm_source=qr"><img src="fotos/instagram_icon.png" alt="insta"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="about.php">Contact</a></td>
+                    <td><a class="footer_icon" href="https://www.instagram.com/travel_insinder_tips?igsh=dzNvMDVjcjRqMjY3&utm_source=qr"><img src="fotos/facebook_icon.png" alt="facebook"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="destinations.php">Destinations</a></td>
+                    <td><a class="footer_icon" href="https://www.instagram.com/travel_insinder_tips?igsh=dzNvMDVjcjRqMjY3&utm_source=qr"><img src="fotos/youtube_icon.png" alt="youtube"></a></td>
+                </tr>
+              </table>
+        </div>
+    </div>
     </footer>
 </body>
 </html>
