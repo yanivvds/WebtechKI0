@@ -15,7 +15,7 @@
             <div class="subcontainer">
                 <div class="cookies">
                     <p>This website uses cookies to ensure you get the best experience on our website.
-                    <a href="#"> More info</a></p>
+                    <a target='_blank' href="https://www.freeprivacypolicy.com/live/3fb7887a-8566-419e-99c6-7db3f28c1e94"> More info</a></p>
                     <button id="cookies-btn"> Accept cookies</button>
                 </div>
             </div>
