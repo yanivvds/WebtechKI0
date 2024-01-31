@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
     <?php require_once("navbar.php"); ?>
     <div class="fotodiv1">
-        <h1>Explore The world</h2>
+        <h1>Explore The World</h2>
         <p>Discover a world of travel possibilities, where every page unfolds new <br>adventures and valuable insights</p>
     </div>
     <div class="golfpagina1">
