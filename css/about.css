@@ -4,6 +4,32 @@ body{
     font-family: 'Poppins', sans-serif
 }
 
+
+.generaltext{
+    text-align: left;
+    max-width: 70%;
+    font-size: 1vw;
+    margin-left: 15%;
+}
+
+.generaltext h1{
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    width: 23.33%; 
+    height: auto;
+    padding: 5%;
+}
+
+.aboutpic{
+    border-radius: 110px;
+}
+
 .hero-about {
     min-height: 60vh;
     background-image: url("../fotos/about-hero.webp");
@@ -21,8 +47,11 @@ body{
     flex-direction: column;
     gap: 2rem;
     font-size: 1.5rem;
-    max-width: 50%;
+    max-width: 100%;
     color: white;
+    background-color: #f2e6d9bd;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .hero-about hgroup h1 {
@@ -43,21 +72,7 @@ body{
     font-weight: 300;
 }
 
-.about-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
 
-.about-item {
-    background-color: #f30000;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 60vh;
-}
 
 @media screen and (max-width: 1120px) {
     .general-information {
@@ -70,6 +85,7 @@ body{
     text-align: center;
     background-color: #f2e6d9;
     padding: 2rem 8rem;
+    background-color: #f0cdaa;
 }
 
 .our-team h3 {
@@ -89,11 +105,16 @@ body{
 .member {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1%;
 }
 
 .member div h4 {
     font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 0px;
+}
+
+.member p {
+    margin-top: 1%;
 }
 
 .member div img {
@@ -109,5 +130,11 @@ body{
 @media screen and (max-width: 1024px) {
     .members {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .generaltext{
+        font-size: medium;
     }
 }

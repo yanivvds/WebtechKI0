@@ -76,8 +76,8 @@
             </div>
         </div>
         <div class="title2" style="margin-top: 2%; margin-bottom: 2%;">
-            <h2>Trending Articles</h2>
-            <p>Follow the newest travel trends and ideas</p>
+            <h2>Oregon</h2>
+            <p>Wide beaches and wild nature</p>
         </div>
         <!-- Hier komt de carousel-->
         <div class="containercarousel">
@@ -95,7 +95,6 @@
                                 <a href="#"><img src="https://picsum.photos/id/1041/800/450" alt=""></a>
                             </div>
                             <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 <span class="credit">Photo: Tim Marshall</span>
                             </figcaption>
                         </figure>
@@ -106,7 +105,6 @@
                                 <a href="#"><img src="https://picsum.photos/id/1043/800/450" alt=""></a>
                             </div>
                             <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 <span class="credit">Photo: Christian Joudrey</span>                            
                             </figcaption>
                         </figure>
@@ -117,7 +115,7 @@
                                 <a href=""><img src="https://picsum.photos/id/1044/800/450" alt=""></a>
                             </div>
                             <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                
                                 <span class="credit">Photo: Steve Carter</span>                            
                             </figcaption>
                         </figure>
@@ -128,7 +126,7 @@
                                <a href=""><img src="https://picsum.photos/id/1045/800/450" alt=""></a>
                             </div>
                             <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                
                                 <span class="credit">Photo: Aleksandra Boguslawska</span>                            
                             </figcaption>
                         </figure>
@@ -139,7 +137,7 @@
                                 <a href=""><img src="https://picsum.photos/id/1049/800/450" alt=""></a>
                             </div>
                             <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                               
                                 <span class="credit">Photo: Rosan Harmens</span>                            
                             </figcaption>
                         </figure>
@@ -150,7 +148,7 @@
                                 <a href=""><img src="https://picsum.photos/id/1052/800/450" alt=""></a>
                             </div>
                             <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                
                                 <span class="credit">Photo: Annie Spratt</span>                            
                             </figcaption>
                         </figure>

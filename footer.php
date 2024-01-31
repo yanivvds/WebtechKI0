@@ -47,11 +47,11 @@ if (session_status() == PHP_SESSION_NONE) {
                   <th id="footer_social"></th>
                 </tr>
                 <tr>
-                    <td><a href="#">FAQ</a></td>
+                    <td><a href="https://www.freeprivacypolicy.com/live/3fb7887a-8566-419e-99c6-7db3f28c1e94" target='_blank'">Privacy Policy</a></td>
                     <td><a class="footer_icon" href="https://www.instagram.com/travel_insinder_tips?igsh=dzNvMDVjcjRqMjY3&utm_source=qr"><img src="fotos/instagram_icon.png" alt="insta"></a></td>
                 </tr>
                 <tr>
-                    <td><a href="contacts.php">Contact</a></td>
+                    <td><a href="about.php">Contact</a></td>
                     <td><a class="footer_icon" href="https://www.instagram.com/travel_insinder_tips?igsh=dzNvMDVjcjRqMjY3&utm_source=qr"><img src="fotos/facebook_icon.png" alt="facebook"></a></td>
                 </tr>
                 <tr>
