@@ -461,10 +461,10 @@ h5{
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.gallery__item:hover .imagediv--1 h3,
-.gallery__item:hover .imagediv--2 h3,
-.gallery__item:hover .imagediv--3 h3,
-.gallery__item:hover .imagediv--4 h3{
+.gallery__item:hover .imagediv--1 h5,
+.gallery__item:hover .imagediv--2 h5,
+.gallery__item:hover .imagediv--3 h5,
+.gallery__item:hover .imagediv--4 h5{
     visibility: none;
 }
 
@@ -2136,10 +2136,10 @@ h5{
         transform:scale(1.05);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     }
-    .gallery__item:hover .imagediv--1 h3,
-    .gallery__item:hover .imagediv--2 h3,
-    .gallery__item:hover .imagediv--3 h3,
-    .gallery__item:hover .imagediv--4 h3{
+    .gallery__item:hover .imagediv--1 h5,
+    .gallery__item:hover .imagediv--2 h5,
+    .gallery__item:hover .imagediv--3 h5,
+    .gallery__item:hover .imagediv--4 h5{
     visibility: hidden;
     }
     .gallery__item,
