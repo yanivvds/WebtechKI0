@@ -14,10 +14,12 @@ body{
 
 .generaltext h1{
     text-align: center;
+    padding: 2%;
 }
 
 .image-container {
     display: flex;
+    place-content: center;
 }
 
 .image-container img {
