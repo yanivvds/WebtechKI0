@@ -48,6 +48,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $is_invalid = true;
         } else {
             $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
+            
+            if ($stmt->errno === 1062) {
+                $errorMessage = "Email has already been used.";
+                $is_invalid = true;
+            }
 
             if ($stmt->execute()) {
                 header("Location: signupsucces.html");
