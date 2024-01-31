@@ -1326,13 +1326,13 @@ a {
     .imagediv--4 p,
     .imagediv--5 p,
     .imagediv--6 p{
-        display: block;
+        display: none;
     }
     .title2{
-        display:block;
+        display:none;
     }
     .containercarousel{
-        display: block;
+        display: none;
     }
     .container{
         margin-top: 0;
