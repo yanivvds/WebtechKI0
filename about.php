@@ -26,23 +26,27 @@
         </div>
         <div class="content-about">
             <div class="generaltext">
-                <div class="about-container">
-                    <div class="about-item">
-                        <h2>Who are we?</h2>
-                        <p>we are a group of students studying artificial intelligence at the University of Amsterdam. We started this project in 2024 for a class we had. 
-                            
+                <h1>Who are we?</h1>
+                        <p>We are a group of students studying artificial intelligence at the University of Amsterdam.
+                            We started this project in 2024 for a class we had. We all love travelling and wanted to share 
+                            the feeling of exploration and discovering with everyone. This is why we decided to make this page.
+                            Our mission is to share the insights we've gained along the way, turning our collective experiences into a valuable resource for fellow explorers.
+                            whether you are a seasoned adventurer or you are still waiting to start your first adventure our
+                            tips aim to make your trip unforgettable! From navigating through vibrant cities to finding the most relaxing places on earth, 
+                            we have all the information to help you find the trip of your dreams.
+                            <br><br>Happy travels from our travel team to you!
                         </p>
-                    </div>
-                    <div class="about-item">Grid Item 2</div>
-                    <div class="about-item">Grid Item 3</div>
-                    <div class="about-item">Grid Item 4</div>
-                </div>
+            </div>
+            <div class="image-container">
+                <img src="../fotos/mannaastwater.jpg" class="aboutpic" alt="man naast water">
+                <img src="../fotos/manopwater.jpg" class="aboutpic" alt="man op water">
+                <img src="../fotos/vrouwopstraat.jpg" class="aboutpic" alt="vrouw op straat">
             </div>
             <div class="our-team">
                 <h3>Our travel team</h3>
                 <div class="members">
                     <div class="member">
-                        <div class=>
+                        <div>
                             <img src="../fotos/yaniv.webp" alt="">
                             <h4>Yaniv van der Stigchel</h4>
                         </div>
@@ -55,9 +59,9 @@
                             <img src="../fotos/thierry.webp" alt="">
                             <h4>Thierry Schneider</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
-                            ullamcorper lectus consequat vel. Mauris vel suscipit odio. Donec tempor sollicitudin purus,
-                            ac finibus nibh hendrerit sed.<br /><a href="mailto:thierry.schneider@student.uva.nl">thierry.schneider@student.uva.nl</a></p>
+                        <p>Ik hou van actie en dingen beleven, maar lekker op het strand liggen met een drankje zeg ik ook geen nee tegen.<br>
+                            Fav. land: Spanje.<br>
+                            Fav. activiteit: Skiën in de alpen.<br><a href="mailto:thierry.schneider@student.uva.nl">thierry.schneider@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
@@ -91,7 +95,7 @@
         </div>
     </main>
     <footer>
-
+        <?php include 'footer.php'; ?>
     </footer>
 </body>
 
