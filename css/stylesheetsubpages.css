@@ -428,28 +428,6 @@ a {
     color: #986e45;
     margin-top: -2rem;
 }
-/* carousel*/
-@mixin aspect-ratio($width, $height) {
-    position: relative;
-      
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: ($height / $width) * 100%;
-    }
-      
-    > img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 100%;
-    }
-  }
-  
   /* Styling*/
   
   section {
@@ -1306,608 +1284,63 @@ a {
         margin-top: 0;
     }
   }
-  @media (min-width: 1300px){
-    *{
-        margin: 0;
-        padding: 0;
-        font-weight: 500;
-        line-height: 1.5;
-        box-sizing: border-box;
-        font-family: "Poppins";
-    }
-    .poppins-thin {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-      }
-      
-    .poppins-thin-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: italic;
-      }
-      
-    .poppins-extralight {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: normal;
-      }
-      
-    .poppins-extralight-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic;
-      }
-      
-    .poppins-light {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-      }
-      
-    .poppins-light-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: italic;
-      }
-      
-    .poppins-regular {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
-    .poppins-regular-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: italic;
-      }
-      
-    .poppins-medium {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-      }
-      
-    .poppins-medium-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: italic;
-      }
-      
-    .poppins-semibold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-      }
-      
-    .poppins-semibold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: italic;
-      }
-      
-    .poppins-bold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
-      
-    .poppins-bold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: italic;
-      }
-      
-    .poppins-extrabold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-      }
-      
-    .poppins-extrabold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: italic;
-      }
-      
-    .poppins-black {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-      }
-      
-    .poppins-black-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: italic;
-      }
-      
-    html, body {
-        height: 100%;
-    }
-    
-    body {
-        background-image: linear-gradient(rgb(141 58 58 / 41%), rgb(219 199 182 / 57%)), url(../fotos/ballon.jpg);
-        background-size:cover;
-        background-position: center;
-        box-sizing: border-box;
-        background-repeat: no-repeat;
-        background-attachment:fixed;
-    }
-    header.scroll{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: -5rem;
-        background-color: rgba(0,0,0,0.1);
-        z-index: 1;
-        transition: 0.5s;
-    }
-    .containertekst{
-        width:100%;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        background-color:#f2e6d9;
-        height: 150px;
-    }
-    .containertekst h1{
-        color:#986e45;
-        text-decoration: none;
-        font-size: 60px;
-    }
-    .containertekst p{
-         color: #986e45;
-         text-decoration: none;
-         font-size: 20px;
-    }
-    
-    .btn{
-        align-items: center;
-        padding: 10px 20px;
-        border: 0;
-        outline: 0;
-        border-radius: 5%;
-        cursor: pointer;
-        background-color: #f5168d;
-        color: #fff;
-        font-size: 20px;
-    }
-    
-    .overlay {
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0, 0, 0, 0.9);
-        overflow-y: hidden;
-        transition: 0.5s;
-    }
-      
-    .overlay-content {
-        position: relative;
-        top: 10%;
-        width: 100%;
-        text-align: left;
-        margin-top: 30px;
-    }
-      
-    .overlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-      
-    .overlay a:hover, .overlay a:focus {
-        color: #f1f1f1;
-    }
-      
-    .overlay .closebtn {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 90px;
-        z-index: 2;
-    }
-    
-    /* Gallery blog */
-    .container {
-        width: 100%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        margin-top: 6rem;
-        flex-direction: column;
-    }
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 5vw);
-        grid-gap: 15px;
-        margin: auto
-    }
-    .gallery__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .gallery__item--1 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
-    .gallery__item--2 {
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
-    .gallery__item--3 {
-        grid-column-start: 5;
-        grid-column-end: 9;
-        grid-row-start: 1;
-        grid-row-end: 6;
-    }
-    .gallery__item--4 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 6;
-    }
-    .gallery__item--5 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 6;
-        grid-row-end: 9;
-    }
-    .gallery__item--6 {
-        grid-column-start: 5;
-        grid-column-end: 9;
-        grid-row-start: 6;
-        grid-row-end: 9;
-    }
-    .imagediv--1{
-        background-image: url(../fotos/rahul-chakraborty-5aN2I852PTs-unsplash.jpg);
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .imagediv--2{
-        background-image: url(../fotos/joachim-lesne-ciNvnoptI20-unsplash.jpg);
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .imagediv--3{
-        background-image: url(../fotos/pema-lama-6cfK0SEtpbY-unsplash.jpg);
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .imagediv--4{
-        background-image: url(../fotos/trevor-gerzen-r_XS7sml57o-unsplash.jpg);
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .imagediv--5{
-        background-image: url(../fotos/fineas-anton-kC1-9Snr9hI-unsplash.jpg);
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .imagediv--6{
-        background-image: url(../fotos/wallpaperflare.com_wallpaper.jpg);
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    h5, p{
-        color: #f1f1f1;
-        text-decoration: none;
-        font-family:"poppins";
-    }
-    h5 {
-        font-weight: 800;
-    }
-    a {
-        text-decoration: none;
-    }
+@media (min-width: 601px){
     .imagediv--1 h5{
-        margin-bottom: 3.5rem;
+        margin-bottom: 0;
         text-shadow: #000000;
         margin-left: 1rem;
+        position: absolute;
     }
     .imagediv--2 h5{
         margin-bottom: 4rem;
+        position: absolute;
+        font-size: 1rem;
     }
     .imagediv--3 h5{
-        margin-bottom: 15rem;
+        margin-bottom: 0;
         text-shadow: 0 0 5px #000;
-        font-size: 2.5em;
+        font-size: 1.2rem;
         margin-left: 1rem;
+        position: absolute;
     }
     .imagediv--4 h5{
-        margin-bottom: 3.5rem;
-        font-size: 1.6em;
-        margin-left: 3rem;
+        margin-bottom:0;
+        font-size: 1rem;
+        margin-left: 1rem;
+        position: absolute;
     }
     .imagediv--5 h5{
-        margin-bottom: 9rem;
+        margin-bottom: 0rem;
         text-shadow: #000;
         margin-left: 2rem;
-        font-size: 1.6rem;
+        font-size: 1rem;
+        position: absolute;
     }
     .imagediv--6 h5{
-        margin-bottom: 7rem;
+        margin-bottom: 0;
         margin-left: 1rem;
-        font-size: 1.6rem;
+        font-size: 1rem;
+        position: absolute;
     }
+    .imagediv--1 p,
     .imagediv--2 p,
     .imagediv--3 p,
     .imagediv--4 p,
     .imagediv--5 p,
     .imagediv--6 p{
-        visibility: hidden;
-        transition: visibility 0.3s ease;
-        font-style: "poppins";
-    }
-    .imagediv--1 p{
-        margin-left: 0.5rem;
-    }
-    .imagediv--4 p{
-        margin-left: 1.6rem;
-    }
-    .imagediv--5 p{
-        margin-left: 1.6rem;
-        font-size: 1.2rem;
-    }
-    .gallery__item:hover .imagediv--1 p,
-    .gallery__item:hover .imagediv--2 p,
-    .gallery__item:hover .imagediv--3 p,
-    .gallery__item:hover .imagediv--4 p,
-    .gallery__item:hover .imagediv--5 p,
-    .gallery__item:hover .imagediv--6 p {
-        visibility: visible;
-        text-shadow:#818181
-    }
-    .gallery__item:hover, 
-    .gallery__item:hover,
-    .gallery__item:hover,
-    .gallery__item:hover,
-    .gallery__item:hover,
-    .gallery__item:hover{
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    }
-    .gallery__item,
-    .gallery__item,
-    .gallery__item,
-    .gallery__item,
-    .gallery__item,
-    .gallery__item{
-        transition: transform 0.3s ease;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: block;
     }
     .title2{
-        background-color: #f2e6d9;
-        width:100%;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        height: 120px;
+        display:block;
     }
-    .title2 h2{
-        color: #986e45;
+    .containercarousel{
+        display: block;
     }
-    .title2 p{
-        color: #986e45;
-        margin-top: -2rem;
+    .container{
+        margin-top: 0;
     }
-    /* carousel*/
-    @mixin aspect-ratio($width, $height) {
-        position: relative;
-          
-        &:before {
-          display: block;
-          content: "";
-          width: 100%;
-          padding-top: ($height / $width) * 100%;
-        }
-          
-        > img {
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              width: 100%;
-              height: 100%;
-        }
-      }
-      
-      /* Styling*/
-      
-      section {
-          background: #F4F4F4;
-          padding: 50px 0;
-      }
-      
-      .containercarousel {
-          max-width: 1044px;
-          margin: 0 auto;
-          padding: 0 20px;
-          margin-left: 20rem;
-      }
-      
-      .carousel {
-          display: block;
-          text-align: left;
-          position: relative;
-          margin-bottom: 22px;
-          
-          > input {
-              clip: rect(1px, 1px, 1px, 1px);
-              clip-path: inset(50%);
-              height: 1px;
-              width: 1px;
-              margin: -1px;
-              overflow: hidden;
-              padding: 0;
-              position: absolute;
-              
-              &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
-              &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
-              &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
-              &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
-              &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
-              &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
-              
-              &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-              &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-              &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-              &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-              &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-              &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-          }
-      }
-      
-      .carousel__slides {
-          position: relative;
-          z-index: 1;
-          padding: 0;
-          margin: 0;
-          overflow: hidden;
-          white-space: nowrap;
-          box-sizing: border-box;
-          display: flex;
-      }
-      
-      .carousel__slide {
-          position: relative;
-          display: block;
-          flex: 1 0 100%;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          transition: all 300ms ease-out;
-          vertical-align: top;
-          box-sizing: border-box;
-          white-space: normal;
-          
-          figure {
-              display: flex;
-              margin: 0;
-          }
-          
-          div {
-              @include aspect-ratio(3, 2);
-              width: 100%;
-          }
-          
-          img {
-              display: block;
-              flex: 1 1 auto;
-              object-fit: cover;
-          }
-          
-          figcaption {
-              align-self: flex-end;
-              padding: 20px 20px 0 20px;
-              flex: 0 0 auto;
-              width: 25%;
-              min-width: 150px;
-          }
-          
-          .credit {
-              margin-top: 1rem;
-              color: rgba(0, 0, 0, 0.5);
-              display: block;        
-          }
-          
-          &.scrollable {
-              overflow-y: scroll;
-          }
-      }
-      
-      .carousel__thumbnails {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          
-          margin: 0 -10px;
-          
-          .carousel__slides + & {
-              margin-top: 20px;
-          }
-          
-          li {        
-              flex: 1 1 auto;
-              max-width: calc((100% / 6) - 20px);  
-              margin: 0 10px;
-              transition: all 300ms ease-in-out;
-          }
-          
-          label {
-              display: block;
-              @include aspect-ratio(1,1);
-              
-                        
-              &:hover,
-              &:focus {
-                  cursor: pointer;
-                  
-                  img {
-                      box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
-                      transition: all 300ms ease-in-out;
-                  }
-              }
-          }
-          
-          img {
-              display: block;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-          }
-      }
-      figcaption{
-        color:#986e45;
-        background-color: #f2e6d9;
-      }
-      /* phone settings */
   }
+
+
+
+  
