@@ -215,7 +215,7 @@ header.scroll{
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
+    margin-top: 22vh;
     flex-direction: column;
 }
 .gallery {
