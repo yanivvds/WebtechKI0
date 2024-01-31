@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Central America</title>
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
     <link href="css/centralamerica.css" rel="stylesheet">
@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php include 'navbar.php'; ?>
     <div class="ImageBackgroundWrap Background-fixed" style="Background-image: url( ../fotos/panamabeach.jpg)">
         <div class="ImageInnerWrap">
             <div class="TextBackground">
@@ -97,7 +98,6 @@
             </div>
           </div>
     </div>   
-    <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
     </div>
 </body>
 </html>
