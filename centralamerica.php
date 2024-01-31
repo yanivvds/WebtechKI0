@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central America</title>
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
     <link href="css/centralamerica.css" rel="stylesheet">

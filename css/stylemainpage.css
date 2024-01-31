@@ -27,6 +27,7 @@ body{
 .fotodiv1 h1{
     font-size: 6rem;
     margin-bottom: 15rem;
+    font-family: "poppins";
 }
 .fotodiv1 p{
     font-size: 1.5rem;
@@ -656,6 +657,7 @@ h5{
         margin-left: 15%;
         font-size: 3rem;
         margin-top:0;
+        font-family: "poppins";
     }
     .fotodiv1 p{
         margin-top: 10%;
@@ -1012,6 +1014,7 @@ h5{
     .fotodiv1 h1{
         font-size: 6rem;
         margin-bottom: 15rem;
+        font-family: "poppins";
     }
     .fotodiv1 p{
         font-size: 1.5rem;
@@ -1415,6 +1418,7 @@ h5{
     .fotodiv1 h1{
         font-size: 6rem;
         margin-bottom: 15rem;
+        font-family: "poppins";
     }
     .fotodiv1 p{
         font-size: 1.5rem;
@@ -1812,6 +1816,7 @@ h5{
     .fotodiv1 h1{
         font-size: 6rem;
         margin-bottom: 15rem;
+        font-family: "poppins";
     }
     .fotodiv1 p{
         font-size: 1.5rem;
