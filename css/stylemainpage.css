@@ -465,7 +465,7 @@ h5{
 .gallery__item:hover .imagediv--2 h3,
 .gallery__item:hover .imagediv--3 h3,
 .gallery__item:hover .imagediv--4 h3{
-    visibility: none;
+    visibility: none !important;
 }
 
 /* COOKIES */
@@ -2140,7 +2140,7 @@ h5{
     .gallery__item:hover .imagediv--2 h3,
     .gallery__item:hover .imagediv--3 h3,
     .gallery__item:hover .imagediv--4 h3{
-    visibility: hidden;
+    visibility: hidden !important;
     }
     .gallery__item,
     .gallery__item,
