@@ -8,6 +8,7 @@ if (!isset($_SESSION["user_id"])) {
     echo "<script>setTimeout(function(){ window.location.href = 'login.php'; });</script>";
     exit;
 }
+$bestemmingFromUrl = isset($_GET['bestemming']) ? trim($_GET['bestemming']) : '';
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +48,7 @@ if (!isset($_SESSION["user_id"])) {
         <div class="title">Book hotel</div>
         <form action="/hotel_search.php" method="post">
             <div class="input-container ic1">
-                <input id="bestemming" class="input" type="text" placeholder=" " name="bestemming" required/>
+                <input id="bestemming" class="input" type="text" placeholder=" " name="bestemming" value="<?php echo htmlspecialchars($bestemmingFromUrl); ?>" required/>
                 <div class="cut"></div>
                 <label for="bestemming" class="placeholder">Bestemming</label>
             </div>

@@ -67,7 +67,7 @@
                 <div class="card-content">
                     <h2>Australia</h2>
                     <p>Australia, a vast island continent with unique wildlife, amazing landscapes and vibrant cities like Sydney and Melbourne, making it a diverse destination.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=SYD">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">  
@@ -75,7 +75,7 @@
                 <div class="card-content">
                     <h2>New Zealand</h2>
                     <p>New Zealand, known for its stunning landscapes and culture is a destination of beauty, friendly locals and inviting outdoor adventures.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=AKL">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -83,7 +83,7 @@
                 <div class="card-content">
                     <h2>Fiji</h2>
                     <p>Fiji is a tropical paradise with crystal-clear waters, palm-fringed beaches and a warm culture. Full of inviting relaxation and water adventures in the South Pacific.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=NAN">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -91,7 +91,7 @@
                 <div class="card-content">
                     <h2>Cook Islands</h2>
                     <p>The Cook Islands is really a South Pacific gem with turquoise lagoons, white-sand beaches and a laid-back Polynesian charm.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=RAR">Book now &rArr;</a>
                 </div>
             </div>
             </div>

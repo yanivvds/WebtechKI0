@@ -75,7 +75,7 @@
                 <div class="card-content">
                     <h2>Japan</h2>
                     <p>A blend of tradition and technology, Japan offers an enchanting blend of ancient beauty and modern vibrancy.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=NRT">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -83,7 +83,7 @@
                 <div class="card-content">
                     <h2>Vietnam</h2>
                     <p>A land of scenic beauty and age-old charm, Vietnam combines vibrant culture and warm hospitality, making it a captivating destination.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=SGN">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -91,7 +91,7 @@
                 <div class="card-content">
                     <h2>Indonesia</h2>
                     <p>A tropical paradise with diverse islands, Indonesia seamlessly blends natural beauty with vibrant cultures, creating a captivating destination.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=CGK">Book now &rArr;</a>
                 </div>
             </div>
             </div>
