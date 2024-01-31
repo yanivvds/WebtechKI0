@@ -66,7 +66,7 @@
                 <div class="card-content">
                     <h2>Italy</h2>
                     <p>A cultural gem, Italy is filled with iconic sights, famous art, delicious cuisine and beautiful coasts, it is offering a taste of la dolce vita.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=FCO">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">  
@@ -74,7 +74,7 @@
                 <div class="card-content">
                     <h2>Portugal</h2>
                     <p>A captivating blend of historic charm and scenic beauty, Portugal enchants with its rich culture, picturesque landscapes and warm hospitality.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=LIS">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -83,7 +83,7 @@
                     <h2>Norway</h2>
                     <p>
                         A land of breathtaking fjords and natural beauty, Norway captivates with its dramatic landscapes, vibrant cities and harmonious blend of tradition and modernity.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=OSL">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -91,7 +91,7 @@
                 <div class="card-content">
                     <h2>The Netherlands</h2>
                     <p>Known for its picturesque canals, vibrant tulip fields and cultural heritage, the Netherlands charms visitors with a mix of history, art and picturesque landscapes.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=AMS">Book now &rArr;</a>
                 </div>
             </div>
             </div>

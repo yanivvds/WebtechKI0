@@ -76,7 +76,7 @@
                 <div class="card-content">
                     <h2>Belize</h2>
                     <p>Belize is the ideal destination for the adventurous traveler. The country is rich in beautiful nature such as rainforests, waterfalls, beaches and exotic animals.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=BZE">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -84,7 +84,7 @@
                 <div class="card-content">
                     <h2>Guatemala</h2>
                     <p>A Central American gem, Guatemala fascinates with Mayan ruins, colonial charm and diverse landscapes, where history and natural allure come together.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=GUA">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">
@@ -93,7 +93,7 @@
                     <h2>Panama</h2>
                     <p>
                         A vibrant crossroads, Panama combines modern cityscapes, lush rainforests and the iconic Panama Canal for a dynamic mix of urban allure and natural wonders.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=PTY">Book now &rArr;</a>
                 </div>
             </div>
           </div>
