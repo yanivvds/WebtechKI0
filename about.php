@@ -50,9 +50,9 @@
                             <img src="../fotos/yaniv.webp" alt="">
                             <h4>Yaniv van der Stigchel</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
-                            ullamcorper lectus consequat vel. Mauris vel suscipit odio. Donec tempor sollicitudin purus,
-                            ac finibus nibh hendrerit sed.<br /><a href="mailto:yaniv.van.der.stigchel@student.uva.nl">yaniv.van.der.stigchel@student.uva.nl</a></p>
+                        <p>Een avonturier in hart en nieren; ik ben altijd op zoek naar de volgende adrenalinekick, <br>
+                            of dat nu skydiven of diepzeeduiken is. Maar een rustige avond genieten van een goed boek <br>
+                            of film sla ik ook niet af..<br /><a href="mailto:yaniv.van.der.stigchel@student.uva.nl">yaniv.van.der.stigchel@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
