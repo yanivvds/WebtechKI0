@@ -461,6 +461,12 @@ h5{
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.gallery__item:hover .imagediv--1 h3,
+.gallery__item:hover .imagediv--2 h3,
+.gallery__item:hover .imagediv--3 h3,
+.gallery__item:hover .imagediv--4 h3{
+    visibility: none;
+}
 
 /* COOKIES */
 
@@ -2129,6 +2135,12 @@ h5{
     .gallery__item:hover{
         transform:scale(1.05);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+    .gallery__item:hover .imagediv--1 h3,
+    .gallery__item:hover .imagediv--2 h3,
+    .gallery__item:hover .imagediv--3 h3,
+    .gallery__item:hover .imagediv--4 h3{
+    visibility: hidden;
     }
     .gallery__item,
     .gallery__item,
