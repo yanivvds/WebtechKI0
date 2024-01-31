@@ -42,32 +42,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $sql = "INSERT INTO Users (username, email, password_hash) VALUES (?, ?, ?)";
         $stmt = $mysqli->stmt_init();
         $token = bin2hex(random_bytes(50));
-
-        if (!$stmt->prepare($sql)) {
-            $errorMessage = "SQL ERROR: " . $mysqli->error;
-            $is_invalid = true;
-        } else {
-            $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
-            
-            if ($stmt->errno === 1062) {
+        
+        try {
+            if (!$stmt->prepare($sql)) {
+                $errorMessage = "SQL ERROR: " . $mysqli->error;
+                $is_invalid = true;
+            } else {
+                $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
+    
+                if ($stmt->execute()) {
+                    header("Location: signupsucces.html");
+                    exit;
+                }
+            }
+        } catch (mysqli_sql_exception $e) {
+            if ($e->getCode() === 1062) {
                 $errorMessage = "Email has already been used.";
                 $is_invalid = true;
-            }
-
-            if ($stmt->execute()) {
-                header("Location: signupsucces.html");
-                exit;
             } else {
-                if ($stmt->errno === 1062) {
-                    $errorMessage = "Email has already been used.";
-                    $is_invalid = true;
-                } else {
-                    die($mysqli->error . " " . $mysqli->errno);
-                }
+                $errorMessage = "An error occurred: " . $e->getMessage();
+                $is_invalid = true;
             }
         }
     }
-}
 ?>
 
 <!DOCTYPE html>
