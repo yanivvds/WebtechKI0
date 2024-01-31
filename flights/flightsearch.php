@@ -5,41 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-.flight-offer {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    position: relative; /* Add this to position the Save button */
-}
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #E3D1C4;
+        margin: 0;
+        padding: 20px;
+    }
 
-.itinerary {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #f9f9f9;
-}
+    .flight-offer {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #986E43;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        position: relative;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-.segment {
-    padding: 5px;
-    border-top: 1px solid #eee;
-}
+    .flight-offer:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-.save-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-}
+    .itinerary {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 3px solid #986E43;
+    }
 
-.save-button:hover {
-    background-color: #0056b3;
-}
-.body {
-    background-color: #f9f9f9;
-}
+    .segment {
+        padding: 10px;
+        border-top: 1px solid #E3D1C4;
+        background-color: #fff;
+    }
+
+    .save-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #937069;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.2s;
+    }
+
+    .save-button:hover {
+        background-color: #986E43;
+    }
+
+    .save-button:before {
+        content: '✈️ ';
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        .flight-offer {
+            margin-bottom: 15px;
+        }
+    }
 </style>
 </head>
 <body>

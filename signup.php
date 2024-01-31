@@ -6,6 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($_POST["username"])) {
         $errorMessage = "Name is required";
         $is_invalid = true;
+    } elseif (strlen($_POST["username"]) > 10) {
+        $errorMessage = "Username must be less than 10 characters";
+        $is_invalid = true;
     }
 
     if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
@@ -38,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mysqli = require __DIR__ . "/../database.php";
         $sql = "INSERT INTO Users (username, email, password_hash) VALUES (?, ?, ?)";
         $stmt = $mysqli->stmt_init();
+        $token = bin2hex(random_bytes(50));
 
         if (!$stmt->prepare($sql)) {
             $errorMessage = "SQL ERROR: " . $mysqli->error;

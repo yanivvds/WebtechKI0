@@ -137,6 +137,31 @@ based on price, latitude and longtitude and radius -->
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
+define('MAX_REQUESTS', 3); // Max requests per 60s
+define('TIME_WINDOW', 60);
+
+// Initialise the session timer
+if (!isset($_SESSION['request_count'])) {
+    $_SESSION['request_count'] = 0;
+    $_SESSION['start_time'] = time();
+}
+
+// Check if the time window has expired and reset the counter if it has
+if (time() - $_SESSION['start_time'] > TIME_WINDOW) {
+    $_SESSION['request_count'] = 0;
+    $_SESSION['start_time'] = time();
+}
+
+// Increment the request count and check the rate limit
+$_SESSION['request_count']++;
+
+
+if ($_SESSION['request_count'] > MAX_REQUESTS) {
+    http_response_code(429);
+    echo json_encode(['error' => 'Rate limit exceeded. Please wait a moment before trying again.']);
+    exit;
+}
 $userID = null;
 if (isset($_SESSION["user_id"])) {
     $userID = $_SESSION["user_id"];
@@ -186,7 +211,8 @@ if (isset($responseArray['data']) && is_array($responseArray['data'])) {
                 echo "<p class='short-description'>$shortDescription</p>"; 
                 echo "<button class='read-more-button'>Read More</button>";
                 echo "<div class='full-description'><p>" . $activity['description'] . "</p></div>";
-                echo "<p>Price: " . $activity['price']['amount'] . " " . $activity['price']['currencyCode'] . "</p>"; 
+                $currencyCode = !empty($activity['price']['currencyCode']) ? $activity['price']['currencyCode'] : 'EUR';
+                echo "<p>Price: " . $activity['price']['amount'] . " " . $currencyCode . "</p>";
                 echo "<a href='" . $activity['bookingLink'] . "' target='_blank' class='view-details-button'>Book Now</a>";
                 echo "</div>"; 
                 $offerCount++;

@@ -19,26 +19,26 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
     <?php require_once("navbar.php"); ?>
     <div class="fotodiv1">
-        <h1>Explore The world</h2>
+        <h1>Explore The World</h2>
         <p>Discover a world of travel possibilities, where every page unfolds new <br>adventures and valuable insights</p>
     </div>
     <div class="golfpagina1">
         <h3 style="margin-top:-27rem;">Explore</h3>
-    <div class="col">
-        <a href="centralamerica.php"><div class="card card1">
+    <div class="cool">
+        <a href="centralamerica.php"><div class="caard card--1">
             <h5>Central America</h5>
             <p>Pristine white beaches, azure waters, vibrant culture and delicious food</p>
         </div></a>
-        <a href="europe.php"><div class="card card2">
+        <a href="europe.php"><div class="caard card--2">
             <h5>Europe</h5>
             <p>Explore the captivating blend of ancient charm and modern 
             allure in Europe, where iconic landmarks, diverse cuisines, and picturesque landscapes await. </p>
         </div></a>
-        <a href="oceania.php"><div class="card card3">
+        <a href="oceania.php"><div class="caard card--3">
             <h5>Oceania</h5>
             <p>Pristine beaches, lush rainforests, and vibrant cities seamlessly blending natural beauty with urban sophistication.</p>
         </div></a>
-        <a href="asia.php"><div class="card card4">
+        <a href="asia.php"><div class="caard card--4">
             <h5>Asia</h5>
             <p>Discover Asia's charm: ancient wonders, modern sights, and rich cultures. From Japan's tranquil temples to Bali's lush beauty, experience an enchanting adventure.</p>
         </div></a>
