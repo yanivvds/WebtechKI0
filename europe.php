@@ -65,7 +65,7 @@
                 <img src="../fotos/italy.jpg" alt="italy">
                 <div class="card-content">
                     <h2>Italy</h2>
-                    <p>A cultural gem, Italy is filled with iconic sights, famous art, delicious cuisine and beautiful coasts, it is offering a taste of la dolce vita.</p>
+                    <p>A cultural gem, Italy is filled with iconic sights, iconic art, delicious cuisine and ice cream and of course beautiful coasts, it is offering a taste of la dolce vita.</p>
                     <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=FCO">Book now &rArr;</a>
                 </div>
             </div>

@@ -29,7 +29,7 @@
                 <div class="about-container">
                     <div class="about-item">
                         <h2>Who are we?</h2>
-                        <p>we are a group of students studying artificial intelligence at the University of Amsterdam. We started this project in 2024 for </p>
+                        <p>we are a group of students studying artificial intelligence at the University of Amsterdam. We started this project in 2024 for a class we had. </p>
                     </div>
                     <div class="about-item">Grid Item 2</div>
                     <div class="about-item">Grid Item 3</div>
