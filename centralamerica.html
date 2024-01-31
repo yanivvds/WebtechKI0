@@ -11,7 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
     <div class="ImageBackgroundWrap Background-fixed" style="Background-image: url( ../fotos/panamabeach.jpg)">
         <div class="ImageInnerWrap">
             <div class="TextBackground">
