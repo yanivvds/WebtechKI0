@@ -68,7 +68,7 @@
                 <div class="card-content">
                     <h2>Costa Rica</h2>
                     <p>Costa Rica is a tropical pearl in the heart of Central America. The country offers a combination of surfing, diving, wildlife and discovering jungles or volcanoes.</p>
-                    <a href="hotelbooker.php">Book now &rArr;</a>
+                    <a href="https://ki0.webtech-uva.nl/hotelbooker.php?bestemming=SJO">Book now &rArr;</a>
                 </div>
             </div>
             <div class="card">

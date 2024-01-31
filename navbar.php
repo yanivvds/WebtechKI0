@@ -35,7 +35,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li>
           <a href="#" class="desktop-item">Planner</a>
           <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Other</label>
+          <label for="showMega" class="mobile-item">Planner</label>
           <!-- Mega menu for planning flights, hotels and experiences -->
           <div class="mega-box">
             <div class="content">
