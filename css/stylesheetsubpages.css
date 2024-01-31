@@ -372,7 +372,7 @@ a {
 .imagediv--4 p,
 .imagediv--5 p,
 .imagediv--6 p{
-    visibility: hidden;
+    visibility: hidden !important;
     transition: visibility 0.3s ease;
     font-style: "poppins";
 }
