@@ -95,6 +95,7 @@ html, body{
 
 .grid-text2 h1 {
     margin-left: 3vw;
+    margin-bottom: 20px;
 }
 
 .grid-pic2 img {
@@ -318,6 +319,7 @@ html, body{
     margin: 10vh auto;
     box-sizing: border-box;
     min-height: 47vh;
+    height: fit-content;
 }
 
 .card:hover {
