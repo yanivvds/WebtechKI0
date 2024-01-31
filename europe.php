@@ -65,7 +65,7 @@
                 <img src="../fotos/italy.jpg" alt="italy">
                 <div class="card-content">
                     <h2>Italy</h2>
-                    <p>A cultural gem, Italy is filled with iconic sights, famous art, delicious cuisine and beautiful coasts, it is offering a taste of la dolce vita.</p>
+                    <p>A cultural gem, Italy is filled with iconic sights, iconic art, delicious cuisine and ice cream and of course beautiful coasts, it is offering a taste of la dolce vita.</p>
                     <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>
@@ -81,8 +81,7 @@
                 <img src="../fotos/norway.jpg" alt="norway">
                 <div class="card-content">
                     <h2>Norway</h2>
-                    <p>
-                        A land of breathtaking fjords and natural beauty, Norway captivates with its dramatic landscapes, vibrant cities and harmonious blend of tradition and modernity.</p>
+                    <p>A land of breathtaking fjords and natural beauty, Norway captivates with its dramatic landscapes, vibrant cities and harmonious blend of tradition and modernity.</p>
                     <a href="hotelbooker.php">Book now &rArr;</a>
                 </div>
             </div>

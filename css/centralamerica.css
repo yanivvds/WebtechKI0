@@ -70,7 +70,7 @@ html, body{
 }
 
 .beachleft {
-    width: 36vh;
+    width: 38%;
     margin-left: 10vw;
     border-radius: 3%;
 }
@@ -119,6 +119,7 @@ html, body{
     grid-template-rows: repeat(6, 11vh); 
     gap: 10px; 
     padding: 20px;
+    max-height: fit-content;
 }
 
 .picture-pic1 {
@@ -912,8 +913,32 @@ html, body{
 @media screen and (max-width: 768px) {
     .card {
         width: 90%;
+        min-height: auto;
     }
     .grid-pic1, .grid-text1, .grid-text2 {
         padding: 10px; 
     }
+
+    .ca-container {
+        display: block;
+    }
+
+    .card-content h2{
+        font-size: medium;
+    }
+
+    .card-content p{
+        font-size: medium;
+    }
+
+    .grid-text1{
+        font-size: medium;
+        margin: 30px;
+    }
+
+    .grid-text2{
+        font-size: medium;
+        margin: 30px;
+    }
+
 }
