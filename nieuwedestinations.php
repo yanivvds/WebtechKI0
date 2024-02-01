@@ -19,16 +19,16 @@
 <div class="world-map">
     <img src="/fotos/nieuwewereld.png" alt="wereldkaart" />
     <div class="pin europe">
-        <span><a href="europe.php">Europe</a></span>
+        <span><a href="europe.php" style="color: #7c5833;text-decoration: none;font-family: 'Poppins';">Europe</a></span>
     </div>
     <div class="pin asia">
-        <span><a href="asia.php">Asia</a></span>
+        <span><a href="asia.php" style="color: #7c5833;text-decoration: none;font-family: 'Poppins';">>Asia</a></span>
     </div>
     <div class="pin oceania">
-        <span><a href="oceania.php">Oceania</a></span>
+        <span><a href="oceania.php" style="color: #7c5833;text-decoration: none;font-family: 'Poppins';">>Oceania</a></span>
     </div>
     <div class="pin central-america">
-        <span><a href="centralamerica.php">Central America</a></span>
+        <span><a href="centralamerica.php" style="color: #7c5833;text-decoration: none;font-family: 'Poppins';">>Central America</a></span>
     </div>
 </div>
 <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
