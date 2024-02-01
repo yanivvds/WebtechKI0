@@ -40,6 +40,8 @@ def get_artikel(raw_data: requests.Response) -> list:
 
     foto_data = bsObj.find_all("img", class_="ResponsiveImageContainer-eybHBd fptoWY responsive-image__image")
 
+
+    print(city_link)
     #storing the data from scraping in arrays and enhancing the data a bit.
     for n in titel_data:
         titel_array.append(n.text.strip())
@@ -55,11 +57,15 @@ def get_artikel(raw_data: requests.Response) -> list:
             link_array.append(f'https://www.cntraveler.com{n.get("href")}')
         else:
             link_array.append(n.get("href"))
-
+    print(city_link[40:].lower())
+    continents = ['africa','australia','europe','caribbean','asia','middle-east','north-america','south-america']
+    if city_link[40:].lower() in continents:
+        foto_data.pop(1)
     for n in foto_data:
         print(n.get('src')[0:4])
         if n.get("src")[0:4] == 'http':
             foto_array.append(n.get("src"))
+   
 
     #writing scrapped data to a file so that java script can read data from there
     with open('artikel_data.txt', 'w') as f:
