@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-
+import String
 #sources: https://www.youtube.com/watch?v=U90vK84bq4s and https://www.youtube.com/watch?v=XVv6mJpFOb0&t=395s
 
 
@@ -10,7 +10,7 @@ def get_city_link() -> str:
     with open('locatie.txt','r') as f:
         stad = f.readline()
         #stad = input("Van welke stad wilt u de activiteiten zien? ")
-        link = f'https://www.cntraveler.com/destinations/{stad}'
+        link = f'https://www.cntraveler.com/destinations/{stad.lower()}'
         return link
 
 #Get request sturen nr server van gegeven url om het html bestand op te halen.
@@ -70,34 +70,6 @@ def get_artikel(raw_data: requests.Response) -> list:
             f.write(foto_array[index_foto])
             index_link += 1
             index_foto += 1
-    
-
-def get_prijs(raw_data: requests.Response) -> list:
-    prijs_array = []
-    bsObj = BeautifulSoup(raw_data.content, "html.parser")
-    prijs_data = bsObj.find_all("a", class_="SummaryItemHedLink-civMjp rgRxi summary-item-tracking__hed-link summary-item__hed-link")
-    link_data = bsObj.find_all("a", class_="SummaryItemHedLink-civMjp dgkWXq summary-item-tracking__hed-link summary-item__hed-link")
-
-    for n in prijs_data:
-        prijs_array.append(n.get("href"))
-
-    for n in link_data:
-        if n.get("href")[0] == '/':
-            prijs_array.append(f'https://www.cntraveler.com{n.get("href")}')
-        else:
-            prijs_array.append(n.get("href"))
-
-    return prijs_array
-
-def get_beoordeling(raw_data: requests.Response) -> list:
-    beoordeling_array = []
-    bsObj = BeautifulSoup(raw_data.content, "html.parser")
-    foto_data = bsObj.find_all("img", class_="ResponsiveImageContainer-eybHBd fptoWY responsive-image__image")
-
-    for n in beoordeling_data:
-        beoordeling_array.append(n.get("src"))
-
-    return beoordeling_array
 
 city_link = get_city_link()
 html_data = get_html(city_link)
@@ -108,8 +80,8 @@ if html_data:
     #beoordeling_array = get_beoordeling(html_data)
     get_artikel(html_data)
 
-    print("Artikel titels:", titel_array)
-    print(len(titel_array))
-    print("Links:", link_array)
-    print(len(link_array))
-    print("fotos:", foto_array)
+    #print("Artikel titels:", titel_array)
+    #print(len(titel_array))
+    #print("Links:", link_array)
+    #print(len(link_array))
+    #print("fotos:", foto_array)
