@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             app.use(express.static('public'));
 
             // Define a route to handle POST requests to '/runPythonScript'
-            app.post('/runPythonScript', (res) => {
+            app.post('/runPythonScript', (req,res) => {
                 // Spawn a new process to run the Python script
                 const pythonProcess = spawn('python', ['scraper.py']);
 
