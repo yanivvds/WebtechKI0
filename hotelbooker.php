@@ -105,11 +105,11 @@ $(document).ready(function() {
             // When an item is selected, set the value of the input field to the city name
             select: function(event, ui) {
                 event.preventDefault();
-                $(this).val(ui.item.value);
+                $(this).val(ui.item.label);
             }
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
-                .append("<div style='display: none;'>" + item.label + "</div>") 
+                .append("<div>" + item.label + "</div>") 
                 .appendTo(ul);
         };
     }
