@@ -38,8 +38,6 @@
         background-size: cover;
     }
 
-
-
     .save-icon.empty {
         background-image: url('/fotos/bookmark-empty.svg'); 
     }
@@ -133,98 +131,64 @@
 <body>
     <?php require_once("navbar.php"); ?>
     <div class="activity-container">
-        <a id='1' href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
+        <!-- Placeholder for the first activity -->
     </div>
 
-    <div class="activity-container">
-        <a id='2' href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id='3' href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id='4' href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id='5' href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id="6" href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id='6' href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id="7" href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id="8" href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id="9" href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div class="activity-container">
-        <a id="10" href=""><div class='activity-offer' style='background-image: url("");'>
-            <div class='title-section'>
-                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
-            </div>
-        </div></a>
-    </div>
-
-    <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
-        <?php require_once("footer.php"); ?>
-    </div>
-    <script src="/javascript/script1.js"></script>
     <script src="scrape.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make an HTTP request to the server when the page loads
+            fetch('/runPythonScript', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the received data and update the HTML content
+                    updateActivityContent(data.activityData);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
 
+        function updateActivityContent(activityData) {
+            const activityContainer = document.querySelector('.activity-container');
+
+            activityData.forEach(data => {
+                const activityOffer = createActivityOfferElement(data);
+                activityContainer.appendChild(activityOffer);
+            });
+        }
+
+        function createActivityOfferElement(data) {
+            const activityOffer = document.createElement('div');
+            activityOffer.classList.add('activity-offer');
+            activityOffer.style.backgroundImage = `url(${data.imageUrl})`;
+
+            const saveIcon = document.createElement('div');
+            saveIcon.classList.add('save-icon', 'empty');
+            activityOffer.appendChild(saveIcon);
+
+            const titleSection = document.createElement('div');
+            titleSection.classList.add('title-section');
+
+            const activityTitle = document.createElement('h2');
+            activityTitle.classList.add('activity-title');
+            activityTitle.textContent = data.title;
+            titleSection.appendChild(activityTitle);
+
+            const viewDetailsButton = document.createElement('a');
+            viewDetailsButton.classList.add('view-details-button');
+            viewDetailsButton.href = data.href;
+            viewDetailsButton.target = '_blank';
+            viewDetailsButton.textContent = 'View Details';
+            titleSection.appendChild(viewDetailsButton);
+
+            activityOffer.appendChild(titleSection);
+
+            const shortDescription = document.createElement('p');
+            shortDescription.classList.add('short-description');
+            shortDescription.textContent = data.shortDescription;
+            activityOffer.appendChild(shortDescription);
+
+            return activityOffer;
+        }
+    </script>
 </body>
 </html>
