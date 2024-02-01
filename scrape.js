@@ -75,38 +75,32 @@ function runAnotherJavaScriptScript() {
 
     // Split the content into an array of lines
     const lines = fileContent.split(/\r?\n/);
-    // hier moet de html code aangepast worden of gegenereerd worden
-    document.addEventListener('DOMContentLoaded', function() {
-    // Example data for each activity
-        const activityData = [
-            { id: '1', href: `${lines[1]}`, imageUrl: `${lines[2]}`, title: `${lines[0]}` },
-            { id: '2', href: `${lines[4]}`, imageUrl: `${lines[5]}`, title: `${lines[3]}` },
-            { id: '3', href: `${lines[7]}`, imageUrl: `${lines[8]}`, title: `${lines[6]}` },
-            { id: '4', href: `${lines[10]}`, imageUrl: `${lines[11]}`, title: `${lines[9]}` },
-            { id: '5', href: `${lines[13]}`, imageUrl: `${lines[14]}`, title: `${lines[12]}` },
-            { id: '6', href: `${lines[16]}`, imageUrl: `${lines[17]}`, title: `${lines[15]}` },
-            { id: '7', href: `${lines[19]}`, imageUrl: `${lines[20]}`, title: `${lines[18]}` },
-            { id: '8', href: `${lines[22]}`, imageUrl: `${lines[23]}`, title: `${lines[21]}` },
-            { id: '9', href: `${lines[25]}`, imageUrl: `${lines[26]}`, title: `${lines[24]}` },
-            { id: '10', href: `${lines[28]}`, imageUrl: `${lines[29]}`, title: `${lines[27]}` },
-        // Add data for other activities
-        ];
 
-        // Loop through activity containers and update content
-        activityData.forEach(function(data) {
-            var activityContainer = document.getElementById(data.id);
-                if (activityContainer) {
-                    // Update href attribute
-                    activityContainer.querySelector('a').href = data.href;
+    // Loop through activity containers and update content
+    for (let i = 1; i <= 10; i++) {
+        const activityContainer = document.getElementById(String(i));
 
-                    // Update background-image URL
-                    activityContainer.querySelector('.activity-offer').style.backgroundImage = 'url("' + data.imageUrl + '")';
+        if (activityContainer) {
+            // Update href attribute
+            activityContainer.querySelector('a').href = lines[i * 3 - 2];
 
-                    // Update h2 text content
-                    activityContainer.querySelector('.activity-title').innerText = data.title;
+            // Update background-image URL
+            activityContainer.querySelector('.activity-offer').style.backgroundImage = `url("${lines[i * 3 - 1]}")`;
+
+            // Update h2 text content
+            activityContainer.querySelector('.activity-title').innerText = lines[i * 3 - 3];
+        }
+    }
+
+    // Delete the used 'artikel_data.txt' file
+    fs.unlink(filePath, (err) => {
+        if (err) {
+            console.error('Error deleting file:', err);
+        } else {
+            console.log('File deleted successfully');
         }
     });
-});
+}
 
 
 
@@ -114,19 +108,12 @@ function runAnotherJavaScriptScript() {
 // Delete used txt files
 
 // Delete the file
-fs.unlink(path, (err) => {
-    if (err) {
-        console.error('Error deleting file:', err);
-    } else {
-        console.log('File deleted successfully');
-    }
-});
+
 const pad = 'locatie.txt';
-fs.unlink(path, (err) => {
+fs.unlink(pad, (err) => {
     if (err) {
         console.error('Error deleting file:', err);
     } else {
         console.log('File deleted successfully');
     }
 });
-}
