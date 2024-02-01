@@ -10,7 +10,7 @@
     <title>Destinations</title>
     <link rel="stylesheet" href="/css/stylesheet.css"> 
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
-    
+    <script src="scrape.js"></script>
 </head>
 <body style="background: #f6ede3;">
 <div>
