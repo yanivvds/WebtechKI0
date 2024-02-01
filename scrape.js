@@ -48,91 +48,85 @@ document.addEventListener("DOMContentLoaded", function () {
                 pythonProcess.stderr.on('data', (data) => {
                     console.error(`Error in Python script: ${data}`);
                 });
-                
-                console.log("Start");
-
-                setTimeout(function() {
-                    console.log("Delayed message");
-                }, 10000); // 2000 milliseconds (2 seconds) delay
-
-                console.log("End");
-
-                const path = 'artikel_data.txt';
-
-                fs.access(path, fs.constants.F_OK, (err) => {
-                    if (err) {
-                        console.log("de python files is nog niet aangemaakt");
-                    } else {
-                        const fs = require('fs');
-
-                        const filePath = 'artikel_data.txt';
-
-                        // Read the entire file into memory
-                        const fileContent = fs.readFileSync(filePath, 'utf8');
-
-                        // Split the content into an array of lines
-                        const lines = fileContent.split(/\r?\n/);
-                        // hier moet de html code aangepast worden of gegenereerd worden
-                        document.addEventListener('DOMContentLoaded', function() {
-                            // Example data for each activity
-                            const activityData = [
-                                { id: '1', href: `${lines[1]}`, imageUrl: `${lines[2]}`, title: `${lines[0]}` },
-                                { id: '2', href: `${lines[4]}`, imageUrl: `${lines[5]}`, title: `${lines[3]}` },
-                                { id: '3', href: `${lines[7]}`, imageUrl: `${lines[8]}`, title: `${lines[6]}` },
-                                { id: '4', href: `${lines[10]}`, imageUrl: `${lines[11]}`, title: `${lines[9]}` },
-                                { id: '5', href: `${lines[13]}`, imageUrl: `${lines[14]}`, title: `${lines[12]}` },
-                                { id: '6', href: `${lines[16]}`, imageUrl: `${lines[17]}`, title: `${lines[15]}` },
-                                { id: '7', href: `${lines[19]}`, imageUrl: `${lines[20]}`, title: `${lines[18]}` },
-                                { id: '8', href: `${lines[22]}`, imageUrl: `${lines[23]}`, title: `${lines[21]}` },
-                                { id: '9', href: `${lines[25]}`, imageUrl: `${lines[26]}`, title: `${lines[24]}` },
-                                { id: '10', href: `${lines[28]}`, imageUrl: `${lines[29]}`, title: `${lines[27]}` },
-                                // Add data for other activities
-                            ];
-                    
-                            // Loop through activity containers and update content
-                            activityData.forEach(function(data) {
-                                var activityContainer = document.getElementById(data.id);
-                                if (activityContainer) {
-                                    // Update href attribute
-                                    activityContainer.querySelector('a').href = data.href;
-                    
-                                    // Update background-image URL
-                                    activityContainer.querySelector('.activity-offer').style.backgroundImage = 'url("' + data.imageUrl + '")';
-                    
-                                    // Update h2 text content
-                                    activityContainer.querySelector('.activity-title').innerText = data.title;
-                                }
-                            });
-                        });
-                    }
-                });
 
                 pythonProcess.on('close', (code) => {
                     console.log(`Python script exited with code ${code}`);
                     res.status(200).send(`Python script exited with code ${code}`);
+
+                    // After the Python script has completed, run another JavaScript script
+                    runAnotherJavaScriptScript();
                 });
 
                 pythonProcess.kill('SIGTERM');
-
-
-            // Delete used txt files
-
-            // Delete the file
-            fs.unlink(path, (err) => {
-                if (err) {
-                    console.error('Error deleting file:', err);
-                } else {
-                    console.log('File deleted successfully');
-                }
-            });
-            const pad = 'locatie.txt';
-            fs.unlink(path, (err) => {
-                if (err) {
-                    console.error('Error deleting file:', err);
-                } else {
-                    console.log('File deleted successfully');
-                }
-            });
+                
+            
         });
     });
 });})
+
+function runAnotherJavaScriptScript() {
+    // Add your code here to run another JavaScript script
+    const fs = require('fs');
+
+    const filePath = 'artikel_data.txt';
+
+    // Read the entire file into memory
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+
+    // Split the content into an array of lines
+    const lines = fileContent.split(/\r?\n/);
+    // hier moet de html code aangepast worden of gegenereerd worden
+    document.addEventListener('DOMContentLoaded', function() {
+    // Example data for each activity
+        const activityData = [
+            { id: '1', href: `${lines[1]}`, imageUrl: `${lines[2]}`, title: `${lines[0]}` },
+            { id: '2', href: `${lines[4]}`, imageUrl: `${lines[5]}`, title: `${lines[3]}` },
+            { id: '3', href: `${lines[7]}`, imageUrl: `${lines[8]}`, title: `${lines[6]}` },
+            { id: '4', href: `${lines[10]}`, imageUrl: `${lines[11]}`, title: `${lines[9]}` },
+            { id: '5', href: `${lines[13]}`, imageUrl: `${lines[14]}`, title: `${lines[12]}` },
+            { id: '6', href: `${lines[16]}`, imageUrl: `${lines[17]}`, title: `${lines[15]}` },
+            { id: '7', href: `${lines[19]}`, imageUrl: `${lines[20]}`, title: `${lines[18]}` },
+            { id: '8', href: `${lines[22]}`, imageUrl: `${lines[23]}`, title: `${lines[21]}` },
+            { id: '9', href: `${lines[25]}`, imageUrl: `${lines[26]}`, title: `${lines[24]}` },
+            { id: '10', href: `${lines[28]}`, imageUrl: `${lines[29]}`, title: `${lines[27]}` },
+        // Add data for other activities
+        ];
+
+        // Loop through activity containers and update content
+        activityData.forEach(function(data) {
+            var activityContainer = document.getElementById(data.id);
+                if (activityContainer) {
+                    // Update href attribute
+                    activityContainer.querySelector('a').href = data.href;
+
+                    // Update background-image URL
+                    activityContainer.querySelector('.activity-offer').style.backgroundImage = 'url("' + data.imageUrl + '")';
+
+                    // Update h2 text content
+                    activityContainer.querySelector('.activity-title').innerText = data.title;
+        }
+    });
+});
+
+
+
+
+// Delete used txt files
+
+// Delete the file
+fs.unlink(path, (err) => {
+    if (err) {
+        console.error('Error deleting file:', err);
+    } else {
+        console.log('File deleted successfully');
+    }
+});
+const pad = 'locatie.txt';
+fs.unlink(path, (err) => {
+    if (err) {
+        console.error('Error deleting file:', err);
+    } else {
+        console.log('File deleted successfully');
+    }
+});
+}
