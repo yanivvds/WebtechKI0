@@ -90,7 +90,7 @@
                             <img src="../fotos/jens.webp" alt="">
                             <h4>Jens Breusers</h4>
                         </div>
-                        <p>Ik hou van een leuke uitdaging en ga graag op vakanties. 
+                        <p>Ik hou van een leuke uitdaging en ga graag op vakanties. Familiy is voor mij het belangrijkst wat er is, dus ik ga daarom het liefst met hen op reis. <br>
                             Fav. Country: Curaçao.<br>
                             Fav. activity: Surfing.<br><a href="mailto:jens.breusers@student.uva.nl">jens.breusers@student.uva.nl</a></p>
                     </div>
