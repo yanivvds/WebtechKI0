@@ -50,46 +50,49 @@
                             <img src="../fotos/yaniv.webp" alt="">
                             <h4>Yaniv van der Stigchel</h4>
                         </div>
-                        <p>Een avonturier in hart en nieren; ik ben altijd op zoek naar de volgende adrenalinekick, <br>
-                            of dat nu skydiven of diepzeeduiken is. Maar een rustige avond genieten van een goed boek <br>
-                            of film sla ik ook niet af..<br /><a href="mailto:yaniv.van.der.stigchel@student.uva.nl">yaniv.van.der.stigchel@student.uva.nl</a></p>
+                        <p>
+                            An adventurer through and through; I'm always looking for the next adrenaline rush, <br>
+                            whether that's skydiving or scuba diving. But enjoy a quiet evening with a good book <br>
+                            I don't turn down a movie either.<br>
+                            Fav. country: Guatemala.<br>
+                            Fav. activity: Meeting new people.<br>
+                            <a href="mailto:yaniv.van.der.stigchel@student.uva.nl">yaniv.van.der.stigchel@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
                             <img src="../fotos/thierry.webp" alt="">
                             <h4>Thierry Schneider</h4>
                         </div>
-                        <p>Ik hou van actie en dingen beleven, maar lekker op het strand liggen met een drankje zeg ik ook geen nee tegen.<br>
-                            Fav. land: Spanje.<br>
-                            Fav. activiteit: Skiën in de alpen.<br><a href="mailto:thierry.schneider@student.uva.nl">thierry.schneider@student.uva.nl</a></p>
+                        <p>I like action and experiencing things, but I wouldn't say no to lying on the beach with a drink either. Discovering new places around the world is most fun with friends.<br>
+                            Fav. country: Spain.<br>
+                            Fav. activity: Skiing in the Alps.<br>
+                            <a href="mailto:thierry.schneider@student.uva.nl">thierry.schneider@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
                             <img src="../fotos/jev.webp" alt="">
                             <h4>Jeff Kroon</h4>
                         </div>
-                        <p>Ik houd van natuur en cultuur. Door dit te combineren kom ik vaak op roadtrips uit. Maar een mooi resort zeg ik ook geen nee tegen.<br>
-                            Fav. land: Nieuw Zeeland.<br>
-                            Fav. activiteit: snowboarden/surfen.
-                            .<br /><a href="mailto:jeff.kroon@student.uva.nl">jev.kroon@student.uva.nl</a></p>
+                        <p>I love nature and culture. By combining this I often end up on road trips. But I wouldn't say no to a beautiful resort either.<br>
+                            Fav. country: New Zealand.<br>
+                            Fav. activity: Snowboarding/Surfing.<br>
+                            <a href="mailto:jeff.kroon@student.uva.nl">jev.kroon@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
                             <img src="../fotos/aimee.webp" alt="">
                             <h4>Aimée Oijevaar</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
-                            ullamcorper lectus consequat vel. Mauris vel suscipit odio. Donec tempor sollicitudin purus,
-                            ac finibus nibh hendrerit sed.<br /><a href="mailto:aimee.oijevaar@student.uva.nl">aimee.oijevaar@student.uva.nl</a></p>
+                        <p><a href="mailto:aimee.oijevaar@student.uva.nl">aimee.oijevaar@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
                             <img src="../fotos/jens.webp" alt="">
                             <h4>Jens Breusers</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ornare massa, ut
-                            ullamcorper lectus consequat vel. Mauris vel suscipit odio. Donec tempor sollicitudin purus,
-                            ac finibus nibh hendrerit sed.<br /><a href="mailto:jens.breusers@student.uva.nl">jens.breusers@student.uva.nl</a></p>
+                        <p>Ik hou van een leuke uitdaging en ga graag op vakanties. Familiy is voor mij het belangrijkst wat er is, dus ik ga daarom het liefst met hen op reis. <br>
+                            Fav. Country: Curaçao.<br>
+                            Fav. activity: Surfing.<br><a href="mailto:jens.breusers@student.uva.nl">jens.breusers@student.uva.nl</a></p>
                     </div>
                 </div>
             </div>

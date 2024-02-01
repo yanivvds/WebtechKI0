@@ -17,11 +17,14 @@ if (session_status() == PHP_SESSION_NONE) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation bar -->
     <?php require_once("navbar.php"); ?>
+    <!-- picture with title -->
     <div class="fotodiv1">
         <h1>Explore The World</h2>
         <p>Discover a world of travel possibilities, where every page unfolds new <br>adventures and valuable insights</p>
     </div>
+    <!-- Section with cards of different destinations -->
     <div class="golfpagina1">
         <h3 style="margin-top:-27rem;">Explore</h3>
     <div class="cool">
@@ -44,17 +47,17 @@ if (session_status() == PHP_SESSION_NONE) {
         </div></a>
     </div>
     </div>
+    <!-- Section about cappadocia -->
     <div class="test">
         <h3>Enchanting Cappadocia</h3>
         <p>Where Magic Awakens Beneath the Rocks</p>
         <a href="inspiration.php"><button class="exploreknop">Explore</button></a>
         
     </div>
+    <!-- section with gallery about different roadtrips -->
     <div class="golfpagina2">
         <div class="title3"><h3>Take the road</h3></div>
         <div class="gallery">
-        
-            <!--<h3 style="margin-top: -15vh; margin-left: 20%; position: absolute;">Take the road</h3>-->
             <div class="gallery__item gallery__item--1">
                 <a href="#">
                     <div class="imagediv--1">
@@ -89,10 +92,11 @@ if (session_status() == PHP_SESSION_NONE) {
             </div>
         </div>
     </div>
-    <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
+    <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;"> 
+       <!-- insert footer --> 
         <?php require_once("footer.php"); ?>
     </div>
-    
+    <!-- cookie pop-up -->
     <div id="cookies">
         <div class="containercook">
             <div class="subcontainer">
@@ -105,8 +109,10 @@ if (session_status() == PHP_SESSION_NONE) {
         </div>
     </div>
     
+<!-- javascript cookies -->
 <script src="/javascript/script1.js"></script>
 <script>
+    // method to set a cookie //
     setcookie = (cName, cValue, cExpdays) => {
     let date = new Date();
     date.setTime(date.getTime() + (cExpdays * 24 * 60 * 60 * 1000));
@@ -114,6 +120,7 @@ if (session_status() == PHP_SESSION_NONE) {
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
 
 }
+// get gookie method //
 getCookie = (cName) => {
     const name = cName + "=";
     const cDecoded = decodeURIComponent(document.cookie);
