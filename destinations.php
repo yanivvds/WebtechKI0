@@ -38,28 +38,28 @@
 </div>
 <div class="world-map">
     <img src="/wereld/wereld.png" alt="wereldkaart" />
-    <a data-target="south-america" href="artikel.php"><div class="pin guatemala">
+    <a data-target="south-america" href="artikel.php" name= "pin"><div class="pin guatemala">
         <span style="left: -7.5rem;">South-america</span>
     </div></a>
-    <a data-target="australia" href="artikel.php"><div class="pin australia">
+    <a data-target="australia" href="artikel.php" name= "pin"><div class="pin australia">
         <span data-content-id="australia">Australia</span>
     </div></a>
-    <a data-target="rome"  href="artikel.php"><div class="pin italy">
+    <a data-target="rome"  href="artikel.php" name= "pin"><div class="pin italy">
         <span data-content-id="rome">Rome</span>
     </div></a>
-    <a data-target="lisbon"  href="artikel.php"><div class="pin portugal">
+    <a data-target="lisbon"  href="artikel.php" name= "pin"><div class="pin portugal">
         <span data-content-id="lisbon" style="left: -6rem;">Lisbon</span>
     </div></a>
-    <a data-target="noorwegen"  href="artikel.php"><div class="pin norway">
+    <a data-target="noorwegen"  href="artikel.php" name= "pin"><div class="pin norway">
         <span data-content-id="noorwegen">Norway</span>
     </div></a>
-    <a data-target="usa"  href="artikel.php"><div class="pin usa">
+    <a data-target="usa"  href="artikel.php" name= "pin"><div class="pin usa">
         <span data-content-id="usa">usa</span>
     </div></a>
-    <a data-target="belize"  href="artikel.php"><div class="pin belize">
+    <a data-target="belize"  href="artikel.php" name= "pin"><div class="pin belize">
         <span data-content-id="belize">Belize</span>
     </div></a>
-    <a data-target="iceland"  href="artikel.php"><div class="pin iceland">
+    <a data-target="iceland"  href="artikel.php" name= "pin"><div class="pin iceland">
         <span data-content-id="iceland" style="left: -5.5rem">Iceland</span>
     </div></a>
 </div>
