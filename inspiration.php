@@ -30,7 +30,7 @@
         <!-- gallery with al articles -->
         <div class="gallery">
             <div class="gallery__item gallery__item--1">
-                <a href="#">
+                <a href="https://www.lonelyplanet.com/italy/amalfi-coast">
                     <div class="imagediv--1">
                         <h5>Amalfi Coast</h5>
                         <p class="hide1">Cliffside villages, azure sea, and culinary delights.</p>
@@ -38,7 +38,7 @@
                     </a>
             </div>
             <div class="gallery__item gallery__item--2">
-                <a href="#">
+                <a href="https://www.interrail.eu/en/plan-your-trip/trip-ideas/top-10-cheapest-cities-in-europe">
                     <div class="imagediv--2">
                         <h5>European underdogs</h5>
                         <p>Discover budget-friendly charm in Eastern European delights</p>
@@ -46,7 +46,7 @@
                     </a>
             </div>
             <div class="gallery__item gallery__item--3">
-                <a href="#">
+                <a href="https://www.gotokyo.org/en/index.html">
                     <div class="imagediv--3">
                         <h5>Tokyo Beyond the Bright Lights</h5>
                         <p>Beneath Tokyo's dazzling skyline lies a world of hidden wonders. Embark on a journey beyond the neon glow, where historic temples whisper tales and culinary delights paint a vibrant portrait. Curiosity beckons, click to unveil Tokyo's best-kept secrets!</p>
@@ -54,7 +54,7 @@
                 </a>
             </div>
             <div class="gallery__item gallery__item--4">
-                <a href="#">
+                <a href="https://www.surfintrip.com/surfintrip-destinations">
                     <div class="imagediv--4">
                         <h5>Surfing Odyssey: Where Waves Meet Wonder</h5>
                         <p>Explore the World's Best Surf Spots! From Bali's barrels to California's breaks, discover the allure of each coastal gem. Immerse in local vibes, savor seaside delights, and ride the waves of pure serenity. Ready for a surf adventure? Click to chase waves and coastal charm!"</p>
@@ -62,7 +62,7 @@
                 </a>
             </div>
             <div class="gallery__item gallery__item--5">
-                <a href="#">
+                <a href="https://medium.com/@JonTravelFitness/italys-culinary-delights-a-gastronomic-journey-63fbb3237751">
                     <div class="imagediv--5">
                         <h5>Savoring Italy's Culinary Delights</h5>
                         <p>Savor Italy's Culinary Symphony: Pasta, Pizza, Truffles, Gelato, and Regional Wines. A Gastronomic Journey</p>
@@ -70,7 +70,7 @@
                 </a>
             </div>
             <div class="gallery__item gallery__item--6">
-                <a href="#">
+                <a href="https://www.lonelyplanet.com/mexico/articles">
                     <div class="imagediv--6">
                         <h5>Mystical Mexico</h5>
                         <p>Experience the Kaleidoscope of Mexico: Savory Culinary Feasts, Sun-Kissed Beaches, Ancient Temples, and Rich History Unfold in Every Corner</p>
@@ -96,7 +96,7 @@
                     <li class="carousel__slide">
                         <figure>
                             <div>
-                                <a href="#"><img src="https://picsum.photos/id/1041/800/450" alt=""></a>
+                                <a href="https://traveloregon.com/?utm_actcampaign=774087977&gad_source=1&gclid=Cj0KCQiAn-2tBhDVARIsAGmStVnicjd4NI-uCOY2PbtwGIMZS9dJO1AttvCZnfpFAuwMNY_BCJoexOgaAjwAEALw_wcB"><img src="https://picsum.photos/id/1041/800/450" alt=""></a>
                             </div>
                             <figcaption>
                                 <span class="credit">Photo: Tim Marshall</span>
@@ -106,7 +106,7 @@
                     <li class="carousel__slide">
                         <figure>
                             <div>
-                                <a href="#"><img src="https://picsum.photos/id/1043/800/450" alt=""></a>
+                                <a href="https://traveloregon.com/?utm_actcampaign=774087977&gad_source=1&gclid=Cj0KCQiAn-2tBhDVARIsAGmStVnicjd4NI-uCOY2PbtwGIMZS9dJO1AttvCZnfpFAuwMNY_BCJoexOgaAjwAEALw_wcB"><img src="https://picsum.photos/id/1043/800/450" alt=""></a>
                             </div>
                             <figcaption>
                                 <span class="credit">Photo: Christian Joudrey</span>                            
@@ -116,7 +116,7 @@
                     <li class="carousel__slide">
                         <figure>
                             <div>
-                                <a href=""><img src="https://picsum.photos/id/1044/800/450" alt=""></a>
+                                <a href="https://traveloregon.com/?utm_actcampaign=774087977&gad_source=1&gclid=Cj0KCQiAn-2tBhDVARIsAGmStVnicjd4NI-uCOY2PbtwGIMZS9dJO1AttvCZnfpFAuwMNY_BCJoexOgaAjwAEALw_wcB"><img src="https://picsum.photos/id/1044/800/450" alt=""></a>
                             </div>
                             <figcaption>
                                 
@@ -127,7 +127,7 @@
                     <li class="carousel__slide">
                         <figure>
                             <div>
-                               <a href=""><img src="https://picsum.photos/id/1045/800/450" alt=""></a>
+                               <a href="https://traveloregon.com/?utm_actcampaign=774087977&gad_source=1&gclid=Cj0KCQiAn-2tBhDVARIsAGmStVnicjd4NI-uCOY2PbtwGIMZS9dJO1AttvCZnfpFAuwMNY_BCJoexOgaAjwAEALw_wcB"><img src="https://picsum.photos/id/1045/800/450" alt=""></a>
                             </div>
                             <figcaption>
                                 
@@ -138,7 +138,7 @@
                     <li class="carousel__slide">
                         <figure>
                             <div>
-                                <a href=""><img src="https://picsum.photos/id/1049/800/450" alt=""></a>
+                                <a href="https://traveloregon.com/?utm_actcampaign=774087977&gad_source=1&gclid=Cj0KCQiAn-2tBhDVARIsAGmStVnicjd4NI-uCOY2PbtwGIMZS9dJO1AttvCZnfpFAuwMNY_BCJoexOgaAjwAEALw_wcB"><img src="https://picsum.photos/id/1049/800/450" alt=""></a>
                             </div>
                             <figcaption>
                                
@@ -149,7 +149,7 @@
                     <li class="carousel__slide">
                         <figure>
                             <div>
-                                <a href=""><img src="https://picsum.photos/id/1052/800/450" alt=""></a>
+                                <a href="https://traveloregon.com/?utm_actcampaign=774087977&gad_source=1&gclid=Cj0KCQiAn-2tBhDVARIsAGmStVnicjd4NI-uCOY2PbtwGIMZS9dJO1AttvCZnfpFAuwMNY_BCJoexOgaAjwAEALw_wcB"><img src="https://picsum.photos/id/1052/800/450" alt=""></a>
                             </div>
                             <figcaption>
                                 

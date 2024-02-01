@@ -59,7 +59,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="title3"><h3>Take the road</h3></div>
         <div class="gallery">
             <div class="gallery__item gallery__item--1">
-                <a href="#">
+                <a href="https://thegapdecaders.com/amalfi-coast-road-trip/">
                     <div class="imagediv--1">
                         <h5>Amalfi Coast</h5>
                         <p class="hide1">Central Italy, renowned for its scenic landscapes, historic architecture, and world-class vineyards</p>
@@ -67,7 +67,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     </a>
             </div>
             <div class="gallery__item gallery__item--2">
-                <a href="#">
+                <a href="https://www.phenomenalglobe.com/australia-east-coast-road-trip-itinerary/">
                     <div class="imagediv--2">
                         <h5>Eastern Australia</h5>
                         <p>Embark on an unforgettable road trip through Eastern Australia, where stunning coastlines, diverse landscapes, and vibrant cities create a captivating journey of exploration and adventure</p>
@@ -75,7 +75,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     </a>
             </div>
             <div class="gallery__item gallery__item--3">
-                <a href="#">
+                <a href="https://www.theguardian.com/travel/2015/feb/28/us-road-trip-route-66">
                     <div class="imagediv--3" alt="Image 3">
                         <h5>Route 66</h5>
                         <p>Embark on the iconic Route 66 road trip, traversing through the heart of America, where historic roadside attractions, classic diners, and the open road converge to create an enduring journey filled with nostalgia and Americana charm</p>
@@ -83,7 +83,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 </a>
             </div>
             <div class="gallery__item gallery__item--4">
-                <a href="#">
+                <a href="https://expertvagabond.com/ring-road-trip-iceland/">
                     <div class="imagediv--4">
                         <h5>Iceland</h5>
                         <p>Embark on a road trip through the otherworldly landscapes of Iceland, where cascading waterfalls, volcanic terrain, and vast glaciers paint an ethereal and breathtaking journey through the land of fire and ice</p>
