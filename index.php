@@ -120,7 +120,7 @@ if (session_status() == PHP_SESSION_NONE) {
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
 
 }
-// get gookie method //
+// get cookie method //
 getCookie = (cName) => {
     const name = cName + "=";
     const cDecoded = decodeURIComponent(document.cookie);
