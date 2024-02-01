@@ -17,7 +17,7 @@
     <p style="max-width: 500px; margin: 1rem auto; line-height: 27px; color: #e0b287; text-align: center;">Click on the pins to see the destinations</p>
 </div>
 <div class="world-map">
-    <img src="/wereld/nieuwewereld.png" alt="wereldkaart" />
+    <img src="/fotos/nieuwewereld.png" alt="wereldkaart" />
     <div class="pin guatemala">
         <span style="left: -7.5rem;">Guatemala</span>
     </div>
