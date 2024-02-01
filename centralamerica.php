@@ -12,9 +12,9 @@
 </head>
 <body>
     <?php include 'navbar.php'; ?>
-    <div class="ImageBackgroundWrap Background-fixed" style="Background-image: url( ../fotos/panamabeach.jpg)">
-        <div class="ImageInnerWrap">
-            <div class="TextBackground">
+    <div class="topbackground fixedbackground" style="Background-image: url( ../fotos/panamabeach.jpg)">
+        <div class="imagebalk">
+            <div class="toptext">
                 <div><h1>Central America</h1></div>
             </div>
         </div>
