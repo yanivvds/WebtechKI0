@@ -63,7 +63,7 @@ $bestemmingFromUrl = isset($_GET['bestemming']) ? trim($_GET['bestemming']) : ''
                 <label for="checkOutDate" class="placeholder">Departure</label>
             </div>
             <div class="input-container ic1">
-                <input id="adults" class="input" type="number" placeholder=" " name="adults" required/>
+                <input id="adults" class="input" type="number" placeholder=" " name="adults" required min="1" max="20"/>
                 <div class="cut"></div>
                 <label for="adults" class="placeholder">Adults</label>
             </div>
@@ -105,7 +105,7 @@ $(document).ready(function() {
             // When an item is selected, set the value of the input field to the city name
             select: function(event, ui) {
                 event.preventDefault();
-                $(this).val(ui.item.value);
+                $(this).val(ui.item.label);
             }
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
