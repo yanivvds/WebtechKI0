@@ -27,6 +27,21 @@
     <link rel="stylesheet" href="/css/stylesheet.css"> 
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
     <script src="scrape.js"></script>
+    <script>
+    // Function to handle pin click
+    function handlePinClick(pin) {
+        // Make an AJAX request to the server-side script
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "handle_pin_click.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        // Send pin data to the server-side script
+        xhr.send("pin=" + pin);
+
+        // Redirect to artikel.php after pin click
+        window.location.href = "artikel.php";
+    }
+</script>
 </head>
 <body style="background: #f6ede3;">
 <div>
@@ -38,29 +53,29 @@
 </div>
 <div class="world-map">
     <img src="/wereld/wereld.png" alt="wereldkaart" />
-    <a data-target="south-america" href="artikel.php" name= "pin"><div class="pin guatemala">
+    <a onclick="handlePinClick('south-america')" data-target="south-america" href="artikel.php" name= "pin"><div class="pin guatemala">
         <span style="left: -7.5rem;">South-america</span>
     </div></a>
-    <a data-target="australia" href="artikel.php" name= "pin"><div class="pin australia">
+    <a onclick="handlePinClick('australia')" data-target="australia" href="artikel.php" name= "pin"><div class="pin australia">
         <span data-content-id="australia">Australia</span>
     </div></a>
-    <a data-target="rome"  href="artikel.php" name= "pin"><div class="pin italy">
+    <a onclick="handlePinClick('rome')" data-target="rome"  href="artikel.php" name= "pin"><div class="pin italy">
         <span data-content-id="rome">Rome</span>
     </div></a>
-    <a data-target="lisbon"  href="artikel.php" name= "pin"><div class="pin portugal">
+    <a onclick="handlePinClick('lisbon')" data-target="lisbon"  href="artikel.php" name= "pin"><div class="pin portugal">
         <span data-content-id="lisbon" style="left: -6rem;">Lisbon</span>
     </div></a>
-    <a data-target="noorwegen"  href="artikel.php" name= "pin"><div class="pin norway">
+    <a onclick="handlePinClick('norway')" data-target="noorwegen"  href="artikel.php" name= "pin"><div class="pin norway">
         <span data-content-id="noorwegen">Norway</span>
     </div></a>
-    <a data-target="usa"  href="artikel.php" name= "pin"><div class="pin usa">
-        <span data-content-id="usa">usa</span>
+    <a onclick="handlePinClick('north-america')" data-target="usa"  href="artikel.php" name= "pin"><div class="pin usa">
+        <span data-content-id="usa">North-america</span>
     </div></a>
-    <a data-target="belize"  href="artikel.php" name= "pin"><div class="pin belize">
-        <span data-content-id="belize">Belize</span>
+    <a onclick="handlePinClick('buenos-aires')" data-target="belize"  href="artikel.php" name= "pin"><div class="pin belize">
+        <span data-content-id="belize">Buenos-aires</span>
     </div></a>
-    <a data-target="iceland"  href="artikel.php" name= "pin"><div class="pin iceland">
-        <span data-content-id="iceland" style="left: -5.5rem">Iceland</span>
+    <a onclick="handlePinClick('copenhagen')" data-target="iceland"  href="artikel.php" name= "pin"><div class="pin iceland">
+        <span data-content-id="iceland" style="left: -5.5rem">Copenhagen</span>
     </div></a>
 </div>
 <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
