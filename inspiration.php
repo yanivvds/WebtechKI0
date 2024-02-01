@@ -19,12 +19,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- navbar insertion -->
     <?php require_once("navbar.php"); ?>
     <div class="container">
         <div class="containertekst" style="margin-bottom: 2%; margin-top: -6.5%;">
             <h1>Travel Blog</h1>
             <p>Find inspiration for your next trip in this blog</p>
         </div>
+        <!-- gallery with al articles -->
         <div class="gallery">
             <div class="gallery__item gallery__item--1">
                 <a href="#">
@@ -79,7 +81,7 @@
             <h2>Oregon</h2>
             <p>Wide beaches and wild nature</p>
         </div>
-        <!-- Hier komt de carousel-->
+        <!-- carousel with pictures of Oregon -->
         <div class="containercarousel">
             <div class="carousel">
                 <input type="radio" name="slides" checked="checked" id="slide-1">
@@ -177,9 +179,10 @@
             </div>
         </div>
     </section>
-        <!--end-->
+        <!--end carousel -->
     </div>
     <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
+        <!-- insert footer -->
         <?php require_once("footer.php"); ?>
     </div>
     <script src="/javascript/script1.js"></script>
