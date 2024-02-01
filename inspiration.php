@@ -22,6 +22,7 @@
     <!-- navbar insertion -->
     <?php require_once("navbar.php"); ?>
     <div class="container">
+        <!-- title bar in the document -->
         <div class="containertekst" style="margin-bottom: 2%; margin-top: -6.5%;">
             <h1>Travel Blog</h1>
             <p>Find inspiration for your next trip in this blog</p>
@@ -77,6 +78,7 @@
                     </a>
             </div>
         </div>
+        <!-- Title bar with title of carousel -->
         <div class="title2" style="margin-top: 2%; margin-bottom: 2%;">
             <h2>Oregon</h2>
             <p>Wide beaches and wild nature</p>
