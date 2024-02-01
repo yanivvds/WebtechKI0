@@ -65,7 +65,37 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Split the content into an array of lines
                         const lines = fileContent.split(/\r?\n/);
                         // hier moet de html code aangepast worden of gegenereerd worden
-                        console.log(lines)
+                        document.addEventListener('DOMContentLoaded', function() {
+                            // Example data for each activity
+                            const activityData = [
+                                { id: '1', href: `${lines[1]}`, imageUrl: `${lines[2]}`, title: `${lines[0]}` },
+                                { id: '2', href: `${lines[4]}`, imageUrl: `${lines[5]}`, title: `${lines[3]}` },
+                                { id: '3', href: `${lines[7]}`, imageUrl: `${lines[8]}`, title: `${lines[6]}` },
+                                { id: '4', href: `${lines[10]}`, imageUrl: `${lines[11]}`, title: `${lines[9]}` },
+                                { id: '5', href: `${lines[13]}`, imageUrl: `${lines[14]}`, title: `${lines[12]}` },
+                                { id: '6', href: `${lines[16]}`, imageUrl: `${lines[17]}`, title: `${lines[15]}` },
+                                { id: '7', href: `${lines[19]}`, imageUrl: `${lines[20]}`, title: `${lines[18]}` },
+                                { id: '8', href: `${lines[22]}`, imageUrl: `${lines[23]}`, title: `${lines[21]}` },
+                                { id: '9', href: `${lines[25]}`, imageUrl: `${lines[26]}`, title: `${lines[24]}` },
+                                { id: '10', href: `${lines[28]}`, imageUrl: `${lines[29]}`, title: `${lines[27]}` },
+                                // Add data for other activities
+                            ];
+                    
+                            // Loop through activity containers and update content
+                            activityData.forEach(function(data) {
+                                var activityContainer = document.getElementById(data.id);
+                                if (activityContainer) {
+                                    // Update href attribute
+                                    activityContainer.querySelector('a').href = data.href;
+                    
+                                    // Update background-image URL
+                                    activityContainer.querySelector('.activity-offer').style.backgroundImage = 'url("' + data.imageUrl + '")';
+                    
+                                    // Update h2 text content
+                                    activityContainer.querySelector('.activity-title').innerText = data.title;
+                                }
+                            });
+                        });
                     }
                 });
 

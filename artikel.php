@@ -133,12 +133,93 @@
 <body>
     <?php require_once("navbar.php"); ?>
     <div class="activity-container">
-        <a href=""><div class='activity-offer' style='background-image: url("");'>
+        <a id='1' href=""><div class='activity-offer' style='background-image: url("");'>
             <div class='title-section'>
                 <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
             </div>
         </div></a>
     </div>
+
+    <div class="activity-container">
+        <a id='2' href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id='3' href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id='4' href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id='5' href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id="6" href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id='6' href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id="7" href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id="8" href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id="9" href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="activity-container">
+        <a id="10" href=""><div class='activity-offer' style='background-image: url("");'>
+            <div class='title-section'>
+                <h2 class='activity-title' style='font-size: 1.5 rem; margin: 10px 35px 10px 10px;'></h2>
+            </div>
+        </div></a>
+    </div>
+
     <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
         <?php require_once("footer.php"); ?>
     </div>
