@@ -76,7 +76,7 @@
                         <p>I love nature and culture. By combining this I often end up on road trips. But I wouldn't say no to a beautiful resort either.<br>
                             Fav. country: New Zealand.<br>
                             Fav. activity: Snowboarding/Surfing.<br>
-                            <a href="mailto:jeff.kroon@student.uva.nl">jev.kroon@student.uva.nl</a></p>
+                            <a href="mailto:jeff.kroon@student.uva.nl">jeff.kroon@student.uva.nl</a></p>
                     </div>
                     <div class="member">
                         <div>
