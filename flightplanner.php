@@ -67,7 +67,7 @@ if (!isset($_SESSION["user_id"])) {
             <label for="returnDate" class="placeholder">Return Date</label>
         </div>
         <div class="input-container ic1">
-            <input id="adults" class="input" type="number" placeholder=" " name="adults" required/>
+            <input id="adults" class="input" type="number" placeholder=" " name="adults" required min="1" max="20"/>
             <div class="cut"></div>
             <label for="adults" class="placeholder">Number of adults</label>
         </div>
