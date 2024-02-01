@@ -2,7 +2,7 @@
     require_once 'config.php';
     // Function to execute the scraper.py script
     function runScraper($target) {
-        $command = escapeshellcmd("python3 scraper.py $target");
+        $command = escapeshellcmd("python scraper.py $target");
         shell_exec($command);
     }
 
