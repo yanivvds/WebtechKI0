@@ -617,6 +617,26 @@ h5{
     top: 33%;
     left: 41.7%;
 }
+
+.europe{
+    top: 43%;
+    left: 49%;
+}
+
+.asia{
+    top: 53%;
+    left: 73.7%;
+}
+
+.oceania{
+  top: 74%;
+  left: 82%;
+}
+
+.central-america{
+    top: 60%;
+    left: 23%;
+}
 @keyframes pulse {
     100% {
         opacity: 0;
