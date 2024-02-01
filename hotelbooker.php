@@ -17,6 +17,7 @@ $bestemmingFromUrl = isset($_GET['bestemming']) ? trim($_GET['bestemming']) : ''
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hotel Bookings</title>
+<link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
 <link rel="stylesheet" href="/css/stylesheet.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

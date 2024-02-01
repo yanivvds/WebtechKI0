@@ -6,6 +6,7 @@ based on price, latitude and longtitude and radius -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tours and Activities</title>
+    <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
       /* Custom styling for this page  */

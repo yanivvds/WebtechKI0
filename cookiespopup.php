@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/cookie.css">
     <title>cookiespopup</title>
+    <link rel="icon" type="image/x-icon" href="/fotos/favicon.ico">
 </head>
 <body>
     <div id="cookies">
