@@ -28,27 +28,27 @@
     <div class="pin costa-rica">
         <span>Costa Rica</span>
     </div>
-    <div class="pin australia">
-        <span>Australia</span>
-    </div>
-    <div class="pin italy">
-        <span>Italy</span>
-    </div>
-    <div class="pin portugal">
-        <span style="left: -6rem;">Portugal</span>
-    </div>
-    <div class="pin norway">
-        <span>Norway</span>
-    </div>
-    <div class="pin usa">
-        <span>usa</span>
-    </div>
-    <div class="pin belize">
-        <span>Belize</span>
-    </div>
-    <div class="pin iceland">
-        <span style="left: -5.5rem">Iceland</span>
-    </div>
+    <a data-target="australia" href="artikel.php"><div class="pin australia">
+        <span data-content-id="australia">Australia</span>
+    </div></a>
+    <a data-target="italy"><div class="pin italy">
+        <span data-content-id="italy">Italy</span>
+    </div></a>
+    <a data-target="portugal"><div class="pin portugal">
+        <span data-content-id="portugal" style="left: -6rem;">Portugal</span>
+    </div></a>
+    <a data-target="noorwegen"><div class="pin norway">
+        <span data-content-id="noorwegen">Norway</span>
+    </div></a>
+    <a data-target="usa"><div class="pin usa">
+        <span data-content-id="usa">usa</span>
+    </div></a>
+    <a data-target="belize"><div class="pin belize">
+        <span data-content-id="belize">Belize</span>
+    </div></a>
+    <a data-target="iceland"><div class="pin iceland">
+        <span data-content-id="iceland" style="left: -5.5rem">Iceland</span>
+    </div></a>
 </div>
 <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
         <?php require_once("footer.php"); ?>
