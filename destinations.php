@@ -1,5 +1,21 @@
 <?php
     require_once 'config.php';
+    // Function to execute the scraper.py script
+    function runScraper($target) {
+        $command = escapeshellcmd("python scraper.py $target");
+        shell_exec($command);
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Check if a pin was clicked
+        if (isset($_POST['pin'])) {
+            $target = $_POST['pin'];
+            runScraper($target);
+            // Redirect to artikel.php after scraping
+            header("Location: artikel.php");
+            exit();
+        }
+    }
 ?>
 
 <!DOCTYPE html>

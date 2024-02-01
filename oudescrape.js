@@ -59,6 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 pythonProcess.kill('SIGTERM');
                 
+                app.listen(port, () => {
+                    console.log(`Server is running on port ${port}`);
+                });
+                
             
         });
     });
@@ -117,3 +121,4 @@ fs.unlink(pad, (err) => {
         console.log('File deleted successfully');
     }
 });
+
