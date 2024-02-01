@@ -109,7 +109,7 @@ $(document).ready(function() {
             }
         }).autocomplete("instance")._renderItem = function(ul, item) {
             return $("<li>")
-                .append("<div>" + item.label + "</div>") 
+                .append("<div style='display: none;'>" + item.label + "</div>") 
                 .appendTo(ul);
         };
     }
