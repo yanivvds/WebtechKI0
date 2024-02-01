@@ -18,32 +18,17 @@
 </div>
 <div class="world-map">
     <img src="/fotos/nieuwewereld.png" alt="wereldkaart" />
-    <div class="pin guatemala">
-        <span style="left: -7.5rem;">Guatemala</span>
+    <div class="pin europe">
+        <span><a href="europe.php">Europe</a></span>
     </div>
-    <div class="pin costa-rica">
-        <span>Costa Rica</span>
+    <div class="pin asia">
+        <span><a href="asia.php">Asia</a></span>
     </div>
-    <div class="pin australia">
-        <span>Australia</span>
+    <div class="pin oceania">
+        <span><a href="oceania.php">Oceania</a></span>
     </div>
-    <div class="pin italy">
-        <span>Italy</span>
-    </div>
-    <div class="pin portugal">
-        <span style="left: -6rem;">Portugal</span>
-    </div>
-    <div class="pin norway">
-        <span>Norway</span>
-    </div>
-    <div class="pin usa">
-        <span>usa</span>
-    </div>
-    <div class="pin belize">
-        <span>Belize</span>
-    </div>
-    <div class="pin iceland">
-        <span style="left: -5.5rem">Iceland</span>
+    <div class="pin central-america">
+        <span><a href="centralamerica.php">Central America</a></span>
     </div>
 </div>
 <div style="z-index: 10;min-height: 0%;margin-top: 42%;position: absolute;bottom: 0;left: 0;width: 100%;position: relative;flex: 1;">
