@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add a click event listener to each button
     saveButtons.forEach(function (a) {
-        button.addEventListener("click", function () {
+        a.addEventListener("click", function () {
             // Get the target content ID from the button's data attribute
             const targetContentId = a.dataset.target;
 
@@ -48,6 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 pythonProcess.stderr.on('data', (data) => {
                     console.error(`Error in Python script: ${data}`);
                 });
+                
+                console.log("Start");
+
+                setTimeout(function() {
+                    console.log("Delayed message");
+                }, 10000); // 2000 milliseconds (2 seconds) delay
+
+                console.log("End");
 
                 const path = 'artikel_data.txt';
 

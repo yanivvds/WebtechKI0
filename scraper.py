@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-import String
+import string
 #sources: https://www.youtube.com/watch?v=U90vK84bq4s and https://www.youtube.com/watch?v=XVv6mJpFOb0&t=395s
 
 
@@ -57,7 +57,9 @@ def get_artikel(raw_data: requests.Response) -> list:
             link_array.append(n.get("href"))
 
     for n in foto_data:
-        foto_array.append(n.get("src"))
+        print(n.get('src')[0:4])
+        if n.get("src")[0:4] == 'http':
+            foto_array.append(n.get("src"))
 
     #writing scrapped data to a file so that java script can read data from there
     with open('artikel_data.txt', 'w') as f:
@@ -65,9 +67,9 @@ def get_artikel(raw_data: requests.Response) -> list:
         index_link = 0
         index_foto = 0
         for element in titel_array:
-            f.write(element)
-            f.write(link_array[index_link])
-            f.write(foto_array[index_foto])
+            f.write(f'{element}\n')
+            f.write(f'{link_array[index_link]}\n')
+            f.write(f'{foto_array[index_foto]}\n')
             index_link += 1
             index_foto += 1
 
